@@ -81,30 +81,39 @@ Partial Class frmBookkeeping
         Me.Label26 = New System.Windows.Forms.Label
         Me.Label27 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.txtLastName = New System.Windows.Forms.TextBox
-        Me.txtFirstName = New System.Windows.Forms.TextBox
-        Me.txtPatronymic = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.txtProfession = New System.Windows.Forms.TextBox
-        Me.txtNumbWorkDay = New System.Windows.Forms.TextBox
-        Me.txtNumbDaysWorked = New System.Windows.Forms.TextBox
-        Me.txtSalary = New System.Windows.Forms.TextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.cmdZP = New System.Windows.Forms.Button
-        Me.cmdDatabase = New System.Windows.Forms.Button
-        Me.cmdBack = New System.Windows.Forms.Button
-        Me.txtWage = New System.Windows.Forms.TextBox
         Me.Label9 = New System.Windows.Forms.Label
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox
-        Me.cmdText = New System.Windows.Forms.Button
-        Me.txtSDZ = New System.Windows.Forms.TextBox
+        Me.txtWage = New System.Windows.Forms.TextBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.Label5 = New System.Windows.Forms.Label
+        Me.txtSalary = New System.Windows.Forms.TextBox
+        Me.txtNumbDaysWorked = New System.Windows.Forms.TextBox
+        Me.txtNumbWorkDay = New System.Windows.Forms.TextBox
+        Me.txtProfession = New System.Windows.Forms.TextBox
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.txtPatronymic = New System.Windows.Forms.TextBox
+        Me.txtFirstName = New System.Windows.Forms.TextBox
+        Me.txtLastName = New System.Windows.Forms.TextBox
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox
+        Me.Label4 = New System.Windows.Forms.Label
         Me.Label28 = New System.Windows.Forms.Label
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox
+        Me.Button4 = New System.Windows.Forms.Button
+        Me.Button5 = New System.Windows.Forms.Button
+        Me.GroupBox11 = New System.Windows.Forms.GroupBox
+        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.Button6 = New System.Windows.Forms.Button
+        Me.Button7 = New System.Windows.Forms.Button
+        Me.GroupBox12 = New System.Windows.Forms.GroupBox
+        Me.TextBox2 = New System.Windows.Forms.TextBox
+        Me.Button8 = New System.Windows.Forms.Button
+        Me.Button9 = New System.Windows.Forms.Button
+        Me.Button10 = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -116,6 +125,12 @@ Partial Class frmBookkeeping
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -123,7 +138,7 @@ Partial Class frmBookkeeping
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ФайлToolStripMenuItem, Me.СправкаToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(581, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(510, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -149,39 +164,19 @@ Partial Class frmBookkeeping
         Me.TabControl1.Location = New System.Drawing.Point(0, 24)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(581, 253)
+        Me.TabControl1.Size = New System.Drawing.Size(510, 298)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Label28)
-        Me.TabPage1.Controls.Add(Me.txtSDZ)
-        Me.TabPage1.Controls.Add(Me.cmdText)
-        Me.TabPage1.Controls.Add(Me.MaskedTextBox1)
-        Me.TabPage1.Controls.Add(Me.Label9)
-        Me.TabPage1.Controls.Add(Me.txtWage)
-        Me.TabPage1.Controls.Add(Me.cmdBack)
-        Me.TabPage1.Controls.Add(Me.cmdDatabase)
-        Me.TabPage1.Controls.Add(Me.cmdZP)
-        Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.txtSalary)
-        Me.TabPage1.Controls.Add(Me.txtNumbDaysWorked)
-        Me.TabPage1.Controls.Add(Me.txtNumbWorkDay)
-        Me.TabPage1.Controls.Add(Me.txtProfession)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.txtPatronymic)
-        Me.TabPage1.Controls.Add(Me.txtFirstName)
-        Me.TabPage1.Controls.Add(Me.txtLastName)
+        Me.TabPage1.Controls.Add(Me.Button10)
+        Me.TabPage1.Controls.Add(Me.GroupBox9)
+        Me.TabPage1.Controls.Add(Me.GroupBox8)
+        Me.TabPage1.Controls.Add(Me.GroupBox7)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(573, 224)
+        Me.TabPage1.Size = New System.Drawing.Size(502, 269)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Персонал"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -198,7 +193,7 @@ Partial Class frmBookkeeping
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(423, 245)
+        Me.TabPage2.Size = New System.Drawing.Size(709, 348)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Комм. услуги"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -443,7 +438,7 @@ Partial Class frmBookkeeping
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(423, 245)
+        Me.TabPage3.Size = New System.Drawing.Size(709, 348)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Прибыль"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -676,218 +671,325 @@ Partial Class frmBookkeeping
         Me.Label27.TabIndex = 0
         Me.Label27.Text = "Количество (кг)"
         '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(105, 6)
-        Me.txtLastName.MaxLength = 40
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(112, 20)
-        Me.txtLastName.TabIndex = 25
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.Location = New System.Drawing.Point(105, 32)
-        Me.txtFirstName.MaxLength = 40
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(112, 20)
-        Me.txtFirstName.TabIndex = 26
-        '
-        'txtPatronymic
-        '
-        Me.txtPatronymic.Location = New System.Drawing.Point(105, 58)
-        Me.txtPatronymic.MaxLength = 40
-        Me.txtPatronymic.Name = "txtPatronymic"
-        Me.txtPatronymic.Size = New System.Drawing.Size(112, 20)
-        Me.txtPatronymic.TabIndex = 27
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 13)
-        Me.Label1.TabIndex = 30
-        Me.Label1.Text = "Фамилия"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 35)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(29, 13)
-        Me.Label2.TabIndex = 31
-        Me.Label2.Text = "Имя"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 61)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 13)
-        Me.Label3.TabIndex = 34
-        Me.Label3.Text = "Отчество"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 87)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(86, 13)
-        Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Дата рождения"
-        '
-        'txtProfession
-        '
-        Me.txtProfession.Location = New System.Drawing.Point(105, 111)
-        Me.txtProfession.MaxLength = 40
-        Me.txtProfession.Name = "txtProfession"
-        Me.txtProfession.Size = New System.Drawing.Size(112, 20)
-        Me.txtProfession.TabIndex = 29
-        '
-        'txtNumbWorkDay
-        '
-        Me.txtNumbWorkDay.Location = New System.Drawing.Point(462, 6)
-        Me.txtNumbWorkDay.MaxLength = 2
-        Me.txtNumbWorkDay.Name = "txtNumbWorkDay"
-        Me.txtNumbWorkDay.Size = New System.Drawing.Size(28, 20)
-        Me.txtNumbWorkDay.TabIndex = 32
-        '
-        'txtNumbDaysWorked
-        '
-        Me.txtNumbDaysWorked.Location = New System.Drawing.Point(462, 32)
-        Me.txtNumbDaysWorked.MaxLength = 2
-        Me.txtNumbDaysWorked.Name = "txtNumbDaysWorked"
-        Me.txtNumbDaysWorked.Size = New System.Drawing.Size(28, 20)
-        Me.txtNumbDaysWorked.TabIndex = 33
-        '
-        'txtSalary
-        '
-        Me.txtSalary.Location = New System.Drawing.Point(462, 58)
-        Me.txtSalary.Name = "txtSalary"
-        Me.txtSalary.Size = New System.Drawing.Size(100, 20)
-        Me.txtSalary.TabIndex = 35
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(9, 114)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(65, 13)
-        Me.Label5.TabIndex = 39
-        Me.Label5.Text = "Профессия"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(256, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(136, 13)
-        Me.Label6.TabIndex = 40
-        Me.Label6.Text = "Количество рабочих дней"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(256, 35)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(167, 13)
-        Me.Label7.TabIndex = 41
-        Me.Label7.Text = "Количество отработанных дней"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(256, 61)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 13)
-        Me.Label8.TabIndex = 42
-        Me.Label8.Text = "Оклад"
-        '
-        'cmdZP
-        '
-        Me.cmdZP.Location = New System.Drawing.Point(343, 152)
-        Me.cmdZP.Name = "cmdZP"
-        Me.cmdZP.Size = New System.Drawing.Size(222, 30)
-        Me.cmdZP.TabIndex = 37
-        Me.cmdZP.Text = "Рассчитать зарплату"
-        Me.cmdZP.UseVisualStyleBackColor = True
-        '
-        'cmdDatabase
-        '
-        Me.cmdDatabase.Location = New System.Drawing.Point(343, 188)
-        Me.cmdDatabase.Name = "cmdDatabase"
-        Me.cmdDatabase.Size = New System.Drawing.Size(222, 28)
-        Me.cmdDatabase.TabIndex = 38
-        Me.cmdDatabase.Text = "Занести в базу данных"
-        Me.cmdDatabase.UseVisualStyleBackColor = True
-        '
-        'cmdBack
-        '
-        Me.cmdBack.Location = New System.Drawing.Point(12, 188)
-        Me.cmdBack.Name = "cmdBack"
-        Me.cmdBack.Size = New System.Drawing.Size(75, 28)
-        Me.cmdBack.TabIndex = 43
-        Me.cmdBack.Text = "Назад"
-        Me.cmdBack.UseVisualStyleBackColor = True
-        '
-        'txtWage
-        '
-        Me.txtWage.Location = New System.Drawing.Point(462, 85)
-        Me.txtWage.Name = "txtWage"
-        Me.txtWage.ReadOnly = True
-        Me.txtWage.Size = New System.Drawing.Size(100, 20)
-        Me.txtWage.TabIndex = 44
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(256, 88)
+        Me.Label9.Location = New System.Drawing.Point(12, 48)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(55, 13)
         Me.Label9.TabIndex = 45
         Me.Label9.Text = "Зарплата"
         '
-        'MaskedTextBox1
+        'txtWage
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(105, 87)
-        Me.MaskedTextBox1.Mask = "00/00/0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(61, 20)
-        Me.MaskedTextBox1.TabIndex = 28
-        Me.MaskedTextBox1.ValidatingType = GetType(Date)
+        Me.txtWage.Location = New System.Drawing.Point(73, 45)
+        Me.txtWage.Name = "txtWage"
+        Me.txtWage.ReadOnly = True
+        Me.txtWage.Size = New System.Drawing.Size(57, 20)
+        Me.txtWage.TabIndex = 44
         '
-        'cmdText
+        'Label8
         '
-        Me.cmdText.Location = New System.Drawing.Point(142, 188)
-        Me.cmdText.Name = "cmdText"
-        Me.cmdText.Size = New System.Drawing.Size(88, 28)
-        Me.cmdText.TabIndex = 46
-        Me.cmdText.Text = "Заполнение"
-        Me.cmdText.UseVisualStyleBackColor = True
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(12, 21)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 13)
+        Me.Label8.TabIndex = 42
+        Me.Label8.Text = "Оклад"
         '
-        'txtSDZ
+        'Label7
         '
-        Me.txtSDZ.Location = New System.Drawing.Point(462, 111)
-        Me.txtSDZ.Name = "txtSDZ"
-        Me.txtSDZ.ReadOnly = True
-        Me.txtSDZ.Size = New System.Drawing.Size(100, 20)
-        Me.txtSDZ.TabIndex = 47
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(3, 76)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(167, 13)
+        Me.Label7.TabIndex = 41
+        Me.Label7.Text = "Количество отработанных дней"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(3, 50)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(136, 13)
+        Me.Label6.TabIndex = 40
+        Me.Label6.Text = "Количество рабочих дней"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 24)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(65, 13)
+        Me.Label5.TabIndex = 39
+        Me.Label5.Text = "Профессия"
+        '
+        'txtSalary
+        '
+        Me.txtSalary.Location = New System.Drawing.Point(57, 18)
+        Me.txtSalary.Name = "txtSalary"
+        Me.txtSalary.Size = New System.Drawing.Size(57, 20)
+        Me.txtSalary.TabIndex = 35
+        '
+        'txtNumbDaysWorked
+        '
+        Me.txtNumbDaysWorked.Location = New System.Drawing.Point(176, 73)
+        Me.txtNumbDaysWorked.MaxLength = 2
+        Me.txtNumbDaysWorked.Name = "txtNumbDaysWorked"
+        Me.txtNumbDaysWorked.Size = New System.Drawing.Size(28, 20)
+        Me.txtNumbDaysWorked.TabIndex = 33
+        '
+        'txtNumbWorkDay
+        '
+        Me.txtNumbWorkDay.Location = New System.Drawing.Point(145, 47)
+        Me.txtNumbWorkDay.MaxLength = 2
+        Me.txtNumbWorkDay.Name = "txtNumbWorkDay"
+        Me.txtNumbWorkDay.Size = New System.Drawing.Size(28, 20)
+        Me.txtNumbWorkDay.TabIndex = 32
+        '
+        'txtProfession
+        '
+        Me.txtProfession.Location = New System.Drawing.Point(74, 21)
+        Me.txtProfession.MaxLength = 40
+        Me.txtProfession.Name = "txtProfession"
+        Me.txtProfession.Size = New System.Drawing.Size(100, 20)
+        Me.txtProfession.TabIndex = 29
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.Label5)
+        Me.GroupBox7.Controls.Add(Me.txtProfession)
+        Me.GroupBox7.Controls.Add(Me.txtNumbWorkDay)
+        Me.GroupBox7.Controls.Add(Me.txtNumbDaysWorked)
+        Me.GroupBox7.Controls.Add(Me.Label6)
+        Me.GroupBox7.Controls.Add(Me.Label7)
+        Me.GroupBox7.Location = New System.Drawing.Point(209, 6)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(211, 100)
+        Me.GroupBox7.TabIndex = 47
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "Профессиональные данные"
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.Label3)
+        Me.GroupBox8.Controls.Add(Me.Label2)
+        Me.GroupBox8.Controls.Add(Me.Label1)
+        Me.GroupBox8.Controls.Add(Me.txtPatronymic)
+        Me.GroupBox8.Controls.Add(Me.txtFirstName)
+        Me.GroupBox8.Controls.Add(Me.txtLastName)
+        Me.GroupBox8.Location = New System.Drawing.Point(8, 6)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(186, 100)
+        Me.GroupBox8.TabIndex = 48
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "Личные данные"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 74)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 13)
+        Me.Label3.TabIndex = 40
+        Me.Label3.Text = "Отчество"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 46)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(29, 13)
+        Me.Label2.TabIndex = 39
+        Me.Label2.Text = "Имя"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 17)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(56, 13)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Фамилия"
+        '
+        'txtPatronymic
+        '
+        Me.txtPatronymic.Location = New System.Drawing.Point(63, 71)
+        Me.txtPatronymic.MaxLength = 40
+        Me.txtPatronymic.Name = "txtPatronymic"
+        Me.txtPatronymic.Size = New System.Drawing.Size(113, 20)
+        Me.txtPatronymic.TabIndex = 37
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Location = New System.Drawing.Point(38, 43)
+        Me.txtFirstName.MaxLength = 40
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(104, 20)
+        Me.txtFirstName.TabIndex = 36
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(65, 14)
+        Me.txtLastName.MaxLength = 40
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(111, 20)
+        Me.txtLastName.TabIndex = 35
+        '
+        'GroupBox9
+        '
+        Me.GroupBox9.Controls.Add(Me.GroupBox12)
+        Me.GroupBox9.Controls.Add(Me.GroupBox11)
+        Me.GroupBox9.Controls.Add(Me.GroupBox10)
+        Me.GroupBox9.Location = New System.Drawing.Point(8, 106)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.Size = New System.Drawing.Size(483, 158)
+        Me.GroupBox9.TabIndex = 49
+        Me.GroupBox9.TabStop = False
+        Me.GroupBox9.Text = "Финансовые данные"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(8, 43)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(30, 13)
+        Me.Label4.TabIndex = 46
+        Me.Label4.Text = "СДЗ"
+        Me.ToolTip1.SetToolTip(Me.Label4, "Средний дневной заработок")
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(256, 114)
+        Me.Label28.Location = New System.Drawing.Point(6, 34)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(30, 13)
-        Me.Label28.TabIndex = 48
-        Me.Label28.Text = "СДЗ"
-        Me.ToolTip1.SetToolTip(Me.Label28, "Средний дневной зарботок")
+        Me.Label28.Size = New System.Drawing.Size(63, 13)
+        Me.Label28.TabIndex = 47
+        Me.Label28.Text = "Отпускные"
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.Controls.Add(Me.Button5)
+        Me.GroupBox10.Controls.Add(Me.Button4)
+        Me.GroupBox10.Controls.Add(Me.Label8)
+        Me.GroupBox10.Controls.Add(Me.Label9)
+        Me.GroupBox10.Controls.Add(Me.txtSalary)
+        Me.GroupBox10.Controls.Add(Me.txtWage)
+        Me.GroupBox10.Location = New System.Drawing.Point(6, 19)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(137, 133)
+        Me.GroupBox10.TabIndex = 46
+        Me.GroupBox10.TabStop = False
+        Me.GroupBox10.Text = "Зарплата"
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(15, 71)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(115, 21)
+        Me.Button4.TabIndex = 46
+        Me.Button4.Text = "Рассчитать"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(15, 99)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(115, 21)
+        Me.Button5.TabIndex = 47
+        Me.Button5.Text = "Занести в базу"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'GroupBox11
+        '
+        Me.GroupBox11.Controls.Add(Me.Button7)
+        Me.GroupBox11.Controls.Add(Me.Button6)
+        Me.GroupBox11.Controls.Add(Me.TextBox1)
+        Me.GroupBox11.Controls.Add(Me.Label4)
+        Me.GroupBox11.Location = New System.Drawing.Point(165, 19)
+        Me.GroupBox11.Name = "GroupBox11"
+        Me.GroupBox11.Size = New System.Drawing.Size(124, 133)
+        Me.GroupBox11.TabIndex = 47
+        Me.GroupBox11.TabStop = False
+        Me.GroupBox11.Text = "Средний дневной заработок"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(44, 40)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(69, 20)
+        Me.TextBox1.TabIndex = 47
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(11, 71)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(102, 21)
+        Me.Button6.TabIndex = 48
+        Me.Button6.Text = "Рассчитать"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(11, 99)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(102, 21)
+        Me.Button7.TabIndex = 49
+        Me.Button7.Text = "Занести в базу"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'GroupBox12
+        '
+        Me.GroupBox12.Controls.Add(Me.Button8)
+        Me.GroupBox12.Controls.Add(Me.TextBox2)
+        Me.GroupBox12.Controls.Add(Me.Button9)
+        Me.GroupBox12.Controls.Add(Me.Label28)
+        Me.GroupBox12.Location = New System.Drawing.Point(314, 19)
+        Me.GroupBox12.Name = "GroupBox12"
+        Me.GroupBox12.Size = New System.Drawing.Size(162, 133)
+        Me.GroupBox12.TabIndex = 48
+        Me.GroupBox12.TabStop = False
+        Me.GroupBox12.Text = "Отпускные"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(75, 31)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(78, 20)
+        Me.TextBox2.TabIndex = 48
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(9, 99)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(102, 21)
+        Me.Button8.TabIndex = 51
+        Me.Button8.Text = "Занести в базу"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(9, 71)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(102, 21)
+        Me.Button9.TabIndex = 50
+        Me.Button9.Text = "Рассчитать"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(429, 83)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(62, 23)
+        Me.Button10.TabIndex = 50
+        Me.Button10.Text = "Назад"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'frmBookkeeping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(581, 277)
+        Me.ClientSize = New System.Drawing.Size(510, 322)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -898,7 +1000,6 @@ Partial Class frmBookkeeping
         Me.MenuStrip1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -913,6 +1014,17 @@ Partial Class frmBookkeeping
         Me.GroupBox5.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        Me.GroupBox9.ResumeLayout(False)
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox11.PerformLayout()
+        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox12.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -975,29 +1087,38 @@ Partial Class frmBookkeeping
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents txtSDZ As System.Windows.Forms.TextBox
-    Friend WithEvents cmdText As System.Windows.Forms.Button
-    Friend WithEvents MaskedTextBox1 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents txtProfession As System.Windows.Forms.TextBox
+    Friend WithEvents txtNumbWorkDay As System.Windows.Forms.TextBox
+    Friend WithEvents txtNumbDaysWorked As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtWage As System.Windows.Forms.TextBox
-    Friend WithEvents cmdBack As System.Windows.Forms.Button
-    Friend WithEvents cmdDatabase As System.Windows.Forms.Button
-    Friend WithEvents cmdZP As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtSalary As System.Windows.Forms.TextBox
-    Friend WithEvents txtNumbDaysWorked As System.Windows.Forms.TextBox
-    Friend WithEvents txtNumbWorkDay As System.Windows.Forms.TextBox
-    Friend WithEvents txtProfession As System.Windows.Forms.TextBox
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtPatronymic As System.Windows.Forms.TextBox
     Friend WithEvents txtFirstName As System.Windows.Forms.TextBox
     Friend WithEvents txtLastName As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox12 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents Button10 As System.Windows.Forms.Button
 
 End Class
