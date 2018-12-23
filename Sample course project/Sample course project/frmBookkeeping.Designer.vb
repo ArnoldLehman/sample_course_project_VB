@@ -29,14 +29,10 @@ Partial Class frmBookkeeping
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.TabPage1 = New System.Windows.Forms.TabPage
         Me.TabPage2 = New System.Windows.Forms.TabPage
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.cmdRash = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
-        Me.txtPotrGaz = New System.Windows.Forms.TextBox
-        Me.txtTarifGaz = New System.Windows.Forms.TextBox
-        Me.txtRashGaz = New System.Windows.Forms.TextBox
+        Me.txtPotrGas = New System.Windows.Forms.TextBox
+        Me.txtTarifGas = New System.Windows.Forms.TextBox
+        Me.txtRashGas = New System.Windows.Forms.TextBox
         Me.Label10 = New System.Windows.Forms.Label
         Me.Label11 = New System.Windows.Forms.Label
         Me.Label12 = New System.Windows.Forms.Label
@@ -55,28 +51,24 @@ Partial Class frmBookkeeping
         Me.Label17 = New System.Windows.Forms.Label
         Me.Label18 = New System.Windows.Forms.Label
         Me.TabPage3 = New System.Windows.Forms.TabPage
-        Me.cmdText2 = New System.Windows.Forms.Button
-        Me.cmdIncomePrice = New System.Windows.Forms.Button
-        Me.cmdBackPrice = New System.Windows.Forms.Button
-        Me.cmdDatabasePrice = New System.Windows.Forms.Button
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
-        Me.txtNumberJom = New System.Windows.Forms.TextBox
-        Me.txtPriceJom = New System.Windows.Forms.TextBox
-        Me.txtIncomeJom = New System.Windows.Forms.TextBox
+        Me.txtNumberPulp = New System.Windows.Forms.TextBox
+        Me.txtPricePulp = New System.Windows.Forms.TextBox
+        Me.txtIncomePulp = New System.Windows.Forms.TextBox
         Me.Label19 = New System.Windows.Forms.Label
         Me.Label20 = New System.Windows.Forms.Label
         Me.Label21 = New System.Windows.Forms.Label
         Me.GroupBox5 = New System.Windows.Forms.GroupBox
-        Me.txtNumberMel = New System.Windows.Forms.TextBox
-        Me.txtPriceMel = New System.Windows.Forms.TextBox
-        Me.txtIncomeMel = New System.Windows.Forms.TextBox
+        Me.txtNumberMolasses = New System.Windows.Forms.TextBox
+        Me.txtPriceMolasses = New System.Windows.Forms.TextBox
+        Me.txtIncomeMolasses = New System.Windows.Forms.TextBox
         Me.Label22 = New System.Windows.Forms.Label
         Me.Label23 = New System.Windows.Forms.Label
         Me.Label24 = New System.Windows.Forms.Label
         Me.GroupBox6 = New System.Windows.Forms.GroupBox
-        Me.txtIncomeSah = New System.Windows.Forms.TextBox
-        Me.txtPriceSah = New System.Windows.Forms.TextBox
-        Me.txtNumberSah = New System.Windows.Forms.TextBox
+        Me.txtIncomeSugar = New System.Windows.Forms.TextBox
+        Me.txtPriceSugar = New System.Windows.Forms.TextBox
+        Me.txtNumberSugar = New System.Windows.Forms.TextBox
         Me.Label25 = New System.Windows.Forms.Label
         Me.Label26 = New System.Windows.Forms.Label
         Me.Label27 = New System.Windows.Forms.Label
@@ -103,17 +95,31 @@ Partial Class frmBookkeeping
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label28 = New System.Windows.Forms.Label
         Me.GroupBox10 = New System.Windows.Forms.GroupBox
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
+        Me.cmdCalculateWage = New System.Windows.Forms.Button
+        Me.cmdDatabaseWage = New System.Windows.Forms.Button
         Me.GroupBox11 = New System.Windows.Forms.GroupBox
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.Button6 = New System.Windows.Forms.Button
-        Me.Button7 = New System.Windows.Forms.Button
+        Me.txtSDZ = New System.Windows.Forms.TextBox
+        Me.cmdCalculateSDZ = New System.Windows.Forms.Button
+        Me.cmdDatabaseSDZ = New System.Windows.Forms.Button
         Me.GroupBox12 = New System.Windows.Forms.GroupBox
-        Me.TextBox2 = New System.Windows.Forms.TextBox
-        Me.Button8 = New System.Windows.Forms.Button
-        Me.Button9 = New System.Windows.Forms.Button
-        Me.Button10 = New System.Windows.Forms.Button
+        Me.txtHolidayPay = New System.Windows.Forms.TextBox
+        Me.cmdDatabaseHolidayPay = New System.Windows.Forms.Button
+        Me.cmdCalculateHolidayPay = New System.Windows.Forms.Button
+        Me.cmdBackStaff = New System.Windows.Forms.Button
+        Me.cmdCalculateSugar = New System.Windows.Forms.Button
+        Me.cmdDatabaseSugar = New System.Windows.Forms.Button
+        Me.cmdDatabasePulp = New System.Windows.Forms.Button
+        Me.cmdCalculatePulp = New System.Windows.Forms.Button
+        Me.cmdDatabaseMolasses = New System.Windows.Forms.Button
+        Me.cmdCalculateMolasses = New System.Windows.Forms.Button
+        Me.cmdBackIncome = New System.Windows.Forms.Button
+        Me.cmdCalculateElectricity = New System.Windows.Forms.Button
+        Me.cmdCalculateWater = New System.Windows.Forms.Button
+        Me.cmdCalculateGas = New System.Windows.Forms.Button
+        Me.cmdDatabaseGas = New System.Windows.Forms.Button
+        Me.cmdDatabaseElectricity = New System.Windows.Forms.Button
+        Me.cmdDatabaseWater = New System.Windows.Forms.Button
+        Me.cmdBackMS = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -138,7 +144,7 @@ Partial Class frmBookkeeping
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ФайлToolStripMenuItem, Me.СправкаToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(510, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(555, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -164,112 +170,75 @@ Partial Class frmBookkeeping
         Me.TabControl1.Location = New System.Drawing.Point(0, 24)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(510, 298)
+        Me.TabControl1.Size = New System.Drawing.Size(555, 295)
         Me.TabControl1.TabIndex = 1
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button10)
+        Me.TabPage1.Controls.Add(Me.cmdBackStaff)
         Me.TabPage1.Controls.Add(Me.GroupBox9)
         Me.TabPage1.Controls.Add(Me.GroupBox8)
         Me.TabPage1.Controls.Add(Me.GroupBox7)
         Me.TabPage1.Location = New System.Drawing.Point(4, 25)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(502, 269)
+        Me.TabPage1.Size = New System.Drawing.Size(547, 266)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Персонал"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button1)
-        Me.TabPage2.Controls.Add(Me.cmdRash)
-        Me.TabPage2.Controls.Add(Me.Button2)
-        Me.TabPage2.Controls.Add(Me.Button3)
+        Me.TabPage2.Controls.Add(Me.cmdBackMS)
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.GroupBox1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(709, 348)
+        Me.TabPage2.Size = New System.Drawing.Size(547, 266)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Комм. услуги"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(255, 120)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(127, 23)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "Заполнение"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'cmdRash
-        '
-        Me.cmdRash.Location = New System.Drawing.Point(287, 208)
-        Me.cmdRash.Name = "cmdRash"
-        Me.cmdRash.Size = New System.Drawing.Size(120, 23)
-        Me.cmdRash.TabIndex = 19
-        Me.cmdRash.Text = "Рассчитать расходы"
-        Me.cmdRash.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(220, 208)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(61, 23)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Назад"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(220, 176)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(187, 26)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Занести в базу данных"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.txtPotrGaz)
-        Me.GroupBox3.Controls.Add(Me.txtTarifGaz)
-        Me.GroupBox3.Controls.Add(Me.txtRashGaz)
+        Me.GroupBox3.Controls.Add(Me.cmdDatabaseGas)
+        Me.GroupBox3.Controls.Add(Me.cmdCalculateGas)
+        Me.GroupBox3.Controls.Add(Me.txtPotrGas)
+        Me.GroupBox3.Controls.Add(Me.txtTarifGas)
+        Me.GroupBox3.Controls.Add(Me.txtRashGas)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Location = New System.Drawing.Point(8, 132)
+        Me.GroupBox3.Location = New System.Drawing.Point(8, 115)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(187, 106)
+        Me.GroupBox3.Size = New System.Drawing.Size(260, 101)
         Me.GroupBox3.TabIndex = 16
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Газ"
         '
-        'txtPotrGaz
+        'txtPotrGas
         '
-        Me.txtPotrGaz.Location = New System.Drawing.Point(94, 30)
-        Me.txtPotrGaz.Name = "txtPotrGaz"
-        Me.txtPotrGaz.Size = New System.Drawing.Size(78, 20)
-        Me.txtPotrGaz.TabIndex = 5
+        Me.txtPotrGas.Location = New System.Drawing.Point(94, 27)
+        Me.txtPotrGas.Name = "txtPotrGas"
+        Me.txtPotrGas.Size = New System.Drawing.Size(78, 20)
+        Me.txtPotrGas.TabIndex = 5
         '
-        'txtTarifGaz
+        'txtTarifGas
         '
-        Me.txtTarifGaz.Location = New System.Drawing.Point(94, 53)
-        Me.txtTarifGaz.Name = "txtTarifGaz"
-        Me.txtTarifGaz.Size = New System.Drawing.Size(78, 20)
-        Me.txtTarifGaz.TabIndex = 4
+        Me.txtTarifGas.Location = New System.Drawing.Point(94, 50)
+        Me.txtTarifGas.Name = "txtTarifGas"
+        Me.txtTarifGas.Size = New System.Drawing.Size(78, 20)
+        Me.txtTarifGas.TabIndex = 4
         '
-        'txtRashGaz
+        'txtRashGas
         '
-        Me.txtRashGaz.Location = New System.Drawing.Point(94, 76)
-        Me.txtRashGaz.Name = "txtRashGaz"
-        Me.txtRashGaz.ReadOnly = True
-        Me.txtRashGaz.Size = New System.Drawing.Size(78, 20)
-        Me.txtRashGaz.TabIndex = 3
+        Me.txtRashGas.Location = New System.Drawing.Point(94, 73)
+        Me.txtRashGas.Name = "txtRashGas"
+        Me.txtRashGas.ReadOnly = True
+        Me.txtRashGas.Size = New System.Drawing.Size(78, 20)
+        Me.txtRashGas.TabIndex = 3
         '
         'Label10
         '
@@ -300,36 +269,38 @@ Partial Class frmBookkeeping
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cmdDatabaseWater)
+        Me.GroupBox2.Controls.Add(Me.cmdCalculateWater)
         Me.GroupBox2.Controls.Add(Me.txtPotrWater)
         Me.GroupBox2.Controls.Add(Me.txtTarifWater)
         Me.GroupBox2.Controls.Add(Me.txtRashWater)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Location = New System.Drawing.Point(220, 6)
+        Me.GroupBox2.Location = New System.Drawing.Point(274, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(187, 108)
+        Me.GroupBox2.Size = New System.Drawing.Size(260, 103)
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Вода"
         '
         'txtPotrWater
         '
-        Me.txtPotrWater.Location = New System.Drawing.Point(94, 30)
+        Me.txtPotrWater.Location = New System.Drawing.Point(94, 27)
         Me.txtPotrWater.Name = "txtPotrWater"
         Me.txtPotrWater.Size = New System.Drawing.Size(78, 20)
         Me.txtPotrWater.TabIndex = 5
         '
         'txtTarifWater
         '
-        Me.txtTarifWater.Location = New System.Drawing.Point(94, 53)
+        Me.txtTarifWater.Location = New System.Drawing.Point(94, 50)
         Me.txtTarifWater.Name = "txtTarifWater"
         Me.txtTarifWater.Size = New System.Drawing.Size(78, 20)
         Me.txtTarifWater.TabIndex = 4
         '
         'txtRashWater
         '
-        Me.txtRashWater.Location = New System.Drawing.Point(94, 76)
+        Me.txtRashWater.Location = New System.Drawing.Point(94, 73)
         Me.txtRashWater.Name = "txtRashWater"
         Me.txtRashWater.ReadOnly = True
         Me.txtRashWater.Size = New System.Drawing.Size(78, 20)
@@ -364,6 +335,8 @@ Partial Class frmBookkeeping
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cmdDatabaseElectricity)
+        Me.GroupBox1.Controls.Add(Me.cmdCalculateElectricity)
         Me.GroupBox1.Controls.Add(Me.txtRashElec)
         Me.GroupBox1.Controls.Add(Me.txtTarifElec)
         Me.GroupBox1.Controls.Add(Me.txtPotrElec)
@@ -372,14 +345,14 @@ Partial Class frmBookkeeping
         Me.GroupBox1.Controls.Add(Me.Label18)
         Me.GroupBox1.Location = New System.Drawing.Point(8, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(187, 108)
+        Me.GroupBox1.Size = New System.Drawing.Size(260, 103)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Электричество"
         '
         'txtRashElec
         '
-        Me.txtRashElec.Location = New System.Drawing.Point(94, 76)
+        Me.txtRashElec.Location = New System.Drawing.Point(94, 73)
         Me.txtRashElec.Name = "txtRashElec"
         Me.txtRashElec.ReadOnly = True
         Me.txtRashElec.Size = New System.Drawing.Size(78, 20)
@@ -387,14 +360,14 @@ Partial Class frmBookkeeping
         '
         'txtTarifElec
         '
-        Me.txtTarifElec.Location = New System.Drawing.Point(94, 53)
+        Me.txtTarifElec.Location = New System.Drawing.Point(94, 50)
         Me.txtTarifElec.Name = "txtTarifElec"
         Me.txtTarifElec.Size = New System.Drawing.Size(78, 20)
         Me.txtTarifElec.TabIndex = 4
         '
         'txtPotrElec
         '
-        Me.txtPotrElec.Location = New System.Drawing.Point(94, 30)
+        Me.txtPotrElec.Location = New System.Drawing.Point(94, 27)
         Me.txtPotrElec.Name = "txtPotrElec"
         Me.txtPotrElec.Size = New System.Drawing.Size(78, 20)
         Me.txtPotrElec.TabIndex = 3
@@ -428,93 +401,56 @@ Partial Class frmBookkeeping
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.cmdText2)
-        Me.TabPage3.Controls.Add(Me.cmdIncomePrice)
-        Me.TabPage3.Controls.Add(Me.cmdBackPrice)
-        Me.TabPage3.Controls.Add(Me.cmdDatabasePrice)
+        Me.TabPage3.Controls.Add(Me.cmdBackIncome)
         Me.TabPage3.Controls.Add(Me.GroupBox4)
         Me.TabPage3.Controls.Add(Me.GroupBox5)
         Me.TabPage3.Controls.Add(Me.GroupBox6)
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(709, 348)
+        Me.TabPage3.Size = New System.Drawing.Size(547, 266)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Прибыль"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'cmdText2
-        '
-        Me.cmdText2.Location = New System.Drawing.Point(255, 120)
-        Me.cmdText2.Name = "cmdText2"
-        Me.cmdText2.Size = New System.Drawing.Size(127, 23)
-        Me.cmdText2.TabIndex = 27
-        Me.cmdText2.Text = "Заполнение"
-        Me.cmdText2.UseVisualStyleBackColor = True
-        '
-        'cmdIncomePrice
-        '
-        Me.cmdIncomePrice.Location = New System.Drawing.Point(287, 208)
-        Me.cmdIncomePrice.Name = "cmdIncomePrice"
-        Me.cmdIncomePrice.Size = New System.Drawing.Size(120, 23)
-        Me.cmdIncomePrice.TabIndex = 26
-        Me.cmdIncomePrice.Text = "Рассчитать доход"
-        Me.cmdIncomePrice.UseVisualStyleBackColor = True
-        '
-        'cmdBackPrice
-        '
-        Me.cmdBackPrice.Location = New System.Drawing.Point(220, 208)
-        Me.cmdBackPrice.Name = "cmdBackPrice"
-        Me.cmdBackPrice.Size = New System.Drawing.Size(61, 23)
-        Me.cmdBackPrice.TabIndex = 25
-        Me.cmdBackPrice.Text = "Назад"
-        Me.cmdBackPrice.UseVisualStyleBackColor = True
-        '
-        'cmdDatabasePrice
-        '
-        Me.cmdDatabasePrice.Location = New System.Drawing.Point(220, 176)
-        Me.cmdDatabasePrice.Name = "cmdDatabasePrice"
-        Me.cmdDatabasePrice.Size = New System.Drawing.Size(187, 26)
-        Me.cmdDatabasePrice.TabIndex = 24
-        Me.cmdDatabasePrice.Text = "Занести в базу данных"
-        Me.cmdDatabasePrice.UseVisualStyleBackColor = True
-        '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.txtNumberJom)
-        Me.GroupBox4.Controls.Add(Me.txtPriceJom)
-        Me.GroupBox4.Controls.Add(Me.txtIncomeJom)
+        Me.GroupBox4.Controls.Add(Me.cmdDatabasePulp)
+        Me.GroupBox4.Controls.Add(Me.txtNumberPulp)
+        Me.GroupBox4.Controls.Add(Me.cmdCalculatePulp)
+        Me.GroupBox4.Controls.Add(Me.txtPricePulp)
+        Me.GroupBox4.Controls.Add(Me.txtIncomePulp)
         Me.GroupBox4.Controls.Add(Me.Label19)
         Me.GroupBox4.Controls.Add(Me.Label20)
         Me.GroupBox4.Controls.Add(Me.Label21)
-        Me.GroupBox4.Location = New System.Drawing.Point(8, 132)
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 115)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(187, 106)
+        Me.GroupBox4.Size = New System.Drawing.Size(283, 101)
         Me.GroupBox4.TabIndex = 23
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Жом"
         '
-        'txtNumberJom
+        'txtNumberPulp
         '
-        Me.txtNumberJom.Location = New System.Drawing.Point(94, 30)
-        Me.txtNumberJom.Name = "txtNumberJom"
-        Me.txtNumberJom.Size = New System.Drawing.Size(78, 20)
-        Me.txtNumberJom.TabIndex = 5
+        Me.txtNumberPulp.Location = New System.Drawing.Point(98, 27)
+        Me.txtNumberPulp.Name = "txtNumberPulp"
+        Me.txtNumberPulp.Size = New System.Drawing.Size(78, 20)
+        Me.txtNumberPulp.TabIndex = 5
         '
-        'txtPriceJom
+        'txtPricePulp
         '
-        Me.txtPriceJom.Location = New System.Drawing.Point(94, 53)
-        Me.txtPriceJom.Name = "txtPriceJom"
-        Me.txtPriceJom.Size = New System.Drawing.Size(78, 20)
-        Me.txtPriceJom.TabIndex = 4
+        Me.txtPricePulp.Location = New System.Drawing.Point(98, 50)
+        Me.txtPricePulp.Name = "txtPricePulp"
+        Me.txtPricePulp.Size = New System.Drawing.Size(78, 20)
+        Me.txtPricePulp.TabIndex = 4
         '
-        'txtIncomeJom
+        'txtIncomePulp
         '
-        Me.txtIncomeJom.Location = New System.Drawing.Point(94, 76)
-        Me.txtIncomeJom.Name = "txtIncomeJom"
-        Me.txtIncomeJom.ReadOnly = True
-        Me.txtIncomeJom.Size = New System.Drawing.Size(78, 20)
-        Me.txtIncomeJom.TabIndex = 3
+        Me.txtIncomePulp.Location = New System.Drawing.Point(98, 73)
+        Me.txtIncomePulp.Name = "txtIncomePulp"
+        Me.txtIncomePulp.ReadOnly = True
+        Me.txtIncomePulp.Size = New System.Drawing.Size(78, 20)
+        Me.txtIncomePulp.TabIndex = 3
         '
         'Label19
         '
@@ -545,40 +481,42 @@ Partial Class frmBookkeeping
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.txtNumberMel)
-        Me.GroupBox5.Controls.Add(Me.txtPriceMel)
-        Me.GroupBox5.Controls.Add(Me.txtIncomeMel)
+        Me.GroupBox5.Controls.Add(Me.cmdDatabaseMolasses)
+        Me.GroupBox5.Controls.Add(Me.txtNumberMolasses)
+        Me.GroupBox5.Controls.Add(Me.cmdCalculateMolasses)
+        Me.GroupBox5.Controls.Add(Me.txtPriceMolasses)
+        Me.GroupBox5.Controls.Add(Me.txtIncomeMolasses)
         Me.GroupBox5.Controls.Add(Me.Label22)
         Me.GroupBox5.Controls.Add(Me.Label23)
         Me.GroupBox5.Controls.Add(Me.Label24)
-        Me.GroupBox5.Location = New System.Drawing.Point(220, 6)
+        Me.GroupBox5.Location = New System.Drawing.Point(297, 6)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(187, 108)
+        Me.GroupBox5.Size = New System.Drawing.Size(283, 103)
         Me.GroupBox5.TabIndex = 22
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Меласса"
         '
-        'txtNumberMel
+        'txtNumberMolasses
         '
-        Me.txtNumberMel.Location = New System.Drawing.Point(94, 30)
-        Me.txtNumberMel.Name = "txtNumberMel"
-        Me.txtNumberMel.Size = New System.Drawing.Size(78, 20)
-        Me.txtNumberMel.TabIndex = 5
+        Me.txtNumberMolasses.Location = New System.Drawing.Point(98, 27)
+        Me.txtNumberMolasses.Name = "txtNumberMolasses"
+        Me.txtNumberMolasses.Size = New System.Drawing.Size(78, 20)
+        Me.txtNumberMolasses.TabIndex = 5
         '
-        'txtPriceMel
+        'txtPriceMolasses
         '
-        Me.txtPriceMel.Location = New System.Drawing.Point(94, 53)
-        Me.txtPriceMel.Name = "txtPriceMel"
-        Me.txtPriceMel.Size = New System.Drawing.Size(78, 20)
-        Me.txtPriceMel.TabIndex = 4
+        Me.txtPriceMolasses.Location = New System.Drawing.Point(98, 50)
+        Me.txtPriceMolasses.Name = "txtPriceMolasses"
+        Me.txtPriceMolasses.Size = New System.Drawing.Size(78, 20)
+        Me.txtPriceMolasses.TabIndex = 4
         '
-        'txtIncomeMel
+        'txtIncomeMolasses
         '
-        Me.txtIncomeMel.Location = New System.Drawing.Point(94, 76)
-        Me.txtIncomeMel.Name = "txtIncomeMel"
-        Me.txtIncomeMel.ReadOnly = True
-        Me.txtIncomeMel.Size = New System.Drawing.Size(78, 20)
-        Me.txtIncomeMel.TabIndex = 3
+        Me.txtIncomeMolasses.Location = New System.Drawing.Point(98, 73)
+        Me.txtIncomeMolasses.Name = "txtIncomeMolasses"
+        Me.txtIncomeMolasses.ReadOnly = True
+        Me.txtIncomeMolasses.Size = New System.Drawing.Size(78, 20)
+        Me.txtIncomeMolasses.TabIndex = 3
         '
         'Label22
         '
@@ -609,40 +547,42 @@ Partial Class frmBookkeeping
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.txtIncomeSah)
-        Me.GroupBox6.Controls.Add(Me.txtPriceSah)
-        Me.GroupBox6.Controls.Add(Me.txtNumberSah)
+        Me.GroupBox6.Controls.Add(Me.cmdDatabaseSugar)
+        Me.GroupBox6.Controls.Add(Me.cmdCalculateSugar)
+        Me.GroupBox6.Controls.Add(Me.txtIncomeSugar)
+        Me.GroupBox6.Controls.Add(Me.txtPriceSugar)
+        Me.GroupBox6.Controls.Add(Me.txtNumberSugar)
         Me.GroupBox6.Controls.Add(Me.Label25)
         Me.GroupBox6.Controls.Add(Me.Label26)
         Me.GroupBox6.Controls.Add(Me.Label27)
         Me.GroupBox6.Location = New System.Drawing.Point(8, 6)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(187, 108)
+        Me.GroupBox6.Size = New System.Drawing.Size(281, 103)
         Me.GroupBox6.TabIndex = 21
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Сахар"
         '
-        'txtIncomeSah
+        'txtIncomeSugar
         '
-        Me.txtIncomeSah.Location = New System.Drawing.Point(94, 76)
-        Me.txtIncomeSah.Name = "txtIncomeSah"
-        Me.txtIncomeSah.ReadOnly = True
-        Me.txtIncomeSah.Size = New System.Drawing.Size(78, 20)
-        Me.txtIncomeSah.TabIndex = 5
+        Me.txtIncomeSugar.Location = New System.Drawing.Point(98, 73)
+        Me.txtIncomeSugar.Name = "txtIncomeSugar"
+        Me.txtIncomeSugar.ReadOnly = True
+        Me.txtIncomeSugar.Size = New System.Drawing.Size(78, 20)
+        Me.txtIncomeSugar.TabIndex = 5
         '
-        'txtPriceSah
+        'txtPriceSugar
         '
-        Me.txtPriceSah.Location = New System.Drawing.Point(94, 53)
-        Me.txtPriceSah.Name = "txtPriceSah"
-        Me.txtPriceSah.Size = New System.Drawing.Size(78, 20)
-        Me.txtPriceSah.TabIndex = 4
+        Me.txtPriceSugar.Location = New System.Drawing.Point(98, 50)
+        Me.txtPriceSugar.Name = "txtPriceSugar"
+        Me.txtPriceSugar.Size = New System.Drawing.Size(78, 20)
+        Me.txtPriceSugar.TabIndex = 4
         '
-        'txtNumberSah
+        'txtNumberSugar
         '
-        Me.txtNumberSah.Location = New System.Drawing.Point(94, 30)
-        Me.txtNumberSah.Name = "txtNumberSah"
-        Me.txtNumberSah.Size = New System.Drawing.Size(78, 20)
-        Me.txtNumberSah.TabIndex = 3
+        Me.txtNumberSugar.Location = New System.Drawing.Point(98, 27)
+        Me.txtNumberSugar.Name = "txtNumberSugar"
+        Me.txtNumberSugar.Size = New System.Drawing.Size(78, 20)
+        Me.txtNumberSugar.TabIndex = 3
         '
         'Label25
         '
@@ -797,7 +737,7 @@ Partial Class frmBookkeeping
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 46)
+        Me.Label2.Location = New System.Drawing.Point(3, 47)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(29, 13)
         Me.Label2.TabIndex = 39
@@ -806,7 +746,7 @@ Partial Class frmBookkeeping
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 17)
+        Me.Label1.Location = New System.Drawing.Point(3, 20)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 38
@@ -822,7 +762,7 @@ Partial Class frmBookkeeping
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(38, 43)
+        Me.txtFirstName.Location = New System.Drawing.Point(38, 44)
         Me.txtFirstName.MaxLength = 40
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(104, 20)
@@ -830,7 +770,7 @@ Partial Class frmBookkeeping
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(65, 14)
+        Me.txtLastName.Location = New System.Drawing.Point(65, 17)
         Me.txtLastName.MaxLength = 40
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(111, 20)
@@ -869,8 +809,8 @@ Partial Class frmBookkeeping
         '
         'GroupBox10
         '
-        Me.GroupBox10.Controls.Add(Me.Button5)
-        Me.GroupBox10.Controls.Add(Me.Button4)
+        Me.GroupBox10.Controls.Add(Me.cmdDatabaseWage)
+        Me.GroupBox10.Controls.Add(Me.cmdCalculateWage)
         Me.GroupBox10.Controls.Add(Me.Label8)
         Me.GroupBox10.Controls.Add(Me.Label9)
         Me.GroupBox10.Controls.Add(Me.txtSalary)
@@ -882,29 +822,29 @@ Partial Class frmBookkeeping
         Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "Зарплата"
         '
-        'Button4
+        'cmdCalculateWage
         '
-        Me.Button4.Location = New System.Drawing.Point(15, 71)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(115, 21)
-        Me.Button4.TabIndex = 46
-        Me.Button4.Text = "Рассчитать"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.cmdCalculateWage.Location = New System.Drawing.Point(15, 71)
+        Me.cmdCalculateWage.Name = "cmdCalculateWage"
+        Me.cmdCalculateWage.Size = New System.Drawing.Size(115, 21)
+        Me.cmdCalculateWage.TabIndex = 46
+        Me.cmdCalculateWage.Text = "Рассчитать"
+        Me.cmdCalculateWage.UseVisualStyleBackColor = True
         '
-        'Button5
+        'cmdDatabaseWage
         '
-        Me.Button5.Location = New System.Drawing.Point(15, 99)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(115, 21)
-        Me.Button5.TabIndex = 47
-        Me.Button5.Text = "Занести в базу"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.cmdDatabaseWage.Location = New System.Drawing.Point(15, 99)
+        Me.cmdDatabaseWage.Name = "cmdDatabaseWage"
+        Me.cmdDatabaseWage.Size = New System.Drawing.Size(115, 21)
+        Me.cmdDatabaseWage.TabIndex = 47
+        Me.cmdDatabaseWage.Text = "Занести в базу"
+        Me.cmdDatabaseWage.UseVisualStyleBackColor = True
         '
         'GroupBox11
         '
-        Me.GroupBox11.Controls.Add(Me.Button7)
-        Me.GroupBox11.Controls.Add(Me.Button6)
-        Me.GroupBox11.Controls.Add(Me.TextBox1)
+        Me.GroupBox11.Controls.Add(Me.cmdDatabaseSDZ)
+        Me.GroupBox11.Controls.Add(Me.cmdCalculateSDZ)
+        Me.GroupBox11.Controls.Add(Me.txtSDZ)
         Me.GroupBox11.Controls.Add(Me.Label4)
         Me.GroupBox11.Location = New System.Drawing.Point(165, 19)
         Me.GroupBox11.Name = "GroupBox11"
@@ -913,36 +853,36 @@ Partial Class frmBookkeeping
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "Средний дневной заработок"
         '
-        'TextBox1
+        'txtSDZ
         '
-        Me.TextBox1.Location = New System.Drawing.Point(44, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(69, 20)
-        Me.TextBox1.TabIndex = 47
+        Me.txtSDZ.Location = New System.Drawing.Point(44, 40)
+        Me.txtSDZ.Name = "txtSDZ"
+        Me.txtSDZ.Size = New System.Drawing.Size(69, 20)
+        Me.txtSDZ.TabIndex = 47
         '
-        'Button6
+        'cmdCalculateSDZ
         '
-        Me.Button6.Location = New System.Drawing.Point(11, 71)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(102, 21)
-        Me.Button6.TabIndex = 48
-        Me.Button6.Text = "Рассчитать"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.cmdCalculateSDZ.Location = New System.Drawing.Point(11, 71)
+        Me.cmdCalculateSDZ.Name = "cmdCalculateSDZ"
+        Me.cmdCalculateSDZ.Size = New System.Drawing.Size(102, 21)
+        Me.cmdCalculateSDZ.TabIndex = 48
+        Me.cmdCalculateSDZ.Text = "Рассчитать"
+        Me.cmdCalculateSDZ.UseVisualStyleBackColor = True
         '
-        'Button7
+        'cmdDatabaseSDZ
         '
-        Me.Button7.Location = New System.Drawing.Point(11, 99)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(102, 21)
-        Me.Button7.TabIndex = 49
-        Me.Button7.Text = "Занести в базу"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.cmdDatabaseSDZ.Location = New System.Drawing.Point(11, 99)
+        Me.cmdDatabaseSDZ.Name = "cmdDatabaseSDZ"
+        Me.cmdDatabaseSDZ.Size = New System.Drawing.Size(102, 21)
+        Me.cmdDatabaseSDZ.TabIndex = 49
+        Me.cmdDatabaseSDZ.Text = "Занести в базу"
+        Me.cmdDatabaseSDZ.UseVisualStyleBackColor = True
         '
         'GroupBox12
         '
-        Me.GroupBox12.Controls.Add(Me.Button8)
-        Me.GroupBox12.Controls.Add(Me.TextBox2)
-        Me.GroupBox12.Controls.Add(Me.Button9)
+        Me.GroupBox12.Controls.Add(Me.cmdDatabaseHolidayPay)
+        Me.GroupBox12.Controls.Add(Me.txtHolidayPay)
+        Me.GroupBox12.Controls.Add(Me.cmdCalculateHolidayPay)
         Me.GroupBox12.Controls.Add(Me.Label28)
         Me.GroupBox12.Location = New System.Drawing.Point(314, 19)
         Me.GroupBox12.Name = "GroupBox12"
@@ -951,45 +891,171 @@ Partial Class frmBookkeeping
         Me.GroupBox12.TabStop = False
         Me.GroupBox12.Text = "Отпускные"
         '
-        'TextBox2
+        'txtHolidayPay
         '
-        Me.TextBox2.Location = New System.Drawing.Point(75, 31)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(78, 20)
-        Me.TextBox2.TabIndex = 48
+        Me.txtHolidayPay.Location = New System.Drawing.Point(75, 31)
+        Me.txtHolidayPay.Name = "txtHolidayPay"
+        Me.txtHolidayPay.Size = New System.Drawing.Size(78, 20)
+        Me.txtHolidayPay.TabIndex = 48
         '
-        'Button8
+        'cmdDatabaseHolidayPay
         '
-        Me.Button8.Location = New System.Drawing.Point(9, 99)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(102, 21)
-        Me.Button8.TabIndex = 51
-        Me.Button8.Text = "Занести в базу"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.cmdDatabaseHolidayPay.Location = New System.Drawing.Point(9, 99)
+        Me.cmdDatabaseHolidayPay.Name = "cmdDatabaseHolidayPay"
+        Me.cmdDatabaseHolidayPay.Size = New System.Drawing.Size(147, 21)
+        Me.cmdDatabaseHolidayPay.TabIndex = 51
+        Me.cmdDatabaseHolidayPay.Text = "Занести в базу"
+        Me.cmdDatabaseHolidayPay.UseVisualStyleBackColor = True
         '
-        'Button9
+        'cmdCalculateHolidayPay
         '
-        Me.Button9.Location = New System.Drawing.Point(9, 71)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(102, 21)
-        Me.Button9.TabIndex = 50
-        Me.Button9.Text = "Рассчитать"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.cmdCalculateHolidayPay.Location = New System.Drawing.Point(9, 71)
+        Me.cmdCalculateHolidayPay.Name = "cmdCalculateHolidayPay"
+        Me.cmdCalculateHolidayPay.Size = New System.Drawing.Size(147, 21)
+        Me.cmdCalculateHolidayPay.TabIndex = 50
+        Me.cmdCalculateHolidayPay.Text = "Рассчитать"
+        Me.cmdCalculateHolidayPay.UseVisualStyleBackColor = True
         '
-        'Button10
+        'cmdBackStaff
         '
-        Me.Button10.Location = New System.Drawing.Point(429, 83)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(62, 23)
-        Me.Button10.TabIndex = 50
-        Me.Button10.Text = "Назад"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.cmdBackStaff.Location = New System.Drawing.Point(429, 83)
+        Me.cmdBackStaff.Name = "cmdBackStaff"
+        Me.cmdBackStaff.Size = New System.Drawing.Size(62, 23)
+        Me.cmdBackStaff.TabIndex = 50
+        Me.cmdBackStaff.Text = "Назад"
+        Me.cmdBackStaff.UseVisualStyleBackColor = True
+        '
+        'cmdCalculateSugar
+        '
+        Me.cmdCalculateSugar.Location = New System.Drawing.Point(182, 27)
+        Me.cmdCalculateSugar.Name = "cmdCalculateSugar"
+        Me.cmdCalculateSugar.Size = New System.Drawing.Size(83, 23)
+        Me.cmdCalculateSugar.TabIndex = 6
+        Me.cmdCalculateSugar.Text = "Рассчитать"
+        Me.cmdCalculateSugar.UseVisualStyleBackColor = True
+        '
+        'cmdDatabaseSugar
+        '
+        Me.cmdDatabaseSugar.Location = New System.Drawing.Point(182, 53)
+        Me.cmdDatabaseSugar.Name = "cmdDatabaseSugar"
+        Me.cmdDatabaseSugar.Size = New System.Drawing.Size(83, 40)
+        Me.cmdDatabaseSugar.TabIndex = 7
+        Me.cmdDatabaseSugar.Text = "Занести в базу"
+        Me.cmdDatabaseSugar.UseVisualStyleBackColor = True
+        '
+        'cmdDatabasePulp
+        '
+        Me.cmdDatabasePulp.Location = New System.Drawing.Point(182, 53)
+        Me.cmdDatabasePulp.Name = "cmdDatabasePulp"
+        Me.cmdDatabasePulp.Size = New System.Drawing.Size(83, 40)
+        Me.cmdDatabasePulp.TabIndex = 9
+        Me.cmdDatabasePulp.Text = "Занести в базу"
+        Me.cmdDatabasePulp.UseVisualStyleBackColor = True
+        '
+        'cmdCalculatePulp
+        '
+        Me.cmdCalculatePulp.Location = New System.Drawing.Point(182, 27)
+        Me.cmdCalculatePulp.Name = "cmdCalculatePulp"
+        Me.cmdCalculatePulp.Size = New System.Drawing.Size(83, 23)
+        Me.cmdCalculatePulp.TabIndex = 8
+        Me.cmdCalculatePulp.Text = "Рассчитать"
+        Me.cmdCalculatePulp.UseVisualStyleBackColor = True
+        '
+        'cmdDatabaseMolasses
+        '
+        Me.cmdDatabaseMolasses.Location = New System.Drawing.Point(182, 53)
+        Me.cmdDatabaseMolasses.Name = "cmdDatabaseMolasses"
+        Me.cmdDatabaseMolasses.Size = New System.Drawing.Size(83, 40)
+        Me.cmdDatabaseMolasses.TabIndex = 11
+        Me.cmdDatabaseMolasses.Text = "Занести в базу"
+        Me.cmdDatabaseMolasses.UseVisualStyleBackColor = True
+        '
+        'cmdCalculateMolasses
+        '
+        Me.cmdCalculateMolasses.Location = New System.Drawing.Point(182, 27)
+        Me.cmdCalculateMolasses.Name = "cmdCalculateMolasses"
+        Me.cmdCalculateMolasses.Size = New System.Drawing.Size(83, 23)
+        Me.cmdCalculateMolasses.TabIndex = 10
+        Me.cmdCalculateMolasses.Text = "Рассчитать"
+        Me.cmdCalculateMolasses.UseVisualStyleBackColor = True
+        '
+        'cmdBackIncome
+        '
+        Me.cmdBackIncome.Location = New System.Drawing.Point(306, 193)
+        Me.cmdBackIncome.Name = "cmdBackIncome"
+        Me.cmdBackIncome.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBackIncome.TabIndex = 24
+        Me.cmdBackIncome.Text = "Назад"
+        Me.cmdBackIncome.UseVisualStyleBackColor = True
+        '
+        'cmdCalculateElectricity
+        '
+        Me.cmdCalculateElectricity.Location = New System.Drawing.Point(178, 27)
+        Me.cmdCalculateElectricity.Name = "cmdCalculateElectricity"
+        Me.cmdCalculateElectricity.Size = New System.Drawing.Size(75, 23)
+        Me.cmdCalculateElectricity.TabIndex = 6
+        Me.cmdCalculateElectricity.Text = "Рассчитать"
+        Me.cmdCalculateElectricity.UseVisualStyleBackColor = True
+        '
+        'cmdCalculateWater
+        '
+        Me.cmdCalculateWater.Location = New System.Drawing.Point(178, 27)
+        Me.cmdCalculateWater.Name = "cmdCalculateWater"
+        Me.cmdCalculateWater.Size = New System.Drawing.Size(75, 23)
+        Me.cmdCalculateWater.TabIndex = 7
+        Me.cmdCalculateWater.Text = "Рассчитать"
+        Me.cmdCalculateWater.UseVisualStyleBackColor = True
+        '
+        'cmdCalculateGas
+        '
+        Me.cmdCalculateGas.Location = New System.Drawing.Point(178, 27)
+        Me.cmdCalculateGas.Name = "cmdCalculateGas"
+        Me.cmdCalculateGas.Size = New System.Drawing.Size(75, 23)
+        Me.cmdCalculateGas.TabIndex = 17
+        Me.cmdCalculateGas.Text = "Рассчитать"
+        Me.cmdCalculateGas.UseVisualStyleBackColor = True
+        '
+        'cmdDatabaseGas
+        '
+        Me.cmdDatabaseGas.Location = New System.Drawing.Point(178, 53)
+        Me.cmdDatabaseGas.Name = "cmdDatabaseGas"
+        Me.cmdDatabaseGas.Size = New System.Drawing.Size(75, 40)
+        Me.cmdDatabaseGas.TabIndex = 18
+        Me.cmdDatabaseGas.Text = "Занести в базу"
+        Me.cmdDatabaseGas.UseVisualStyleBackColor = True
+        '
+        'cmdDatabaseElectricity
+        '
+        Me.cmdDatabaseElectricity.Location = New System.Drawing.Point(178, 53)
+        Me.cmdDatabaseElectricity.Name = "cmdDatabaseElectricity"
+        Me.cmdDatabaseElectricity.Size = New System.Drawing.Size(75, 40)
+        Me.cmdDatabaseElectricity.TabIndex = 19
+        Me.cmdDatabaseElectricity.Text = "Занести в базу"
+        Me.cmdDatabaseElectricity.UseVisualStyleBackColor = True
+        '
+        'cmdDatabaseWater
+        '
+        Me.cmdDatabaseWater.Location = New System.Drawing.Point(178, 53)
+        Me.cmdDatabaseWater.Name = "cmdDatabaseWater"
+        Me.cmdDatabaseWater.Size = New System.Drawing.Size(75, 40)
+        Me.cmdDatabaseWater.TabIndex = 20
+        Me.cmdDatabaseWater.Text = "Занести в базу"
+        Me.cmdDatabaseWater.UseVisualStyleBackColor = True
+        '
+        'cmdBackMS
+        '
+        Me.cmdBackMS.Location = New System.Drawing.Point(283, 192)
+        Me.cmdBackMS.Name = "cmdBackMS"
+        Me.cmdBackMS.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBackMS.TabIndex = 17
+        Me.cmdBackMS.Text = "Назад"
+        Me.cmdBackMS.UseVisualStyleBackColor = True
         '
         'frmBookkeeping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(510, 322)
+        Me.ClientSize = New System.Drawing.Size(555, 319)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -1036,14 +1102,10 @@ Partial Class frmBookkeeping
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage3 As System.Windows.Forms.TabPage
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents cmdRash As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtPotrGaz As System.Windows.Forms.TextBox
-    Friend WithEvents txtTarifGaz As System.Windows.Forms.TextBox
-    Friend WithEvents txtRashGaz As System.Windows.Forms.TextBox
+    Friend WithEvents txtPotrGas As System.Windows.Forms.TextBox
+    Friend WithEvents txtTarifGas As System.Windows.Forms.TextBox
+    Friend WithEvents txtRashGas As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
@@ -1061,28 +1123,24 @@ Partial Class frmBookkeeping
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents cmdText2 As System.Windows.Forms.Button
-    Friend WithEvents cmdIncomePrice As System.Windows.Forms.Button
-    Friend WithEvents cmdBackPrice As System.Windows.Forms.Button
-    Friend WithEvents cmdDatabasePrice As System.Windows.Forms.Button
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtNumberJom As System.Windows.Forms.TextBox
-    Friend WithEvents txtPriceJom As System.Windows.Forms.TextBox
-    Friend WithEvents txtIncomeJom As System.Windows.Forms.TextBox
+    Friend WithEvents txtNumberPulp As System.Windows.Forms.TextBox
+    Friend WithEvents txtPricePulp As System.Windows.Forms.TextBox
+    Friend WithEvents txtIncomePulp As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtNumberMel As System.Windows.Forms.TextBox
-    Friend WithEvents txtPriceMel As System.Windows.Forms.TextBox
-    Friend WithEvents txtIncomeMel As System.Windows.Forms.TextBox
+    Friend WithEvents txtNumberMolasses As System.Windows.Forms.TextBox
+    Friend WithEvents txtPriceMolasses As System.Windows.Forms.TextBox
+    Friend WithEvents txtIncomeMolasses As System.Windows.Forms.TextBox
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtIncomeSah As System.Windows.Forms.TextBox
-    Friend WithEvents txtPriceSah As System.Windows.Forms.TextBox
-    Friend WithEvents txtNumberSah As System.Windows.Forms.TextBox
+    Friend WithEvents txtIncomeSugar As System.Windows.Forms.TextBox
+    Friend WithEvents txtPriceSugar As System.Windows.Forms.TextBox
+    Friend WithEvents txtNumberSugar As System.Windows.Forms.TextBox
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Label27 As System.Windows.Forms.Label
@@ -1110,15 +1168,29 @@ Partial Class frmBookkeeping
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents GroupBox11 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabaseWage As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateWage As System.Windows.Forms.Button
     Friend WithEvents GroupBox12 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents txtHolidayPay As System.Windows.Forms.TextBox
+    Friend WithEvents cmdDatabaseSDZ As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateSDZ As System.Windows.Forms.Button
+    Friend WithEvents txtSDZ As System.Windows.Forms.TextBox
+    Friend WithEvents cmdDatabaseHolidayPay As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateHolidayPay As System.Windows.Forms.Button
+    Friend WithEvents cmdBackStaff As System.Windows.Forms.Button
+    Friend WithEvents cmdBackIncome As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabasePulp As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculatePulp As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabaseMolasses As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateMolasses As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabaseSugar As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateSugar As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabaseGas As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateGas As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabaseWater As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateWater As System.Windows.Forms.Button
+    Friend WithEvents cmdDatabaseElectricity As System.Windows.Forms.Button
+    Friend WithEvents cmdCalculateElectricity As System.Windows.Forms.Button
+    Friend WithEvents cmdBackMS As System.Windows.Forms.Button
 
 End Class
