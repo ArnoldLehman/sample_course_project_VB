@@ -32,11 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-<<<<<<< HEAD
             Me.MainForm = Global.Sample_course_project.frmMain
-=======
-            Me.MainForm = Global.Sample_course_project.Form1
->>>>>>> parent of c515fd8... Добавил на форму бухгалтерии меню и вкладки
         End Sub
     End Class
 End Namespace

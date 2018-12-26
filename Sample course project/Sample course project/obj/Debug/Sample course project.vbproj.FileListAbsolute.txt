@@ -9,3 +9,6 @@ C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample co
 C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\Debug\Sample course project.pdb
 C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\Debug\Sample_course_project.frmBookkeeping.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\Debug\Sample_course_project.frmMain.resources
+C:\Users\Дом\Desktop\Sample course project — копия\Sample course project\obj\Debug\Sample course project.exe
+C:\Users\Дом\Desktop\Sample course project — копия\Sample course project\obj\Debug\Sample course project.xml
+C:\Users\Дом\Desktop\Sample course project — копия\Sample course project\obj\Debug\Sample course project.pdb
