@@ -3,8 +3,8 @@
     Private Sub TabPage1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage1.Enter
         If TabControl1.SelectedTab Is TabPage1 Then
             With Me
-                .Width = 526
-                .Height = 361
+                .Width = 895
+                .Height = 363
             End With
         End If
     End Sub
@@ -12,8 +12,8 @@
     Private Sub TabPage2_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage2.Enter
         If TabControl1.SelectedTab Is TabPage2 Then
             With Me
-                .Width = 571
-                .Height = 317
+                .Width = 744
+                .Height = 481
             End With
         End If
     End Sub
@@ -21,8 +21,8 @@
     Private Sub TabPage3_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabPage3.Enter
         If TabControl1.SelectedTab Is TabPage3 Then
             With Me
-                .Width = 611
-                .Height = 316
+                .Width = 744
+                .Height = 481
             End With
         End If
     End Sub
@@ -82,4 +82,45 @@
         Me.Close()
     End Sub
 
+    Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "DatabaseDataSet.Сахар". При необходимости она может быть перемещена или удалена.
+        Me.СахарTableAdapter.Fill(Me.DatabaseDataSet.Сахар)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "DatabaseDataSet.Жом". При необходимости она может быть перемещена или удалена.
+        Me.ЖомTableAdapter.Fill(Me.DatabaseDataSet.Жом)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "DatabaseDataSet.Меласса". При необходимости она может быть перемещена или удалена.
+        Me.МелассаTableAdapter.Fill(Me.DatabaseDataSet.Меласса)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "DatabaseDataSet.Электричество". При необходимости она может быть перемещена или удалена.
+        Me.ЭлектричествоTableAdapter.Fill(Me.DatabaseDataSet.Электричество)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "DatabaseDataSet.Газ". При необходимости она может быть перемещена или удалена.
+        Me.ГазTableAdapter.Fill(Me.DatabaseDataSet.Газ)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "DatabaseDataSet.Вода". При необходимости она может быть перемещена или удалена.
+        Me.ВодаTableAdapter.Fill(Me.DatabaseDataSet.Вода)
+
+    End Sub
+
+    Private Sub cmdPrevious_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPrevious.Click
+        ЭлектричествоBindingSource.MovePrevious()
+    End Sub
+
+    Private Sub cmdNext_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdNext.Click
+        ЭлектричествоBindingSource.MoveNext()
+    End Sub
+
+    Private Sub cmdAddNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNew.Click
+        ЭлектричествоBindingSource.AddNew()
+    End Sub
+
+    Private Sub cmdSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSave.Click
+        ЭлектричествоBindingSource.EndEdit()
+        ЭлектричествоTableAdapter.Update(DatabaseDataSet.Электричество)
+        MessageBox.Show("All good!")
+    End Sub
+
+    Private Sub cmdDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDelete.Click
+        ЭлектричествоBindingSource.RemoveCurrent()
+    End Sub
+
+    Private Sub cmdClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdClose.Click
+        Me.Close()
+    End Sub
 End Class
