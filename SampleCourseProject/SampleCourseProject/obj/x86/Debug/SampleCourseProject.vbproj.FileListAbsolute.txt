@@ -1,0 +1,16 @@
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\x86\Debug\SampleCourseProject.exe
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\x86\Debug\SampleCourseProject.pdb
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\x86\Debug\SampleCourseProject.xml
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmBookkeeping.resources
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmMain.resources
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.Resources.resources
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.vbproj.GenerateResource.Cache
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.exe
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.xml
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\x86\Debug\SampleCourseProject.pdb
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\x86\Debug\SampleCourseProject.exe.config
+C:\Users\Дом\Desktop\КУрсач\SampleCourseProject\SampleCourseProject\bin\x86\Debug\SampleCourseProject.exe.config
+C:\Users\Дом\Desktop\КУрсач\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.exe
+C:\Users\Дом\Desktop\КУрсач\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.xml
+C:\Users\Дом\Desktop\КУрсач\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.pdb

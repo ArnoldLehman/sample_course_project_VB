@@ -1,0 +1,159 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SampleCourseProject
+</name>
+</assembly>
+<members>
+<member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ВодаDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ГазDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ЖомDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.МелассаDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ПерсоналDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.СахарDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ЭлектричествоDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ВодаRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ГазRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ЖомRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.МелассаRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ПерсоналRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.СахарRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ЭлектричествоRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ВодаRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ГазRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ЖомRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.МелассаRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ПерсоналRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.СахарRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ЭлектричествоRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ВодаTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ГазTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЖомTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ПерсоналTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.СахарTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЭлектричествоTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SampleCourseProject.BookkeepingDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SampleCourseProject.BookkeepingDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SampleCourseProject.BookkeepingDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(SampleCourseProject.BookkeepingDatabaseDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

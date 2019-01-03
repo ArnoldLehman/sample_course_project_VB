@@ -1,0 +1,11 @@
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.frmBookkeeping.resources
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.Resources.resources
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.vbproj.GenerateResource.Cache
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\Debug\SampleCourseProject.exe
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\Debug\SampleCourseProject.pdb
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\bin\Debug\SampleCourseProject.xml
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.frmMain.resources
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.exe
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.xml
+C:\Users\Дом\AppData\Local\Temporary Projects\SampleCourseProject\obj\Debug\SampleCourseProject.pdb
