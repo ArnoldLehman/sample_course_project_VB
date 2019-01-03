@@ -1,0 +1,29 @@
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\bin\x86\Debug\Sample course project.exe.config
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\bin\x86\Debug\Database.mdb
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\bin\x86\Debug\Sample course project.exe
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\bin\x86\Debug\Sample course project.pdb
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\bin\x86\Debug\Sample course project.xml
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample_course_project.frmBookkeeping.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample_course_project.frmMain.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample_course_project.Resources.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample course project.vbproj.GenerateResource.Cache
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample course project.exe
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample course project.xml
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\Sample course project\obj\x86\Debug\Sample course project.pdb
+C:\Users\Дом\Desktop\Sample course project\Sample course project\bin\x86\Debug\Sample course project.exe.config
+C:\Users\Дом\Desktop\Sample course project\Sample course project\obj\x86\Debug\Sample course project.exe
+C:\Users\Дом\Desktop\Sample course project\Sample course project\obj\x86\Debug\Sample course project.xml
+C:\Users\Дом\Desktop\Sample course project\Sample course project\obj\x86\Debug\Sample course project.pdb
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample course project.exe
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample course project.xml
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample course project.pdb
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\bin\x86\Debug\Sample course project.exe
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\bin\x86\Debug\Sample course project.pdb
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\bin\x86\Debug\Sample course project.xml
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample_course_project.frmBookkeeping.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample_course_project.frmMain.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample_course_project.Resources.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\obj\x86\Debug\Sample course project.vbproj.GenerateResource.Cache
+C:\Users\Дом\Desktop\sample_course_project_VB\Sample course project\bin\x86\Debug\Sample course project.exe.config

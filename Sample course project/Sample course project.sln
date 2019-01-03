@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Basic Express 2008
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sample course project", "Sample course project\Sample course project.vbproj", "{67C86A74-AC4C-401C-9E27-8DF2B5FA5E5F}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Sample course project", "Sample course project.vbproj", "{67C86A74-AC4C-401C-9E27-8DF2B5FA5E5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
