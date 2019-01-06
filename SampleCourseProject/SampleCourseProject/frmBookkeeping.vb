@@ -1,5 +1,6 @@
 ﻿Public Class frmBookkeeping
 
+    Dim result As DialogResult
 
     Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Меласса". При необходимости она может быть перемещена или удалена.
@@ -26,8 +27,8 @@
     Private Sub tpPersonal_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpPersonal.Enter
         If tabBookkeeping.SelectedTab Is tpPersonal Then
             With Me
-                .Width = 1173
-                .Height = 365
+                .Width = 1184
+                .Height = 328
             End With
             ПерсоналBindingSource.MoveFirst()
         End If
@@ -44,7 +45,18 @@
     End Sub
     'Удаление строки таблицы
     Private Sub cmdDeletePersonal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeletePersonal.Click
-        ПерсоналBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            ПерсоналBindingSource.RemoveCurrent()
+            ПерсоналTableAdapter.Update(BookkeepingDatabaseDataSet.Персонал)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Выделение предыдущей строки таблицы 
     Private Sub cmdPreviousPersonal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousPersonal.Click
@@ -128,7 +140,18 @@
     End Sub
     'Удаление строки из таблицы на вкладке "Электричество"
     Private Sub cmdDeleteElectricity_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteElectricity.Click
-        ЭлектричествоBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            ЭлектричествоBindingSource.RemoveCurrent()
+            ЭлектричествоTableAdapter.Update(BookkeepingDatabaseDataSet.Электричество)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Выделить предыдущую строку таблицы на вкладке "Газ"
     Private Sub cmdPreviousGas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousGas.Click
@@ -150,7 +173,18 @@
     End Sub
     'Удаление строки из таблицы на вкладке "Газ"
     Private Sub cmdDeleteGas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteGas.Click
-        ГазBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            ГазBindingSource.RemoveCurrent()
+            ГазTableAdapter.Update(BookkeepingDatabaseDataSet.Газ)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Выделить предыдущую строку таблицы на вкладке "Вода"
     Private Sub cmdPreviousWater_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousWater.Click
@@ -172,7 +206,18 @@
     End Sub
     'Удаление строки из таблицы на вкладке "Вода"
     Private Sub cmdDeleteWater_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteWater.Click
-        ВодаBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            ВодаBindingSource.RemoveCurrent()
+            ВодаTableAdapter.Update(BookkeepingDatabaseDataSet.Вода)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Расчёт затрат на газ по формуле (Рг = Пг * Тг), где
     'Рг - расход на газ
@@ -251,7 +296,18 @@
     End Sub
     'Удаление строки из таблицы на вкладке "Сахар"
     Private Sub cmdDeleteSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteSugar.Click
-        СахарBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            СахарBindingSource.RemoveCurrent()
+            СахарTableAdapter.Update(BookkeepingDatabaseDataSet.Сахар)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Выделить предыдущую строку таблицы на вкладке "Жом"
     Private Sub cmdPreviousPulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousPulp.Click
@@ -273,7 +329,18 @@
     End Sub
     'Удаление строки из таблицы на вкладке "Жом"
     Private Sub cmdDeletePulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeletePulp.Click
-        ЖомBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            ЖомBindingSource.RemoveCurrent()
+            ЖомTableAdapter.Update(BookkeepingDatabaseDataSet.Жом)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Выделить предыдущую строку таблицы на вкладке "Меласса"
     Private Sub cmdPreviousMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousMolasses.Click
@@ -295,7 +362,18 @@
     End Sub
     'Удаление строки из таблицы на вкладке "Меласса"
     Private Sub cmdDeleteMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteMolasses.Click
-        МелассаBindingSource.RemoveCurrent()
+        On Error GoTo ErrExite
+        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
+        If result = DialogResult.Yes Then
+            МелассаBindingSource.RemoveCurrent()
+            МелассаTableAdapter.Update(BookkeepingDatabaseDataSet.Меласса)
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+ErrExite:
+        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
+        Exit Sub
     End Sub
     'Расчёт дохода от сахара по формуле (Дс = Кс * Цс), где 
     'Дс - доход от сахара
@@ -324,5 +402,8 @@
         Me.Close()
     End Sub
 
-    
+    Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
+        MsgBox("Поиск не работает", MessageBoxIcon.Error, "Ограничение доступа")
+        cmdSearch.Enabled = False
+    End Sub
 End Class

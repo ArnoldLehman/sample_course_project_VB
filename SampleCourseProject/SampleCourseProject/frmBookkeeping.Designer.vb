@@ -25,6 +25,8 @@ Partial Class frmBookkeeping
         Me.components = New System.ComponentModel.Container
         Me.tabBookkeeping = New System.Windows.Forms.TabControl
         Me.tpPersonal = New System.Windows.Forms.TabPage
+        Me.txtSearch = New System.Windows.Forms.TextBox
+        Me.cmdSearch = New System.Windows.Forms.Button
         Me.cmdDatabasePersonal = New System.Windows.Forms.Button
         Me.cmdNextPersonal = New System.Windows.Forms.Button
         Me.cmdPreviousPersonal = New System.Windows.Forms.Button
@@ -74,6 +76,7 @@ Partial Class frmBookkeeping
         Me.txtNumbDaysWorked = New System.Windows.Forms.TextBox
         Me.Label6 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.tpMS = New System.Windows.Forms.TabPage
         Me.tabMS = New System.Windows.Forms.TabControl
         Me.tpElectricity = New System.Windows.Forms.TabPage
@@ -246,11 +249,13 @@ Partial Class frmBookkeeping
         Me.tabBookkeeping.Location = New System.Drawing.Point(0, 0)
         Me.tabBookkeeping.Name = "tabBookkeeping"
         Me.tabBookkeeping.SelectedIndex = 0
-        Me.tabBookkeeping.Size = New System.Drawing.Size(1168, 338)
+        Me.tabBookkeeping.Size = New System.Drawing.Size(1168, 289)
         Me.tabBookkeeping.TabIndex = 2
         '
         'tpPersonal
         '
+        Me.tpPersonal.Controls.Add(Me.txtSearch)
+        Me.tpPersonal.Controls.Add(Me.cmdSearch)
         Me.tpPersonal.Controls.Add(Me.cmdDatabasePersonal)
         Me.tpPersonal.Controls.Add(Me.cmdNextPersonal)
         Me.tpPersonal.Controls.Add(Me.cmdPreviousPersonal)
@@ -261,17 +266,34 @@ Partial Class frmBookkeeping
         Me.tpPersonal.Controls.Add(Me.GroupBox9)
         Me.tpPersonal.Controls.Add(Me.GroupBox8)
         Me.tpPersonal.Controls.Add(Me.GroupBox7)
+        Me.tpPersonal.Controls.Add(Me.GroupBox1)
         Me.tpPersonal.Location = New System.Drawing.Point(4, 25)
         Me.tpPersonal.Name = "tpPersonal"
         Me.tpPersonal.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpPersonal.Size = New System.Drawing.Size(1160, 309)
+        Me.tpPersonal.Size = New System.Drawing.Size(1160, 260)
         Me.tpPersonal.TabIndex = 0
         Me.tpPersonal.Text = "Персонал"
         Me.tpPersonal.UseVisualStyleBackColor = True
         '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(495, 229)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(575, 20)
+        Me.txtSearch.TabIndex = 58
+        '
+        'cmdSearch
+        '
+        Me.cmdSearch.Location = New System.Drawing.Point(1076, 229)
+        Me.cmdSearch.Name = "cmdSearch"
+        Me.cmdSearch.Size = New System.Drawing.Size(75, 20)
+        Me.cmdSearch.TabIndex = 57
+        Me.cmdSearch.Text = "Поиск"
+        Me.cmdSearch.UseVisualStyleBackColor = True
+        '
         'cmdDatabasePersonal
         '
-        Me.cmdDatabasePersonal.Location = New System.Drawing.Point(762, 234)
+        Me.cmdDatabasePersonal.Location = New System.Drawing.Point(767, 196)
         Me.cmdDatabasePersonal.Name = "cmdDatabasePersonal"
         Me.cmdDatabasePersonal.Size = New System.Drawing.Size(94, 23)
         Me.cmdDatabasePersonal.TabIndex = 51
@@ -280,7 +302,7 @@ Partial Class frmBookkeeping
         '
         'cmdNextPersonal
         '
-        Me.cmdNextPersonal.Location = New System.Drawing.Point(1071, 234)
+        Me.cmdNextPersonal.Location = New System.Drawing.Point(1076, 196)
         Me.cmdNextPersonal.Name = "cmdNextPersonal"
         Me.cmdNextPersonal.Size = New System.Drawing.Size(75, 23)
         Me.cmdNextPersonal.TabIndex = 55
@@ -289,7 +311,7 @@ Partial Class frmBookkeeping
         '
         'cmdPreviousPersonal
         '
-        Me.cmdPreviousPersonal.Location = New System.Drawing.Point(497, 234)
+        Me.cmdPreviousPersonal.Location = New System.Drawing.Point(502, 196)
         Me.cmdPreviousPersonal.Name = "cmdPreviousPersonal"
         Me.cmdPreviousPersonal.Size = New System.Drawing.Size(75, 23)
         Me.cmdPreviousPersonal.TabIndex = 54
@@ -298,7 +320,7 @@ Partial Class frmBookkeeping
         '
         'cmdDeletePersonal
         '
-        Me.cmdDeletePersonal.Location = New System.Drawing.Point(862, 234)
+        Me.cmdDeletePersonal.Location = New System.Drawing.Point(867, 196)
         Me.cmdDeletePersonal.Name = "cmdDeletePersonal"
         Me.cmdDeletePersonal.Size = New System.Drawing.Size(75, 23)
         Me.cmdDeletePersonal.TabIndex = 53
@@ -307,7 +329,7 @@ Partial Class frmBookkeeping
         '
         'cmdAddNewPersonal
         '
-        Me.cmdAddNewPersonal.Location = New System.Drawing.Point(681, 234)
+        Me.cmdAddNewPersonal.Location = New System.Drawing.Point(686, 196)
         Me.cmdAddNewPersonal.Name = "cmdAddNewPersonal"
         Me.cmdAddNewPersonal.Size = New System.Drawing.Size(75, 23)
         Me.cmdAddNewPersonal.TabIndex = 52
@@ -320,7 +342,7 @@ Partial Class frmBookkeeping
         Me.DataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView8.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn, Me.ФамилияDataGridViewTextBoxColumn, Me.ИмяDataGridViewTextBoxColumn, Me.ОтчествоDataGridViewTextBoxColumn, Me.ПрофессияDataGridViewTextBoxColumn, Me.КоличествоРабочихДнейDataGridViewTextBoxColumn, Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn, Me.ОкладDataGridViewTextBoxColumn, Me.ЗарплатаDataGridViewTextBoxColumn, Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn, Me.ОтпускныеDataGridViewTextBoxColumn})
         Me.DataGridView8.DataSource = Me.ПерсоналBindingSource
-        Me.DataGridView8.Location = New System.Drawing.Point(497, 50)
+        Me.DataGridView8.Location = New System.Drawing.Point(502, 23)
         Me.DataGridView8.Name = "DataGridView8"
         Me.DataGridView8.Size = New System.Drawing.Size(649, 167)
         Me.DataGridView8.TabIndex = 51
@@ -404,9 +426,9 @@ Partial Class frmBookkeeping
         '
         'cmdBackStaff
         '
-        Me.cmdBackStaff.Location = New System.Drawing.Point(429, 83)
+        Me.cmdBackStaff.Location = New System.Drawing.Point(424, 83)
         Me.cmdBackStaff.Name = "cmdBackStaff"
-        Me.cmdBackStaff.Size = New System.Drawing.Size(62, 23)
+        Me.cmdBackStaff.Size = New System.Drawing.Size(65, 23)
         Me.cmdBackStaff.TabIndex = 50
         Me.cmdBackStaff.Text = "Назад"
         Me.cmdBackStaff.UseVisualStyleBackColor = True
@@ -416,9 +438,9 @@ Partial Class frmBookkeeping
         Me.GroupBox9.Controls.Add(Me.GroupBox12)
         Me.GroupBox9.Controls.Add(Me.GroupBox11)
         Me.GroupBox9.Controls.Add(Me.GroupBox10)
-        Me.GroupBox9.Location = New System.Drawing.Point(8, 127)
+        Me.GroupBox9.Location = New System.Drawing.Point(6, 112)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(483, 130)
+        Me.GroupBox9.Size = New System.Drawing.Size(483, 137)
         Me.GroupBox9.TabIndex = 49
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "Финансовые данные"
@@ -428,7 +450,7 @@ Partial Class frmBookkeeping
         Me.GroupBox12.Controls.Add(Me.txtHolidayPay)
         Me.GroupBox12.Controls.Add(Me.cmdCalculateHolidayPay)
         Me.GroupBox12.Controls.Add(Me.Label28)
-        Me.GroupBox12.Location = New System.Drawing.Point(314, 19)
+        Me.GroupBox12.Location = New System.Drawing.Point(314, 22)
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(162, 103)
         Me.GroupBox12.TabIndex = 48
@@ -467,7 +489,7 @@ Partial Class frmBookkeeping
         Me.GroupBox11.Controls.Add(Me.cmdCalculateSDZ)
         Me.GroupBox11.Controls.Add(Me.txtSDZ)
         Me.GroupBox11.Controls.Add(Me.Label4)
-        Me.GroupBox11.Location = New System.Drawing.Point(165, 19)
+        Me.GroupBox11.Location = New System.Drawing.Point(165, 22)
         Me.GroupBox11.Name = "GroupBox11"
         Me.GroupBox11.Size = New System.Drawing.Size(124, 103)
         Me.GroupBox11.TabIndex = 47
@@ -508,7 +530,7 @@ Partial Class frmBookkeeping
         Me.GroupBox10.Controls.Add(Me.Label9)
         Me.GroupBox10.Controls.Add(Me.txtSalary)
         Me.GroupBox10.Controls.Add(Me.txtWage)
-        Me.GroupBox10.Location = New System.Drawing.Point(6, 19)
+        Me.GroupBox10.Location = New System.Drawing.Point(6, 22)
         Me.GroupBox10.Name = "GroupBox10"
         Me.GroupBox10.Size = New System.Drawing.Size(137, 103)
         Me.GroupBox10.TabIndex = 46
@@ -567,7 +589,7 @@ Partial Class frmBookkeeping
         Me.GroupBox8.Controls.Add(Me.txtPatronymic)
         Me.GroupBox8.Controls.Add(Me.txtFirstName)
         Me.GroupBox8.Controls.Add(Me.txtLastName)
-        Me.GroupBox8.Location = New System.Drawing.Point(8, 21)
+        Me.GroupBox8.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(186, 100)
         Me.GroupBox8.TabIndex = 48
@@ -636,7 +658,7 @@ Partial Class frmBookkeeping
         Me.GroupBox7.Controls.Add(Me.txtNumbDaysWorked)
         Me.GroupBox7.Controls.Add(Me.Label6)
         Me.GroupBox7.Controls.Add(Me.Label7)
-        Me.GroupBox7.Location = New System.Drawing.Point(209, 21)
+        Me.GroupBox7.Location = New System.Drawing.Point(207, 6)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(211, 100)
         Me.GroupBox7.TabIndex = 47
@@ -697,6 +719,15 @@ Partial Class frmBookkeeping
         Me.Label7.TabIndex = 41
         Me.Label7.Text = "Количество отработанных дней"
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Location = New System.Drawing.Point(495, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(659, 217)
+        Me.GroupBox1.TabIndex = 56
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "База персонала"
+        '
         'tpMS
         '
         Me.tpMS.Controls.Add(Me.tabMS)
@@ -704,7 +735,7 @@ Partial Class frmBookkeeping
         Me.tpMS.Location = New System.Drawing.Point(4, 25)
         Me.tpMS.Name = "tpMS"
         Me.tpMS.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMS.Size = New System.Drawing.Size(718, 200)
+        Me.tpMS.Size = New System.Drawing.Size(1160, 260)
         Me.tpMS.TabIndex = 1
         Me.tpMS.Text = "Комм. услуги"
         Me.tpMS.UseVisualStyleBackColor = True
@@ -1256,7 +1287,7 @@ Partial Class frmBookkeeping
         Me.tpIncome.Location = New System.Drawing.Point(4, 25)
         Me.tpIncome.Name = "tpIncome"
         Me.tpIncome.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpIncome.Size = New System.Drawing.Size(1158, 272)
+        Me.tpIncome.Size = New System.Drawing.Size(1160, 260)
         Me.tpIncome.TabIndex = 2
         Me.tpIncome.Text = "Прибыль"
         Me.tpIncome.UseVisualStyleBackColor = True
@@ -1827,13 +1858,14 @@ Partial Class frmBookkeeping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1168, 338)
+        Me.ClientSize = New System.Drawing.Size(1168, 289)
         Me.Controls.Add(Me.tabBookkeeping)
         Me.Name = "frmBookkeeping"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
         Me.Text = "Бухгалтерия"
         Me.tabBookkeeping.ResumeLayout(False)
         Me.tpPersonal.ResumeLayout(False)
+        Me.tpPersonal.PerformLayout()
         CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ПерсоналBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BookkeepingDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2057,5 +2089,8 @@ Partial Class frmBookkeeping
     Friend WithEvents КоличествоDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ЦенаDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ДоходDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents cmdSearch As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
 
 End Class
