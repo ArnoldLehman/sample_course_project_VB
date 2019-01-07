@@ -2,25 +2,6 @@
 
     Dim result As DialogResult
 
-    Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Меласса". При необходимости она может быть перемещена или удалена.
-        Me.МелассаTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Меласса)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Жом". При необходимости она может быть перемещена или удалена.
-        Me.ЖомTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Жом)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Сахар". При необходимости она может быть перемещена или удалена.
-        Me.СахарTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Сахар)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Вода". При необходимости она может быть перемещена или удалена.
-        Me.ВодаTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Вода)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Газ". При необходимости она может быть перемещена или удалена.
-        Me.ГазTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Газ)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Электричество". При необходимости она может быть перемещена или удалена.
-        Me.ЭлектричествоTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Электричество)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Персонал". При необходимости она может быть перемещена или удалена.
-        Me.ПерсоналTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Персонал)
-
-    End Sub
-
-
     'Код, относящийся к первой вкладке (Персонал)
 
     'Расширение окна формы до соответствующих размеров и выбор первой строки таблицы
@@ -405,5 +386,23 @@ ErrExite:
     Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
         MsgBox("Поиск не работает", MessageBoxIcon.Error, "Ограничение доступа")
         cmdSearch.Enabled = False
+    End Sub
+
+    Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Меласса". При необходимости она может быть перемещена или удалена.
+        Me.МелассаTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Меласса)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Жом". При необходимости она может быть перемещена или удалена.
+        Me.ЖомTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Жом)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Сахар". При необходимости она может быть перемещена или удалена.
+        Me.СахарTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Сахар)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Вода". При необходимости она может быть перемещена или удалена.
+        Me.ВодаTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Вода)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Газ". При необходимости она может быть перемещена или удалена.
+        Me.ГазTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Газ)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Электричество". При необходимости она может быть перемещена или удалена.
+        Me.ЭлектричествоTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Электричество)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Персонал". При необходимости она может быть перемещена или удалена.
+        Me.ПерсоналTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Персонал)
+
     End Sub
 End Class

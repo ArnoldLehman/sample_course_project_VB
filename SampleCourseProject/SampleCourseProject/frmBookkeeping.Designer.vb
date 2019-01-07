@@ -33,19 +33,6 @@ Partial Class frmBookkeeping
         Me.cmdDeletePersonal = New System.Windows.Forms.Button
         Me.cmdAddNewPersonal = New System.Windows.Forms.Button
         Me.DataGridView8 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ФамилияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ИмяDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ОтчествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ПрофессияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ОкладDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЗарплатаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ОтпускныеDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ПерсоналBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BookkeepingDatabaseDataSet = New SampleCourseProject.BookkeepingDatabaseDataSet
         Me.cmdBackStaff = New System.Windows.Forms.Button
         Me.GroupBox9 = New System.Windows.Forms.GroupBox
         Me.GroupBox12 = New System.Windows.Forms.GroupBox
@@ -83,7 +70,6 @@ Partial Class frmBookkeeping
         Me.cmdNextElectricity = New System.Windows.Forms.Button
         Me.cmdCalculateElectricity = New System.Windows.Forms.Button
         Me.txtRashElec = New System.Windows.Forms.TextBox
-        Me.ЭлектричествоBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtTarifElec = New System.Windows.Forms.TextBox
         Me.cmdPreviousElectricity = New System.Windows.Forms.Button
         Me.txtPotrElec = New System.Windows.Forms.TextBox
@@ -94,14 +80,9 @@ Partial Class frmBookkeeping
         Me.cmdDeleteElectricity = New System.Windows.Forms.Button
         Me.Label18 = New System.Windows.Forms.Label
         Me.DataGridView3 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ПотребленоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ТарифDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.РасходDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.tpGas = New System.Windows.Forms.TabPage
         Me.cmdCalculateGas = New System.Windows.Forms.Button
         Me.txtPotrGas = New System.Windows.Forms.TextBox
-        Me.ГазBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmdNextGas = New System.Windows.Forms.Button
         Me.txtTarifGas = New System.Windows.Forms.TextBox
         Me.txtRashGas = New System.Windows.Forms.TextBox
@@ -113,15 +94,10 @@ Partial Class frmBookkeeping
         Me.Label12 = New System.Windows.Forms.Label
         Me.cmdPreviousGas = New System.Windows.Forms.Button
         Me.DataGridView2 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ПотребленоDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ТарифDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.РасходDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.tpWater = New System.Windows.Forms.TabPage
         Me.cmdCalculateWater = New System.Windows.Forms.Button
         Me.cmdNextWater = New System.Windows.Forms.Button
         Me.txtPotrWater = New System.Windows.Forms.TextBox
-        Me.ВодаBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtTarifWater = New System.Windows.Forms.TextBox
         Me.cmdAddNewWater = New System.Windows.Forms.Button
         Me.txtRashWater = New System.Windows.Forms.TextBox
@@ -132,10 +108,6 @@ Partial Class frmBookkeeping
         Me.cmdPreviousWater = New System.Windows.Forms.Button
         Me.Label15 = New System.Windows.Forms.Label
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ПотребленоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ТарифDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.РасходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.cmdBackMS = New System.Windows.Forms.Button
         Me.tpIncome = New System.Windows.Forms.TabPage
         Me.tabIncome = New System.Windows.Forms.TabControl
@@ -146,11 +118,6 @@ Partial Class frmBookkeeping
         Me.cmdSaveSugar = New System.Windows.Forms.Button
         Me.cmdDeleteSugar = New System.Windows.Forms.Button
         Me.DataGridView6 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЦенаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ДоходDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.СахарBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.cmdCalculateSugar = New System.Windows.Forms.Button
         Me.Label27 = New System.Windows.Forms.Label
         Me.txtIncomeSugar = New System.Windows.Forms.TextBox
@@ -165,12 +132,7 @@ Partial Class frmBookkeeping
         Me.cmdSavePulp = New System.Windows.Forms.Button
         Me.cmdDeletePulp = New System.Windows.Forms.Button
         Me.txtNumberPulp = New System.Windows.Forms.TextBox
-        Me.ЖомBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridView5 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЦенаDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ДоходDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Label21 = New System.Windows.Forms.Label
         Me.cmdCalculatePulp = New System.Windows.Forms.Button
         Me.Label20 = New System.Windows.Forms.Label
@@ -184,12 +146,7 @@ Partial Class frmBookkeeping
         Me.cmdSaveMolasses = New System.Windows.Forms.Button
         Me.cmdDeleteMolasses = New System.Windows.Forms.Button
         Me.txtNumberMolasses = New System.Windows.Forms.TextBox
-        Me.МелассаBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridView4 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЦенаDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ДоходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Label24 = New System.Windows.Forms.Label
         Me.cmdCalculateMolasses = New System.Windows.Forms.Button
         Me.Label23 = New System.Windows.Forms.Label
@@ -197,18 +154,60 @@ Partial Class frmBookkeeping
         Me.txtPriceMolasses = New System.Windows.Forms.TextBox
         Me.txtIncomeMolasses = New System.Windows.Forms.TextBox
         Me.cmdBackIncome = New System.Windows.Forms.Button
+        Me.BookkeepingDatabaseDataSet = New SampleCourseProject.BookkeepingDatabaseDataSet
+        Me.ПерсоналBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ПерсоналTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ПерсоналTableAdapter
+        Me.КодDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ФамилияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ИмяDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ОтчествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ПрофессияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ОкладDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЗарплатаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ОтпускныеDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЭлектричествоBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ЭлектричествоTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЭлектричествоTableAdapter
+        Me.КодDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ПотребленоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ТарифDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.РасходDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ГазBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ГазTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ГазTableAdapter
+        Me.КодDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ПотребленоDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ТарифDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.РасходDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ВодаBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ВодаTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ВодаTableAdapter
+        Me.КодDataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ПотребленоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ТарифDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.РасходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.СахарBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.СахарTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.СахарTableAdapter
+        Me.КодDataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЦенаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ДоходDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЖомBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ЖомTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЖомTableAdapter
+        Me.КодDataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЦенаDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ДоходDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.МелассаBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.МелассаTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter
+        Me.КодDataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЦенаDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ДоходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.tabBookkeeping.SuspendLayout()
         Me.tpPersonal.SuspendLayout()
         CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ПерсоналBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BookkeepingDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox9.SuspendLayout()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
@@ -218,25 +217,27 @@ Partial Class frmBookkeeping
         Me.tpMS.SuspendLayout()
         Me.tabMS.SuspendLayout()
         Me.tpElectricity.SuspendLayout()
-        CType(Me.ЭлектричествоBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpGas.SuspendLayout()
-        CType(Me.ГазBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpWater.SuspendLayout()
-        CType(Me.ВодаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpIncome.SuspendLayout()
         Me.tabIncome.SuspendLayout()
         Me.tpSugar.SuspendLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.СахарBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpPulp.SuspendLayout()
-        CType(Me.ЖомBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tpMolasses.SuspendLayout()
-        CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BookkeepingDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ПерсоналBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ЭлектричествоBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ГазBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ВодаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.СахарBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ЖомBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabBookkeeping
@@ -347,83 +348,6 @@ Partial Class frmBookkeeping
         Me.DataGridView8.Size = New System.Drawing.Size(649, 167)
         Me.DataGridView8.TabIndex = 51
         '
-        'КодDataGridViewTextBoxColumn
-        '
-        Me.КодDataGridViewTextBoxColumn.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn.Name = "КодDataGridViewTextBoxColumn"
-        Me.КодDataGridViewTextBoxColumn.Width = 40
-        '
-        'ФамилияDataGridViewTextBoxColumn
-        '
-        Me.ФамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия"
-        Me.ФамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия"
-        Me.ФамилияDataGridViewTextBoxColumn.Name = "ФамилияDataGridViewTextBoxColumn"
-        '
-        'ИмяDataGridViewTextBoxColumn
-        '
-        Me.ИмяDataGridViewTextBoxColumn.DataPropertyName = "Имя"
-        Me.ИмяDataGridViewTextBoxColumn.HeaderText = "Имя"
-        Me.ИмяDataGridViewTextBoxColumn.Name = "ИмяDataGridViewTextBoxColumn"
-        '
-        'ОтчествоDataGridViewTextBoxColumn
-        '
-        Me.ОтчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество"
-        Me.ОтчествоDataGridViewTextBoxColumn.HeaderText = "Отчество"
-        Me.ОтчествоDataGridViewTextBoxColumn.Name = "ОтчествоDataGridViewTextBoxColumn"
-        '
-        'ПрофессияDataGridViewTextBoxColumn
-        '
-        Me.ПрофессияDataGridViewTextBoxColumn.DataPropertyName = "Профессия"
-        Me.ПрофессияDataGridViewTextBoxColumn.HeaderText = "Профессия"
-        Me.ПрофессияDataGridViewTextBoxColumn.Name = "ПрофессияDataGridViewTextBoxColumn"
-        '
-        'КоличествоРабочихДнейDataGridViewTextBoxColumn
-        '
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество рабочих дней"
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.HeaderText = "Количество рабочих дней"
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.Name = "КоличествоРабочихДнейDataGridViewTextBoxColumn"
-        '
-        'КоличествоОтработанныхДнейDataGridViewTextBoxColumn
-        '
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество отработанных дней"
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.HeaderText = "Количество отработанных дней"
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.Name = "КоличествоОтработанныхДнейDataGridViewTextBoxColumn"
-        '
-        'ОкладDataGridViewTextBoxColumn
-        '
-        Me.ОкладDataGridViewTextBoxColumn.DataPropertyName = "Оклад"
-        Me.ОкладDataGridViewTextBoxColumn.HeaderText = "Оклад"
-        Me.ОкладDataGridViewTextBoxColumn.Name = "ОкладDataGridViewTextBoxColumn"
-        '
-        'ЗарплатаDataGridViewTextBoxColumn
-        '
-        Me.ЗарплатаDataGridViewTextBoxColumn.DataPropertyName = "Зарплата"
-        Me.ЗарплатаDataGridViewTextBoxColumn.HeaderText = "Зарплата"
-        Me.ЗарплатаDataGridViewTextBoxColumn.Name = "ЗарплатаDataGridViewTextBoxColumn"
-        '
-        'СреднийДневнойЗаработокDataGridViewTextBoxColumn
-        '
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.DataPropertyName = "Средний дневной заработок"
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.HeaderText = "Средний дневной заработок"
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.Name = "СреднийДневнойЗаработокDataGridViewTextBoxColumn"
-        '
-        'ОтпускныеDataGridViewTextBoxColumn
-        '
-        Me.ОтпускныеDataGridViewTextBoxColumn.DataPropertyName = "Отпускные"
-        Me.ОтпускныеDataGridViewTextBoxColumn.HeaderText = "Отпускные"
-        Me.ОтпускныеDataGridViewTextBoxColumn.Name = "ОтпускныеDataGridViewTextBoxColumn"
-        '
-        'ПерсоналBindingSource
-        '
-        Me.ПерсоналBindingSource.DataMember = "Персонал"
-        Me.ПерсоналBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
-        'BookkeepingDatabaseDataSet
-        '
-        Me.BookkeepingDatabaseDataSet.DataSetName = "BookkeepingDatabaseDataSet"
-        Me.BookkeepingDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'cmdBackStaff
         '
         Me.cmdBackStaff.Location = New System.Drawing.Point(424, 83)
@@ -522,6 +446,7 @@ Partial Class frmBookkeeping
         Me.Label4.Size = New System.Drawing.Size(30, 13)
         Me.Label4.TabIndex = 46
         Me.Label4.Text = "СДЗ"
+        Me.ToolTip1.SetToolTip(Me.Label4, "Средний дневной заработок")
         '
         'GroupBox10
         '
@@ -805,11 +730,6 @@ Partial Class frmBookkeeping
         Me.txtRashElec.Size = New System.Drawing.Size(156, 20)
         Me.txtRashElec.TabIndex = 5
         '
-        'ЭлектричествоBindingSource
-        '
-        Me.ЭлектричествоBindingSource.DataMember = "Электричество"
-        Me.ЭлектричествоBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
         'txtTarifElec
         '
         Me.txtTarifElec.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ЭлектричествоBindingSource, "Тариф", True))
@@ -904,31 +824,6 @@ Partial Class frmBookkeeping
         Me.DataGridView3.Size = New System.Drawing.Size(416, 124)
         Me.DataGridView3.TabIndex = 0
         '
-        'КодDataGridViewTextBoxColumn1
-        '
-        Me.КодDataGridViewTextBoxColumn1.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn1.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn1.Name = "КодDataGridViewTextBoxColumn1"
-        Me.КодDataGridViewTextBoxColumn1.Width = 73
-        '
-        'ПотребленоDataGridViewTextBoxColumn
-        '
-        Me.ПотребленоDataGridViewTextBoxColumn.DataPropertyName = "Потреблено"
-        Me.ПотребленоDataGridViewTextBoxColumn.HeaderText = "Потреблено"
-        Me.ПотребленоDataGridViewTextBoxColumn.Name = "ПотребленоDataGridViewTextBoxColumn"
-        '
-        'ТарифDataGridViewTextBoxColumn
-        '
-        Me.ТарифDataGridViewTextBoxColumn.DataPropertyName = "Тариф"
-        Me.ТарифDataGridViewTextBoxColumn.HeaderText = "Тариф"
-        Me.ТарифDataGridViewTextBoxColumn.Name = "ТарифDataGridViewTextBoxColumn"
-        '
-        'РасходDataGridViewTextBoxColumn
-        '
-        Me.РасходDataGridViewTextBoxColumn.DataPropertyName = "Расход"
-        Me.РасходDataGridViewTextBoxColumn.HeaderText = "Расход"
-        Me.РасходDataGridViewTextBoxColumn.Name = "РасходDataGridViewTextBoxColumn"
-        '
         'tpGas
         '
         Me.tpGas.BackColor = System.Drawing.SystemColors.Control
@@ -969,11 +864,6 @@ Partial Class frmBookkeeping
         Me.txtPotrGas.Name = "txtPotrGas"
         Me.txtPotrGas.Size = New System.Drawing.Size(156, 20)
         Me.txtPotrGas.TabIndex = 5
-        '
-        'ГазBindingSource
-        '
-        Me.ГазBindingSource.DataMember = "Газ"
-        Me.ГазBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
         '
         'cmdNextGas
         '
@@ -1075,31 +965,6 @@ Partial Class frmBookkeeping
         Me.DataGridView2.Size = New System.Drawing.Size(416, 124)
         Me.DataGridView2.TabIndex = 0
         '
-        'КодDataGridViewTextBoxColumn2
-        '
-        Me.КодDataGridViewTextBoxColumn2.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn2.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn2.Name = "КодDataGridViewTextBoxColumn2"
-        Me.КодDataGridViewTextBoxColumn2.Width = 73
-        '
-        'ПотребленоDataGridViewTextBoxColumn1
-        '
-        Me.ПотребленоDataGridViewTextBoxColumn1.DataPropertyName = "Потреблено"
-        Me.ПотребленоDataGridViewTextBoxColumn1.HeaderText = "Потреблено"
-        Me.ПотребленоDataGridViewTextBoxColumn1.Name = "ПотребленоDataGridViewTextBoxColumn1"
-        '
-        'ТарифDataGridViewTextBoxColumn1
-        '
-        Me.ТарифDataGridViewTextBoxColumn1.DataPropertyName = "Тариф"
-        Me.ТарифDataGridViewTextBoxColumn1.HeaderText = "Тариф"
-        Me.ТарифDataGridViewTextBoxColumn1.Name = "ТарифDataGridViewTextBoxColumn1"
-        '
-        'РасходDataGridViewTextBoxColumn1
-        '
-        Me.РасходDataGridViewTextBoxColumn1.DataPropertyName = "Расход"
-        Me.РасходDataGridViewTextBoxColumn1.HeaderText = "Расход"
-        Me.РасходDataGridViewTextBoxColumn1.Name = "РасходDataGridViewTextBoxColumn1"
-        '
         'tpWater
         '
         Me.tpWater.BackColor = System.Drawing.SystemColors.Control
@@ -1149,11 +1014,6 @@ Partial Class frmBookkeeping
         Me.txtPotrWater.Name = "txtPotrWater"
         Me.txtPotrWater.Size = New System.Drawing.Size(156, 20)
         Me.txtPotrWater.TabIndex = 5
-        '
-        'ВодаBindingSource
-        '
-        Me.ВодаBindingSource.DataMember = "Вода"
-        Me.ВодаBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
         '
         'txtTarifWater
         '
@@ -1245,31 +1105,6 @@ Partial Class frmBookkeeping
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(416, 124)
         Me.DataGridView1.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn3
-        '
-        Me.КодDataGridViewTextBoxColumn3.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn3.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn3.Name = "КодDataGridViewTextBoxColumn3"
-        Me.КодDataGridViewTextBoxColumn3.Width = 73
-        '
-        'ПотребленоDataGridViewTextBoxColumn2
-        '
-        Me.ПотребленоDataGridViewTextBoxColumn2.DataPropertyName = "Потреблено"
-        Me.ПотребленоDataGridViewTextBoxColumn2.HeaderText = "Потреблено"
-        Me.ПотребленоDataGridViewTextBoxColumn2.Name = "ПотребленоDataGridViewTextBoxColumn2"
-        '
-        'ТарифDataGridViewTextBoxColumn2
-        '
-        Me.ТарифDataGridViewTextBoxColumn2.DataPropertyName = "Тариф"
-        Me.ТарифDataGridViewTextBoxColumn2.HeaderText = "Тариф"
-        Me.ТарифDataGridViewTextBoxColumn2.Name = "ТарифDataGridViewTextBoxColumn2"
-        '
-        'РасходDataGridViewTextBoxColumn2
-        '
-        Me.РасходDataGridViewTextBoxColumn2.DataPropertyName = "Расход"
-        Me.РасходDataGridViewTextBoxColumn2.HeaderText = "Расход"
-        Me.РасходDataGridViewTextBoxColumn2.Name = "РасходDataGridViewTextBoxColumn2"
         '
         'cmdBackMS
         '
@@ -1383,36 +1218,6 @@ Partial Class frmBookkeeping
         Me.DataGridView6.Name = "DataGridView6"
         Me.DataGridView6.Size = New System.Drawing.Size(393, 126)
         Me.DataGridView6.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn4
-        '
-        Me.КодDataGridViewTextBoxColumn4.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn4.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn4.Name = "КодDataGridViewTextBoxColumn4"
-        Me.КодDataGridViewTextBoxColumn4.Width = 50
-        '
-        'КоличествоDataGridViewTextBoxColumn
-        '
-        Me.КоличествоDataGridViewTextBoxColumn.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn.Name = "КоличествоDataGridViewTextBoxColumn"
-        '
-        'ЦенаDataGridViewTextBoxColumn
-        '
-        Me.ЦенаDataGridViewTextBoxColumn.DataPropertyName = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn.HeaderText = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn.Name = "ЦенаDataGridViewTextBoxColumn"
-        '
-        'ДоходDataGridViewTextBoxColumn
-        '
-        Me.ДоходDataGridViewTextBoxColumn.DataPropertyName = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn.HeaderText = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn.Name = "ДоходDataGridViewTextBoxColumn"
-        '
-        'СахарBindingSource
-        '
-        Me.СахарBindingSource.DataMember = "Сахар"
-        Me.СахарBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
         '
         'cmdCalculateSugar
         '
@@ -1552,11 +1357,6 @@ Partial Class frmBookkeeping
         Me.txtNumberPulp.Size = New System.Drawing.Size(156, 20)
         Me.txtNumberPulp.TabIndex = 5
         '
-        'ЖомBindingSource
-        '
-        Me.ЖомBindingSource.DataMember = "Жом"
-        Me.ЖомBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
         'DataGridView5
         '
         Me.DataGridView5.AutoGenerateColumns = False
@@ -1567,31 +1367,6 @@ Partial Class frmBookkeeping
         Me.DataGridView5.Name = "DataGridView5"
         Me.DataGridView5.Size = New System.Drawing.Size(393, 126)
         Me.DataGridView5.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn5
-        '
-        Me.КодDataGridViewTextBoxColumn5.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn5.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn5.Name = "КодDataGridViewTextBoxColumn5"
-        Me.КодDataGridViewTextBoxColumn5.Width = 50
-        '
-        'КоличествоDataGridViewTextBoxColumn1
-        '
-        Me.КоличествоDataGridViewTextBoxColumn1.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn1.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn1.Name = "КоличествоDataGridViewTextBoxColumn1"
-        '
-        'ЦенаDataGridViewTextBoxColumn1
-        '
-        Me.ЦенаDataGridViewTextBoxColumn1.DataPropertyName = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn1.HeaderText = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn1.Name = "ЦенаDataGridViewTextBoxColumn1"
-        '
-        'ДоходDataGridViewTextBoxColumn1
-        '
-        Me.ДоходDataGridViewTextBoxColumn1.DataPropertyName = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn1.HeaderText = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn1.Name = "ДоходDataGridViewTextBoxColumn1"
         '
         'Label21
         '
@@ -1723,11 +1498,6 @@ Partial Class frmBookkeeping
         Me.txtNumberMolasses.Size = New System.Drawing.Size(156, 20)
         Me.txtNumberMolasses.TabIndex = 5
         '
-        'МелассаBindingSource
-        '
-        Me.МелассаBindingSource.DataMember = "Меласса"
-        Me.МелассаBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
         'DataGridView4
         '
         Me.DataGridView4.AutoGenerateColumns = False
@@ -1738,31 +1508,6 @@ Partial Class frmBookkeeping
         Me.DataGridView4.Name = "DataGridView4"
         Me.DataGridView4.Size = New System.Drawing.Size(393, 126)
         Me.DataGridView4.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn6
-        '
-        Me.КодDataGridViewTextBoxColumn6.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn6.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn6.Name = "КодDataGridViewTextBoxColumn6"
-        Me.КодDataGridViewTextBoxColumn6.Width = 50
-        '
-        'КоличествоDataGridViewTextBoxColumn2
-        '
-        Me.КоличествоDataGridViewTextBoxColumn2.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn2.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn2.Name = "КоличествоDataGridViewTextBoxColumn2"
-        '
-        'ЦенаDataGridViewTextBoxColumn2
-        '
-        Me.ЦенаDataGridViewTextBoxColumn2.DataPropertyName = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn2.HeaderText = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn2.Name = "ЦенаDataGridViewTextBoxColumn2"
-        '
-        'ДоходDataGridViewTextBoxColumn2
-        '
-        Me.ДоходDataGridViewTextBoxColumn2.DataPropertyName = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn2.HeaderText = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn2.Name = "ДоходDataGridViewTextBoxColumn2"
         '
         'Label24
         '
@@ -1826,33 +1571,283 @@ Partial Class frmBookkeeping
         Me.cmdBackIncome.Text = "Назад"
         Me.cmdBackIncome.UseVisualStyleBackColor = True
         '
+        'BookkeepingDatabaseDataSet
+        '
+        Me.BookkeepingDatabaseDataSet.DataSetName = "BookkeepingDatabaseDataSet"
+        Me.BookkeepingDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ПерсоналBindingSource
+        '
+        Me.ПерсоналBindingSource.DataMember = "Персонал"
+        Me.ПерсоналBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
+        '
         'ПерсоналTableAdapter
         '
         Me.ПерсоналTableAdapter.ClearBeforeFill = True
+        '
+        'КодDataGridViewTextBoxColumn
+        '
+        Me.КодDataGridViewTextBoxColumn.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn.Name = "КодDataGridViewTextBoxColumn"
+        '
+        'ФамилияDataGridViewTextBoxColumn
+        '
+        Me.ФамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия"
+        Me.ФамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия"
+        Me.ФамилияDataGridViewTextBoxColumn.Name = "ФамилияDataGridViewTextBoxColumn"
+        '
+        'ИмяDataGridViewTextBoxColumn
+        '
+        Me.ИмяDataGridViewTextBoxColumn.DataPropertyName = "Имя"
+        Me.ИмяDataGridViewTextBoxColumn.HeaderText = "Имя"
+        Me.ИмяDataGridViewTextBoxColumn.Name = "ИмяDataGridViewTextBoxColumn"
+        '
+        'ОтчествоDataGridViewTextBoxColumn
+        '
+        Me.ОтчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество"
+        Me.ОтчествоDataGridViewTextBoxColumn.HeaderText = "Отчество"
+        Me.ОтчествоDataGridViewTextBoxColumn.Name = "ОтчествоDataGridViewTextBoxColumn"
+        '
+        'ПрофессияDataGridViewTextBoxColumn
+        '
+        Me.ПрофессияDataGridViewTextBoxColumn.DataPropertyName = "Профессия"
+        Me.ПрофессияDataGridViewTextBoxColumn.HeaderText = "Профессия"
+        Me.ПрофессияDataGridViewTextBoxColumn.Name = "ПрофессияDataGridViewTextBoxColumn"
+        '
+        'КоличествоРабочихДнейDataGridViewTextBoxColumn
+        '
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество рабочих дней"
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.HeaderText = "Количество рабочих дней"
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.Name = "КоличествоРабочихДнейDataGridViewTextBoxColumn"
+        '
+        'КоличествоОтработанныхДнейDataGridViewTextBoxColumn
+        '
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество отработанных дней"
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.HeaderText = "Количество отработанных дней"
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.Name = "КоличествоОтработанныхДнейDataGridViewTextBoxColumn"
+        '
+        'ОкладDataGridViewTextBoxColumn
+        '
+        Me.ОкладDataGridViewTextBoxColumn.DataPropertyName = "Оклад"
+        Me.ОкладDataGridViewTextBoxColumn.HeaderText = "Оклад"
+        Me.ОкладDataGridViewTextBoxColumn.Name = "ОкладDataGridViewTextBoxColumn"
+        '
+        'ЗарплатаDataGridViewTextBoxColumn
+        '
+        Me.ЗарплатаDataGridViewTextBoxColumn.DataPropertyName = "Зарплата"
+        Me.ЗарплатаDataGridViewTextBoxColumn.HeaderText = "Зарплата"
+        Me.ЗарплатаDataGridViewTextBoxColumn.Name = "ЗарплатаDataGridViewTextBoxColumn"
+        '
+        'СреднийДневнойЗаработокDataGridViewTextBoxColumn
+        '
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.DataPropertyName = "Средний дневной заработок"
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.HeaderText = "Средний дневной заработок"
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.Name = "СреднийДневнойЗаработокDataGridViewTextBoxColumn"
+        '
+        'ОтпускныеDataGridViewTextBoxColumn
+        '
+        Me.ОтпускныеDataGridViewTextBoxColumn.DataPropertyName = "Отпускные"
+        Me.ОтпускныеDataGridViewTextBoxColumn.HeaderText = "Отпускные"
+        Me.ОтпускныеDataGridViewTextBoxColumn.Name = "ОтпускныеDataGridViewTextBoxColumn"
+        '
+        'ЭлектричествоBindingSource
+        '
+        Me.ЭлектричествоBindingSource.DataMember = "Электричество"
+        Me.ЭлектричествоBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
         '
         'ЭлектричествоTableAdapter
         '
         Me.ЭлектричествоTableAdapter.ClearBeforeFill = True
         '
+        'КодDataGridViewTextBoxColumn1
+        '
+        Me.КодDataGridViewTextBoxColumn1.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn1.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn1.Name = "КодDataGridViewTextBoxColumn1"
+        '
+        'ПотребленоDataGridViewTextBoxColumn
+        '
+        Me.ПотребленоDataGridViewTextBoxColumn.DataPropertyName = "Потреблено"
+        Me.ПотребленоDataGridViewTextBoxColumn.HeaderText = "Потреблено"
+        Me.ПотребленоDataGridViewTextBoxColumn.Name = "ПотребленоDataGridViewTextBoxColumn"
+        '
+        'ТарифDataGridViewTextBoxColumn
+        '
+        Me.ТарифDataGridViewTextBoxColumn.DataPropertyName = "Тариф"
+        Me.ТарифDataGridViewTextBoxColumn.HeaderText = "Тариф"
+        Me.ТарифDataGridViewTextBoxColumn.Name = "ТарифDataGridViewTextBoxColumn"
+        '
+        'РасходDataGridViewTextBoxColumn
+        '
+        Me.РасходDataGridViewTextBoxColumn.DataPropertyName = "Расход"
+        Me.РасходDataGridViewTextBoxColumn.HeaderText = "Расход"
+        Me.РасходDataGridViewTextBoxColumn.Name = "РасходDataGridViewTextBoxColumn"
+        '
+        'ГазBindingSource
+        '
+        Me.ГазBindingSource.DataMember = "Газ"
+        Me.ГазBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
+        '
         'ГазTableAdapter
         '
         Me.ГазTableAdapter.ClearBeforeFill = True
+        '
+        'КодDataGridViewTextBoxColumn2
+        '
+        Me.КодDataGridViewTextBoxColumn2.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn2.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn2.Name = "КодDataGridViewTextBoxColumn2"
+        '
+        'ПотребленоDataGridViewTextBoxColumn1
+        '
+        Me.ПотребленоDataGridViewTextBoxColumn1.DataPropertyName = "Потреблено"
+        Me.ПотребленоDataGridViewTextBoxColumn1.HeaderText = "Потреблено"
+        Me.ПотребленоDataGridViewTextBoxColumn1.Name = "ПотребленоDataGridViewTextBoxColumn1"
+        '
+        'ТарифDataGridViewTextBoxColumn1
+        '
+        Me.ТарифDataGridViewTextBoxColumn1.DataPropertyName = "Тариф"
+        Me.ТарифDataGridViewTextBoxColumn1.HeaderText = "Тариф"
+        Me.ТарифDataGridViewTextBoxColumn1.Name = "ТарифDataGridViewTextBoxColumn1"
+        '
+        'РасходDataGridViewTextBoxColumn1
+        '
+        Me.РасходDataGridViewTextBoxColumn1.DataPropertyName = "Расход"
+        Me.РасходDataGridViewTextBoxColumn1.HeaderText = "Расход"
+        Me.РасходDataGridViewTextBoxColumn1.Name = "РасходDataGridViewTextBoxColumn1"
+        '
+        'ВодаBindingSource
+        '
+        Me.ВодаBindingSource.DataMember = "Вода"
+        Me.ВодаBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
         '
         'ВодаTableAdapter
         '
         Me.ВодаTableAdapter.ClearBeforeFill = True
         '
+        'КодDataGridViewTextBoxColumn3
+        '
+        Me.КодDataGridViewTextBoxColumn3.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn3.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn3.Name = "КодDataGridViewTextBoxColumn3"
+        '
+        'ПотребленоDataGridViewTextBoxColumn2
+        '
+        Me.ПотребленоDataGridViewTextBoxColumn2.DataPropertyName = "Потреблено"
+        Me.ПотребленоDataGridViewTextBoxColumn2.HeaderText = "Потреблено"
+        Me.ПотребленоDataGridViewTextBoxColumn2.Name = "ПотребленоDataGridViewTextBoxColumn2"
+        '
+        'ТарифDataGridViewTextBoxColumn2
+        '
+        Me.ТарифDataGridViewTextBoxColumn2.DataPropertyName = "Тариф"
+        Me.ТарифDataGridViewTextBoxColumn2.HeaderText = "Тариф"
+        Me.ТарифDataGridViewTextBoxColumn2.Name = "ТарифDataGridViewTextBoxColumn2"
+        '
+        'РасходDataGridViewTextBoxColumn2
+        '
+        Me.РасходDataGridViewTextBoxColumn2.DataPropertyName = "Расход"
+        Me.РасходDataGridViewTextBoxColumn2.HeaderText = "Расход"
+        Me.РасходDataGridViewTextBoxColumn2.Name = "РасходDataGridViewTextBoxColumn2"
+        '
+        'СахарBindingSource
+        '
+        Me.СахарBindingSource.DataMember = "Сахар"
+        Me.СахарBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
+        '
         'СахарTableAdapter
         '
         Me.СахарTableAdapter.ClearBeforeFill = True
+        '
+        'КодDataGridViewTextBoxColumn4
+        '
+        Me.КодDataGridViewTextBoxColumn4.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn4.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn4.Name = "КодDataGridViewTextBoxColumn4"
+        '
+        'КоличествоDataGridViewTextBoxColumn
+        '
+        Me.КоличествоDataGridViewTextBoxColumn.DataPropertyName = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn.HeaderText = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn.Name = "КоличествоDataGridViewTextBoxColumn"
+        '
+        'ЦенаDataGridViewTextBoxColumn
+        '
+        Me.ЦенаDataGridViewTextBoxColumn.DataPropertyName = "Цена"
+        Me.ЦенаDataGridViewTextBoxColumn.HeaderText = "Цена"
+        Me.ЦенаDataGridViewTextBoxColumn.Name = "ЦенаDataGridViewTextBoxColumn"
+        '
+        'ДоходDataGridViewTextBoxColumn
+        '
+        Me.ДоходDataGridViewTextBoxColumn.DataPropertyName = "Доход"
+        Me.ДоходDataGridViewTextBoxColumn.HeaderText = "Доход"
+        Me.ДоходDataGridViewTextBoxColumn.Name = "ДоходDataGridViewTextBoxColumn"
+        '
+        'ЖомBindingSource
+        '
+        Me.ЖомBindingSource.DataMember = "Жом"
+        Me.ЖомBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
         '
         'ЖомTableAdapter
         '
         Me.ЖомTableAdapter.ClearBeforeFill = True
         '
+        'КодDataGridViewTextBoxColumn5
+        '
+        Me.КодDataGridViewTextBoxColumn5.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn5.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn5.Name = "КодDataGridViewTextBoxColumn5"
+        '
+        'КоличествоDataGridViewTextBoxColumn1
+        '
+        Me.КоличествоDataGridViewTextBoxColumn1.DataPropertyName = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn1.HeaderText = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn1.Name = "КоличествоDataGridViewTextBoxColumn1"
+        '
+        'ЦенаDataGridViewTextBoxColumn1
+        '
+        Me.ЦенаDataGridViewTextBoxColumn1.DataPropertyName = "Цена"
+        Me.ЦенаDataGridViewTextBoxColumn1.HeaderText = "Цена"
+        Me.ЦенаDataGridViewTextBoxColumn1.Name = "ЦенаDataGridViewTextBoxColumn1"
+        '
+        'ДоходDataGridViewTextBoxColumn1
+        '
+        Me.ДоходDataGridViewTextBoxColumn1.DataPropertyName = "Доход"
+        Me.ДоходDataGridViewTextBoxColumn1.HeaderText = "Доход"
+        Me.ДоходDataGridViewTextBoxColumn1.Name = "ДоходDataGridViewTextBoxColumn1"
+        '
+        'МелассаBindingSource
+        '
+        Me.МелассаBindingSource.DataMember = "Меласса"
+        Me.МелассаBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
+        '
         'МелассаTableAdapter
         '
         Me.МелассаTableAdapter.ClearBeforeFill = True
+        '
+        'КодDataGridViewTextBoxColumn6
+        '
+        Me.КодDataGridViewTextBoxColumn6.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn6.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn6.Name = "КодDataGridViewTextBoxColumn6"
+        '
+        'КоличествоDataGridViewTextBoxColumn2
+        '
+        Me.КоличествоDataGridViewTextBoxColumn2.DataPropertyName = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn2.HeaderText = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn2.Name = "КоличествоDataGridViewTextBoxColumn2"
+        '
+        'ЦенаDataGridViewTextBoxColumn2
+        '
+        Me.ЦенаDataGridViewTextBoxColumn2.DataPropertyName = "Цена"
+        Me.ЦенаDataGridViewTextBoxColumn2.HeaderText = "Цена"
+        Me.ЦенаDataGridViewTextBoxColumn2.Name = "ЦенаDataGridViewTextBoxColumn2"
+        '
+        'ДоходDataGridViewTextBoxColumn2
+        '
+        Me.ДоходDataGridViewTextBoxColumn2.DataPropertyName = "Доход"
+        Me.ДоходDataGridViewTextBoxColumn2.HeaderText = "Доход"
+        Me.ДоходDataGridViewTextBoxColumn2.Name = "ДоходDataGridViewTextBoxColumn2"
         '
         'frmBookkeeping
         '
@@ -1867,8 +1862,6 @@ Partial Class frmBookkeeping
         Me.tpPersonal.ResumeLayout(False)
         Me.tpPersonal.PerformLayout()
         CType(Me.DataGridView8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ПерсоналBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BookkeepingDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox9.ResumeLayout(False)
         Me.GroupBox12.ResumeLayout(False)
         Me.GroupBox12.PerformLayout()
@@ -1884,30 +1877,32 @@ Partial Class frmBookkeeping
         Me.tabMS.ResumeLayout(False)
         Me.tpElectricity.ResumeLayout(False)
         Me.tpElectricity.PerformLayout()
-        CType(Me.ЭлектричествоBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpGas.ResumeLayout(False)
         Me.tpGas.PerformLayout()
-        CType(Me.ГазBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpWater.ResumeLayout(False)
         Me.tpWater.PerformLayout()
-        CType(Me.ВодаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpIncome.ResumeLayout(False)
         Me.tabIncome.ResumeLayout(False)
         Me.tpSugar.ResumeLayout(False)
         Me.tpSugar.PerformLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.СахарBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpPulp.ResumeLayout(False)
         Me.tpPulp.PerformLayout()
-        CType(Me.ЖомBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tpMolasses.ResumeLayout(False)
         Me.tpMolasses.PerformLayout()
-        CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BookkeepingDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ПерсоналBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ЭлектричествоBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ГазBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ВодаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.СахарBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ЖомBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2037,6 +2032,11 @@ Partial Class frmBookkeeping
     Friend WithEvents txtPriceMolasses As System.Windows.Forms.TextBox
     Friend WithEvents txtIncomeMolasses As System.Windows.Forms.TextBox
     Friend WithEvents cmdBackIncome As System.Windows.Forms.Button
+    Friend WithEvents cmdNextPersonal As System.Windows.Forms.Button
+    Friend WithEvents cmdPreviousPersonal As System.Windows.Forms.Button
+    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
+    Friend WithEvents cmdSearch As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents BookkeepingDatabaseDataSet As SampleCourseProject.BookkeepingDatabaseDataSet
     Friend WithEvents ПерсоналBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ПерсоналTableAdapter As SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ПерсоналTableAdapter
@@ -2083,14 +2083,10 @@ Partial Class frmBookkeeping
     Friend WithEvents ДоходDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents МелассаBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents МелассаTableAdapter As SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter
-    Friend WithEvents cmdNextPersonal As System.Windows.Forms.Button
-    Friend WithEvents cmdPreviousPersonal As System.Windows.Forms.Button
     Friend WithEvents КодDataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents КоличествоDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ЦенаDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ДоходDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtSearch As System.Windows.Forms.TextBox
-    Friend WithEvents cmdSearch As System.Windows.Forms.Button
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 
 End Class

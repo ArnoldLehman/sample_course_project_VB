@@ -3721,7 +3721,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -4079,7 +4079,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -4436,7 +4436,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -4794,7 +4794,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -5217,7 +5217,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -5766,7 +5766,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -6124,7 +6124,7 @@ Namespace BookkeepingDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection
-            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString
+            Me._connection.ConnectionString = Global.SampleCourseProject.My.MySettings.Default.BookkeepingDatabaseConnectionString1
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
