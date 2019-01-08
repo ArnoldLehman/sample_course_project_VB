@@ -24,69 +24,84 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.cmdBookkeeping = New System.Windows.Forms.Button
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton
-        Me.ToolStrip1.SuspendLayout()
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
+        Me.ПерсоналToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ЗарегистрироватьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.АвторизироватьсяToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmdBookkeeping
         '
-        Me.cmdBookkeeping.Location = New System.Drawing.Point(12, 119)
+        Me.cmdBookkeeping.Location = New System.Drawing.Point(0, 177)
         Me.cmdBookkeeping.Name = "cmdBookkeeping"
-        Me.cmdBookkeeping.Size = New System.Drawing.Size(260, 130)
+        Me.cmdBookkeeping.Size = New System.Drawing.Size(275, 77)
         Me.cmdBookkeeping.TabIndex = 0
         Me.cmdBookkeeping.Text = "Бухгалтерия"
         Me.cmdBookkeeping.UseVisualStyleBackColor = True
         '
-        'ToolStrip1
+        'Label3
         '
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStrip1.Size = New System.Drawing.Size(275, 25)
-        Me.ToolStrip1.TabIndex = 3
-        Me.ToolStrip1.Text = "ToolStrip1"
+        Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
+        Me.Label3.Location = New System.Drawing.Point(21, 102)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(16, 20)
+        Me.Label3.TabIndex = 10
         '
-        'ToolStripButton1
+        'MenuStrip1
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "Авторизироваться"
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ПерсоналToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(275, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ToolStripButton2
+        'ПерсоналToolStripMenuItem
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "Зарегистрироваться"
+        Me.ПерсоналToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ЗарегистрироватьToolStripMenuItem, Me.АвторизироватьсяToolStripMenuItem})
+        Me.ПерсоналToolStripMenuItem.Name = "ПерсоналToolStripMenuItem"
+        Me.ПерсоналToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
+        Me.ПерсоналToolStripMenuItem.Text = "Персонал"
+        '
+        'ЗарегистрироватьToolStripMenuItem
+        '
+        Me.ЗарегистрироватьToolStripMenuItem.Image = CType(resources.GetObject("ЗарегистрироватьToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ЗарегистрироватьToolStripMenuItem.Name = "ЗарегистрироватьToolStripMenuItem"
+        Me.ЗарегистрироватьToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.ЗарегистрироватьToolStripMenuItem.Text = "Зарегистрировать"
+        '
+        'АвторизироватьсяToolStripMenuItem
+        '
+        Me.АвторизироватьсяToolStripMenuItem.Image = CType(resources.GetObject("АвторизироватьсяToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.АвторизироватьсяToolStripMenuItem.Name = "АвторизироватьсяToolStripMenuItem"
+        Me.АвторизироватьсяToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.АвторизироватьсяToolStripMenuItem.Text = "Авторизироваться"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(275, 253)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.cmdBookkeeping)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Главная"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents cmdBookkeeping As System.Windows.Forms.Button
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents ПерсоналToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ЗарегистрироватьToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents АвторизироватьсяToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

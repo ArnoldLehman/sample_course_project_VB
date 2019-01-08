@@ -117,13 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="StaffBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>201, 17</value>
-  </metadata>
-  <metadata name="RegistrationStaffDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="tmrAutorization.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="StaffTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>356, 17</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblVisible.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAeJJREFUWEftVb1KA0EY/O4upFRs1EKfQh/DPIH6CjaCdiKICkkKIySVNhY2KgqW
+        +ghWplAQQRRiEwkkKP6E6Mzt3t3mcpockQhyA8Ml38w3u9ns7kmCBAkS9AgLnBJblixLDixbypYjVfBN
+        s4raJTV6XK/q6RtjCF8F7+yUfMYhe9jLDBUVD8NozoEvUeEktA/wHeQKNKM8JDPAHDNVdDc4MoOGSkRQ
+        A9zDEs/iWQBvUW/hSV6Bm9Dm8NwHnyP6K8zWo0TChikLtkKNNQQvQx8CHfzPx6ZuEt4dN0lkRFKygu+N
+        kM7JZqHbyhYgjeAj0+w2WHIKbVxZAFsW23RHHsBHswbPvHYTk8g4N3WSY0FLK4v6VSchE2e6Aa1tJ6N2
+        73kw0IIuc+XWvTpOw4Wue6C+7em+DysJzWFosUN0ZE31tmHU0G90zYODWk1rTX5X5QCob3n9Rk6RQilC
+        GNQEStQG8RcUPN33YUxo/kR/2oTBRRJ/E04g48zUSY4Fzd+EHjhTXj79HMNdN4nH0HaPYT2kc2V5KXUc
+        wwCOZGCKuojq4HcX0TXYy0WU0aN0Ba/iPNjLVfzKz1EekhlgnpkqOh7+7GUUBk/DNPcC9sChfh0/gebr
+        uEyNHnh/7XWcIEGC/w6RL/NyD/K0UFsnAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>
