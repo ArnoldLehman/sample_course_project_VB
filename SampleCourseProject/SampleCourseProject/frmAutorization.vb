@@ -21,11 +21,13 @@
         If My.Settings.LoginUser = txtLogin.Text And My.Settings.PasswordUser = txtPassword.Text Then
             frmMain.authMain = True
             frmMain.access = False
+            frmMain.tslblAccount.Text = "Пользователь"
             frmMain.Show()
             Me.Close()
         ElseIf My.Settings.LoginAdmin = txtLogin.Text And My.Settings.PasswordAdmin = txtPassword.Text Then
             frmMain.authMain = True
             frmMain.access = True
+            frmMain.tslblAccount.Text = "Администратор"
             frmMain.Show()
             Me.Close()
         End If
