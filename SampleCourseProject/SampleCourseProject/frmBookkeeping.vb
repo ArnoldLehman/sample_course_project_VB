@@ -403,6 +403,5 @@ ErrExite:
         Me.ЭлектричествоTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Электричество)
         'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Персонал". При необходимости она может быть перемещена или удалена.
         Me.ПерсоналTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Персонал)
-
     End Sub
 End Class

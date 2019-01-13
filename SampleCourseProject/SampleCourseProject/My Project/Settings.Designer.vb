@@ -75,6 +75,75 @@ Namespace My
                 Return CType(Me("BookkeepingDatabaseConnectionString1"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\AccountPersonal.mdb")>  _
+        Public ReadOnly Property AccountPersonalConnectionString() As String
+            Get
+                Return CType(Me("AccountPersonalConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\RegistrationStaff.md"& _ 
+            "b")>  _
+        Public ReadOnly Property RegistrationStaffConnectionString() As String
+            Get
+                Return CType(Me("RegistrationStaffConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("user")>  _
+        Public Property LoginUser() As String
+            Get
+                Return CType(Me("LoginUser"),String)
+            End Get
+            Set
+                Me("LoginUser") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("passuser")>  _
+        Public Property PasswordUser() As String
+            Get
+                Return CType(Me("PasswordUser"),String)
+            End Get
+            Set
+                Me("PasswordUser") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("admin")>  _
+        Public Property LoginAdmin() As String
+            Get
+                Return CType(Me("LoginAdmin"),String)
+            End Get
+            Set
+                Me("LoginAdmin") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("passadmin")>  _
+        Public Property PasswordAdmin() As String
+            Get
+                Return CType(Me("PasswordAdmin"),String)
+            End Get
+            Set
+                Me("PasswordAdmin") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

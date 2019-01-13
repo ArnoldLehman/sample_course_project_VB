@@ -32,3 +32,5 @@ C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCours
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.vbproj.GenerateResource.Cache
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmRegistrationPersonal.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\BookkeepingDatabase.mdb
+C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\RegistrationStaff.mdb
+C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmAutorization.resources

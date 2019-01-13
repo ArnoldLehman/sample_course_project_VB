@@ -105,6 +105,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookkeepingDatabaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAutorization.Designer.vb">
+      <DependentUpon>frmAutorization.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutorization.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBookkeeping.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +151,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RegistrationStaffDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAutorization.resx">
+      <DependentUpon>frmAutorization.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBookkeeping.resx">
       <DependentUpon>frmBookkeeping.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +199,17 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="RegistrationStaffDataSet.xsc">
+      <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegistrationStaffDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegistrationStaffDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegistrationStaffDataSet.xss">
+      <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -220,6 +245,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BookkeepingDatabase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RegistrationStaff.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
