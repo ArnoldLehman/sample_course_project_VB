@@ -105,6 +105,8 @@ Partial Class frmAutorization
         Me.Controls.Add(Me.txtLogin)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmAutorization"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Авторизация"

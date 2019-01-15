@@ -384,8 +384,34 @@ ErrExite:
     End Sub
 
     Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
-        MsgBox("Поиск не работает", MessageBoxIcon.Error, "Ограничение доступа")
-        cmdSearch.Enabled = False
+        Dim cantFine As String = txtSearch.Text
+        If txtSearch.Text = "" Then
+            Exit Sub
+        Else
+            ПерсоналBindingSource.Filter = "(Фамилия LIKE '" & txtSearch.Text & "')" & _
+            "OR (Имя LIKE '" & txtSearch.Text & "')" & _
+            "OR (Отчество LIKE '" & txtSearch.Text & "')" & _
+            "OR (Профессия LIKE '" & txtSearch.Text & "')" & _
+            "OR (Convert(Оклад, 'System.String') LIKE) '" & txtSearch.Text & "')" & _
+            "OR (Convert(Зарплата, 'System.String') LIKE) '" & txtSearch.Text & "')" & _
+            "OR (Convert(Средний дневной заработок, 'System.String') LIKE) '" & txtSearch.Text & "')" & _
+            "OR (Convert(Отпускные, 'System.String') LIKE) '" & txtSearch.Text & "')"
+        End If
+
+        If ПерсоналBindingSource.Count <> 0 Then
+            With DataGridView1
+                .DataSource = ПерсоналBindingSource
+            End With
+        Else
+            MsgBox("-->" & cantFine & vbNewLine & "The search item was not found.", MsgBoxStyle.Information, "Hey Boss!")
+            ПерсоналBindingSource.Filter = Nothing
+            With DataGridView1
+                .ClearSelection()
+                .ReadOnly = True
+                .MultiSelect = False
+                .DataSource = ПерсоналBindingSource
+            End With
+        End If
     End Sub
 
     Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

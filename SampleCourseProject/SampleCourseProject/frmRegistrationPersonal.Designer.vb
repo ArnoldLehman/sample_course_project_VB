@@ -391,6 +391,8 @@ Partial Class frmRegistrationPersonal
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmRegistrationPersonal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Регистрация "

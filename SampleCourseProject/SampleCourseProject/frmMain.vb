@@ -34,14 +34,14 @@
     End Sub
 
     Private Sub АвторизироватьсяToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles АвторизироватьсяToolStripMenuItem.Click
-        frmAutorization.Show()
+        frmliststaff.Show()
         Me.Close()
     End Sub
 
     Private Sub tmrShow_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles tmrShow.Tick
         msMenu.Width += 20
         cmdBookkeeping.Width -= 20
-        If msMenu.Width >= 100 Then
+        If msMenu.Width >= 140 Then
             tmrShow.Stop()
             lblHide.Show()
         End If
@@ -80,5 +80,9 @@
     Private Sub lblHide_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblHide.Click
         lblHide.Hide()
         tmrHide.Start()
+    End Sub
+
+    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
