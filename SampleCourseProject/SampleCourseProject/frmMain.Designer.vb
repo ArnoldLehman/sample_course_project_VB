@@ -27,9 +27,12 @@ Partial Class frmMain
         Me.cmdBookkeeping = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
         Me.msMenu = New System.Windows.Forms.MenuStrip
-        Me.ПерсоналToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.tsmiPersonal = New System.Windows.Forms.ToolStripMenuItem
         Me.ЗарегистрироватьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.АвторизироватьсяToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.tsmiPurchaseSale = New System.Windows.Forms.ToolStripMenuItem
+        Me.tsmiSuppliers = New System.Windows.Forms.ToolStripMenuItem
+        Me.tsmiBuyers = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
         Me.tscmdExit = New System.Windows.Forms.ToolStripButton
         Me.tslblAccount = New System.Windows.Forms.ToolStripLabel
@@ -45,7 +48,7 @@ Partial Class frmMain
         '
         Me.cmdBookkeeping.Location = New System.Drawing.Point(0, 177)
         Me.cmdBookkeeping.Name = "cmdBookkeeping"
-        Me.cmdBookkeeping.Size = New System.Drawing.Size(275, 77)
+        Me.cmdBookkeeping.Size = New System.Drawing.Size(390, 77)
         Me.cmdBookkeeping.TabIndex = 0
         Me.cmdBookkeeping.Text = "Бухгалтерия"
         Me.cmdBookkeeping.UseVisualStyleBackColor = True
@@ -63,34 +66,52 @@ Partial Class frmMain
         Me.msMenu.AutoSize = False
         Me.msMenu.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.msMenu.Dock = System.Windows.Forms.DockStyle.Right
-        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ПерсоналToolStripMenuItem})
-        Me.msMenu.Location = New System.Drawing.Point(275, 0)
+        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiPersonal, Me.tsmiPurchaseSale})
+        Me.msMenu.Location = New System.Drawing.Point(390, 0)
         Me.msMenu.Name = "msMenu"
         Me.msMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.msMenu.Size = New System.Drawing.Size(0, 253)
         Me.msMenu.TabIndex = 11
         Me.msMenu.Text = "MenuStrip1"
         '
-        'ПерсоналToolStripMenuItem
+        'tsmiPersonal
         '
-        Me.ПерсоналToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ЗарегистрироватьToolStripMenuItem, Me.АвторизироватьсяToolStripMenuItem})
-        Me.ПерсоналToolStripMenuItem.Name = "ПерсоналToolStripMenuItem"
-        Me.ПерсоналToolStripMenuItem.Size = New System.Drawing.Size(0, 19)
-        Me.ПерсоналToolStripMenuItem.Text = "Персонал"
+        Me.tsmiPersonal.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ЗарегистрироватьToolStripMenuItem, Me.АвторизироватьсяToolStripMenuItem})
+        Me.tsmiPersonal.Name = "tsmiPersonal"
+        Me.tsmiPersonal.Size = New System.Drawing.Size(0, 19)
+        Me.tsmiPersonal.Text = "Персонал"
         '
         'ЗарегистрироватьToolStripMenuItem
         '
         Me.ЗарегистрироватьToolStripMenuItem.Image = CType(resources.GetObject("ЗарегистрироватьToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ЗарегистрироватьToolStripMenuItem.Name = "ЗарегистрироватьToolStripMenuItem"
-        Me.ЗарегистрироватьToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
+        Me.ЗарегистрироватьToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.ЗарегистрироватьToolStripMenuItem.Text = "Зарегистрировать"
         '
         'АвторизироватьсяToolStripMenuItem
         '
-        Me.АвторизироватьсяToolStripMenuItem.Image = CType(resources.GetObject("АвторизироватьсяToolStripMenuItem.Image"), System.Drawing.Image)
         Me.АвторизироватьсяToolStripMenuItem.Name = "АвторизироватьсяToolStripMenuItem"
-        Me.АвторизироватьсяToolStripMenuItem.Size = New System.Drawing.Size(175, 22)
-        Me.АвторизироватьсяToolStripMenuItem.Text = "Авторизироваться"
+        Me.АвторизироватьсяToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.АвторизироватьсяToolStripMenuItem.Text = "Список персонала"
+        '
+        'tsmiPurchaseSale
+        '
+        Me.tsmiPurchaseSale.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiSuppliers, Me.tsmiBuyers})
+        Me.tsmiPurchaseSale.Name = "tsmiPurchaseSale"
+        Me.tsmiPurchaseSale.Size = New System.Drawing.Size(0, 19)
+        Me.tsmiPurchaseSale.Text = "Купить / Продать"
+        '
+        'tsmiSuppliers
+        '
+        Me.tsmiSuppliers.Name = "tsmiSuppliers"
+        Me.tsmiSuppliers.Size = New System.Drawing.Size(144, 22)
+        Me.tsmiSuppliers.Text = "Поставщики"
+        '
+        'tsmiBuyers
+        '
+        Me.tsmiBuyers.Name = "tsmiBuyers"
+        Me.tsmiBuyers.Size = New System.Drawing.Size(144, 22)
+        Me.tsmiBuyers.Text = "Покупатели"
         '
         'ToolStrip1
         '
@@ -100,7 +121,7 @@ Partial Class frmMain
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
         Me.ToolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStrip1.Size = New System.Drawing.Size(275, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(390, 25)
         Me.ToolStrip1.TabIndex = 12
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -123,7 +144,7 @@ Partial Class frmMain
         '
         Me.lblShow.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblShow.Image = CType(resources.GetObject("lblShow.Image"), System.Drawing.Image)
-        Me.lblShow.Location = New System.Drawing.Point(245, 78)
+        Me.lblShow.Location = New System.Drawing.Point(360, 78)
         Me.lblShow.Name = "lblShow"
         Me.lblShow.Size = New System.Drawing.Size(30, 20)
         Me.lblShow.TabIndex = 13
@@ -138,7 +159,7 @@ Partial Class frmMain
         '
         Me.lblHide.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblHide.Image = CType(resources.GetObject("lblHide.Image"), System.Drawing.Image)
-        Me.lblHide.Location = New System.Drawing.Point(145, 78)
+        Me.lblHide.Location = New System.Drawing.Point(220, 78)
         Me.lblHide.Name = "lblHide"
         Me.lblHide.Size = New System.Drawing.Size(30, 20)
         Me.lblHide.TabIndex = 14
@@ -148,7 +169,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(275, 253)
+        Me.ClientSize = New System.Drawing.Size(390, 253)
         Me.Controls.Add(Me.lblHide)
         Me.Controls.Add(Me.lblShow)
         Me.Controls.Add(Me.ToolStrip1)
@@ -157,6 +178,8 @@ Partial Class frmMain
         Me.Controls.Add(Me.cmdBookkeeping)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.msMenu
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Главная"
@@ -171,7 +194,7 @@ Partial Class frmMain
     Friend WithEvents cmdBookkeeping As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents msMenu As System.Windows.Forms.MenuStrip
-    Friend WithEvents ПерсоналToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiPersonal As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ЗарегистрироватьToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents АвторизироватьсяToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
@@ -181,4 +204,7 @@ Partial Class frmMain
     Friend WithEvents tmrHide As System.Windows.Forms.Timer
     Friend WithEvents tscmdExit As System.Windows.Forms.ToolStripButton
     Friend WithEvents lblHide As System.Windows.Forms.Label
+    Friend WithEvents tsmiPurchaseSale As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiSuppliers As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiBuyers As System.Windows.Forms.ToolStripMenuItem
 End Class
