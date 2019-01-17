@@ -55,3 +55,4 @@ F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debu
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.Resources.resources
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.vbproj.GenerateResource.Cache
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmStorage.resources
+F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmTest.resources

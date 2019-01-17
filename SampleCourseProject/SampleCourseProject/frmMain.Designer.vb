@@ -33,15 +33,11 @@ Partial Class frmMain
         Me.tsmiPurchaseSale = New System.Windows.Forms.ToolStripMenuItem
         Me.tsmiSuppliers = New System.Windows.Forms.ToolStripMenuItem
         Me.tsmiBuyers = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip
-        Me.tscmdExit = New System.Windows.Forms.ToolStripButton
-        Me.tslblAccount = New System.Windows.Forms.ToolStripLabel
         Me.lblShow = New System.Windows.Forms.Label
         Me.tmrShow = New System.Windows.Forms.Timer(Me.components)
         Me.tmrHide = New System.Windows.Forms.Timer(Me.components)
         Me.lblHide = New System.Windows.Forms.Label
         Me.msMenu.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmdBookkeeping
@@ -56,7 +52,7 @@ Partial Class frmMain
         'Label3
         '
         Me.Label3.Image = CType(resources.GetObject("Label3.Image"), System.Drawing.Image)
-        Me.Label3.Location = New System.Drawing.Point(-3, 25)
+        Me.Label3.Location = New System.Drawing.Point(-3, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(16, 20)
         Me.Label3.TabIndex = 10
@@ -67,10 +63,10 @@ Partial Class frmMain
         Me.msMenu.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.msMenu.Dock = System.Windows.Forms.DockStyle.Right
         Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiPersonal, Me.tsmiPurchaseSale})
-        Me.msMenu.Location = New System.Drawing.Point(390, 0)
+        Me.msMenu.Location = New System.Drawing.Point(191, 0)
         Me.msMenu.Name = "msMenu"
         Me.msMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.msMenu.Size = New System.Drawing.Size(0, 253)
+        Me.msMenu.Size = New System.Drawing.Size(199, 253)
         Me.msMenu.TabIndex = 11
         Me.msMenu.Text = "MenuStrip1"
         '
@@ -78,7 +74,7 @@ Partial Class frmMain
         '
         Me.tsmiPersonal.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ЗарегистрироватьToolStripMenuItem, Me.АвторизироватьсяToolStripMenuItem})
         Me.tsmiPersonal.Name = "tsmiPersonal"
-        Me.tsmiPersonal.Size = New System.Drawing.Size(0, 19)
+        Me.tsmiPersonal.Size = New System.Drawing.Size(192, 19)
         Me.tsmiPersonal.Text = "Персонал"
         '
         'ЗарегистрироватьToolStripMenuItem
@@ -98,47 +94,20 @@ Partial Class frmMain
         '
         Me.tsmiPurchaseSale.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiSuppliers, Me.tsmiBuyers})
         Me.tsmiPurchaseSale.Name = "tsmiPurchaseSale"
-        Me.tsmiPurchaseSale.Size = New System.Drawing.Size(0, 19)
+        Me.tsmiPurchaseSale.Size = New System.Drawing.Size(192, 19)
         Me.tsmiPurchaseSale.Text = "Купить / Продать"
         '
         'tsmiSuppliers
         '
         Me.tsmiSuppliers.Name = "tsmiSuppliers"
-        Me.tsmiSuppliers.Size = New System.Drawing.Size(144, 22)
+        Me.tsmiSuppliers.Size = New System.Drawing.Size(152, 22)
         Me.tsmiSuppliers.Text = "Поставщики"
         '
         'tsmiBuyers
         '
         Me.tsmiBuyers.Name = "tsmiBuyers"
-        Me.tsmiBuyers.Size = New System.Drawing.Size(144, 22)
+        Me.tsmiBuyers.Size = New System.Drawing.Size(152, 22)
         Me.tsmiBuyers.Text = "Покупатели"
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tscmdExit, Me.tslblAccount})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.ToolStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStrip1.Size = New System.Drawing.Size(390, 25)
-        Me.ToolStrip1.TabIndex = 12
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'tscmdExit
-        '
-        Me.tscmdExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.tscmdExit.Image = CType(resources.GetObject("tscmdExit.Image"), System.Drawing.Image)
-        Me.tscmdExit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.tscmdExit.Name = "tscmdExit"
-        Me.tscmdExit.Size = New System.Drawing.Size(23, 22)
-        Me.tscmdExit.Text = "Выход"
-        '
-        'tslblAccount
-        '
-        Me.tslblAccount.Name = "tslblAccount"
-        Me.tslblAccount.Size = New System.Drawing.Size(37, 22)
-        Me.tslblAccount.Text = "Гость"
         '
         'lblShow
         '
@@ -172,7 +141,6 @@ Partial Class frmMain
         Me.ClientSize = New System.Drawing.Size(390, 253)
         Me.Controls.Add(Me.lblHide)
         Me.Controls.Add(Me.lblShow)
-        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.msMenu)
         Me.Controls.Add(Me.cmdBookkeeping)
@@ -185,10 +153,7 @@ Partial Class frmMain
         Me.Text = "Главная"
         Me.msMenu.ResumeLayout(False)
         Me.msMenu.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents cmdBookkeeping As System.Windows.Forms.Button
@@ -197,12 +162,9 @@ Partial Class frmMain
     Friend WithEvents tsmiPersonal As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ЗарегистрироватьToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents АвторизироватьсяToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents tslblAccount As System.Windows.Forms.ToolStripLabel
     Friend WithEvents lblShow As System.Windows.Forms.Label
     Friend WithEvents tmrShow As System.Windows.Forms.Timer
     Friend WithEvents tmrHide As System.Windows.Forms.Timer
-    Friend WithEvents tscmdExit As System.Windows.Forms.ToolStripButton
     Friend WithEvents lblHide As System.Windows.Forms.Label
     Friend WithEvents tsmiPurchaseSale As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsmiSuppliers As System.Windows.Forms.ToolStripMenuItem

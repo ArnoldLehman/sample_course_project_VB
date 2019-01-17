@@ -1,4 +1,8 @@
-﻿Public Class frmBookkeeping
+﻿Imports System.Data
+Imports System.Data.OleDb
+Imports System.Data.DataTable
+
+Public Class frmBookkeeping
 
     Dim result As DialogResult
 
@@ -8,17 +12,25 @@
     Private Sub tpPersonal_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpPersonal.Enter
         If tabBookkeeping.SelectedTab Is tpPersonal Then
             With Me
-                .Width = 1184
-                .Height = 328
+                .Width = 1227
+                .Height = 323
             End With
             ПерсоналBindingSource.MoveFirst()
         End If
     End Sub
     'Сохранение информации в базу данных и обновление таблицы на форме
     Private Sub cmdDatabasePersonal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDatabasePersonal.Click
+        On Error GoTo SaveErr
         ПерсоналBindingSource.EndEdit()
         ПерсоналTableAdapter.Update(BookkeepingDatabaseDataSet.Персонал)
-        MessageBox.Show("All good!")
+
+ErrEx:
+        Exit Sub
+SaveErr:
+        MsgBox("Ошибка номер " & Err.Number & vbNewLine & _
+               "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
+               "Reser Error!")
+        Resume ErrEx
     End Sub
     'Создание новой строки таблицы
     Private Sub cmdAddNewPrsonal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNewPersonal.Click
@@ -384,33 +396,71 @@ ErrExite:
     End Sub
 
     Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
-        Dim cantFine As String = txtSearch.Text
+        On Error GoTo SearchErr
         If txtSearch.Text = "" Then
+            Call notFound()
             Exit Sub
         Else
-            ПерсоналBindingSource.Filter = "(Фамилия LIKE '" & txtSearch.Text & "')" & _
-            "OR (Имя LIKE '" & txtSearch.Text & "')" & _
-            "OR (Отчество LIKE '" & txtSearch.Text & "')" & _
-            "OR (Профессия LIKE '" & txtSearch.Text & "')" & _
-            "OR (Convert(Оклад, 'System.String') LIKE) '" & txtSearch.Text & "')" & _
-            "OR (Convert(Зарплата, 'System.String') LIKE) '" & txtSearch.Text & "')" & _
-            "OR (Convert(Средний дневной заработок, 'System.String') LIKE) '" & txtSearch.Text & "')" & _
-            "OR (Convert(Отпускные, 'System.String') LIKE) '" & txtSearch.Text & "')"
+            Dim cantFine As String = txtSearch.Text
+            Me.dgvFill()
+            ПерсоналBindingSource.Filter = "(Convert(Код, 'System.String') LIKE '" & txtSearch.Text & "')" & _
+            "OR (Фамилия LIKE '" & txtSearch.Text & "') OR (Имя LIKE '" & txtSearch.Text & "')" & _
+            "OR (Отчество LIKE '" & txtSearch.Text & "') OR (Профессия LIKE '" & txtSearch.Text & "')" & _
+            "OR (Convert(Оклад, 'System.String') LIKE '" & txtSearch.Text & "')" & _
+            "OR (Convert(Зарплата, 'System.String') LIKE '" & txtSearch.Text & "')"
+
+            If ПерсоналBindingSource.Count <> 0 Then
+                With dgvStaff
+                    .DataSource = ПерсоналBindingSource
+                End With
+            Else
+                Me.notFound()
+                MsgBox("-->" & cantFine & vbNewLine & "The search item was not found.", MsgBoxStyle.Information, "Hey Boss!")
+                ПерсоналBindingSource.Filter = Nothing
+                With dgvStaff
+                    .ClearSelection()
+                    .ReadOnly = True
+                    .MultiSelect = False
+                    .DataSource = ПерсоналBindingSource
+                End With
+            End If
         End If
 
-        If ПерсоналBindingSource.Count <> 0 Then
-            With DataGridView1
-                .DataSource = ПерсоналBindingSource
-            End With
-        Else
-            MsgBox("-->" & cantFine & vbNewLine & "The search item was not found.", MsgBoxStyle.Information, "Hey Boss!")
-            ПерсоналBindingSource.Filter = Nothing
-            With DataGridView1
-                .ClearSelection()
-                .ReadOnly = True
-                .MultiSelect = False
-                .DataSource = ПерсоналBindingSource
-            End With
+ErrExit:
+        Exit Sub
+SearchErr:
+        MsgBox("Ошибка номер " & Err.Number & vbNewLine & _
+               "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
+               "Reser Error!")
+        Resume ErrExit
+    End Sub
+
+    Private Sub reset()
+        With txtSearch
+            .Text = ""
+            .Select()
+        End With
+
+        If dgvStaff.DataSource Is Nothing Then
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub dgvFill()
+
+        If dgvStaff.DataSource Is Nothing Then
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub notFound()
+        With txtSearch
+            .Select()
+            .SelectAll()
+        End With
+
+        If dgvStaff.DataSource Is Nothing Then
+            Exit Sub
         End If
     End Sub
 
@@ -429,5 +479,59 @@ ErrExite:
         Me.ЭлектричествоTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Электричество)
         'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Персонал". При необходимости она может быть перемещена или удалена.
         Me.ПерсоналTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Персонал)
+
+        With dgvStaff
+            .ClearSelection()
+            .ReadOnly = True
+            .MultiSelect = False
+        End With
+
+        Me.reset()
+    End Sub
+
+    Private Sub lblReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblReset.Click
+        On Error GoTo ErrRe
+        txtSearch.Select()
+        ПерсоналBindingSource.Filter = Nothing
+
+        With dgvStaff
+            .ClearSelection()
+            .ReadOnly = True
+            .MultiSelect = False
+            .DataSource = ПерсоналBindingSource
+        End With
+
+
+        Me.reset()
+ErrEx:
+        Exit Sub
+ErrRe:
+        MsgBox("Ошибка номер " & Err.Number & vbNewLine & _
+                "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
+                "Reser Error!")
+        Resume ErrEx
+    End Sub
+
+    Private Sub lblReset_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblReset.MouseEnter
+        Me.Cursor = Cursors.Hand
+    End Sub
+
+    Private Sub lblReset_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblReset.MouseLeave
+        Me.Cursor = Cursors.Default
+    End Sub
+
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\sample_course_project_VB\Course project database\BookkeepingDatabase.mdb")
+        Dim cmd As New OleDbCommand("select* from Персонал where Фамилия=@login", conn)
+        cmd.Parameters.Add("@login", OleDbType.VarChar).Value = TextBox1.Text
+        Dim adapter1 As New OleDbDataAdapter(cmd)
+        Dim table As New DataTable
+        adapter1.Fill(table)
+        If table.Rows.Count <= 0 Then
+            MsgBox("Error")
+        Else
+            MsgBox("good")
+        End If
     End Sub
 End Class

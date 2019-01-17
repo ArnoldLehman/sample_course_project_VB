@@ -173,19 +173,6 @@
         5QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>239, 17</value>
-  </metadata>
-  <data name="tscmdExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVFhHxZZBCsMwDATzsz6tT8vT2ggis3VlaxzsZGBo
-        ICtpoT10O/ksEhMNzxBTD+6Hr8Or+B6MHlevFvF5jB6NHC3icxg91pMW8TxGjxAzaK6gy4kZNFfQ5cSM
-        Ovc+P5vocmJGnbPnbgkfoI7ic80Supw4is6GJTRAdKJ3xL8SUainE72j/pSIAj2d6B310QLTvgKKzk79
-        EVJ8Ljxu6HJiRp2z5+ZxwweoGXWue9zQ5cQMmivocmIGzRV0OTGD5gq6nJhBcwVdPlNMNDxDjP3RtD+c
-        0ZLIZdAiy8mK3EaryO3URR7Di0xi274G19okuoOxhAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="lblShow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
