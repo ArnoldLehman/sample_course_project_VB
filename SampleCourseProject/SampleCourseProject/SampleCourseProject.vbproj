@@ -154,6 +154,18 @@
     <Compile Include="frmTest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmUserLogin.Designer.vb">
+      <DependentUpon>frmUserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserRegistration.Designer.vb">
+      <DependentUpon>frmUserRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -173,6 +185,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserAccountDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +223,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserLogin.resx">
+      <DependentUpon>frmUserLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserRegistration.resx">
+      <DependentUpon>frmUserRegistration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -247,6 +272,17 @@
     <None Include="RegistrationStaffDataSet.xss">
       <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
     </None>
+    <None Include="UserAccountDataSet.xsc">
+      <DependentUpon>UserAccountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UserAccountDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UserAccountDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UserAccountDataSet.xss">
+      <DependentUpon>UserAccountDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -285,6 +321,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="RegistrationStaff.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UserAccount.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

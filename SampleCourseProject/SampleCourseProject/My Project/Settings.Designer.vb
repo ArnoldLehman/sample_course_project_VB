@@ -144,6 +144,27 @@ Namespace My
                 Me("PasswordAdmin") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\UserRegistration.mdb"& _ 
+            "")>  _
+        Public ReadOnly Property UserRegistrationConnectionString() As String
+            Get
+                Return CType(Me("UserRegistrationConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\UserAccount.mdb")>  _
+        Public ReadOnly Property UserAccountConnectionString() As String
+            Get
+                Return CType(Me("UserAccountConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

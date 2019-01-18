@@ -1,4 +1,7 @@
 ﻿Public Class frmTest
+    Public access As Boolean = False
+    Public auth As Boolean = False
+
 
     Private Sub frmTest_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FirstImage()
@@ -146,5 +149,10 @@
         Label1.Font = New Font(Label1.Font.FontFamily, Label1.Font.Size, FontStyle.Regular)
         Label1.BackColor = Color.RoyalBlue
         Label1.ForeColor = Color.White
+    End Sub
+
+    Private Sub tsmiAccount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiAccount.Click
+        frmUserLogin.Show()
+        Me.Close()
     End Sub
 End Class

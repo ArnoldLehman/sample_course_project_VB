@@ -26,11 +26,8 @@ Partial Class frmTest
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTest))
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.lblNews = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.АвторизироватьсяToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ЗарегистрироватьсяToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.tsmiAccount = New System.Windows.Forms.ToolStripMenuItem
         Me.lblTitle = New System.Windows.Forms.Label
         Me.lblMain = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -54,7 +51,6 @@ Partial Class frmTest
         '
         Me.Panel1.BackColor = System.Drawing.Color.Blue
         Me.Panel1.Controls.Add(Me.lblNews)
-        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Controls.Add(Me.lblTitle)
         Me.Panel1.Controls.Add(Me.lblMain)
@@ -70,75 +66,46 @@ Partial Class frmTest
         Me.lblNews.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblNews.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblNews.ForeColor = System.Drawing.Color.White
-        Me.lblNews.Location = New System.Drawing.Point(255, 0)
+        Me.lblNews.Location = New System.Drawing.Point(275, 0)
         Me.lblNews.Name = "lblNews"
         Me.lblNews.Size = New System.Drawing.Size(100, 64)
         Me.lblNews.TabIndex = 3
         Me.lblNews.Text = "Новости"
         Me.lblNews.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.Blue
-        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(355, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(100, 64)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Label4"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'MenuStrip1
         '
-        Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.BackColor = System.Drawing.Color.Blue
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(726, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAccount})
+        Me.MenuStrip1.Location = New System.Drawing.Point(739, 20)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(81, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(165, 24)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ToolStripMenuItem
+        'tsmiAccount
         '
-        Me.ToolStripMenuItem.BackColor = System.Drawing.Color.Blue
-        Me.ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.АвторизироватьсяToolStripMenuItem, Me.ЗарегистрироватьсяToolStripMenuItem})
-        Me.ToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.ToolStripMenuItem.Image = CType(resources.GetObject("ToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ToolStripMenuItem.Name = "ToolStripMenuItem"
-        Me.ToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.ToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
-        Me.ToolStripMenuItem.Text = "Гость"
-        '
-        'АвторизироватьсяToolStripMenuItem
-        '
-        Me.АвторизироватьсяToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.АвторизироватьсяToolStripMenuItem.Name = "АвторизироватьсяToolStripMenuItem"
-        Me.АвторизироватьсяToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.АвторизироватьсяToolStripMenuItem.Text = "Авторизироваться"
-        '
-        'ЗарегистрироватьсяToolStripMenuItem
-        '
-        Me.ЗарегистрироватьсяToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ЗарегистрироватьсяToolStripMenuItem.Name = "ЗарегистрироватьсяToolStripMenuItem"
-        Me.ЗарегистрироватьсяToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.ЗарегистрироватьсяToolStripMenuItem.Text = "Зарегистрироваться"
+        Me.tsmiAccount.BackColor = System.Drawing.Color.Blue
+        Me.tsmiAccount.ForeColor = System.Drawing.Color.White
+        Me.tsmiAccount.Image = CType(resources.GetObject("tsmiAccount.Image"), System.Drawing.Image)
+        Me.tsmiAccount.Name = "tsmiAccount"
+        Me.tsmiAccount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.tsmiAccount.Size = New System.Drawing.Size(65, 20)
+        Me.tsmiAccount.Text = "Гость"
         '
         'lblTitle
         '
         Me.lblTitle.BackColor = System.Drawing.Color.Blue
         Me.lblTitle.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblTitle.Font = New System.Drawing.Font("Centaur_BHG", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.White
         Me.lblTitle.Location = New System.Drawing.Point(-3, 0)
         Me.lblTitle.Margin = New System.Windows.Forms.Padding(25, 0, 3, 0)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Padding = New System.Windows.Forms.Padding(35, 0, 35, 0)
-        Me.lblTitle.Size = New System.Drawing.Size(158, 64)
+        Me.lblTitle.Size = New System.Drawing.Size(178, 64)
         Me.lblTitle.TabIndex = 1
         Me.lblTitle.Text = "SugProd"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -150,7 +117,7 @@ Partial Class frmTest
         Me.lblMain.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblMain.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblMain.ForeColor = System.Drawing.Color.White
-        Me.lblMain.Location = New System.Drawing.Point(155, 0)
+        Me.lblMain.Location = New System.Drawing.Point(175, 0)
         Me.lblMain.Name = "lblMain"
         Me.lblMain.Size = New System.Drawing.Size(100, 64)
         Me.lblMain.TabIndex = 2
@@ -238,7 +205,6 @@ Partial Class frmTest
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 64)
@@ -254,7 +220,7 @@ Partial Class frmTest
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(-1, -1)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 36)
+        Me.Label1.Size = New System.Drawing.Size(109, 36)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Главная"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -289,6 +255,7 @@ Partial Class frmTest
         Me.Name = "frmTest"
         Me.Text = "Главная"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -299,10 +266,9 @@ Partial Class frmTest
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents lblMain As System.Windows.Forms.Label
     Friend WithEvents lblNews As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tsmiAccount As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents lblImage As System.Windows.Forms.Label
     Friend WithEvents lblNext As System.Windows.Forms.Label
@@ -311,8 +277,6 @@ Partial Class frmTest
     Friend WithEvents lblSecondImage As System.Windows.Forms.Label
     Friend WithEvents lblThirdImage As System.Windows.Forms.Label
     Friend WithEvents lblFourthImage As System.Windows.Forms.Label
-    Friend WithEvents АвторизироватьсяToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ЗарегистрироватьсяToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblText As System.Windows.Forms.Label
