@@ -97,54 +97,6 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("user")>  _
-        Public Property LoginUser() As String
-            Get
-                Return CType(Me("LoginUser"),String)
-            End Get
-            Set
-                Me("LoginUser") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("passuser")>  _
-        Public Property PasswordUser() As String
-            Get
-                Return CType(Me("PasswordUser"),String)
-            End Get
-            Set
-                Me("PasswordUser") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("admin")>  _
-        Public Property LoginAdmin() As String
-            Get
-                Return CType(Me("LoginAdmin"),String)
-            End Get
-            Set
-                Me("LoginAdmin") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("passadmin")>  _
-        Public Property PasswordAdmin() As String
-            Get
-                Return CType(Me("PasswordAdmin"),String)
-            End Get
-            Set
-                Me("PasswordAdmin") = value
-            End Set
-        End Property
-        
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
@@ -163,6 +115,37 @@ Namespace My
         Public ReadOnly Property UserAccountConnectionString() As String
             Get
                 Return CType(Me("UserAccountConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\StorageDatabase.mdb")>  _
+        Public ReadOnly Property StorageDatabaseConnectionString() As String
+            Get
+                Return CType(Me("StorageDatabaseConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property MyItems() As Global.System.Collections.Specialized.StringCollection
+            Get
+                Return CType(Me("MyItems"),Global.System.Collections.Specialized.StringCollection)
+            End Get
+            Set
+                Me("MyItems") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\BuyersDatabase.mdb")>  _
+        Public ReadOnly Property BuyersDatabaseConnectionString() As String
+            Get
+                Return CType(Me("BuyersDatabaseConnectionString"),String)
             End Get
         End Property
     End Class

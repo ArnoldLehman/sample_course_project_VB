@@ -76,11 +76,6 @@ ErrExite:
     Private Sub cmdCalculateHolidayPay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculateHolidayPay.Click
         txtHolidayPay.Text = Val(txtSDZ.Text) * Val(txtNumbDaysWorked.Text)
     End Sub
-    'Возврат на главное меню и закрытие формы бухгалтерии
-    Private Sub cmdBackStaff_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBackStaff.Click
-        frmMain.Show()
-        Me.Close()
-    End Sub
 
 
 
@@ -233,11 +228,6 @@ ErrExite:
     Private Sub cmdCalculateElectricity_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculateElectricity.Click
         txtRashElec.Text = Val(txtPotrElec.Text) * Val(txtTarifElec.Text)
     End Sub
-    'Возврат на главное меню и закрытие формы бухгалтерии
-    Private Sub cmdBackMS_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBackMS.Click
-        frmMain.Show()
-        Me.Close()
-    End Sub
 
 
     'Код, относящийся к третьей вкладке (Прибыль)
@@ -389,20 +379,15 @@ ErrExite:
     Private Sub cmdCalculateMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculateMolasses.Click
         txtIncomeMolasses.Text = Val(txtNumberMolasses.Text) * Val(txtPriceMolasses.Text)
     End Sub
-    'Возврат на главное меню и закрытие формы бухгалтерии
-    Private Sub cmdBackIncome_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBackIncome.Click
-        frmMain.Show()
-        Me.Close()
-    End Sub
 
     Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
         On Error GoTo SearchErr
         If txtSearch.Text = "" Then
-            Call notFound()
+            'Call notFound()
             Exit Sub
         Else
             Dim cantFine As String = txtSearch.Text
-            Me.dgvFill()
+            'Me.dgvFill()
             ПерсоналBindingSource.Filter = "(Convert(Код, 'System.String') LIKE '" & txtSearch.Text & "')" & _
             "OR (Фамилия LIKE '" & txtSearch.Text & "') OR (Имя LIKE '" & txtSearch.Text & "')" & _
             "OR (Отчество LIKE '" & txtSearch.Text & "') OR (Профессия LIKE '" & txtSearch.Text & "')" & _
@@ -414,7 +399,7 @@ ErrExite:
                     .DataSource = ПерсоналBindingSource
                 End With
             Else
-                Me.notFound()
+                'Me.notFound()
                 MsgBox("-->" & cantFine & vbNewLine & "The search item was not found.", MsgBoxStyle.Information, "Hey Boss!")
                 ПерсоналBindingSource.Filter = Nothing
                 With dgvStaff
@@ -435,33 +420,8 @@ SearchErr:
         Resume ErrExit
     End Sub
 
-    Private Sub reset()
-        With txtSearch
-            .Text = ""
-            .Select()
-        End With
-
-        If dgvStaff.DataSource Is Nothing Then
-            Exit Sub
-        End If
-    End Sub
-
-    Private Sub dgvFill()
-
-        If dgvStaff.DataSource Is Nothing Then
-            Exit Sub
-        End If
-    End Sub
-
-    Private Sub notFound()
-        With txtSearch
-            .Select()
-            .SelectAll()
-        End With
-
-        If dgvStaff.DataSource Is Nothing Then
-            Exit Sub
-        End If
+    Private Sub frmBookkeeping_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        frmTest.Show()
     End Sub
 
     Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -486,7 +446,7 @@ SearchErr:
             .MultiSelect = False
         End With
 
-        Me.reset()
+        'Me.reset()
     End Sub
 
     Private Sub lblReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblReset.Click
@@ -502,7 +462,7 @@ SearchErr:
         End With
 
 
-        Me.reset()
+        'Me.reset()
 ErrEx:
         Exit Sub
 ErrRe:
@@ -510,28 +470,5 @@ ErrRe:
                 "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
                 "Reser Error!")
         Resume ErrEx
-    End Sub
-
-    Private Sub lblReset_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblReset.MouseEnter
-        Me.Cursor = Cursors.Hand
-    End Sub
-
-    Private Sub lblReset_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblReset.MouseLeave
-        Me.Cursor = Cursors.Default
-    End Sub
-
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=F:\sample_course_project_VB\Course project database\BookkeepingDatabase.mdb")
-        Dim cmd As New OleDbCommand("select* from Персонал where Фамилия=@login", conn)
-        cmd.Parameters.Add("@login", OleDbType.VarChar).Value = TextBox1.Text
-        Dim adapter1 As New OleDbDataAdapter(cmd)
-        Dim table As New DataTable
-        adapter1.Fill(table)
-        If table.Rows.Count <= 0 Then
-            MsgBox("Error")
-        Else
-            MsgBox("good")
-        End If
     End Sub
 End Class

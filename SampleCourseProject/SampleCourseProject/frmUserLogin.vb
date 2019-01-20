@@ -7,6 +7,7 @@ Public Class frmUserLogin
         Dim pword As String
         Dim username As String = ""
         Dim pass As String = ""
+        Dim old As Point = Me.Location
         If txtLogin.Text = "" Or txtPassword.Text = "" Then
             MsgBox("Pls fill all the info")
         Else
@@ -20,18 +21,27 @@ Public Class frmUserLogin
             Try
                 pass = cmd.ExecuteScalar().ToString
             Catch ex As Exception
-                MsgBox("Username does not exit")
+                MsgBox(ex.Message)
             End Try
             If pword = pass Then
                 MsgBox("Login success")
                 frmTest.auth = True
                 If txtLogin.Text = "Admin" Then
-                    Dim old As Point = Me.Location
                     frmTest.access = True
                     frmTest.tsmiAccount.Text = "Администратор"
                     old.X = 683
                     old.Y = 20
                     frmTest.MenuStrip1.Location = New Point(old.X, old.Y)
+                    frmTest.lblBookkeepingOrBuy.Text = "Бухгалтерия"
+                    frmTest.lblStorageOrComp.Text = "Склад"
+                Else
+                    frmTest.access = False
+                    frmTest.tsmiAccount.Text = txtLogin.Text
+                    old.X = 683
+                    old.Y = 20
+                    frmTest.MenuStrip1.Location = New Point(old.X, old.Y)
+                    frmTest.lblBookkeepingOrBuy.Text = "Купить"
+                    frmTest.lblStorageOrComp.Text = "О предприятии"
                 End If
                 frmTest.Show()
                 Me.Close()
@@ -48,5 +58,9 @@ Public Class frmUserLogin
         If frmUserCreateAccount.Visible Then
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub frmUserLogin_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        frmTest.Show()
     End Sub
 End Class

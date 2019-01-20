@@ -93,6 +93,7 @@ Partial Class frmUserLogin
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmdLogin)
         Me.Name = "frmUserLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Вход"
         Me.ResumeLayout(False)
         Me.PerformLayout()

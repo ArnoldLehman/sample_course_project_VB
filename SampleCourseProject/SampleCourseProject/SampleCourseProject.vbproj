@@ -32,6 +32,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>factory_39516.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -105,11 +106,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BookkeepingDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="frmAutorization.Designer.vb">
-      <DependentUpon>frmAutorization.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmAutorization.vb">
-      <SubType>Form</SubType>
+    <Compile Include="BuyersDatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuyersDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmBookkeeping.vb">
       <SubType>Form</SubType>
@@ -118,28 +118,16 @@
       <DependentUpon>frmBookkeeping.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBuy.Designer.vb">
+      <DependentUpon>frmBuy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuy.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmBuyers.Designer.vb">
       <DependentUpon>frmBuyers.vb</DependentUpon>
     </Compile>
     <Compile Include="frmBuyers.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmListStaff.Designer.vb">
-      <DependentUpon>frmListStaff.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmListStaff.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegistrationPersonal.Designer.vb">
-      <DependentUpon>frmRegistrationPersonal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmRegistrationPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmStorage.Designer.vb">
@@ -166,6 +154,7 @@
     <Compile Include="frmUserRegistration.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="mdlStyle.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -181,10 +170,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="RegistrationStaffDataSet.Designer.vb">
+    <Compile Include="StorageDatabaseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="UserAccountDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -193,33 +182,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAutorization.resx">
-      <DependentUpon>frmAutorization.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmBookkeeping.resx">
       <DependentUpon>frmBookkeeping.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuy.resx">
+      <DependentUpon>frmBuy.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuyers.resx">
       <DependentUpon>frmBuyers.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmListStaff.resx">
-      <DependentUpon>frmListStaff.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrationPersonal.resx">
-      <DependentUpon>frmRegistrationPersonal.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStorage.resx">
       <DependentUpon>frmStorage.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTest.resx">
       <DependentUpon>frmTest.vb</DependentUpon>
@@ -231,6 +205,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUserRegistration.resx">
       <DependentUpon>frmUserRegistration.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -252,6 +227,17 @@
     <None Include="BookkeepingDatabaseDataSet.xss">
       <DependentUpon>BookkeepingDatabaseDataSet.xsd</DependentUpon>
     </None>
+    <None Include="BuyersDatabaseDataSet.xsc">
+      <DependentUpon>BuyersDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BuyersDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BuyersDatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BuyersDatabaseDataSet.xss">
+      <DependentUpon>BuyersDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -261,16 +247,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="RegistrationStaffDataSet.xsc">
-      <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+    <None Include="StorageDatabaseDataSet.xsc">
+      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="RegistrationStaffDataSet.xsd">
+    <None Include="StorageDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RegistrationStaffDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>StorageDatabaseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RegistrationStaffDataSet.xss">
-      <DependentUpon>RegistrationStaffDataSet.xsd</DependentUpon>
+    <None Include="StorageDatabaseDataSet.xss">
+      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="UserAccountDataSet.xsc">
       <DependentUpon>UserAccountDataSet.xsd</DependentUpon>
@@ -320,7 +306,11 @@
     <Content Include="BookkeepingDatabase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="RegistrationStaff.mdb">
+    <Content Include="BuyersDatabase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="factory_39516.ico" />
+    <Content Include="StorageDatabase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UserAccount.mdb">

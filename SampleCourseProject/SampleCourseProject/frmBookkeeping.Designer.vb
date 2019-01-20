@@ -46,7 +46,6 @@ Partial Class frmBookkeeping
         Me.ОтпускныеDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ПерсоналBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BookkeepingDatabaseDataSet = New SampleCourseProject.BookkeepingDatabaseDataSet
-        Me.cmdBackStaff = New System.Windows.Forms.Button
         Me.GroupBox9 = New System.Windows.Forms.GroupBox
         Me.GroupBox12 = New System.Windows.Forms.GroupBox
         Me.txtHolidayPay = New System.Windows.Forms.TextBox
@@ -206,8 +205,6 @@ Partial Class frmBookkeeping
         Me.ЖомTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЖомTableAdapter
         Me.МелассаTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
         Me.tabBookkeeping.SuspendLayout()
         Me.tpPersonal.SuspendLayout()
         CType(Me.dgvStaff, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,13 +251,11 @@ Partial Class frmBookkeeping
         Me.tabBookkeeping.Location = New System.Drawing.Point(0, 0)
         Me.tabBookkeeping.Name = "tabBookkeeping"
         Me.tabBookkeeping.SelectedIndex = 0
-        Me.tabBookkeeping.Size = New System.Drawing.Size(1211, 339)
+        Me.tabBookkeeping.Size = New System.Drawing.Size(1211, 287)
         Me.tabBookkeeping.TabIndex = 2
         '
         'tpPersonal
         '
-        Me.tpPersonal.Controls.Add(Me.Button1)
-        Me.tpPersonal.Controls.Add(Me.TextBox1)
         Me.tpPersonal.Controls.Add(Me.lblReset)
         Me.tpPersonal.Controls.Add(Me.txtSearch)
         Me.tpPersonal.Controls.Add(Me.cmdSearch)
@@ -269,7 +264,6 @@ Partial Class frmBookkeeping
         Me.tpPersonal.Controls.Add(Me.cmdDeletePersonal)
         Me.tpPersonal.Controls.Add(Me.cmdAddNewPersonal)
         Me.tpPersonal.Controls.Add(Me.dgvStaff)
-        Me.tpPersonal.Controls.Add(Me.cmdBackStaff)
         Me.tpPersonal.Controls.Add(Me.GroupBox9)
         Me.tpPersonal.Controls.Add(Me.GroupBox8)
         Me.tpPersonal.Controls.Add(Me.GroupBox7)
@@ -277,7 +271,7 @@ Partial Class frmBookkeeping
         Me.tpPersonal.Location = New System.Drawing.Point(4, 25)
         Me.tpPersonal.Name = "tpPersonal"
         Me.tpPersonal.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpPersonal.Size = New System.Drawing.Size(1203, 310)
+        Me.tpPersonal.Size = New System.Drawing.Size(1203, 258)
         Me.tpPersonal.TabIndex = 0
         Me.tpPersonal.Text = "Персонал"
         Me.tpPersonal.UseVisualStyleBackColor = True
@@ -285,6 +279,7 @@ Partial Class frmBookkeeping
         'lblReset
         '
         Me.lblReset.AutoSize = True
+        Me.lblReset.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblReset.Location = New System.Drawing.Point(502, 232)
         Me.lblReset.Name = "lblReset"
         Me.lblReset.Size = New System.Drawing.Size(55, 13)
@@ -433,15 +428,6 @@ Partial Class frmBookkeeping
         '
         Me.BookkeepingDatabaseDataSet.DataSetName = "BookkeepingDatabaseDataSet"
         Me.BookkeepingDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'cmdBackStaff
-        '
-        Me.cmdBackStaff.Location = New System.Drawing.Point(424, 83)
-        Me.cmdBackStaff.Name = "cmdBackStaff"
-        Me.cmdBackStaff.Size = New System.Drawing.Size(65, 23)
-        Me.cmdBackStaff.TabIndex = 50
-        Me.cmdBackStaff.Text = "Назад"
-        Me.cmdBackStaff.UseVisualStyleBackColor = True
         '
         'GroupBox9
         '
@@ -756,7 +742,7 @@ Partial Class frmBookkeeping
         Me.tpMS.Location = New System.Drawing.Point(4, 25)
         Me.tpMS.Name = "tpMS"
         Me.tpMS.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMS.Size = New System.Drawing.Size(1203, 255)
+        Me.tpMS.Size = New System.Drawing.Size(1203, 258)
         Me.tpMS.TabIndex = 1
         Me.tpMS.Text = "Комм. услуги"
         Me.tpMS.UseVisualStyleBackColor = True
@@ -1305,7 +1291,7 @@ Partial Class frmBookkeeping
         Me.tpIncome.Location = New System.Drawing.Point(4, 25)
         Me.tpIncome.Name = "tpIncome"
         Me.tpIncome.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpIncome.Size = New System.Drawing.Size(1203, 255)
+        Me.tpIncome.Size = New System.Drawing.Size(1203, 258)
         Me.tpIncome.TabIndex = 2
         Me.tpIncome.Text = "Прибыль"
         Me.tpIncome.UseVisualStyleBackColor = True
@@ -1869,27 +1855,11 @@ Partial Class frmBookkeeping
         '
         Me.МелассаTableAdapter.ClearBeforeFill = True
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(338, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 60
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(444, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 61
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmBookkeeping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1211, 339)
+        Me.ClientSize = New System.Drawing.Size(1211, 287)
         Me.Controls.Add(Me.tabBookkeeping)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -1950,7 +1920,6 @@ Partial Class frmBookkeeping
     Friend WithEvents cmdDeletePersonal As System.Windows.Forms.Button
     Friend WithEvents cmdAddNewPersonal As System.Windows.Forms.Button
     Friend WithEvents dgvStaff As System.Windows.Forms.DataGridView
-    Friend WithEvents cmdBackStaff As System.Windows.Forms.Button
     Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox12 As System.Windows.Forms.GroupBox
     Friend WithEvents cmdDatabasePersonal As System.Windows.Forms.Button
@@ -2128,7 +2097,5 @@ Partial Class frmBookkeeping
     Friend WithEvents ЗарплатаDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents СреднийДневнойЗаработокDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ОтпускныеDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 
 End Class

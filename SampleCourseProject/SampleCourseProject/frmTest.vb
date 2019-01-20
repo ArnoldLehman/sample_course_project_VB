@@ -2,7 +2,6 @@
     Public access As Boolean = False
     Public auth As Boolean = False
 
-
     Private Sub frmTest_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FirstImage()
     End Sub
@@ -73,6 +72,10 @@
             FourthImage()
             Exit Sub
         End If
+        If lblImage.ImageIndex = 3 Then
+            FirstImage()
+            Exit Sub
+        End If
     End Sub
 
     Private Sub lblBack_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblBack.Click
@@ -86,6 +89,10 @@
         End If
         If lblImage.ImageIndex = 1 Then
             FirstImage()
+            Exit Sub
+        End If
+        If lblImage.ImageIndex = 0 Then
+            FourthImage()
             Exit Sub
         End If
     End Sub
@@ -139,20 +146,39 @@
         frmTest_Load(Nothing, Nothing)
     End Sub
 
-    Private Sub Label1_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label1.MouseEnter
-        Label1.Font = New Font(Label1.Font.FontFamily, Label1.Font.Size, FontStyle.Underline)
-        Label1.BackColor = Color.Gainsboro
-        Label1.ForeColor = Color.Black
-    End Sub
-
-    Private Sub Label1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label1.MouseLeave
-        Label1.Font = New Font(Label1.Font.FontFamily, Label1.Font.Size, FontStyle.Regular)
-        Label1.BackColor = Color.RoyalBlue
-        Label1.ForeColor = Color.White
-    End Sub
-
     Private Sub tsmiAccount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiAccount.Click
         frmUserLogin.Show()
         Me.Close()
+    End Sub
+
+    Private Sub lblBookkeepingOrBuy_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.MouseEnter
+        msHover(lblBookkeepingOrBuy)
+    End Sub
+
+    Private Sub lblBookkeepingOrBuy_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.MouseLeave
+        msLeave(lblBookkeepingOrBuy)
+    End Sub
+
+    Private Sub lblStorage_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblStorageOrComp.MouseEnter
+        msHover(lblStorageOrComp)
+    End Sub
+
+    Private Sub lblStorage_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblStorageOrComp.MouseLeave
+        msLeave(lblStorageOrComp)
+    End Sub
+
+    Private Sub lblBookkeepingOrBuy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.Click
+        If access = True Then
+            frmBookkeeping.Show()
+            Me.Hide()
+        Else
+            frmBuy.Show()
+            Me.Hide()
+        End If
+    End Sub
+
+    Private Sub lblStorage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblStorageOrComp.Click
+        frmStorage.Show()
+        Me.Hide()
     End Sub
 End Class

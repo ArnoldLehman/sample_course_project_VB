@@ -28,10 +28,9 @@ Partial Class frmBuyers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(634, 354)
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
+        Me.ClientSize = New System.Drawing.Size(932, 456)
         Me.Name = "frmBuyers"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Покупатели"
         Me.ResumeLayout(False)
 

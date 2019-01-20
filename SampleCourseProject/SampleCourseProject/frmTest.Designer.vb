@@ -40,7 +40,8 @@ Partial Class frmTest
         Me.lblThirdImage = New System.Windows.Forms.Label
         Me.lblFourthImage = New System.Windows.Forms.Label
         Me.Panel2 = New System.Windows.Forms.Panel
-        Me.Label1 = New System.Windows.Forms.Label
+        Me.lblStorageOrComp = New System.Windows.Forms.Label
+        Me.lblBookkeepingOrBuy = New System.Windows.Forms.Label
         Me.lblText = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -81,7 +82,7 @@ Partial Class frmTest
         Me.MenuStrip1.Location = New System.Drawing.Point(739, 20)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(165, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(57, 24)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -89,10 +90,9 @@ Partial Class frmTest
         '
         Me.tsmiAccount.BackColor = System.Drawing.Color.Blue
         Me.tsmiAccount.ForeColor = System.Drawing.Color.White
-        Me.tsmiAccount.Image = CType(resources.GetObject("tsmiAccount.Image"), System.Drawing.Image)
         Me.tsmiAccount.Name = "tsmiAccount"
         Me.tsmiAccount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.tsmiAccount.Size = New System.Drawing.Size(65, 20)
+        Me.tsmiAccount.Size = New System.Drawing.Size(49, 20)
         Me.tsmiAccount.Text = "Гость"
         '
         'lblTitle
@@ -137,7 +137,7 @@ Partial Class frmTest
         '
         Me.lblImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblImage.ImageList = Me.ImageList1
-        Me.lblImage.Location = New System.Drawing.Point(483, 64)
+        Me.lblImage.Location = New System.Drawing.Point(483, 78)
         Me.lblImage.Name = "lblImage"
         Me.lblImage.Size = New System.Drawing.Size(256, 256)
         Me.lblImage.TabIndex = 6
@@ -147,7 +147,7 @@ Partial Class frmTest
         Me.lblNext.BackColor = System.Drawing.Color.Gainsboro
         Me.lblNext.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblNext.Image = CType(resources.GetObject("lblNext.Image"), System.Drawing.Image)
-        Me.lblNext.Location = New System.Drawing.Point(739, 64)
+        Me.lblNext.Location = New System.Drawing.Point(739, 78)
         Me.lblNext.Name = "lblNext"
         Me.lblNext.Size = New System.Drawing.Size(46, 256)
         Me.lblNext.TabIndex = 7
@@ -157,7 +157,7 @@ Partial Class frmTest
         Me.lblBack.BackColor = System.Drawing.Color.Gainsboro
         Me.lblBack.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblBack.Image = CType(resources.GetObject("lblBack.Image"), System.Drawing.Image)
-        Me.lblBack.Location = New System.Drawing.Point(437, 64)
+        Me.lblBack.Location = New System.Drawing.Point(437, 78)
         Me.lblBack.Name = "lblBack"
         Me.lblBack.Size = New System.Drawing.Size(46, 256)
         Me.lblBack.TabIndex = 8
@@ -167,7 +167,7 @@ Partial Class frmTest
         Me.lblFirstImage.BackColor = System.Drawing.Color.Gainsboro
         Me.lblFirstImage.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblFirstImage.Image = CType(resources.GetObject("lblFirstImage.Image"), System.Drawing.Image)
-        Me.lblFirstImage.Location = New System.Drawing.Point(483, 320)
+        Me.lblFirstImage.Location = New System.Drawing.Point(483, 334)
         Me.lblFirstImage.Name = "lblFirstImage"
         Me.lblFirstImage.Size = New System.Drawing.Size(50, 50)
         Me.lblFirstImage.TabIndex = 9
@@ -177,7 +177,7 @@ Partial Class frmTest
         Me.lblSecondImage.BackColor = System.Drawing.Color.Gainsboro
         Me.lblSecondImage.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblSecondImage.Image = CType(resources.GetObject("lblSecondImage.Image"), System.Drawing.Image)
-        Me.lblSecondImage.Location = New System.Drawing.Point(552, 320)
+        Me.lblSecondImage.Location = New System.Drawing.Point(552, 334)
         Me.lblSecondImage.Name = "lblSecondImage"
         Me.lblSecondImage.Size = New System.Drawing.Size(50, 50)
         Me.lblSecondImage.TabIndex = 10
@@ -187,7 +187,7 @@ Partial Class frmTest
         Me.lblThirdImage.BackColor = System.Drawing.Color.Gainsboro
         Me.lblThirdImage.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblThirdImage.Image = CType(resources.GetObject("lblThirdImage.Image"), System.Drawing.Image)
-        Me.lblThirdImage.Location = New System.Drawing.Point(621, 320)
+        Me.lblThirdImage.Location = New System.Drawing.Point(621, 334)
         Me.lblThirdImage.Name = "lblThirdImage"
         Me.lblThirdImage.Size = New System.Drawing.Size(50, 50)
         Me.lblThirdImage.TabIndex = 11
@@ -197,7 +197,7 @@ Partial Class frmTest
         Me.lblFourthImage.BackColor = System.Drawing.Color.Gainsboro
         Me.lblFourthImage.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblFourthImage.Image = CType(resources.GetObject("lblFourthImage.Image"), System.Drawing.Image)
-        Me.lblFourthImage.Location = New System.Drawing.Point(689, 320)
+        Me.lblFourthImage.Location = New System.Drawing.Point(689, 334)
         Me.lblFourthImage.Name = "lblFourthImage"
         Me.lblFourthImage.Size = New System.Drawing.Size(50, 50)
         Me.lblFourthImage.TabIndex = 12
@@ -205,30 +205,44 @@ Partial Class frmTest
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Controls.Add(Me.lblStorageOrComp)
+        Me.Panel2.Controls.Add(Me.lblBookkeepingOrBuy)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 64)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(108, 345)
+        Me.Panel2.Size = New System.Drawing.Size(123, 345)
         Me.Panel2.TabIndex = 13
         '
-        'Label1
+        'lblStorageOrComp
         '
-        Me.Label1.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(-1, -1)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 36)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Главная"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblStorageOrComp.BackColor = System.Drawing.Color.RoyalBlue
+        Me.lblStorageOrComp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblStorageOrComp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblStorageOrComp.ForeColor = System.Drawing.Color.White
+        Me.lblStorageOrComp.Location = New System.Drawing.Point(-9, 35)
+        Me.lblStorageOrComp.Name = "lblStorageOrComp"
+        Me.lblStorageOrComp.Size = New System.Drawing.Size(132, 36)
+        Me.lblStorageOrComp.TabIndex = 16
+        Me.lblStorageOrComp.Text = "Склад"
+        Me.lblStorageOrComp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblBookkeepingOrBuy
+        '
+        Me.lblBookkeepingOrBuy.BackColor = System.Drawing.Color.RoyalBlue
+        Me.lblBookkeepingOrBuy.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblBookkeepingOrBuy.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblBookkeepingOrBuy.ForeColor = System.Drawing.Color.White
+        Me.lblBookkeepingOrBuy.Location = New System.Drawing.Point(-9, -1)
+        Me.lblBookkeepingOrBuy.Name = "lblBookkeepingOrBuy"
+        Me.lblBookkeepingOrBuy.Size = New System.Drawing.Size(132, 36)
+        Me.lblBookkeepingOrBuy.TabIndex = 14
+        Me.lblBookkeepingOrBuy.Text = "Купить"
+        Me.lblBookkeepingOrBuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblText
         '
         Me.lblText.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.lblText.Location = New System.Drawing.Point(140, 64)
+        Me.lblText.Location = New System.Drawing.Point(140, 78)
         Me.lblText.Name = "lblText"
         Me.lblText.Size = New System.Drawing.Size(291, 256)
         Me.lblText.TabIndex = 14
@@ -253,6 +267,7 @@ Partial Class frmTest
         Me.Controls.Add(Me.Panel1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmTest"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Главная"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -278,6 +293,7 @@ Partial Class frmTest
     Friend WithEvents lblThirdImage As System.Windows.Forms.Label
     Friend WithEvents lblFourthImage As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblBookkeepingOrBuy As System.Windows.Forms.Label
     Friend WithEvents lblText As System.Windows.Forms.Label
+    Friend WithEvents lblStorageOrComp As System.Windows.Forms.Label
 End Class

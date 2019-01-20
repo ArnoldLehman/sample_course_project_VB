@@ -41,17 +41,11 @@ F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debu
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.xml
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.pdb
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\BookkeepingDatabase.mdb
-F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\RegistrationStaff.mdb
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\SampleCourseProject.exe
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\SampleCourseProject.pdb
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\SampleCourseProject.xml
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\ResolveAssemblyReference.cache
-F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmAutorization.resources
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmBookkeeping.resources
-F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmBuyers.resources
-F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmListStaff.resources
-F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmMain.resources
-F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmRegistrationPersonal.resources
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.Resources.resources
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.vbproj.GenerateResource.Cache
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmStorage.resources
@@ -81,3 +75,7 @@ H:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debu
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmUserLogin.resources
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmUserCreateAccount.resources
 F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\UserAccount.mdb
+F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmBuy.resources
+F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\StorageDatabase.mdb
+F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\BuyersDatabase.mdb
+F:\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmBuyers.resources
