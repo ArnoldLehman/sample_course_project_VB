@@ -381,43 +381,30 @@ ErrExite:
     End Sub
 
     Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
-        On Error GoTo SearchErr
-        If txtSearch.Text = "" Then
-            'Call notFound()
-            Exit Sub
-        Else
-            Dim cantFine As String = txtSearch.Text
-            'Me.dgvFill()
-            ПерсоналBindingSource.Filter = "(Convert(Код, 'System.String') LIKE '" & txtSearch.Text & "')" & _
-            "OR (Фамилия LIKE '" & txtSearch.Text & "') OR (Имя LIKE '" & txtSearch.Text & "')" & _
-            "OR (Отчество LIKE '" & txtSearch.Text & "') OR (Профессия LIKE '" & txtSearch.Text & "')" & _
-            "OR (Convert(Оклад, 'System.String') LIKE '" & txtSearch.Text & "')" & _
-            "OR (Convert(Зарплата, 'System.String') LIKE '" & txtSearch.Text & "')"
-
-            If ПерсоналBindingSource.Count <> 0 Then
-                With dgvStaff
-                    .DataSource = ПерсоналBindingSource
-                End With
+        Try
+            If txtSearch.Text = "" Then
+                Exit Sub
             Else
-                'Me.notFound()
-                MsgBox("-->" & cantFine & vbNewLine & "The search item was not found.", MsgBoxStyle.Information, "Hey Boss!")
-                ПерсоналBindingSource.Filter = Nothing
-                With dgvStaff
-                    .ClearSelection()
-                    .ReadOnly = True
-                    .MultiSelect = False
-                    .DataSource = ПерсоналBindingSource
-                End With
-            End If
-        End If
+                Dim cantFine As String = txtSearch.Text
+                ПерсоналBindingSource.Filter = "(Convert(Код, 'System.String') LIKE '" & txtSearch.Text & "')" & _
+                "OR (Фамилия LIKE '" & txtSearch.Text & "') OR (Имя LIKE '" & txtSearch.Text & "')" & _
+                "OR (Отчество LIKE '" & txtSearch.Text & "') OR (Профессия LIKE '" & txtSearch.Text & "')" & _
+                "OR (Convert(Оклад, 'System.String') LIKE '" & txtSearch.Text & "')" & _
+                "OR (Convert(Зарплата, 'System.String') LIKE '" & txtSearch.Text & "')"
 
-ErrExit:
-        Exit Sub
-SearchErr:
-        MsgBox("Ошибка номер " & Err.Number & vbNewLine & _
-               "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
-               "Reser Error!")
-        Resume ErrExit
+                If ПерсоналBindingSource.Count <> 0 Then
+                    With dgvStaff
+                        .DataSource = ПерсоналBindingSource
+                    End With
+                Else
+                    MsgBox("Элемент " & cantFine & " не найден", MsgBoxStyle.Information, "Поиск")
+                    ПерсоналBindingSource.Filter = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        
     End Sub
 
     Private Sub frmBookkeeping_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
@@ -446,7 +433,7 @@ SearchErr:
             .MultiSelect = False
         End With
 
-        'Me.reset()
+
     End Sub
 
     Private Sub lblReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblReset.Click
@@ -462,7 +449,6 @@ SearchErr:
         End With
 
 
-        'Me.reset()
 ErrEx:
         Exit Sub
 ErrRe:

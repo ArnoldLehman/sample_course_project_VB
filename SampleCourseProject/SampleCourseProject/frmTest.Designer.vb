@@ -25,7 +25,6 @@ Partial Class frmTest
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTest))
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.lblNews = New System.Windows.Forms.Label
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
         Me.tsmiAccount = New System.Windows.Forms.ToolStripMenuItem
         Me.lblTitle = New System.Windows.Forms.Label
@@ -40,9 +39,11 @@ Partial Class frmTest
         Me.lblThirdImage = New System.Windows.Forms.Label
         Me.lblFourthImage = New System.Windows.Forms.Label
         Me.Panel2 = New System.Windows.Forms.Panel
-        Me.lblStorageOrComp = New System.Windows.Forms.Label
+        Me.lblBuyers = New System.Windows.Forms.Label
+        Me.lblStorage = New System.Windows.Forms.Label
         Me.lblBookkeepingOrBuy = New System.Windows.Forms.Label
         Me.lblText = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -51,7 +52,7 @@ Partial Class frmTest
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Blue
-        Me.Panel1.Controls.Add(Me.lblNews)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Controls.Add(Me.lblTitle)
         Me.Panel1.Controls.Add(Me.lblMain)
@@ -61,25 +62,12 @@ Partial Class frmTest
         Me.Panel1.Size = New System.Drawing.Size(816, 64)
         Me.Panel1.TabIndex = 0
         '
-        'lblNews
-        '
-        Me.lblNews.BackColor = System.Drawing.Color.Blue
-        Me.lblNews.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblNews.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.lblNews.ForeColor = System.Drawing.Color.White
-        Me.lblNews.Location = New System.Drawing.Point(275, 0)
-        Me.lblNews.Name = "lblNews"
-        Me.lblNews.Size = New System.Drawing.Size(100, 64)
-        Me.lblNews.TabIndex = 3
-        Me.lblNews.Text = "Новости"
-        Me.lblNews.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Blue
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAccount})
-        Me.MenuStrip1.Location = New System.Drawing.Point(739, 20)
+        Me.MenuStrip1.Location = New System.Drawing.Point(522, 19)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
         Me.MenuStrip1.Size = New System.Drawing.Size(57, 24)
@@ -205,7 +193,8 @@ Partial Class frmTest
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.RoyalBlue
-        Me.Panel2.Controls.Add(Me.lblStorageOrComp)
+        Me.Panel2.Controls.Add(Me.lblBuyers)
+        Me.Panel2.Controls.Add(Me.lblStorage)
         Me.Panel2.Controls.Add(Me.lblBookkeepingOrBuy)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 64)
@@ -213,18 +202,33 @@ Partial Class frmTest
         Me.Panel2.Size = New System.Drawing.Size(123, 345)
         Me.Panel2.TabIndex = 13
         '
-        'lblStorageOrComp
+        'lblBuyers
         '
-        Me.lblStorageOrComp.BackColor = System.Drawing.Color.RoyalBlue
-        Me.lblStorageOrComp.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblStorageOrComp.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.lblStorageOrComp.ForeColor = System.Drawing.Color.White
-        Me.lblStorageOrComp.Location = New System.Drawing.Point(-9, 35)
-        Me.lblStorageOrComp.Name = "lblStorageOrComp"
-        Me.lblStorageOrComp.Size = New System.Drawing.Size(132, 36)
-        Me.lblStorageOrComp.TabIndex = 16
-        Me.lblStorageOrComp.Text = "Склад"
-        Me.lblStorageOrComp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblBuyers.BackColor = System.Drawing.Color.RoyalBlue
+        Me.lblBuyers.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblBuyers.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblBuyers.ForeColor = System.Drawing.Color.White
+        Me.lblBuyers.Location = New System.Drawing.Point(-9, 71)
+        Me.lblBuyers.Name = "lblBuyers"
+        Me.lblBuyers.Size = New System.Drawing.Size(132, 36)
+        Me.lblBuyers.TabIndex = 17
+        Me.lblBuyers.Text = "Покупатели"
+        Me.lblBuyers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblBuyers.Visible = False
+        '
+        'lblStorage
+        '
+        Me.lblStorage.BackColor = System.Drawing.Color.RoyalBlue
+        Me.lblStorage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblStorage.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblStorage.ForeColor = System.Drawing.Color.White
+        Me.lblStorage.Location = New System.Drawing.Point(-9, 35)
+        Me.lblStorage.Name = "lblStorage"
+        Me.lblStorage.Size = New System.Drawing.Size(132, 36)
+        Me.lblStorage.TabIndex = 16
+        Me.lblStorage.Text = "Склад"
+        Me.lblStorage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblStorage.Visible = False
         '
         'lblBookkeepingOrBuy
         '
@@ -248,6 +252,17 @@ Partial Class frmTest
         Me.lblText.TabIndex = 14
         Me.lblText.Text = resources.GetString("lblText.Text")
         Me.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(692, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(124, 64)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Администратор"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmTest
         '
@@ -280,7 +295,6 @@ Partial Class frmTest
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents lblMain As System.Windows.Forms.Label
-    Friend WithEvents lblNews As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents tsmiAccount As System.Windows.Forms.ToolStripMenuItem
@@ -295,5 +309,7 @@ Partial Class frmTest
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents lblBookkeepingOrBuy As System.Windows.Forms.Label
     Friend WithEvents lblText As System.Windows.Forms.Label
-    Friend WithEvents lblStorageOrComp As System.Windows.Forms.Label
+    Friend WithEvents lblStorage As System.Windows.Forms.Label
+    Friend WithEvents lblBuyers As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

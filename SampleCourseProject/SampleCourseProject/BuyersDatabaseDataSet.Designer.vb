@@ -272,6 +272,10 @@ Partial Public Class BuyersDatabaseDataSet
         
         Private columnИмя_заказчика As Global.System.Data.DataColumn
         
+        Private columnНаименование_товара As Global.System.Data.DataColumn
+        
+        Private columnКоличество_купленного_товара As Global.System.Data.DataColumn
+        
         Private columnОплата_за_заказ As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -328,6 +332,20 @@ Partial Public Class BuyersDatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property Наименование_товараColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnНаименование_товара
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public ReadOnly Property Количество_купленного_товараColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnКоличество_купленного_товара
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public ReadOnly Property Оплата_за_заказColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnОплата_за_заказ
@@ -363,9 +381,9 @@ Partial Public Class BuyersDatabaseDataSet
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Overloads Function AddBuyersRow(ByVal Наименование_организации As String, ByVal Имя_заказчика As String, ByVal Оплата_за_заказ As String) As BuyersRow
+        Public Overloads Function AddBuyersRow(ByVal Наименование_организации As String, ByVal Имя_заказчика As String, ByVal Наименование_товара As String, ByVal Количество_купленного_товара As String, ByVal Оплата_за_заказ As String) As BuyersRow
             Dim rowBuyersRow As BuyersRow = CType(Me.NewRow,BuyersRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Наименование_организации, Имя_заказчика, Оплата_за_заказ}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Наименование_организации, Имя_заказчика, Наименование_товара, Количество_купленного_товара, Оплата_за_заказ}
             rowBuyersRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowBuyersRow)
             Return rowBuyersRow
@@ -393,6 +411,8 @@ Partial Public Class BuyersDatabaseDataSet
             Me.columnКод = MyBase.Columns("Код")
             Me.columnНаименование_организации = MyBase.Columns("Наименование_организации")
             Me.columnИмя_заказчика = MyBase.Columns("Имя_заказчика")
+            Me.columnНаименование_товара = MyBase.Columns("Наименование_товара")
+            Me.columnКоличество_купленного_товара = MyBase.Columns("Количество_купленного_товара")
             Me.columnОплата_за_заказ = MyBase.Columns("Оплата_за_заказ")
         End Sub
         
@@ -404,6 +424,10 @@ Partial Public Class BuyersDatabaseDataSet
             MyBase.Columns.Add(Me.columnНаименование_организации)
             Me.columnИмя_заказчика = New Global.System.Data.DataColumn("Имя_заказчика", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnИмя_заказчика)
+            Me.columnНаименование_товара = New Global.System.Data.DataColumn("Наименование_товара", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnНаименование_товара)
+            Me.columnКоличество_купленного_товара = New Global.System.Data.DataColumn("Количество_купленного_товара", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnКоличество_купленного_товара)
             Me.columnОплата_за_заказ = New Global.System.Data.DataColumn("Оплата_за_заказ", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnОплата_за_заказ)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnКод}, true))
@@ -414,6 +438,8 @@ Partial Public Class BuyersDatabaseDataSet
             Me.columnКод.Unique = true
             Me.columnНаименование_организации.MaxLength = 255
             Me.columnИмя_заказчика.MaxLength = 255
+            Me.columnНаименование_товара.MaxLength = 255
+            Me.columnКоличество_купленного_товара.MaxLength = 255
             Me.columnОплата_за_заказ.MaxLength = 255
         End Sub
         
@@ -589,6 +615,35 @@ Partial Public Class BuyersDatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property Наименование_товара() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBuyers.Наименование_товараColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Значение для столбца 'Наименование_товара' в таблице 'Buyers' равно DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBuyers.Наименование_товараColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property Количество_купленного_товара() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBuyers.Количество_купленного_товараColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Значение для столбца 'Количество_купленного_товара' в таблице 'Buyers' равно DBNu"& _ 
+                            "ll.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBuyers.Количество_купленного_товараColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Property Оплата_за_заказ() As String
             Get
                 Try 
@@ -620,6 +675,26 @@ Partial Public Class BuyersDatabaseDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
         Public Sub SetИмя_заказчикаNull()
             Me(Me.tableBuyers.Имя_заказчикаColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IsНаименование_товараNull() As Boolean
+            Return Me.IsNull(Me.tableBuyers.Наименование_товараColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetНаименование_товараNull()
+            Me(Me.tableBuyers.Наименование_товараColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Function IsКоличество_купленного_товараNull() As Boolean
+            Return Me.IsNull(Me.tableBuyers.Количество_купленного_товараColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Sub SetКоличество_купленного_товараNull()
+            Me(Me.tableBuyers.Количество_купленного_товараColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
@@ -793,46 +868,66 @@ Namespace BuyersDatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Код", "Код")
             tableMapping.ColumnMappings.Add("Наименование_организации", "Наименование_организации")
             tableMapping.ColumnMappings.Add("Имя_заказчика", "Имя_заказчика")
+            tableMapping.ColumnMappings.Add("Наименование_товара", "Наименование_товара")
+            tableMapping.ColumnMappings.Add("Количество_купленного_товара", "Количество_купленного_товара")
             tableMapping.ColumnMappings.Add("Оплата_за_заказ", "Оплата_за_заказ")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Buyers` WHERE ((`Код` = ?) AND ((? = 1 AND `Наименование_организации"& _ 
                 "` IS NULL) OR (`Наименование_организации` = ?)) AND ((? = 1 AND `Имя_заказчика` "& _ 
-                "IS NULL) OR (`Имя_заказчика` = ?)) AND ((? = 1 AND `Оплата_за_заказ` IS NULL) OR"& _ 
-                " (`Оплата_за_заказ` = ?)))"
+                "IS NULL) OR (`Имя_заказчика` = ?)) AND ((? = 1 AND `Наименование_товара` IS NULL"& _ 
+                ") OR (`Наименование_товара` = ?)) AND ((? = 1 AND `Количество_купленного_товара`"& _ 
+                " IS NULL) OR (`Количество_купленного_товара` = ?)) AND ((? = 1 AND `Оплата_за_за"& _ 
+                "каз` IS NULL) OR (`Оплата_за_заказ` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Код", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Код", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Наименование_организации", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_организации", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Наименование_организации", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_организации", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Имя_заказчика", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Имя_заказчика", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Имя_заказчика", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Имя_заказчика", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Наименование_товара", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_товара", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Наименование_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_товара", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Количество_купленного_товара", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Количество_купленного_товара", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Количество_купленного_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Количество_купленного_товара", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Оплата_за_заказ", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Оплата_за_заказ", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Оплата_за_заказ", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Оплата_за_заказ", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Buyers` (`Наименование_организации`, `Имя_заказчика`, `Оплата_за_зак"& _ 
-                "аз`) VALUES (?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Buyers` (`Наименование_организации`, `Имя_заказчика`, `Наименование_"& _ 
+                "товара`, `Количество_купленного_товара`, `Оплата_за_заказ`) VALUES (?, ?, ?, ?, "& _ 
+                "?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Наименование_организации", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_организации", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Имя_заказчика", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Имя_заказчика", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Наименование_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_товара", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Количество_купленного_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Количество_купленного_товара", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Оплата_за_заказ", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Оплата_за_заказ", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `Buyers` SET `Наименование_организации` = ?, `Имя_заказчика` = ?, `Оплата_"& _ 
-                "за_заказ` = ? WHERE ((`Код` = ?) AND ((? = 1 AND `Наименование_организации` IS N"& _ 
-                "ULL) OR (`Наименование_организации` = ?)) AND ((? = 1 AND `Имя_заказчика` IS NUL"& _ 
-                "L) OR (`Имя_заказчика` = ?)) AND ((? = 1 AND `Оплата_за_заказ` IS NULL) OR (`Опл"& _ 
-                "ата_за_заказ` = ?)))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Buyers` SET `Наименование_организации` = ?, `Имя_заказчика` = ?, `Наимено"& _ 
+                "вание_товара` = ?, `Количество_купленного_товара` = ?, `Оплата_за_заказ` = ? WHE"& _ 
+                "RE ((`Код` = ?) AND ((? = 1 AND `Наименование_организации` IS NULL) OR (`Наимено"& _ 
+                "вание_организации` = ?)) AND ((? = 1 AND `Имя_заказчика` IS NULL) OR (`Имя_заказ"& _ 
+                "чика` = ?)) AND ((? = 1 AND `Наименование_товара` IS NULL) OR (`Наименование_тов"& _ 
+                "ара` = ?)) AND ((? = 1 AND `Количество_купленного_товара` IS NULL) OR (`Количест"& _ 
+                "во_купленного_товара` = ?)) AND ((? = 1 AND `Оплата_за_заказ` IS NULL) OR (`Опла"& _ 
+                "та_за_заказ` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Наименование_организации", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_организации", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Имя_заказчика", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Имя_заказчика", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Наименование_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_товара", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Количество_купленного_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Количество_купленного_товара", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Оплата_за_заказ", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Оплата_за_заказ", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Код", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Код", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Наименование_организации", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_организации", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Наименование_организации", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_организации", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Имя_заказчика", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Имя_заказчика", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Имя_заказчика", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Имя_заказчика", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Наименование_товара", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_товара", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Наименование_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Наименование_товара", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Количество_купленного_товара", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Количество_купленного_товара", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Количество_купленного_товара", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Количество_купленного_товара", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Оплата_за_заказ", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Оплата_за_заказ", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Оплата_за_заказ", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Оплата_за_заказ", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
@@ -848,7 +943,8 @@ Namespace BuyersDatabaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Код, Наименование_организации, Имя_заказчика, Оплата_за_заказ FROM Buyers"
+            Me._commandCollection(0).CommandText = "SELECT Код, Наименование_организации, Имя_заказчика, Наименование_товара, Количес"& _ 
+                "тво_купленного_товара, Оплата_за_заказ FROM Buyers"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -901,7 +997,7 @@ Namespace BuyersDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Код As Integer, ByVal Original_Наименование_организации As String, ByVal Original_Имя_заказчика As String, ByVal Original_Оплата_за_заказ As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Код As Integer, ByVal Original_Наименование_организации As String, ByVal Original_Имя_заказчика As String, ByVal Original_Наименование_товара As String, ByVal Original_Количество_купленного_товара As String, ByVal Original_Оплата_за_заказ As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Код,Integer)
             If (Original_Наименование_организации Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -917,12 +1013,26 @@ Namespace BuyersDatabaseDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Имя_заказчика,String)
             End If
-            If (Original_Оплата_за_заказ Is Nothing) Then
+            If (Original_Наименование_товара Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Оплата_за_заказ,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Наименование_товара,String)
+            End If
+            If (Original_Количество_купленного_товара Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Количество_купленного_товара,String)
+            End If
+            If (Original_Оплата_за_заказ Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Оплата_за_заказ,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -942,7 +1052,7 @@ Namespace BuyersDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Наименование_организации As String, ByVal Имя_заказчика As String, ByVal Оплата_за_заказ As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Наименование_организации As String, ByVal Имя_заказчика As String, ByVal Наименование_товара As String, ByVal Количество_купленного_товара As String, ByVal Оплата_за_заказ As String) As Integer
             If (Наименование_организации Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -953,10 +1063,20 @@ Namespace BuyersDatabaseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(Имя_заказчика,String)
             End If
-            If (Оплата_за_заказ Is Nothing) Then
+            If (Наименование_товара Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Оплата_за_заказ,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Наименование_товара,String)
+            End If
+            If (Количество_купленного_товара Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Количество_купленного_товара,String)
+            End If
+            If (Оплата_за_заказ Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Оплата_за_заказ,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -976,7 +1096,7 @@ Namespace BuyersDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Наименование_организации As String, ByVal Имя_заказчика As String, ByVal Оплата_за_заказ As String, ByVal Original_Код As Integer, ByVal Original_Наименование_организации As String, ByVal Original_Имя_заказчика As String, ByVal Original_Оплата_за_заказ As String) As Integer
+        Public Overloads Overridable Function Update(ByVal Наименование_организации As String, ByVal Имя_заказчика As String, ByVal Наименование_товара As String, ByVal Количество_купленного_товара As String, ByVal Оплата_за_заказ As String, ByVal Original_Код As Integer, ByVal Original_Наименование_организации As String, ByVal Original_Имя_заказчика As String, ByVal Original_Наименование_товара As String, ByVal Original_Количество_купленного_товара As String, ByVal Original_Оплата_за_заказ As String) As Integer
             If (Наименование_организации Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -987,32 +1107,56 @@ Namespace BuyersDatabaseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Имя_заказчика,String)
             End If
-            If (Оплата_за_заказ Is Nothing) Then
+            If (Наименование_товара Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Оплата_за_заказ,String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Наименование_товара,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_Код,Integer)
-            If (Original_Наименование_организации Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            If (Количество_купленного_товара Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Наименование_организации,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Количество_купленного_товара,String)
             End If
-            If (Original_Имя_заказчика Is Nothing) Then
+            If (Оплата_за_заказ Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Оплата_за_заказ,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_Код,Integer)
+            If (Original_Наименование_организации Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Имя_заказчика,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Наименование_организации,String)
             End If
-            If (Original_Оплата_за_заказ Is Nothing) Then
+            If (Original_Имя_заказчика Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Оплата_за_заказ,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Имя_заказчика,String)
+            End If
+            If (Original_Наименование_товара Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Наименование_товара,String)
+            End If
+            If (Original_Количество_купленного_товара Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Количество_купленного_товара,String)
+            End If
+            If (Original_Оплата_за_заказ Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Оплата_за_заказ,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _

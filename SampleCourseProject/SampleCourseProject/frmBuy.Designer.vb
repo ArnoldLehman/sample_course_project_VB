@@ -33,34 +33,36 @@ Partial Class frmBuy
         Me.lblMain = New System.Windows.Forms.Label
         Me.pnl2 = New System.Windows.Forms.Panel
         Me.cboTypeOfSugar = New System.Windows.Forms.ComboBox
-        Me.Label8 = New System.Windows.Forms.Label
         Me.Label7 = New System.Windows.Forms.Label
-        Me.txtEndSumm = New System.Windows.Forms.TextBox
         Me.txtSumm = New System.Windows.Forms.TextBox
-        Me.cmdAdd = New System.Windows.Forms.Button
         Me.rdoOrganization = New System.Windows.Forms.RadioButton
         Me.rdoPrivatePerson = New System.Windows.Forms.RadioButton
         Me.Label3 = New System.Windows.Forms.Label
         Me.lblName = New System.Windows.Forms.Label
         Me.txtName = New System.Windows.Forms.TextBox
-        Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
         Me.txtOrganization = New System.Windows.Forms.TextBox
         Me.lblOrganization = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
-        Me.BuyersTableAdapter = New SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
         Me.pnl1 = New System.Windows.Forms.Panel
         Me.cmdFurther = New System.Windows.Forms.Button
+        Me.StorageDatabaseDataSet = New SampleCourseProject.StorageDatabaseDataSet
+        Me.StorageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StorageTableAdapter = New SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
+        Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
+        Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BuyersTableAdapter = New SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
         Me.Panel1.SuspendLayout()
         Me.pnl2.SuspendLayout()
-        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl1.SuspendLayout()
+        CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StorageBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdBuy
         '
-        Me.cmdBuy.Location = New System.Drawing.Point(25, 222)
+        Me.cmdBuy.Location = New System.Drawing.Point(25, 158)
         Me.cmdBuy.Name = "cmdBuy"
         Me.cmdBuy.Size = New System.Drawing.Size(75, 23)
         Me.cmdBuy.TabIndex = 0
@@ -87,7 +89,8 @@ Partial Class frmBuy
         '
         'txtNumber
         '
-        Me.txtNumber.Location = New System.Drawing.Point(25, 94)
+        Me.txtNumber.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Количество_купленного_товара", True))
+        Me.txtNumber.Location = New System.Drawing.Point(25, 89)
         Me.txtNumber.Name = "txtNumber"
         Me.txtNumber.Size = New System.Drawing.Size(61, 20)
         Me.txtNumber.TabIndex = 14
@@ -95,7 +98,7 @@ Partial Class frmBuy
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 75)
+        Me.Label4.Location = New System.Drawing.Point(22, 70)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 16
@@ -104,7 +107,7 @@ Partial Class frmBuy
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(90, 97)
+        Me.Label5.Location = New System.Drawing.Point(90, 92)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(30, 13)
         Me.Label5.TabIndex = 17
@@ -136,11 +139,8 @@ Partial Class frmBuy
         'pnl2
         '
         Me.pnl2.Controls.Add(Me.cboTypeOfSugar)
-        Me.pnl2.Controls.Add(Me.Label8)
         Me.pnl2.Controls.Add(Me.Label7)
-        Me.pnl2.Controls.Add(Me.txtEndSumm)
         Me.pnl2.Controls.Add(Me.txtSumm)
-        Me.pnl2.Controls.Add(Me.cmdAdd)
         Me.pnl2.Controls.Add(Me.Label1)
         Me.pnl2.Controls.Add(Me.Label5)
         Me.pnl2.Controls.Add(Me.cmdBuy)
@@ -154,55 +154,31 @@ Partial Class frmBuy
         '
         'cboTypeOfSugar
         '
+        Me.cboTypeOfSugar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Наименование_товара", True))
         Me.cboTypeOfSugar.FormattingEnabled = True
-        Me.cboTypeOfSugar.Items.AddRange(New Object() {"сахарный песок", "гранулированный сахар", "кусковой сахар", "фруктовый", "пекарский", "ультрамелкий", "сахарная пудра", "грубый сахар", "коричневый сахар", "турбинадо", "мусковадо", "демерара", "пальмовый сахар", "мексиканский сахар", "меласса", "жом"})
+        Me.cboTypeOfSugar.Items.AddRange(New Object() {"гранулированный", "кусковой", "фруктовый", "сахарная пудра", "коричневый", "меласса", "жом"})
         Me.cboTypeOfSugar.Location = New System.Drawing.Point(92, 11)
         Me.cboTypeOfSugar.Name = "cboTypeOfSugar"
         Me.cboTypeOfSugar.Size = New System.Drawing.Size(121, 21)
         Me.cboTypeOfSugar.TabIndex = 23
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(22, 170)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(91, 13)
-        Me.Label8.TabIndex = 22
-        Me.Label8.Text = "Итоговая сумма"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(22, 119)
+        Me.Label7.Location = New System.Drawing.Point(22, 114)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(41, 13)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Сумма"
         '
-        'txtEndSumm
-        '
-        Me.txtEndSumm.Location = New System.Drawing.Point(25, 186)
-        Me.txtEndSumm.Name = "txtEndSumm"
-        Me.txtEndSumm.ReadOnly = True
-        Me.txtEndSumm.Size = New System.Drawing.Size(134, 20)
-        Me.txtEndSumm.TabIndex = 20
-        '
         'txtSumm
         '
-        Me.txtSumm.Location = New System.Drawing.Point(25, 135)
+        Me.txtSumm.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Оплата_за_заказ", True))
+        Me.txtSumm.Location = New System.Drawing.Point(25, 130)
         Me.txtSumm.Name = "txtSumm"
         Me.txtSumm.ReadOnly = True
         Me.txtSumm.Size = New System.Drawing.Size(134, 20)
         Me.txtSumm.TabIndex = 19
-        '
-        'cmdAdd
-        '
-        Me.cmdAdd.Location = New System.Drawing.Point(106, 222)
-        Me.cmdAdd.Name = "cmdAdd"
-        Me.cmdAdd.Size = New System.Drawing.Size(75, 23)
-        Me.cmdAdd.TabIndex = 18
-        Me.cmdAdd.Text = "Добавить"
-        Me.cmdAdd.UseVisualStyleBackColor = True
         '
         'rdoOrganization
         '
@@ -236,7 +212,7 @@ Partial Class frmBuy
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(63, 40)
+        Me.lblName.Location = New System.Drawing.Point(63, 16)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(110, 13)
         Me.lblName.TabIndex = 22
@@ -245,25 +221,15 @@ Partial Class frmBuy
         'txtName
         '
         Me.txtName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Имя_заказчика", True))
-        Me.txtName.Location = New System.Drawing.Point(66, 56)
+        Me.txtName.Location = New System.Drawing.Point(66, 32)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(167, 20)
         Me.txtName.TabIndex = 23
         '
-        'BuyersBindingSource
-        '
-        Me.BuyersBindingSource.DataMember = "Buyers"
-        Me.BuyersBindingSource.DataSource = Me.BuyersDatabaseDataSet
-        '
-        'BuyersDatabaseDataSet
-        '
-        Me.BuyersDatabaseDataSet.DataSetName = "BuyersDatabaseDataSet"
-        Me.BuyersDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'txtOrganization
         '
         Me.txtOrganization.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Наименование_организации", True))
-        Me.txtOrganization.Location = New System.Drawing.Point(66, 111)
+        Me.txtOrganization.Location = New System.Drawing.Point(66, 87)
         Me.txtOrganization.Multiline = True
         Me.txtOrganization.Name = "txtOrganization"
         Me.txtOrganization.Size = New System.Drawing.Size(167, 75)
@@ -272,7 +238,7 @@ Partial Class frmBuy
         'lblOrganization
         '
         Me.lblOrganization.AutoSize = True
-        Me.lblOrganization.Location = New System.Drawing.Point(63, 95)
+        Me.lblOrganization.Location = New System.Drawing.Point(63, 71)
         Me.lblOrganization.Name = "lblOrganization"
         Me.lblOrganization.Size = New System.Drawing.Size(170, 13)
         Me.lblOrganization.TabIndex = 25
@@ -281,15 +247,11 @@ Partial Class frmBuy
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(17, 20)
+        Me.Label6.Location = New System.Drawing.Point(17, -4)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(241, 13)
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "_______________________________________"
-        '
-        'BuyersTableAdapter
-        '
-        Me.BuyersTableAdapter.ClearBeforeFill = True
         '
         'pnl1
         '
@@ -306,18 +268,46 @@ Partial Class frmBuy
         '
         'cmdFurther
         '
-        Me.cmdFurther.Location = New System.Drawing.Point(243, 203)
+        Me.cmdFurther.Location = New System.Drawing.Point(243, 179)
         Me.cmdFurther.Name = "cmdFurther"
         Me.cmdFurther.Size = New System.Drawing.Size(75, 23)
         Me.cmdFurther.TabIndex = 27
         Me.cmdFurther.Text = "Далее"
         Me.cmdFurther.UseVisualStyleBackColor = True
         '
+        'StorageDatabaseDataSet
+        '
+        Me.StorageDatabaseDataSet.DataSetName = "StorageDatabaseDataSet"
+        Me.StorageDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StorageBindingSource
+        '
+        Me.StorageBindingSource.DataMember = "Storage"
+        Me.StorageBindingSource.DataSource = Me.StorageDatabaseDataSet
+        '
+        'StorageTableAdapter
+        '
+        Me.StorageTableAdapter.ClearBeforeFill = True
+        '
+        'BuyersDatabaseDataSet
+        '
+        Me.BuyersDatabaseDataSet.DataSetName = "BuyersDatabaseDataSet"
+        Me.BuyersDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BuyersBindingSource
+        '
+        Me.BuyersBindingSource.DataMember = "Buyers"
+        Me.BuyersBindingSource.DataSource = Me.BuyersDatabaseDataSet
+        '
+        'BuyersTableAdapter
+        '
+        Me.BuyersTableAdapter.ClearBeforeFill = True
+        '
         'frmBuy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(495, 377)
+        Me.ClientSize = New System.Drawing.Size(495, 340)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.rdoPrivatePerson)
         Me.Controls.Add(Me.rdoOrganization)
@@ -330,10 +320,12 @@ Partial Class frmBuy
         Me.Panel1.ResumeLayout(False)
         Me.pnl2.ResumeLayout(False)
         Me.pnl2.PerformLayout()
-        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl1.ResumeLayout(False)
         Me.pnl1.PerformLayout()
+        CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StorageBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -355,15 +347,15 @@ Partial Class frmBuy
     Friend WithEvents txtOrganization As System.Windows.Forms.TextBox
     Friend WithEvents lblOrganization As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents BuyersDatabaseDataSet As SampleCourseProject.BuyersDatabaseDataSet
-    Friend WithEvents BuyersBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents BuyersTableAdapter As SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
     Friend WithEvents pnl1 As System.Windows.Forms.Panel
     Friend WithEvents cmdFurther As System.Windows.Forms.Button
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents txtEndSumm As System.Windows.Forms.TextBox
     Friend WithEvents txtSumm As System.Windows.Forms.TextBox
-    Friend WithEvents cmdAdd As System.Windows.Forms.Button
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cboTypeOfSugar As System.Windows.Forms.ComboBox
+    Friend WithEvents StorageDatabaseDataSet As SampleCourseProject.StorageDatabaseDataSet
+    Friend WithEvents StorageBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents StorageTableAdapter As SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
+    Friend WithEvents BuyersDatabaseDataSet As SampleCourseProject.BuyersDatabaseDataSet
+    Friend WithEvents BuyersBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents BuyersTableAdapter As SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
 End Class

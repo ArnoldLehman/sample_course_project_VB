@@ -8,7 +8,7 @@ Public Class frmBuy
     Dim amountSugar As String = ""
     Dim tpSugar As String = ""
 
-    Dim Income As Integer
+    Dim Cost As Integer
 
     Private Sub frmBuy_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmTest.Show()
@@ -25,15 +25,33 @@ Public Class frmBuy
             cmd.ExecuteNonQuery()
             MsgBox("Data has been update")
             conn.close()
+
+
+            Dim buy As DialogResult
+            BuyersBindingSource.EndEdit()
+            BuyersTableAdapter.Update(BuyersDatabaseDataSet.Buyers)
+            MessageBox.Show("Ваш заказ отправлен на обработку" & vbNewLine & "В ближайшее время с вами свяжутся для уточнения деталей", "Купить", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            buy = MessageBox.Show("Хотите сделать ещё один заказ?", "Купить", MessageBoxButtons.YesNo, MessageBoxIcon.None, MessageBoxDefaultButton.Button1)
+            If buy = Windows.Forms.DialogResult.Yes Then
+                BuyersBindingSource.AddNew()
+                txtOrganization.Text = " - "
+                lblNumberOnStorage.Text = "Количество на складе: "
+            Else
+                Me.Close()
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
     End Sub
 
     Private Sub frmBuy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: данная строка кода позволяет загрузить данные в таблицу "BuyersDatabaseDataSet.Buyers". При необходимости она может быть перемещена или удалена.
         Me.BuyersTableAdapter.Fill(Me.BuyersDatabaseDataSet.Buyers)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "StorageDatabaseDataSet.Storage". При необходимости она может быть перемещена или удалена.
+        Me.StorageTableAdapter.Fill(Me.StorageDatabaseDataSet.Storage)
+        BuyersBindingSource.AddNew()
+        lblNumberOnStorage.Text = "Количество на складе: "
 
         With Me
             .Height = 195
@@ -48,7 +66,7 @@ Public Class frmBuy
 
     Private Sub rdoOrganization_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdoOrganization.CheckedChanged
         With Me
-            .Height = 414
+            .Height = 386
             .Width = 343
         End With
         pnl1.Visible = True
@@ -60,11 +78,10 @@ Public Class frmBuy
 
     Private Sub rdoPrivatePerson_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdoPrivatePerson.CheckedChanged
         With Me
-            .Height = 414
+            .Height = 386
             .Width = 343
         End With
         pnl1.Visible = True
-        lblName.Text = "Введите ваше имя"
         With txtOrganization
             .Text = " - "
             .ReadOnly = True
@@ -81,7 +98,7 @@ Public Class frmBuy
             Exit Sub
         End If
         With Me
-            .Height = 416
+            .Height = 349
             .Width = 511
         End With
         pnl2.Visible = True
@@ -89,7 +106,6 @@ Public Class frmBuy
     End Sub
 
     Private Sub cboTypeOfSugar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboTypeOfSugar.SelectedIndexChanged
-        lblNumberOnStorage.Text = "Количество на складе: "
         tpSugar = cboTypeOfSugar.Text
         Try
             Dim querry As String = "Select Количество From Storage where Виды= '" & tpSugar & "';"
@@ -105,11 +121,23 @@ Public Class frmBuy
 
 
         If cboTypeOfSugar.SelectedIndex = 0 Then
-            Income = 32 * 1000
+            Cost = 93 * 1000
+        ElseIf cboTypeOfSugar.SelectedIndex = 1 Then
+            Cost = 119 * 1000
+        ElseIf cboTypeOfSugar.SelectedIndex = 2 Then
+            Cost = 263 * 1000
+        ElseIf cboTypeOfSugar.SelectedIndex = 3 Then
+            Cost = 130 * 1000
+        ElseIf cboTypeOfSugar.SelectedIndex = 4 Then
+            Cost = 256 * 1000
+        ElseIf cboTypeOfSugar.SelectedIndex = 5 Then
+            Cost = 2.6 * 1000
+        ElseIf cboTypeOfSugar.SelectedIndex = 6 Then
+            Cost = 12.5 * 1000
         End If
     End Sub
 
     Private Sub txtNumber_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumber.Leave
-        txtSumm.Text = Income * Val(txtNumber.Text)
+        txtSumm.Text = Cost * Val(txtNumber.Text)
     End Sub
 End Class

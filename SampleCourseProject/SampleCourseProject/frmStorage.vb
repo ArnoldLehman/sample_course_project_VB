@@ -10,6 +10,7 @@ Public Class frmStorage
     Private Sub frmStorage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: данная строка кода позволяет загрузить данные в таблицу "StorageDatabaseDataSet.Storage". При необходимости она может быть перемещена или удалена.
         Me.StorageTableAdapter.Fill(Me.StorageDatabaseDataSet.Storage)
+
     End Sub
 
     Private Sub cmdAddNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNew.Click
@@ -34,7 +35,6 @@ Public Class frmStorage
             conn.Open()
             Dim str As String = "UPDATE Storage SET Назначение=?, Количество=? where Виды=? "
             Dim cmd As New OleDbCommand(str, conn)
-            cmd.Parameters.AddWithValue("Назначение", txtAppointment.Text)
             cmd.Parameters.AddWithValue("Количество", txtNumber.Text)
             cmd.Parameters.AddWithValue("Виды", txtType.Text)
             cmd.ExecuteNonQuery()

@@ -5,11 +5,10 @@ Public Class frmUserLogin
     Private Sub cmdLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdLogin.Click
         Dim uname As String = ""
         Dim pword As String
-        Dim username As String = ""
         Dim pass As String = ""
         Dim old As Point = Me.Location
         If txtLogin.Text = "" Or txtPassword.Text = "" Then
-            MsgBox("Pls fill all the info")
+            MsgBox("Проверьте, все ли поля заполнены корректно", MsgBoxStyle.Exclamation, "Вход")
         Else
             uname = txtLogin.Text
             pword = txtPassword.Text
@@ -33,17 +32,16 @@ Public Class frmUserLogin
                     old.Y = 20
                     frmTest.MenuStrip1.Location = New Point(old.X, old.Y)
                     frmTest.lblBookkeepingOrBuy.Text = "Бухгалтерия"
-                    frmTest.lblStorageOrComp.Text = "Склад"
+                    frmTest.lblStorage.Visible = True
+                    frmTest.lblBuyers.Visible = True
                 Else
                     frmTest.access = False
                     frmTest.tsmiAccount.Text = txtLogin.Text
-                    old.X = 683
-                    old.Y = 20
                     frmTest.MenuStrip1.Location = New Point(old.X, old.Y)
                     frmTest.lblBookkeepingOrBuy.Text = "Купить"
-                    frmTest.lblStorageOrComp.Text = "О предприятии"
+                    frmTest.lblStorage.Hide()
+                    frmTest.lblBuyers.Hide()
                 End If
-                frmTest.Show()
                 Me.Close()
             Else
                 MsgBox("login failed")

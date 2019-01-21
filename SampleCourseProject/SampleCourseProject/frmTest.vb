@@ -9,37 +9,37 @@
     'Блок кода, относящийся к списку картинок
     Private Sub FirstImage()
         lblImage.ImageIndex = 0
-        lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
-        lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
+        'lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
         lblText.Text = "Если у вас есть какие то интересные предложения, обращайтесь! Студия Web-Boss всегда готова решить любую задачу. С другой стороны укрепление и развитие структуры обеспечивает участие в формировании систем массового участия. Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям."
     End Sub
 
     Private Sub SecondImage()
         lblImage.ImageIndex = 1
-        lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
-        lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
+        'lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
         lblText.Text = "Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития."
     End Sub
 
     Private Sub ThirdImage()
         lblImage.ImageIndex = 2
-        lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
-        lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
+        'lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
         lblText.Text = "Если у вас есть какие то интересные предложения, обращайтесь! Студия Web-Boss всегда готова решить любую задачу. Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений."
     End Sub
 
     Private Sub FourthImage()
         lblImage.ImageIndex = 3
-        lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
-        lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
+        'lblFirstImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblSecondImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblThirdImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\perfect-circle_icon-icons.com_53928.ico")
+        'lblFourthImage.Image = System.Drawing.Image.FromFile("F:\sample_course_project_VB\Image\filled-circle_icon-icons.com_72757.ico")
         lblText.Text = "С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также укрепление и развитие структуры играет важную роль в формировании существенных финансовых и административных условий."
     End Sub
 
@@ -126,16 +126,8 @@
         lblMain.BackColor = Color.RoyalBlue
     End Sub
 
-    Private Sub lblNews_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblNews.MouseEnter
-        lblNews.BackColor = Color.RoyalBlue
-    End Sub
-
     Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
         lblMain.BackColor = Color.Blue
-    End Sub
-
-    Private Sub lblNews_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblNews.MouseLeave
-        lblNews.BackColor = Color.Blue
     End Sub
 
     Private Sub lblTitle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblTitle.Click
@@ -148,7 +140,6 @@
 
     Private Sub tsmiAccount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiAccount.Click
         frmUserLogin.Show()
-        Me.Close()
     End Sub
 
     Private Sub lblBookkeepingOrBuy_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.MouseEnter
@@ -159,30 +150,47 @@
         msLeave(lblBookkeepingOrBuy)
     End Sub
 
-    Private Sub lblStorage_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblStorageOrComp.MouseEnter
-        msHover(lblStorageOrComp)
+    Private Sub lblStorage_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblStorage.MouseEnter
+        msHover(lblStorage)
     End Sub
 
-    Private Sub lblStorage_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblStorageOrComp.MouseLeave
-        msLeave(lblStorageOrComp)
+    Private Sub lblStorage_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblStorage.MouseLeave
+        msLeave(lblStorage)
+    End Sub
+
+    Private Sub lblBuyers_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBuyers.MouseEnter
+        msHover(lblBuyers)
+    End Sub
+
+    Private Sub lblBuyers_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBuyers.MouseLeave
+        msLeave(lblBuyers)
     End Sub
 
     Private Sub lblBookkeepingOrBuy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.Click
-        If access = True Then
-            frmBookkeeping.Show()
-            Me.Hide()
+        If auth = False Then
+            frmUserLogin.Show()
         Else
-            frmBuy.Show()
-            Me.Hide()
+            If access = True Then
+                frmBookkeeping.Show()
+                Me.Hide()
+            Else
+                frmBuy.Show()
+                Me.Hide()
+            End If
         End If
     End Sub
 
-    Private Sub lblStorage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblStorageOrComp.Click
+    Private Sub lblStorage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblStorage.Click
         frmStorage.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+    Private Sub lblBuyers_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblBuyers.Click
+        frmBuyers.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
 End Class
