@@ -7,17 +7,21 @@ Public Class frmUserCreateAccount
         If txtLoginCreate.Text = "" Or txtPasswordCreate.Text = "" Or txtConfirmPassword.Text = "" Then
             MsgBox("plz fill the info")
         Else
-            Try
-                Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\UserAccount.mdb")
-                Dim insert As String = "Insert into Account values('" & txtLoginCreate.Text & "','" & txtPasswordCreate.Text & "');"
-                Dim cmd As New OleDbCommand(insert, conn)
-                conn.Open()
-                cmd.ExecuteNonQuery()
-                MsgBox("create success")
-                Me.Close()
-            Catch ex As Exception
-                MsgBox("Error")
-            End Try
+            If txtPasswordCreate.Text = txtConfirmPassword.Text Then
+                Try
+                    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\UserAccount.mdb")
+                    Dim insert As String = "Insert into Account values('" & txtLoginCreate.Text & "','" & txtPasswordCreate.Text & "');"
+                    Dim cmd As New OleDbCommand(insert, conn)
+                    conn.Open()
+                    cmd.ExecuteNonQuery()
+                    MsgBox("create success")
+                    Me.Close()
+                Catch ex As Exception
+                    MsgBox(ex.Message)
+                End Try
+            Else
+                MsgBox("Несоответствие паролей", MsgBoxStyle.Critical, "")
+            End If
         End If
     End Sub
 

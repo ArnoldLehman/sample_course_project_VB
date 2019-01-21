@@ -23,55 +23,49 @@ Partial Class frmBuy
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuy))
         Me.cmdBuy = New System.Windows.Forms.Button
-        Me.txtTypeOfSugar = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
-        Me.pnlHelp = New System.Windows.Forms.Panel
-        Me.lblInfo = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
+        Me.lblNumberOnStorage = New System.Windows.Forms.Label
         Me.txtNumber = New System.Windows.Forms.TextBox
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.lblMain = New System.Windows.Forms.Label
         Me.pnl2 = New System.Windows.Forms.Panel
+        Me.cboTypeOfSugar = New System.Windows.Forms.ComboBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.txtEndSumm = New System.Windows.Forms.TextBox
+        Me.txtSumm = New System.Windows.Forms.TextBox
+        Me.cmdAdd = New System.Windows.Forms.Button
         Me.rdoOrganization = New System.Windows.Forms.RadioButton
         Me.rdoPrivatePerson = New System.Windows.Forms.RadioButton
         Me.Label3 = New System.Windows.Forms.Label
         Me.lblName = New System.Windows.Forms.Label
         Me.txtName = New System.Windows.Forms.TextBox
+        Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
         Me.txtOrganization = New System.Windows.Forms.TextBox
         Me.lblOrganization = New System.Windows.Forms.Label
         Me.Label6 = New System.Windows.Forms.Label
-        Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
-        Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BuyersTableAdapter = New SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
         Me.pnl1 = New System.Windows.Forms.Panel
         Me.cmdFurther = New System.Windows.Forms.Button
-        Me.pnlHelp.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.pnl2.SuspendLayout()
-        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnl1.SuspendLayout()
         Me.SuspendLayout()
         '
         'cmdBuy
         '
-        Me.cmdBuy.Location = New System.Drawing.Point(3, 225)
+        Me.cmdBuy.Location = New System.Drawing.Point(25, 222)
         Me.cmdBuy.Name = "cmdBuy"
-        Me.cmdBuy.Size = New System.Drawing.Size(75, 20)
+        Me.cmdBuy.Size = New System.Drawing.Size(75, 23)
         Me.cmdBuy.TabIndex = 0
         Me.cmdBuy.Text = "Купить"
         Me.cmdBuy.UseVisualStyleBackColor = True
-        '
-        'txtTypeOfSugar
-        '
-        Me.txtTypeOfSugar.Location = New System.Drawing.Point(92, 11)
-        Me.txtTypeOfSugar.Name = "txtTypeOfSugar"
-        Me.txtTypeOfSugar.Size = New System.Drawing.Size(100, 20)
-        Me.txtTypeOfSugar.TabIndex = 1
         '
         'Label1
         '
@@ -82,33 +76,14 @@ Partial Class frmBuy
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Вид сахара"
         '
-        'pnlHelp
+        'lblNumberOnStorage
         '
-        Me.pnlHelp.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.pnlHelp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pnlHelp.Controls.Add(Me.lblInfo)
-        Me.pnlHelp.Location = New System.Drawing.Point(246, 14)
-        Me.pnlHelp.Name = "pnlHelp"
-        Me.pnlHelp.Size = New System.Drawing.Size(168, 234)
-        Me.pnlHelp.TabIndex = 3
-        '
-        'lblInfo
-        '
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.Location = New System.Drawing.Point(14, 6)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(141, 221)
-        Me.lblInfo.TabIndex = 0
-        Me.lblInfo.Text = resources.GetString("lblInfo.Text")
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 39)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 13)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "Количество на складе: "
+        Me.lblNumberOnStorage.AutoSize = True
+        Me.lblNumberOnStorage.Location = New System.Drawing.Point(22, 39)
+        Me.lblNumberOnStorage.Name = "lblNumberOnStorage"
+        Me.lblNumberOnStorage.Size = New System.Drawing.Size(126, 13)
+        Me.lblNumberOnStorage.TabIndex = 13
+        Me.lblNumberOnStorage.Text = "Количество на складе: "
         '
         'txtNumber
         '
@@ -120,7 +95,7 @@ Partial Class frmBuy
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 78)
+        Me.Label4.Location = New System.Drawing.Point(22, 75)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
         Me.Label4.TabIndex = 16
@@ -129,11 +104,11 @@ Partial Class frmBuy
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(92, 97)
+        Me.Label5.Location = New System.Drawing.Point(90, 97)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(23, 13)
+        Me.Label5.Size = New System.Drawing.Size(30, 13)
         Me.Label5.TabIndex = 17
-        Me.Label5.Text = "шт."
+        Me.Label5.Text = "тонн"
         '
         'Panel1
         '
@@ -142,7 +117,7 @@ Partial Class frmBuy
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(720, 64)
+        Me.Panel1.Size = New System.Drawing.Size(495, 64)
         Me.Panel1.TabIndex = 18
         '
         'lblMain
@@ -160,23 +135,79 @@ Partial Class frmBuy
         '
         'pnl2
         '
+        Me.pnl2.Controls.Add(Me.cboTypeOfSugar)
+        Me.pnl2.Controls.Add(Me.Label8)
+        Me.pnl2.Controls.Add(Me.Label7)
+        Me.pnl2.Controls.Add(Me.txtEndSumm)
+        Me.pnl2.Controls.Add(Me.txtSumm)
+        Me.pnl2.Controls.Add(Me.cmdAdd)
         Me.pnl2.Controls.Add(Me.Label1)
         Me.pnl2.Controls.Add(Me.Label5)
         Me.pnl2.Controls.Add(Me.cmdBuy)
         Me.pnl2.Controls.Add(Me.Label4)
-        Me.pnl2.Controls.Add(Me.txtTypeOfSugar)
         Me.pnl2.Controls.Add(Me.txtNumber)
-        Me.pnl2.Controls.Add(Me.pnlHelp)
-        Me.pnl2.Controls.Add(Me.Label2)
-        Me.pnl2.Location = New System.Drawing.Point(283, 121)
+        Me.pnl2.Controls.Add(Me.lblNumberOnStorage)
+        Me.pnl2.Location = New System.Drawing.Point(257, 121)
         Me.pnl2.Name = "pnl2"
-        Me.pnl2.Size = New System.Drawing.Size(433, 248)
+        Me.pnl2.Size = New System.Drawing.Size(223, 248)
         Me.pnl2.TabIndex = 0
+        '
+        'cboTypeOfSugar
+        '
+        Me.cboTypeOfSugar.FormattingEnabled = True
+        Me.cboTypeOfSugar.Items.AddRange(New Object() {"сахарный песок", "гранулированный сахар", "кусковой сахар", "фруктовый", "пекарский", "ультрамелкий", "сахарная пудра", "грубый сахар", "коричневый сахар", "турбинадо", "мусковадо", "демерара", "пальмовый сахар", "мексиканский сахар", "меласса", "жом"})
+        Me.cboTypeOfSugar.Location = New System.Drawing.Point(92, 11)
+        Me.cboTypeOfSugar.Name = "cboTypeOfSugar"
+        Me.cboTypeOfSugar.Size = New System.Drawing.Size(121, 21)
+        Me.cboTypeOfSugar.TabIndex = 23
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(22, 170)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(91, 13)
+        Me.Label8.TabIndex = 22
+        Me.Label8.Text = "Итоговая сумма"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(22, 119)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(41, 13)
+        Me.Label7.TabIndex = 21
+        Me.Label7.Text = "Сумма"
+        '
+        'txtEndSumm
+        '
+        Me.txtEndSumm.Location = New System.Drawing.Point(25, 186)
+        Me.txtEndSumm.Name = "txtEndSumm"
+        Me.txtEndSumm.ReadOnly = True
+        Me.txtEndSumm.Size = New System.Drawing.Size(134, 20)
+        Me.txtEndSumm.TabIndex = 20
+        '
+        'txtSumm
+        '
+        Me.txtSumm.Location = New System.Drawing.Point(25, 135)
+        Me.txtSumm.Name = "txtSumm"
+        Me.txtSumm.ReadOnly = True
+        Me.txtSumm.Size = New System.Drawing.Size(134, 20)
+        Me.txtSumm.TabIndex = 19
+        '
+        'cmdAdd
+        '
+        Me.cmdAdd.Location = New System.Drawing.Point(106, 222)
+        Me.cmdAdd.Name = "cmdAdd"
+        Me.cmdAdd.Size = New System.Drawing.Size(75, 23)
+        Me.cmdAdd.TabIndex = 18
+        Me.cmdAdd.Text = "Добавить"
+        Me.cmdAdd.UseVisualStyleBackColor = True
         '
         'rdoOrganization
         '
         Me.rdoOrganization.AutoSize = True
-        Me.rdoOrganization.Location = New System.Drawing.Point(21, 118)
+        Me.rdoOrganization.Location = New System.Drawing.Point(59, 118)
         Me.rdoOrganization.Name = "rdoOrganization"
         Me.rdoOrganization.Size = New System.Drawing.Size(92, 17)
         Me.rdoOrganization.TabIndex = 1
@@ -186,7 +217,7 @@ Partial Class frmBuy
         'rdoPrivatePerson
         '
         Me.rdoPrivatePerson.AutoSize = True
-        Me.rdoPrivatePerson.Location = New System.Drawing.Point(118, 118)
+        Me.rdoPrivatePerson.Location = New System.Drawing.Point(156, 118)
         Me.rdoPrivatePerson.Name = "rdoPrivatePerson"
         Me.rdoPrivatePerson.Size = New System.Drawing.Size(95, 17)
         Me.rdoPrivatePerson.TabIndex = 20
@@ -205,7 +236,7 @@ Partial Class frmBuy
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(17, 33)
+        Me.lblName.Location = New System.Drawing.Point(63, 40)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(110, 13)
         Me.lblName.TabIndex = 22
@@ -214,15 +245,25 @@ Partial Class frmBuy
         'txtName
         '
         Me.txtName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Имя_заказчика", True))
-        Me.txtName.Location = New System.Drawing.Point(20, 49)
+        Me.txtName.Location = New System.Drawing.Point(66, 56)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(167, 20)
         Me.txtName.TabIndex = 23
         '
+        'BuyersBindingSource
+        '
+        Me.BuyersBindingSource.DataMember = "Buyers"
+        Me.BuyersBindingSource.DataSource = Me.BuyersDatabaseDataSet
+        '
+        'BuyersDatabaseDataSet
+        '
+        Me.BuyersDatabaseDataSet.DataSetName = "BuyersDatabaseDataSet"
+        Me.BuyersDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'txtOrganization
         '
         Me.txtOrganization.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Наименование_организации", True))
-        Me.txtOrganization.Location = New System.Drawing.Point(20, 104)
+        Me.txtOrganization.Location = New System.Drawing.Point(66, 111)
         Me.txtOrganization.Multiline = True
         Me.txtOrganization.Name = "txtOrganization"
         Me.txtOrganization.Size = New System.Drawing.Size(167, 75)
@@ -231,7 +272,7 @@ Partial Class frmBuy
         'lblOrganization
         '
         Me.lblOrganization.AutoSize = True
-        Me.lblOrganization.Location = New System.Drawing.Point(17, 88)
+        Me.lblOrganization.Location = New System.Drawing.Point(63, 95)
         Me.lblOrganization.Name = "lblOrganization"
         Me.lblOrganization.Size = New System.Drawing.Size(170, 13)
         Me.lblOrganization.TabIndex = 25
@@ -240,21 +281,11 @@ Partial Class frmBuy
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 11)
+        Me.Label6.Location = New System.Drawing.Point(17, 20)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(241, 13)
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "_______________________________________"
-        '
-        'BuyersDatabaseDataSet
-        '
-        Me.BuyersDatabaseDataSet.DataSetName = "BuyersDatabaseDataSet"
-        Me.BuyersDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BuyersBindingSource
-        '
-        Me.BuyersBindingSource.DataMember = "Buyers"
-        Me.BuyersBindingSource.DataSource = Me.BuyersDatabaseDataSet
         '
         'BuyersTableAdapter
         '
@@ -270,12 +301,12 @@ Partial Class frmBuy
         Me.pnl1.Controls.Add(Me.txtName)
         Me.pnl1.Location = New System.Drawing.Point(1, 140)
         Me.pnl1.Name = "pnl1"
-        Me.pnl1.Size = New System.Drawing.Size(260, 229)
+        Me.pnl1.Size = New System.Drawing.Size(321, 229)
         Me.pnl1.TabIndex = 27
         '
         'cmdFurther
         '
-        Me.cmdFurther.Location = New System.Drawing.Point(173, 203)
+        Me.cmdFurther.Location = New System.Drawing.Point(243, 203)
         Me.cmdFurther.Name = "cmdFurther"
         Me.cmdFurther.Size = New System.Drawing.Size(75, 23)
         Me.cmdFurther.TabIndex = 27
@@ -286,7 +317,7 @@ Partial Class frmBuy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(720, 375)
+        Me.ClientSize = New System.Drawing.Size(495, 377)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.rdoPrivatePerson)
         Me.Controls.Add(Me.rdoOrganization)
@@ -296,13 +327,11 @@ Partial Class frmBuy
         Me.Name = "frmBuy"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Покупка"
-        Me.pnlHelp.ResumeLayout(False)
-        Me.pnlHelp.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.pnl2.ResumeLayout(False)
         Me.pnl2.PerformLayout()
-        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnl1.ResumeLayout(False)
         Me.pnl1.PerformLayout()
         Me.ResumeLayout(False)
@@ -310,11 +339,8 @@ Partial Class frmBuy
 
     End Sub
     Friend WithEvents cmdBuy As System.Windows.Forms.Button
-    Friend WithEvents txtTypeOfSugar As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents pnlHelp As System.Windows.Forms.Panel
-    Friend WithEvents lblInfo As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lblNumberOnStorage As System.Windows.Forms.Label
     Friend WithEvents txtNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -334,4 +360,10 @@ Partial Class frmBuy
     Friend WithEvents BuyersTableAdapter As SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
     Friend WithEvents pnl1 As System.Windows.Forms.Panel
     Friend WithEvents cmdFurther As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtEndSumm As System.Windows.Forms.TextBox
+    Friend WithEvents txtSumm As System.Windows.Forms.TextBox
+    Friend WithEvents cmdAdd As System.Windows.Forms.Button
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents cboTypeOfSugar As System.Windows.Forms.ComboBox
 End Class

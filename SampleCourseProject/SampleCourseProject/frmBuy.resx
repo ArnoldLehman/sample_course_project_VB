@@ -117,33 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblInfo.Text" xml:space="preserve">
-    <value>      Виды сахара:
-1) сахарный песок
-2) гранулированный сахар
-3) кусковой сахар
-4) фруктовый
-5) пекарский
-6) ультрамелкий
-7) сахарная пудра
-8) грубый сахар
-9) коричневый сахар
-10) турбинадо
-11) мусковадо
-12) демерара
-13) пальмовый сахар
-14) мексиканский сахар
-15)меласса
-16)жом</value>
-  </data>
+  <metadata name="BuyersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 17</value>
+  </metadata>
   <metadata name="BuyersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>198, 17</value>
   </metadata>
   <metadata name="BuyersDatabaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="BuyersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>198, 17</value>
   </metadata>
   <metadata name="BuyersDatabaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

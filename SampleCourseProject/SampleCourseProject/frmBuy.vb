@@ -8,35 +8,18 @@ Public Class frmBuy
     Dim amountSugar As String = ""
     Dim tpSugar As String = ""
 
+    Dim Income As Integer
+
     Private Sub frmBuy_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmTest.Show()
     End Sub
 
-    Private Sub txtTypeOfSugar_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtTypeOfSugar.Leave
-        If txtTypeOfSugar.Text = "" Then
-            MsgBox("Pls fill all the info")
-        Else
-            Label2.Text = "Количество на складе: "
-            tpSugar = txtTypeOfSugar.Text
-            Dim querry As String = "Select Количество_сахара From Storage where Виды_сахара= '" & tpSugar & "';"
-            Dim cmd As New OleDbCommand(querry, conn)
-            conn.Open()
-            Try
-                amountSugar = cmd.ExecuteScalar().ToString
-            Catch ex As Exception
-                MsgBox("Username does not exist")
-            End Try
-            Label2.Text = Label2.Text & amountSugar
-            conn.close()
-        End If
-    End Sub
-
     Private Sub cmdBuy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBuy.Click
         amountSugar -= Val(txtNumber.Text)
-        tpSugar = txtTypeOfSugar.Text
+        tpSugar = cboTypeOfSugar.Text
         Try
             conn.open()
-            Dim str As String = "UPDATE Storage SET Количество_сахара=? where Виды_сахара= '" & tpSugar & "';"
+            Dim str As String = "UPDATE Storage SET Количество=? where Виды= '" & tpSugar & "';"
             Dim cmd As New OleDbCommand(str, conn)
             cmd.Parameters.AddWithValue("Количество_сахара", amountSugar)
             cmd.ExecuteNonQuery()
@@ -60,6 +43,7 @@ Public Class frmBuy
         rdoPrivatePerson.Checked = False
         pnl1.Hide()
         pnl2.Hide()
+
     End Sub
 
     Private Sub rdoOrganization_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdoOrganization.CheckedChanged
@@ -81,21 +65,51 @@ Public Class frmBuy
         End With
         pnl1.Visible = True
         lblName.Text = "Введите ваше имя"
-        lblOrganization.Hide()
-        txtOrganization.Text = " - "
-        txtOrganization.Hide()
+        With txtOrganization
+            .Text = " - "
+            .ReadOnly = True
+        End With
         rdoOrganization.Enabled = False
         rdoPrivatePerson.Enabled = False
+
+
     End Sub
 
     Private Sub cmdFurther_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdFurther.Click
         If txtOrganization.Text = "" Or txtName.Text = "" Then
             MsgBox("Введите данные", MsgBoxStyle.Critical, "")
+            Exit Sub
         End If
         With Me
-            .Height = 414
-            .Width = 736
+            .Height = 416
+            .Width = 511
         End With
         pnl2.Visible = True
+        cmdFurther.Hide()
+    End Sub
+
+    Private Sub cboTypeOfSugar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboTypeOfSugar.SelectedIndexChanged
+        lblNumberOnStorage.Text = "Количество на складе: "
+        tpSugar = cboTypeOfSugar.Text
+        Try
+            Dim querry As String = "Select Количество From Storage where Виды= '" & tpSugar & "';"
+            Dim cmd As New OleDbCommand(querry, conn)
+            conn.Open()
+
+            amountSugar = cmd.ExecuteScalar().ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        lblNumberOnStorage.Text = lblNumberOnStorage.Text & amountSugar & " тонн"
+        conn.close()
+
+
+        If cboTypeOfSugar.SelectedIndex = 0 Then
+            Income = 32 * 1000
+        End If
+    End Sub
+
+    Private Sub txtNumber_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumber.Leave
+        txtSumm.Text = Income * Val(txtNumber.Text)
     End Sub
 End Class
