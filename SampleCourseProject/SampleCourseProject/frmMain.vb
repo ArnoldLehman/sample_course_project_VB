@@ -1,8 +1,8 @@
-﻿Public Class frmTest
+﻿Public Class frmMain
     Public access As Boolean = False
     Public auth As Boolean = False
 
-    Private Sub frmTest_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FirstImage()
     End Sub
 
@@ -138,10 +138,6 @@
         frmTest_Load(Nothing, Nothing)
     End Sub
 
-    Private Sub tsmiAccount_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tsmiAccount.Click
-        frmUserLogin.Show()
-    End Sub
-
     Private Sub lblBookkeepingOrBuy_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.MouseEnter
         msHover(lblBookkeepingOrBuy)
     End Sub
@@ -190,7 +186,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
-
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblAccount.Click
+        frmUserLogin.Show()
     End Sub
 End Class

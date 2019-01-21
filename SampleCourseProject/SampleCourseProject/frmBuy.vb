@@ -11,7 +11,7 @@ Public Class frmBuy
     Dim Cost As Integer
 
     Private Sub frmBuy_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        frmTest.Show()
+        frmMain.Show()
     End Sub
 
     Private Sub cmdBuy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBuy.Click

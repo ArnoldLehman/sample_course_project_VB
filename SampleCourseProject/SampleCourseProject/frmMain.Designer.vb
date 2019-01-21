@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmTest
+Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Форма переопределяет dispose для очистки списка компонентов.
@@ -23,10 +23,9 @@ Partial Class frmTest
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTest))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.tsmiAccount = New System.Windows.Forms.ToolStripMenuItem
+        Me.lblAccount = New System.Windows.Forms.Label
         Me.lblTitle = New System.Windows.Forms.Label
         Me.lblMain = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -43,17 +42,14 @@ Partial Class frmTest
         Me.lblStorage = New System.Windows.Forms.Label
         Me.lblBookkeepingOrBuy = New System.Windows.Forms.Label
         Me.lblText = New System.Windows.Forms.Label
-        Me.Label1 = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Blue
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.MenuStrip1)
+        Me.Panel1.Controls.Add(Me.lblAccount)
         Me.Panel1.Controls.Add(Me.lblTitle)
         Me.Panel1.Controls.Add(Me.lblMain)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -62,26 +58,17 @@ Partial Class frmTest
         Me.Panel1.Size = New System.Drawing.Size(816, 64)
         Me.Panel1.TabIndex = 0
         '
-        'MenuStrip1
+        'lblAccount
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Blue
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiAccount})
-        Me.MenuStrip1.Location = New System.Drawing.Point(522, 19)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(57, 24)
-        Me.MenuStrip1.TabIndex = 5
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'tsmiAccount
-        '
-        Me.tsmiAccount.BackColor = System.Drawing.Color.Blue
-        Me.tsmiAccount.ForeColor = System.Drawing.Color.White
-        Me.tsmiAccount.Name = "tsmiAccount"
-        Me.tsmiAccount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.tsmiAccount.Size = New System.Drawing.Size(49, 20)
-        Me.tsmiAccount.Text = "Гость"
+        Me.lblAccount.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblAccount.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblAccount.ForeColor = System.Drawing.Color.White
+        Me.lblAccount.Location = New System.Drawing.Point(649, 0)
+        Me.lblAccount.Name = "lblAccount"
+        Me.lblAccount.Size = New System.Drawing.Size(167, 64)
+        Me.lblAccount.TabIndex = 6
+        Me.lblAccount.Text = "Гость"
+        Me.lblAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblTitle
         '
@@ -253,17 +240,6 @@ Partial Class frmTest
         Me.lblText.Text = resources.GetString("lblText.Text")
         Me.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
-        '
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(692, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(124, 64)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Администратор"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'frmTest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -280,14 +256,10 @@ Partial Class frmTest
         Me.Controls.Add(Me.lblNext)
         Me.Controls.Add(Me.lblImage)
         Me.Controls.Add(Me.Panel1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmTest"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Главная"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -296,8 +268,6 @@ Partial Class frmTest
     Friend WithEvents lblTitle As System.Windows.Forms.Label
     Friend WithEvents lblMain As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents tsmiAccount As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents lblImage As System.Windows.Forms.Label
     Friend WithEvents lblNext As System.Windows.Forms.Label
@@ -311,5 +281,5 @@ Partial Class frmTest
     Friend WithEvents lblText As System.Windows.Forms.Label
     Friend WithEvents lblStorage As System.Windows.Forms.Label
     Friend WithEvents lblBuyers As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblAccount As System.Windows.Forms.Label
 End Class

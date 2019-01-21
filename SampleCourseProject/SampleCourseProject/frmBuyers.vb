@@ -6,7 +6,7 @@ Public Class frmBuyers
     Dim conn = New OleDbConnection(dbsource)
 
     Private Sub frmBuyers_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        frmTest.Show()
+        frmMain.Show()
     End Sub
 
     Private Sub frmBuyers_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

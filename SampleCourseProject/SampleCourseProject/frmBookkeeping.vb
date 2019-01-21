@@ -408,7 +408,7 @@ ErrExite:
     End Sub
 
     Private Sub frmBookkeeping_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        frmTest.Show()
+        frmMain.Show()
     End Sub
 
     Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

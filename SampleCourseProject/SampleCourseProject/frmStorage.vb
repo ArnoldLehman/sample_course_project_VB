@@ -4,7 +4,7 @@ Imports System.Data
 Public Class frmStorage
 
     Private Sub frmStorage_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        frmTest.Show()
+        frmMain.Show()
     End Sub
 
     Private Sub frmStorage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

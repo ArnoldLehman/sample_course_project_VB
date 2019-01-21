@@ -6,7 +6,6 @@ Public Class frmUserLogin
         Dim uname As String = ""
         Dim pword As String
         Dim pass As String = ""
-        Dim old As Point = Me.Location
         If txtLogin.Text = "" Or txtPassword.Text = "" Then
             MsgBox("Проверьте, все ли поля заполнены корректно", MsgBoxStyle.Exclamation, "Вход")
         Else
@@ -24,23 +23,19 @@ Public Class frmUserLogin
             End Try
             If pword = pass Then
                 MsgBox("Login success")
-                frmTest.auth = True
+                frmMain.auth = True
                 If txtLogin.Text = "Admin" Then
-                    frmTest.access = True
-                    frmTest.tsmiAccount.Text = "Администратор"
-                    old.X = 683
-                    old.Y = 20
-                    frmTest.MenuStrip1.Location = New Point(old.X, old.Y)
-                    frmTest.lblBookkeepingOrBuy.Text = "Бухгалтерия"
-                    frmTest.lblStorage.Visible = True
-                    frmTest.lblBuyers.Visible = True
+                    frmMain.access = True
+                    frmMain.lblAccount.Text = "Администратор"
+                    frmMain.lblBookkeepingOrBuy.Text = "Бухгалтерия"
+                    frmMain.lblStorage.Visible = True
+                    frmMain.lblBuyers.Visible = True
                 Else
-                    frmTest.access = False
-                    frmTest.tsmiAccount.Text = txtLogin.Text
-                    frmTest.MenuStrip1.Location = New Point(old.X, old.Y)
-                    frmTest.lblBookkeepingOrBuy.Text = "Купить"
-                    frmTest.lblStorage.Hide()
-                    frmTest.lblBuyers.Hide()
+                    frmMain.access = False
+                    frmMain.lblAccount.Text = txtLogin.Text
+                    frmMain.lblBookkeepingOrBuy.Text = "Купить"
+                    frmMain.lblStorage.Hide()
+                    frmMain.lblBuyers.Hide()
                 End If
                 Me.Close()
             Else
@@ -59,6 +54,6 @@ Public Class frmUserLogin
     End Sub
 
     Private Sub frmUserLogin_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
-        frmTest.Show()
+        frmMain.Show()
     End Sub
 End Class
