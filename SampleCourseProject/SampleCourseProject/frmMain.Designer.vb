@@ -31,19 +31,23 @@ Partial Class frmMain
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.lblImage = New System.Windows.Forms.Label
-        Me.lblNext = New System.Windows.Forms.Label
-        Me.lblBack = New System.Windows.Forms.Label
-        Me.lblFirstImage = New System.Windows.Forms.Label
-        Me.lblSecondImage = New System.Windows.Forms.Label
-        Me.lblThirdImage = New System.Windows.Forms.Label
-        Me.lblFourthImage = New System.Windows.Forms.Label
         Me.Panel2 = New System.Windows.Forms.Panel
         Me.lblBuyers = New System.Windows.Forms.Label
         Me.lblStorage = New System.Windows.Forms.Label
         Me.lblBookkeepingOrBuy = New System.Windows.Forms.Label
         Me.lblText = New System.Windows.Forms.Label
+        Me.picFourthImage = New System.Windows.Forms.PictureBox
+        Me.picThirdImage = New System.Windows.Forms.PictureBox
+        Me.picFirstImage = New System.Windows.Forms.PictureBox
+        Me.picSecondImage = New System.Windows.Forms.PictureBox
+        Me.lblBack = New System.Windows.Forms.Label
+        Me.lblNext = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.picFourthImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picThirdImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picFirstImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picSecondImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -62,6 +66,7 @@ Partial Class frmMain
         '
         Me.lblAccount.Cursor = System.Windows.Forms.Cursors.Hand
         Me.lblAccount.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblAccount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblAccount.ForeColor = System.Drawing.Color.White
         Me.lblAccount.Location = New System.Drawing.Point(649, 0)
         Me.lblAccount.Name = "lblAccount"
@@ -116,66 +121,6 @@ Partial Class frmMain
         Me.lblImage.Name = "lblImage"
         Me.lblImage.Size = New System.Drawing.Size(256, 256)
         Me.lblImage.TabIndex = 6
-        '
-        'lblNext
-        '
-        Me.lblNext.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblNext.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblNext.Image = CType(resources.GetObject("lblNext.Image"), System.Drawing.Image)
-        Me.lblNext.Location = New System.Drawing.Point(739, 78)
-        Me.lblNext.Name = "lblNext"
-        Me.lblNext.Size = New System.Drawing.Size(46, 256)
-        Me.lblNext.TabIndex = 7
-        '
-        'lblBack
-        '
-        Me.lblBack.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblBack.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblBack.Image = CType(resources.GetObject("lblBack.Image"), System.Drawing.Image)
-        Me.lblBack.Location = New System.Drawing.Point(437, 78)
-        Me.lblBack.Name = "lblBack"
-        Me.lblBack.Size = New System.Drawing.Size(46, 256)
-        Me.lblBack.TabIndex = 8
-        '
-        'lblFirstImage
-        '
-        Me.lblFirstImage.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblFirstImage.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblFirstImage.Image = CType(resources.GetObject("lblFirstImage.Image"), System.Drawing.Image)
-        Me.lblFirstImage.Location = New System.Drawing.Point(483, 334)
-        Me.lblFirstImage.Name = "lblFirstImage"
-        Me.lblFirstImage.Size = New System.Drawing.Size(50, 50)
-        Me.lblFirstImage.TabIndex = 9
-        '
-        'lblSecondImage
-        '
-        Me.lblSecondImage.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblSecondImage.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblSecondImage.Image = CType(resources.GetObject("lblSecondImage.Image"), System.Drawing.Image)
-        Me.lblSecondImage.Location = New System.Drawing.Point(552, 334)
-        Me.lblSecondImage.Name = "lblSecondImage"
-        Me.lblSecondImage.Size = New System.Drawing.Size(50, 50)
-        Me.lblSecondImage.TabIndex = 10
-        '
-        'lblThirdImage
-        '
-        Me.lblThirdImage.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblThirdImage.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblThirdImage.Image = CType(resources.GetObject("lblThirdImage.Image"), System.Drawing.Image)
-        Me.lblThirdImage.Location = New System.Drawing.Point(621, 334)
-        Me.lblThirdImage.Name = "lblThirdImage"
-        Me.lblThirdImage.Size = New System.Drawing.Size(50, 50)
-        Me.lblThirdImage.TabIndex = 11
-        '
-        'lblFourthImage
-        '
-        Me.lblFourthImage.BackColor = System.Drawing.Color.Gainsboro
-        Me.lblFourthImage.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblFourthImage.Image = CType(resources.GetObject("lblFourthImage.Image"), System.Drawing.Image)
-        Me.lblFourthImage.Location = New System.Drawing.Point(689, 334)
-        Me.lblFourthImage.Name = "lblFourthImage"
-        Me.lblFourthImage.Size = New System.Drawing.Size(50, 50)
-        Me.lblFourthImage.TabIndex = 12
         '
         'Panel2
         '
@@ -240,27 +185,97 @@ Partial Class frmMain
         Me.lblText.Text = resources.GetString("lblText.Text")
         Me.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'frmTest
+        'picFourthImage
+        '
+        Me.picFourthImage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picFourthImage.Image = CType(resources.GetObject("picFourthImage.Image"), System.Drawing.Image)
+        Me.picFourthImage.Location = New System.Drawing.Point(689, 337)
+        Me.picFourthImage.Name = "picFourthImage"
+        Me.picFourthImage.Size = New System.Drawing.Size(50, 50)
+        Me.picFourthImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picFourthImage.TabIndex = 18
+        Me.picFourthImage.TabStop = False
+        '
+        'picThirdImage
+        '
+        Me.picThirdImage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picThirdImage.Image = CType(resources.GetObject("picThirdImage.Image"), System.Drawing.Image)
+        Me.picThirdImage.Location = New System.Drawing.Point(621, 337)
+        Me.picThirdImage.Name = "picThirdImage"
+        Me.picThirdImage.Size = New System.Drawing.Size(50, 50)
+        Me.picThirdImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picThirdImage.TabIndex = 17
+        Me.picThirdImage.TabStop = False
+        '
+        'picFirstImage
+        '
+        Me.picFirstImage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picFirstImage.Image = Global.SampleCourseProject.My.Resources.Resources.perfect_circle_icon_icons_com_53928
+        Me.picFirstImage.Location = New System.Drawing.Point(483, 337)
+        Me.picFirstImage.Name = "picFirstImage"
+        Me.picFirstImage.Size = New System.Drawing.Size(50, 50)
+        Me.picFirstImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picFirstImage.TabIndex = 16
+        Me.picFirstImage.TabStop = False
+        '
+        'picSecondImage
+        '
+        Me.picSecondImage.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.picSecondImage.Image = CType(resources.GetObject("picSecondImage.Image"), System.Drawing.Image)
+        Me.picSecondImage.Location = New System.Drawing.Point(552, 337)
+        Me.picSecondImage.Name = "picSecondImage"
+        Me.picSecondImage.Size = New System.Drawing.Size(50, 50)
+        Me.picSecondImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.picSecondImage.TabIndex = 15
+        Me.picSecondImage.TabStop = False
+        '
+        'lblBack
+        '
+        Me.lblBack.BackColor = System.Drawing.Color.Gainsboro
+        Me.lblBack.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblBack.Image = Global.SampleCourseProject.My.Resources.Resources.ios7_arrow_thin_left_icon_icons_com_50347
+        Me.lblBack.Location = New System.Drawing.Point(437, 78)
+        Me.lblBack.Name = "lblBack"
+        Me.lblBack.Size = New System.Drawing.Size(46, 256)
+        Me.lblBack.TabIndex = 8
+        '
+        'lblNext
+        '
+        Me.lblNext.BackColor = System.Drawing.Color.Gainsboro
+        Me.lblNext.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblNext.Image = Global.SampleCourseProject.My.Resources.Resources.ios7_arrow_thin_right_icon_icons_com_50346
+        Me.lblNext.Location = New System.Drawing.Point(739, 78)
+        Me.lblNext.Name = "lblNext"
+        Me.lblNext.Size = New System.Drawing.Size(46, 256)
+        Me.lblNext.TabIndex = 7
+        '
+        'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(816, 409)
+        Me.Controls.Add(Me.picFourthImage)
+        Me.Controls.Add(Me.picThirdImage)
+        Me.Controls.Add(Me.picFirstImage)
+        Me.Controls.Add(Me.picSecondImage)
         Me.Controls.Add(Me.lblText)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.lblFourthImage)
-        Me.Controls.Add(Me.lblThirdImage)
-        Me.Controls.Add(Me.lblSecondImage)
-        Me.Controls.Add(Me.lblFirstImage)
         Me.Controls.Add(Me.lblBack)
         Me.Controls.Add(Me.lblNext)
         Me.Controls.Add(Me.lblImage)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "frmTest"
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Главная"
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        CType(Me.picFourthImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picThirdImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picFirstImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picSecondImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -272,14 +287,14 @@ Partial Class frmMain
     Friend WithEvents lblImage As System.Windows.Forms.Label
     Friend WithEvents lblNext As System.Windows.Forms.Label
     Friend WithEvents lblBack As System.Windows.Forms.Label
-    Friend WithEvents lblFirstImage As System.Windows.Forms.Label
-    Friend WithEvents lblSecondImage As System.Windows.Forms.Label
-    Friend WithEvents lblThirdImage As System.Windows.Forms.Label
-    Friend WithEvents lblFourthImage As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents lblBookkeepingOrBuy As System.Windows.Forms.Label
     Friend WithEvents lblText As System.Windows.Forms.Label
     Friend WithEvents lblStorage As System.Windows.Forms.Label
     Friend WithEvents lblBuyers As System.Windows.Forms.Label
     Friend WithEvents lblAccount As System.Windows.Forms.Label
+    Friend WithEvents picSecondImage As System.Windows.Forms.PictureBox
+    Friend WithEvents picFirstImage As System.Windows.Forms.PictureBox
+    Friend WithEvents picThirdImage As System.Windows.Forms.PictureBox
+    Friend WithEvents picFourthImage As System.Windows.Forms.PictureBox
 End Class

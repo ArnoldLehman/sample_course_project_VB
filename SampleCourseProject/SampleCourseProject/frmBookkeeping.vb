@@ -12,8 +12,8 @@ Public Class frmBookkeeping
     Private Sub tpPersonal_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpPersonal.Enter
         If tabBookkeeping.SelectedTab Is tpPersonal Then
             With Me
-                .Width = 1227
-                .Height = 323
+                .Width = 1230
+                .Height = 386
             End With
             ПерсоналBindingSource.MoveFirst()
         End If
@@ -85,8 +85,8 @@ ErrExite:
     Private Sub tpMS_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpMS.Enter
         If tabBookkeeping.SelectedTab Is tpMS Then
             With Me
-                .Width = 742
-                .Height = 268
+                .Width = 736
+                .Height = 306
             End With
         End If
     End Sub
@@ -236,8 +236,8 @@ ErrExite:
     Private Sub tpIncome_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpIncome.Enter
         If tabBookkeeping.SelectedTab Is tpIncome Then
             With Me
-                .Width = 721
-                .Height = 303
+                .Width = 712
+                .Height = 306
             End With
         End If
     End Sub

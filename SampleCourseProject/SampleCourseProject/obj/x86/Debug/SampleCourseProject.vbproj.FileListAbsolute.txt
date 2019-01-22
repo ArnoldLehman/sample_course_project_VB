@@ -79,6 +79,7 @@ C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCours
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\UserAccount.mdb
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmBuy.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmStorage.resources
-C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmTest.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmUserLogin.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmUserCreateAccount.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmMain.resources
+C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.Form1.resources

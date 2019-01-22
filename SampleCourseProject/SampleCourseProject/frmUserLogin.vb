@@ -56,4 +56,12 @@ Public Class frmUserLogin
     Private Sub frmUserLogin_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmMain.Show()
     End Sub
+
+    Private Sub chkShowPass_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkShowPass.CheckedChanged
+        If chkShowPass.Checked = True Then
+            txtPassword.PasswordChar = ""
+        ElseIf chkShowPass.Checked = False Then
+            txtPassword.PasswordChar = "*"
+        End If
+    End Sub
 End Class

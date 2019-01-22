@@ -27,6 +27,8 @@ Partial Class frmBuy
         Me.Label1 = New System.Windows.Forms.Label
         Me.lblNumberOnStorage = New System.Windows.Forms.Label
         Me.txtNumber = New System.Windows.Forms.TextBox
+        Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel
@@ -48,16 +50,14 @@ Partial Class frmBuy
         Me.StorageDatabaseDataSet = New SampleCourseProject.StorageDatabaseDataSet
         Me.StorageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StorageTableAdapter = New SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
-        Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
-        Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BuyersTableAdapter = New SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
+        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.pnl2.SuspendLayout()
         Me.pnl1.SuspendLayout()
         CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StorageBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdBuy
@@ -95,6 +95,16 @@ Partial Class frmBuy
         Me.txtNumber.Size = New System.Drawing.Size(61, 20)
         Me.txtNumber.TabIndex = 14
         '
+        'BuyersBindingSource
+        '
+        Me.BuyersBindingSource.DataMember = "Buyers"
+        Me.BuyersBindingSource.DataSource = Me.BuyersDatabaseDataSet
+        '
+        'BuyersDatabaseDataSet
+        '
+        Me.BuyersDatabaseDataSet.DataSetName = "BuyersDatabaseDataSet"
+        Me.BuyersDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -120,7 +130,7 @@ Partial Class frmBuy
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(495, 64)
+        Me.Panel1.Size = New System.Drawing.Size(540, 64)
         Me.Panel1.TabIndex = 18
         '
         'lblMain
@@ -247,7 +257,7 @@ Partial Class frmBuy
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(17, -4)
+        Me.Label6.Location = New System.Drawing.Point(24, -4)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(241, 13)
         Me.Label6.TabIndex = 26
@@ -289,16 +299,6 @@ Partial Class frmBuy
         '
         Me.StorageTableAdapter.ClearBeforeFill = True
         '
-        'BuyersDatabaseDataSet
-        '
-        Me.BuyersDatabaseDataSet.DataSetName = "BuyersDatabaseDataSet"
-        Me.BuyersDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BuyersBindingSource
-        '
-        Me.BuyersBindingSource.DataMember = "Buyers"
-        Me.BuyersBindingSource.DataSource = Me.BuyersDatabaseDataSet
-        '
         'BuyersTableAdapter
         '
         Me.BuyersTableAdapter.ClearBeforeFill = True
@@ -307,16 +307,20 @@ Partial Class frmBuy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(495, 340)
+        Me.ClientSize = New System.Drawing.Size(540, 381)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.rdoPrivatePerson)
         Me.Controls.Add(Me.rdoOrganization)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnl2)
         Me.Controls.Add(Me.pnl1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmBuy"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Покупка"
+        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.pnl2.ResumeLayout(False)
         Me.pnl2.PerformLayout()
@@ -324,8 +328,6 @@ Partial Class frmBuy
         Me.pnl1.PerformLayout()
         CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StorageBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

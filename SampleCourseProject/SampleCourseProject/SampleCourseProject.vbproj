@@ -32,7 +32,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <ApplicationIcon>factory_39516.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -154,6 +155,7 @@
     <Compile Include="frmUserRegistration.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="mdlChecks.vb" />
     <Compile Include="mdlStyle.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -312,7 +314,12 @@
     <Content Include="BuyersDatabase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="factory_39516.ico" />
+    <None Include="Resources\folder_my_documents_15435.ico" />
+    <None Include="Resources\passwords_keys_6032 %281%29.ico" />
+    <None Include="Resources\filled-circle_icon-icons.com_72757.ico" />
+    <None Include="Resources\perfect-circle_icon-icons.com_53928.ico" />
+    <None Include="Resources\ios7-arrow-thin-left_icon-icons.com_50347.ico" />
+    <None Include="Resources\ios7-arrow-thin-right_icon-icons.com_50346.ico" />
     <Content Include="StorageDatabase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

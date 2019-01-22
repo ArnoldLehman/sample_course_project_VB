@@ -50,4 +50,17 @@ Public Class frmBuyers
     Private Sub cmdDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDelete.Click
         BuyersBindingSource.RemoveCurrent()
     End Sub
+
+    Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
+        msHoverTitle(lblMain)
+    End Sub
+
+    Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
+        msLeaveTitle(lblMain)
+    End Sub
+
+    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
+        frmMain.Show()
+        Me.Close()
+    End Sub
 End Class

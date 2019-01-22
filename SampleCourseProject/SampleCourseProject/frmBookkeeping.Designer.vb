@@ -136,7 +136,6 @@ Partial Class frmBookkeeping
         Me.ПотребленоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ТарифDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.РасходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.cmdBackMS = New System.Windows.Forms.Button
         Me.tpIncome = New System.Windows.Forms.TabPage
         Me.tabIncome = New System.Windows.Forms.TabControl
         Me.tpSugar = New System.Windows.Forms.TabPage
@@ -196,7 +195,6 @@ Partial Class frmBookkeeping
         Me.Label22 = New System.Windows.Forms.Label
         Me.txtPriceMolasses = New System.Windows.Forms.TextBox
         Me.txtIncomeMolasses = New System.Windows.Forms.TextBox
-        Me.cmdBackIncome = New System.Windows.Forms.Button
         Me.ПерсоналTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ПерсоналTableAdapter
         Me.ЭлектричествоTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЭлектричествоTableAdapter
         Me.ГазTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ГазTableAdapter
@@ -205,6 +203,8 @@ Partial Class frmBookkeeping
         Me.ЖомTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЖомTableAdapter
         Me.МелассаTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.lblMain = New System.Windows.Forms.Label
         Me.tabBookkeeping.SuspendLayout()
         Me.tpPersonal.SuspendLayout()
         CType(Me.dgvStaff, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,6 +239,7 @@ Partial Class frmBookkeeping
         Me.tpMolasses.SuspendLayout()
         CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'tabBookkeeping
@@ -247,8 +248,7 @@ Partial Class frmBookkeeping
         Me.tabBookkeeping.Controls.Add(Me.tpPersonal)
         Me.tabBookkeeping.Controls.Add(Me.tpMS)
         Me.tabBookkeeping.Controls.Add(Me.tpIncome)
-        Me.tabBookkeeping.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tabBookkeeping.Location = New System.Drawing.Point(0, 0)
+        Me.tabBookkeeping.Location = New System.Drawing.Point(1, 67)
         Me.tabBookkeeping.Name = "tabBookkeeping"
         Me.tabBookkeeping.SelectedIndex = 0
         Me.tabBookkeeping.Size = New System.Drawing.Size(1211, 287)
@@ -738,7 +738,6 @@ Partial Class frmBookkeeping
         'tpMS
         '
         Me.tpMS.Controls.Add(Me.tabMS)
-        Me.tpMS.Controls.Add(Me.cmdBackMS)
         Me.tpMS.Location = New System.Drawing.Point(4, 25)
         Me.tpMS.Name = "tpMS"
         Me.tpMS.Padding = New System.Windows.Forms.Padding(3)
@@ -1275,19 +1274,9 @@ Partial Class frmBookkeeping
         Me.РасходDataGridViewTextBoxColumn2.HeaderText = "Расход"
         Me.РасходDataGridViewTextBoxColumn2.Name = "РасходDataGridViewTextBoxColumn2"
         '
-        'cmdBackMS
-        '
-        Me.cmdBackMS.Location = New System.Drawing.Point(12, 172)
-        Me.cmdBackMS.Name = "cmdBackMS"
-        Me.cmdBackMS.Size = New System.Drawing.Size(75, 23)
-        Me.cmdBackMS.TabIndex = 17
-        Me.cmdBackMS.Text = "Назад"
-        Me.cmdBackMS.UseVisualStyleBackColor = True
-        '
         'tpIncome
         '
         Me.tpIncome.Controls.Add(Me.tabIncome)
-        Me.tpIncome.Controls.Add(Me.cmdBackIncome)
         Me.tpIncome.Location = New System.Drawing.Point(4, 25)
         Me.tpIncome.Name = "tpIncome"
         Me.tpIncome.Padding = New System.Windows.Forms.Padding(3)
@@ -1818,15 +1807,6 @@ Partial Class frmBookkeeping
         Me.txtIncomeMolasses.Size = New System.Drawing.Size(156, 20)
         Me.txtIncomeMolasses.TabIndex = 3
         '
-        'cmdBackIncome
-        '
-        Me.cmdBackIncome.Location = New System.Drawing.Point(12, 181)
-        Me.cmdBackIncome.Name = "cmdBackIncome"
-        Me.cmdBackIncome.Size = New System.Drawing.Size(75, 23)
-        Me.cmdBackIncome.TabIndex = 24
-        Me.cmdBackIncome.Text = "Назад"
-        Me.cmdBackIncome.UseVisualStyleBackColor = True
-        '
         'ПерсоналTableAdapter
         '
         Me.ПерсоналTableAdapter.ClearBeforeFill = True
@@ -1855,11 +1835,35 @@ Partial Class frmBookkeeping
         '
         Me.МелассаTableAdapter.ClearBeforeFill = True
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Blue
+        Me.Panel1.Controls.Add(Me.lblMain)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1241, 64)
+        Me.Panel1.TabIndex = 19
+        '
+        'lblMain
+        '
+        Me.lblMain.BackColor = System.Drawing.Color.Blue
+        Me.lblMain.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMain.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblMain.ForeColor = System.Drawing.Color.White
+        Me.lblMain.Location = New System.Drawing.Point(-2, 0)
+        Me.lblMain.Name = "lblMain"
+        Me.lblMain.Size = New System.Drawing.Size(100, 64)
+        Me.lblMain.TabIndex = 2
+        Me.lblMain.Text = "Главная"
+        Me.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmBookkeeping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1211, 287)
+        Me.ClientSize = New System.Drawing.Size(1241, 347)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.tabBookkeeping)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -1912,6 +1916,7 @@ Partial Class frmBookkeeping
         Me.tpMolasses.PerformLayout()
         CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1994,7 +1999,6 @@ Partial Class frmBookkeeping
     Friend WithEvents cmdPreviousWater As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents cmdBackMS As System.Windows.Forms.Button
     Friend WithEvents tpIncome As System.Windows.Forms.TabPage
     Friend WithEvents tabIncome As System.Windows.Forms.TabControl
     Friend WithEvents tpSugar As System.Windows.Forms.TabPage
@@ -2039,7 +2043,6 @@ Partial Class frmBookkeeping
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents txtPriceMolasses As System.Windows.Forms.TextBox
     Friend WithEvents txtIncomeMolasses As System.Windows.Forms.TextBox
-    Friend WithEvents cmdBackIncome As System.Windows.Forms.Button
     Friend WithEvents cmdNextPersonal As System.Windows.Forms.Button
     Friend WithEvents cmdPreviousPersonal As System.Windows.Forms.Button
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
@@ -2097,5 +2100,7 @@ Partial Class frmBookkeeping
     Friend WithEvents ЗарплатаDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents СреднийДневнойЗаработокDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ОтпускныеDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents lblMain As System.Windows.Forms.Label
 
 End Class

@@ -49,9 +49,12 @@ Partial Class frmBuyers
         Me.txtNumberProduct = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
         Me.txtPayment = New System.Windows.Forms.TextBox
+        Me.Panel1 = New System.Windows.Forms.Panel
+        Me.lblMain = New System.Windows.Forms.Label
         CType(Me.dgvBuyers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvBuyers
@@ -60,7 +63,7 @@ Partial Class frmBuyers
         Me.dgvBuyers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvBuyers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn, Me.НаименованиеорганизацииDataGridViewTextBoxColumn, Me.ИмязаказчикаDataGridViewTextBoxColumn, Me.НаименованиетовараDataGridViewTextBoxColumn, Me.КоличествокупленноготовараDataGridViewTextBoxColumn, Me.ОплатазазаказDataGridViewTextBoxColumn})
         Me.dgvBuyers.DataSource = Me.BuyersBindingSource
-        Me.dgvBuyers.Location = New System.Drawing.Point(12, 12)
+        Me.dgvBuyers.Location = New System.Drawing.Point(12, 86)
         Me.dgvBuyers.MultiSelect = False
         Me.dgvBuyers.Name = "dgvBuyers"
         Me.dgvBuyers.ReadOnly = True
@@ -125,14 +128,14 @@ Partial Class frmBuyers
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(70, 277)
+        Me.txtSearch.Location = New System.Drawing.Point(70, 351)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(506, 20)
         Me.txtSearch.TabIndex = 1
         '
         'cmdSearch
         '
-        Me.cmdSearch.Location = New System.Drawing.Point(582, 276)
+        Me.cmdSearch.Location = New System.Drawing.Point(582, 350)
         Me.cmdSearch.Name = "cmdSearch"
         Me.cmdSearch.Size = New System.Drawing.Size(75, 20)
         Me.cmdSearch.TabIndex = 2
@@ -143,7 +146,7 @@ Partial Class frmBuyers
         '
         Me.lblReset.AutoSize = True
         Me.lblReset.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.lblReset.Location = New System.Drawing.Point(9, 280)
+        Me.lblReset.Location = New System.Drawing.Point(9, 354)
         Me.lblReset.Name = "lblReset"
         Me.lblReset.Size = New System.Drawing.Size(55, 13)
         Me.lblReset.TabIndex = 3
@@ -151,7 +154,7 @@ Partial Class frmBuyers
         '
         'cmdAddNew
         '
-        Me.cmdAddNew.Location = New System.Drawing.Point(674, 247)
+        Me.cmdAddNew.Location = New System.Drawing.Point(674, 321)
         Me.cmdAddNew.Name = "cmdAddNew"
         Me.cmdAddNew.Size = New System.Drawing.Size(75, 23)
         Me.cmdAddNew.TabIndex = 4
@@ -160,7 +163,7 @@ Partial Class frmBuyers
         '
         'cmdSave
         '
-        Me.cmdSave.Location = New System.Drawing.Point(761, 247)
+        Me.cmdSave.Location = New System.Drawing.Point(761, 321)
         Me.cmdSave.Name = "cmdSave"
         Me.cmdSave.Size = New System.Drawing.Size(75, 23)
         Me.cmdSave.TabIndex = 6
@@ -169,7 +172,7 @@ Partial Class frmBuyers
         '
         'cmdDelete
         '
-        Me.cmdDelete.Location = New System.Drawing.Point(845, 247)
+        Me.cmdDelete.Location = New System.Drawing.Point(845, 321)
         Me.cmdDelete.Name = "cmdDelete"
         Me.cmdDelete.Size = New System.Drawing.Size(75, 23)
         Me.cmdDelete.TabIndex = 7
@@ -179,7 +182,7 @@ Partial Class frmBuyers
         'txtNameOfOrganizatioin
         '
         Me.txtNameOfOrganizatioin.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Наименование_организации", True))
-        Me.txtNameOfOrganizatioin.Location = New System.Drawing.Point(674, 28)
+        Me.txtNameOfOrganizatioin.Location = New System.Drawing.Point(674, 102)
         Me.txtNameOfOrganizatioin.Name = "txtNameOfOrganizatioin"
         Me.txtNameOfOrganizatioin.Size = New System.Drawing.Size(246, 20)
         Me.txtNameOfOrganizatioin.TabIndex = 8
@@ -187,7 +190,7 @@ Partial Class frmBuyers
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(671, 12)
+        Me.Label1.Location = New System.Drawing.Point(671, 86)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(151, 13)
         Me.Label1.TabIndex = 9
@@ -196,7 +199,7 @@ Partial Class frmBuyers
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(671, 60)
+        Me.Label2.Location = New System.Drawing.Point(671, 134)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 11
@@ -205,7 +208,7 @@ Partial Class frmBuyers
         'txtNameOfCustomer
         '
         Me.txtNameOfCustomer.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Имя_заказчика", True))
-        Me.txtNameOfCustomer.Location = New System.Drawing.Point(674, 76)
+        Me.txtNameOfCustomer.Location = New System.Drawing.Point(674, 150)
         Me.txtNameOfCustomer.Name = "txtNameOfCustomer"
         Me.txtNameOfCustomer.Size = New System.Drawing.Size(246, 20)
         Me.txtNameOfCustomer.TabIndex = 10
@@ -213,7 +216,7 @@ Partial Class frmBuyers
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(671, 108)
+        Me.Label3.Location = New System.Drawing.Point(671, 182)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 13)
         Me.Label3.TabIndex = 13
@@ -222,7 +225,7 @@ Partial Class frmBuyers
         'txtNameOfProduct
         '
         Me.txtNameOfProduct.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Наименование_товара", True))
-        Me.txtNameOfProduct.Location = New System.Drawing.Point(674, 124)
+        Me.txtNameOfProduct.Location = New System.Drawing.Point(674, 198)
         Me.txtNameOfProduct.Name = "txtNameOfProduct"
         Me.txtNameOfProduct.Size = New System.Drawing.Size(246, 20)
         Me.txtNameOfProduct.TabIndex = 12
@@ -230,7 +233,7 @@ Partial Class frmBuyers
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(671, 157)
+        Me.Label4.Location = New System.Drawing.Point(671, 231)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(165, 13)
         Me.Label4.TabIndex = 15
@@ -239,7 +242,7 @@ Partial Class frmBuyers
         'txtNumberProduct
         '
         Me.txtNumberProduct.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Количество_купленного_товара", True))
-        Me.txtNumberProduct.Location = New System.Drawing.Point(674, 173)
+        Me.txtNumberProduct.Location = New System.Drawing.Point(674, 247)
         Me.txtNumberProduct.Name = "txtNumberProduct"
         Me.txtNumberProduct.Size = New System.Drawing.Size(246, 20)
         Me.txtNumberProduct.TabIndex = 14
@@ -247,7 +250,7 @@ Partial Class frmBuyers
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(671, 205)
+        Me.Label5.Location = New System.Drawing.Point(671, 279)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(92, 13)
         Me.Label5.TabIndex = 17
@@ -256,16 +259,40 @@ Partial Class frmBuyers
         'txtPayment
         '
         Me.txtPayment.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuyersBindingSource, "Оплата_за_заказ", True))
-        Me.txtPayment.Location = New System.Drawing.Point(674, 221)
+        Me.txtPayment.Location = New System.Drawing.Point(674, 295)
         Me.txtPayment.Name = "txtPayment"
         Me.txtPayment.Size = New System.Drawing.Size(246, 20)
         Me.txtPayment.TabIndex = 16
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Blue
+        Me.Panel1.Controls.Add(Me.lblMain)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(933, 64)
+        Me.Panel1.TabIndex = 19
+        '
+        'lblMain
+        '
+        Me.lblMain.BackColor = System.Drawing.Color.Blue
+        Me.lblMain.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.lblMain.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblMain.ForeColor = System.Drawing.Color.White
+        Me.lblMain.Location = New System.Drawing.Point(-2, 0)
+        Me.lblMain.Name = "lblMain"
+        Me.lblMain.Size = New System.Drawing.Size(100, 64)
+        Me.lblMain.TabIndex = 2
+        Me.lblMain.Text = "Главная"
+        Me.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmBuyers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(932, 307)
+        Me.ClientSize = New System.Drawing.Size(933, 386)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtPayment)
         Me.Controls.Add(Me.Label4)
@@ -283,12 +310,15 @@ Partial Class frmBuyers
         Me.Controls.Add(Me.cmdSearch)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.dgvBuyers)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "frmBuyers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Покупатели"
         CType(Me.dgvBuyers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -319,4 +349,6 @@ Partial Class frmBuyers
     Friend WithEvents txtNumberProduct As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtPayment As System.Windows.Forms.TextBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents lblMain As System.Windows.Forms.Label
 End Class

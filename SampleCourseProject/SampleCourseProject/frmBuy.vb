@@ -140,4 +140,17 @@ Public Class frmBuy
     Private Sub txtNumber_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumber.Leave
         txtSumm.Text = Cost * Val(txtNumber.Text)
     End Sub
+
+    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
+        frmMain.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
+        msHoverTitle(lblMain)
+    End Sub
+
+    Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
+        msLeaveTitle(lblMain)
+    End Sub
 End Class
