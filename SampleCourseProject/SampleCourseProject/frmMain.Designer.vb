@@ -108,10 +108,11 @@ Partial Class frmMain
         '
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "254.jpg")
-        Me.ImageList1.Images.SetKeyName(1, "0037460126347236-41263746182340213-263741276342-234723764927364saXaP333.jpg")
-        Me.ImageList1.Images.SetKeyName(2, "thmb-2014-08-12-09h42m24s46-660x330.jpg")
-        Me.ImageList1.Images.SetKeyName(3, "8a8efac9a0e10f9b2021e3485e6e2df7.jpg")
+        Me.ImageList1.Images.SetKeyName(0, "0d0c674b93877fac35da4674df655cfc.jpg")
+        Me.ImageList1.Images.SetKeyName(1, "8a8efac9a0e10f9b2021e3485e6e2df7.jpg")
+        Me.ImageList1.Images.SetKeyName(2, "254.jpg")
+        Me.ImageList1.Images.SetKeyName(3, "d3d3Lnl1Z2EucnUvbWVkaWEvNzQvZWUvaW1nXzI0MjMoMSlfX2FiMm9uYjEuanBnP19faWQ9OTgyODI=." & _
+                "jpg")
         '
         'lblImage
         '
@@ -177,12 +178,11 @@ Partial Class frmMain
         '
         'lblText
         '
-        Me.lblText.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblText.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.lblText.Location = New System.Drawing.Point(140, 78)
         Me.lblText.Name = "lblText"
-        Me.lblText.Size = New System.Drawing.Size(291, 256)
+        Me.lblText.Size = New System.Drawing.Size(291, 309)
         Me.lblText.TabIndex = 14
-        Me.lblText.Text = resources.GetString("lblText.Text")
         Me.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'picFourthImage
