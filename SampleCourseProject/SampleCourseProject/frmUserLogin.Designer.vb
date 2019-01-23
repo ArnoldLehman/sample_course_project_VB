@@ -38,7 +38,7 @@ Partial Class frmUserLogin
         Me.cmdLogin.Location = New System.Drawing.Point(313, 153)
         Me.cmdLogin.Name = "cmdLogin"
         Me.cmdLogin.Size = New System.Drawing.Size(114, 23)
-        Me.cmdLogin.TabIndex = 0
+        Me.cmdLogin.TabIndex = 3
         Me.cmdLogin.Text = "Вход"
         Me.cmdLogin.UseVisualStyleBackColor = True
         '
@@ -65,14 +65,15 @@ Partial Class frmUserLogin
         Me.txtLogin.Location = New System.Drawing.Point(231, 28)
         Me.txtLogin.Name = "txtLogin"
         Me.txtLogin.Size = New System.Drawing.Size(196, 20)
-        Me.txtLogin.TabIndex = 3
+        Me.txtLogin.TabIndex = 1
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(236, 85)
+        Me.txtPassword.Location = New System.Drawing.Point(231, 85)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(191, 20)
-        Me.txtPassword.TabIndex = 4
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(196, 20)
+        Me.txtPassword.TabIndex = 2
         '
         'lnklblCreateUserAccount
         '
@@ -90,7 +91,7 @@ Partial Class frmUserLogin
         Me.chkShowPass.Location = New System.Drawing.Point(313, 120)
         Me.chkShowPass.Name = "chkShowPass"
         Me.chkShowPass.Size = New System.Drawing.Size(114, 17)
-        Me.chkShowPass.TabIndex = 6
+        Me.chkShowPass.TabIndex = 4
         Me.chkShowPass.Text = "Показать пароль"
         Me.chkShowPass.UseVisualStyleBackColor = True
         '

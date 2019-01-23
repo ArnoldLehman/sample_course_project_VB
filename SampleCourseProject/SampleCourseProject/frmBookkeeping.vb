@@ -437,24 +437,133 @@ ErrExite:
     End Sub
 
     Private Sub lblReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblReset.Click
-        On Error GoTo ErrRe
-        txtSearch.Select()
-        ПерсоналBindingSource.Filter = Nothing
+        Try
+            txtSearch.Select()
+            ПерсоналBindingSource.Filter = Nothing
 
-        With dgvStaff
-            .ClearSelection()
-            .ReadOnly = True
-            .MultiSelect = False
-            .DataSource = ПерсоналBindingSource
-        End With
+            With dgvStaff
+                .ClearSelection()
+                .ReadOnly = True
+                .MultiSelect = False
+                .DataSource = ПерсоналBindingSource
+            End With
+        Catch ex As Exception
+
+        End Try
+    End Sub
 
 
-ErrEx:
-        Exit Sub
-ErrRe:
-        MsgBox("Ошибка номер " & Err.Number & vbNewLine & _
-                "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
-                "Reser Error!")
-        Resume ErrEx
+
+    'Блок проверок полей
+    'Проверка на ввод цифр
+    Private Sub ChecksNumberInBookkeeping(ByVal txt As TextBox)
+        If checksNumber(txt) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt.Focus()
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtFirstName_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtFirstName.Leave
+        ChecksNumberInBookkeeping(txtFirstName)
+    End Sub
+
+    Private Sub txtLastName_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtLastName.Leave
+        ChecksNumberInBookkeeping(txtLastName)
+    End Sub
+
+    Private Sub txtPatronymic_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPatronymic.Leave
+        ChecksNumberInBookkeeping(txtPatronymic)
+    End Sub
+
+    Private Sub txtProfession_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtProfession.Leave
+        ChecksNumberInBookkeeping(txtProfession)
+    End Sub
+
+
+    'Проверка на ввод букв
+    Private Sub ChecksWordInBookkeeping(ByVal txt As TextBox)
+        If checksWord(txt) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt.Focus()
+            Exit Sub
+        Else
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtNumbDaysWorked_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumbDaysWorked.Leave
+        ChecksWordInBookkeeping(txtNumbDaysWorked)
+    End Sub
+
+    Private Sub txtNumbWorkDay_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumbWorkDay.Leave
+        ChecksWordInBookkeeping(txtNumbWorkDay)
+    End Sub
+
+    Private Sub txtNumberMolasses_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberMolasses.Leave
+        ChecksWordInBookkeeping(txtNumberMolasses)
+    End Sub
+
+    Private Sub txtNumberPulp_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberPulp.Leave
+        ChecksWordInBookkeeping(txtNumberPulp)
+    End Sub
+
+    Private Sub txtNumberSugar_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberSugar.Leave
+        ChecksWordInBookkeeping(txtNumberSugar)
+    End Sub
+
+    Private Sub txtSalary_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtSalary.Leave
+        ChecksWordInBookkeeping(txtSalary)
+    End Sub
+
+    Private Sub txtPriceMolasses_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPriceMolasses.Leave
+        ChecksWordInBookkeeping(txtPriceMolasses)
+    End Sub
+
+    Private Sub txtPricePulp_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPricePulp.Leave
+        ChecksWordInBookkeeping(txtPricePulp)
+    End Sub
+
+    Private Sub txtPriceSugar_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPriceSugar.Leave
+        ChecksWordInBookkeeping(txtPriceSugar)
+    End Sub
+
+    Private Sub txtPotrElec_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPotrElec.Leave
+        ChecksWordInBookkeeping(txtPotrElec)
+    End Sub
+
+    Private Sub txtPotrGas_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPotrGas.Leave
+        ChecksWordInBookkeeping(txtPotrGas)
+    End Sub
+
+    Private Sub txtPotrWater_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPotrWater.Leave
+        ChecksWordInBookkeeping(txtPotrWater)
+    End Sub
+
+    Private Sub txtTarifElec_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtTarifElec.Leave
+        ChecksWordInBookkeeping(txtTarifElec)
+    End Sub
+
+    Private Sub txtTarifGas_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtTarifGas.Leave
+        ChecksWordInBookkeeping(txtTarifGas)
+    End Sub
+
+    Private Sub txtTarifWater_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtTarifWater.Leave
+        ChecksWordInBookkeeping(txtTarifWater)
+    End Sub
+
+    Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
+        msHoverTitle(lblMain)
+    End Sub
+
+    Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
+        msLeaveTitle(lblMain)
+    End Sub
+
+    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
+        frmMain.Show()
+        Me.Close()
     End Sub
 End Class

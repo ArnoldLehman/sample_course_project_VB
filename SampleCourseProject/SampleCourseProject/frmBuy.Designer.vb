@@ -25,7 +25,7 @@ Partial Class frmBuy
         Me.components = New System.ComponentModel.Container
         Me.cmdBuy = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
-        Me.lblNumberOnStorage = New System.Windows.Forms.Label
+        Me.Label8 = New System.Windows.Forms.Label
         Me.txtNumber = New System.Windows.Forms.TextBox
         Me.BuyersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BuyersDatabaseDataSet = New SampleCourseProject.BuyersDatabaseDataSet
@@ -34,6 +34,7 @@ Partial Class frmBuy
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.lblMain = New System.Windows.Forms.Label
         Me.pnl2 = New System.Windows.Forms.Panel
+        Me.lblNumberOnStorage = New System.Windows.Forms.Label
         Me.cboTypeOfSugar = New System.Windows.Forms.ComboBox
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtSumm = New System.Windows.Forms.TextBox
@@ -47,10 +48,10 @@ Partial Class frmBuy
         Me.Label6 = New System.Windows.Forms.Label
         Me.pnl1 = New System.Windows.Forms.Panel
         Me.cmdFurther = New System.Windows.Forms.Button
+        Me.BuyersTableAdapter = New SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
         Me.StorageDatabaseDataSet = New SampleCourseProject.StorageDatabaseDataSet
         Me.StorageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StorageTableAdapter = New SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
-        Me.BuyersTableAdapter = New SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
         CType(Me.BuyersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BuyersDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -78,14 +79,14 @@ Partial Class frmBuy
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Вид сахара"
         '
-        'lblNumberOnStorage
+        'Label8
         '
-        Me.lblNumberOnStorage.AutoSize = True
-        Me.lblNumberOnStorage.Location = New System.Drawing.Point(22, 39)
-        Me.lblNumberOnStorage.Name = "lblNumberOnStorage"
-        Me.lblNumberOnStorage.Size = New System.Drawing.Size(126, 13)
-        Me.lblNumberOnStorage.TabIndex = 13
-        Me.lblNumberOnStorage.Text = "Количество на складе: "
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(22, 39)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(126, 13)
+        Me.Label8.TabIndex = 13
+        Me.Label8.Text = "Количество на складе: "
         '
         'txtNumber
         '
@@ -148,6 +149,7 @@ Partial Class frmBuy
         '
         'pnl2
         '
+        Me.pnl2.Controls.Add(Me.lblNumberOnStorage)
         Me.pnl2.Controls.Add(Me.cboTypeOfSugar)
         Me.pnl2.Controls.Add(Me.Label7)
         Me.pnl2.Controls.Add(Me.txtSumm)
@@ -156,11 +158,19 @@ Partial Class frmBuy
         Me.pnl2.Controls.Add(Me.cmdBuy)
         Me.pnl2.Controls.Add(Me.Label4)
         Me.pnl2.Controls.Add(Me.txtNumber)
-        Me.pnl2.Controls.Add(Me.lblNumberOnStorage)
+        Me.pnl2.Controls.Add(Me.Label8)
         Me.pnl2.Location = New System.Drawing.Point(257, 121)
         Me.pnl2.Name = "pnl2"
         Me.pnl2.Size = New System.Drawing.Size(223, 248)
         Me.pnl2.TabIndex = 0
+        '
+        'lblNumberOnStorage
+        '
+        Me.lblNumberOnStorage.AutoSize = True
+        Me.lblNumberOnStorage.Location = New System.Drawing.Point(154, 39)
+        Me.lblNumberOnStorage.Name = "lblNumberOnStorage"
+        Me.lblNumberOnStorage.Size = New System.Drawing.Size(0, 13)
+        Me.lblNumberOnStorage.TabIndex = 24
         '
         'cboTypeOfSugar
         '
@@ -285,6 +295,10 @@ Partial Class frmBuy
         Me.cmdFurther.Text = "Далее"
         Me.cmdFurther.UseVisualStyleBackColor = True
         '
+        'BuyersTableAdapter
+        '
+        Me.BuyersTableAdapter.ClearBeforeFill = True
+        '
         'StorageDatabaseDataSet
         '
         Me.StorageDatabaseDataSet.DataSetName = "StorageDatabaseDataSet"
@@ -298,10 +312,6 @@ Partial Class frmBuy
         'StorageTableAdapter
         '
         Me.StorageTableAdapter.ClearBeforeFill = True
-        '
-        'BuyersTableAdapter
-        '
-        Me.BuyersTableAdapter.ClearBeforeFill = True
         '
         'frmBuy
         '
@@ -334,7 +344,7 @@ Partial Class frmBuy
     End Sub
     Friend WithEvents cmdBuy As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lblNumberOnStorage As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtNumber As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -354,10 +364,11 @@ Partial Class frmBuy
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtSumm As System.Windows.Forms.TextBox
     Friend WithEvents cboTypeOfSugar As System.Windows.Forms.ComboBox
-    Friend WithEvents StorageDatabaseDataSet As SampleCourseProject.StorageDatabaseDataSet
-    Friend WithEvents StorageBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents StorageTableAdapter As SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
     Friend WithEvents BuyersDatabaseDataSet As SampleCourseProject.BuyersDatabaseDataSet
     Friend WithEvents BuyersBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents BuyersTableAdapter As SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter
+    Friend WithEvents lblNumberOnStorage As System.Windows.Forms.Label
+    Friend WithEvents StorageDatabaseDataSet As SampleCourseProject.StorageDatabaseDataSet
+    Friend WithEvents StorageBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents StorageTableAdapter As SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
 End Class
