@@ -36,7 +36,7 @@ Public Class frmBuy
             If buy = Windows.Forms.DialogResult.Yes Then
                 BuyersBindingSource.AddNew()
                 txtOrganization.Text = " - "
-                lblNumberOnStorage.Text = "Количество на складе: "
+                Label8.Text = "Количество на складе: "
             Else
                 Me.Close()
             End If
@@ -46,12 +46,13 @@ Public Class frmBuy
     End Sub
 
     Private Sub frmBuy_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BuyersDatabaseDataSet.Buyers". При необходимости она может быть перемещена или удалена.
-        Me.BuyersTableAdapter.Fill(Me.BuyersDatabaseDataSet.Buyers)
         'TODO: данная строка кода позволяет загрузить данные в таблицу "StorageDatabaseDataSet.Storage". При необходимости она может быть перемещена или удалена.
         Me.StorageTableAdapter.Fill(Me.StorageDatabaseDataSet.Storage)
+        'TODO: данная строка кода позволяет загрузить данные в таблицу "BuyersDatabaseDataSet.Buyers". При необходимости она может быть перемещена или удалена.
+        Me.BuyersTableAdapter.Fill(Me.BuyersDatabaseDataSet.Buyers)
+
         BuyersBindingSource.AddNew()
-        lblNumberOnStorage.Text = "Количество на складе: "
+        Label8.Text = "Количество на складе: "
 
         With Me
             .Height = 195
@@ -70,10 +71,12 @@ Public Class frmBuy
             .Width = 343
         End With
         pnl1.Visible = True
-        lblOrganization.Visible = True
-        txtOrganization.Visible = True
-        rdoOrganization.Enabled = False
-        rdoPrivatePerson.Enabled = False
+        With txtOrganization
+            .Text = ""
+            .ReadOnly = False
+        End With
+        pnl2.Hide()
+        cmdFurther.Visible = True
     End Sub
 
     Private Sub rdoPrivatePerson_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdoPrivatePerson.CheckedChanged
@@ -86,10 +89,8 @@ Public Class frmBuy
             .Text = " - "
             .ReadOnly = True
         End With
-        rdoOrganization.Enabled = False
-        rdoPrivatePerson.Enabled = False
-
-
+        pnl2.Hide()
+        cmdFurther.Visible = True
     End Sub
 
     Private Sub cmdFurther_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdFurther.Click
@@ -116,7 +117,7 @@ Public Class frmBuy
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        lblNumberOnStorage.Text = lblNumberOnStorage.Text & amountSugar & " тонн"
+        lblNumberOnStorage.Text = amountSugar & " тонн"
         conn.close()
 
 
@@ -136,8 +137,27 @@ Public Class frmBuy
             Cost = 12.5 * 1000
         End If
     End Sub
+    'Проверка на цифры
+    Private Sub ChecksNumberInBuy(ByVal txt As TextBox)
+        If checksNumber(txt) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    'Проверка на буквы
+    Private Sub ChecksWordInBuy(ByVal txt As TextBox)
+        If checksWord(txt) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txt.Focus()
+            Exit Sub
+        End If
+    End Sub
+
 
     Private Sub txtNumber_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumber.Leave
+        ChecksWordInBuy(txtNumber)
         txtSumm.Text = Cost * Val(txtNumber.Text)
     End Sub
 
@@ -152,5 +172,9 @@ Public Class frmBuy
 
     Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
         msLeaveTitle(lblMain)
+    End Sub
+
+    Private Sub txtName_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtName.Leave
+        ChecksNumberInBuy(txtName)
     End Sub
 End Class

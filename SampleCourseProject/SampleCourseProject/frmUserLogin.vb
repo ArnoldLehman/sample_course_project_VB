@@ -39,7 +39,6 @@ Public Class frmUserLogin
                 End If
                 Me.Close()
             Else
-                MsgBox("login failed")
                 txtLogin.Clear()
                 txtPassword.Clear()
             End If
@@ -63,5 +62,29 @@ Public Class frmUserLogin
         ElseIf chkShowPass.Checked = False Then
             txtPassword.PasswordChar = "*"
         End If
+    End Sub
+
+    Private Sub txtLogin_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtLogin.Leave
+        If checksAccount(txtLogin) = True Then
+            Exit Sub
+        Else
+            MsgBox("Длина логина не должна быть меньше 3 и больше 20", MsgBoxStyle.Critical, "Ввод")
+            txtLogin.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtPassword_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPassword.Leave
+        If checksAccount(txtPassword) = True Then
+            Exit Sub
+        Else
+            MsgBox("Длина пароля не должна быть меньше 3 и больше 20", MsgBoxStyle.Critical, "Ввод")
+            txtPassword.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub frmUserLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

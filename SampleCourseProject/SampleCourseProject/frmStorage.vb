@@ -11,6 +11,7 @@ Public Class frmStorage
         'TODO: данная строка кода позволяет загрузить данные в таблицу "StorageDatabaseDataSet.Storage". При необходимости она может быть перемещена или удалена.
         Me.StorageTableAdapter.Fill(Me.StorageDatabaseDataSet.Storage)
 
+
     End Sub
 
     Private Sub cmdAddNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNew.Click

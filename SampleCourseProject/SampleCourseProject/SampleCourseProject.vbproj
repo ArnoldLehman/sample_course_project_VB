@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A015048F-B2DE-4E1D-9382-4DD73E8738D9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -252,17 +252,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="StorageDatabaseDataSet.xsc">
-      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="StorageDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StorageDatabaseDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="StorageDatabaseDataSet.xss">
-      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="UserAccountDataSet.xsc">
       <DependentUpon>UserAccountDataSet.xsd</DependentUpon>
     </None>
@@ -320,6 +309,17 @@
     <None Include="Resources\perfect-circle_icon-icons.com_53928.ico" />
     <None Include="Resources\ios7-arrow-thin-left_icon-icons.com_50347.ico" />
     <None Include="Resources\ios7-arrow-thin-right_icon-icons.com_50346.ico" />
+    <None Include="StorageDatabaseDataSet.xsc">
+      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StorageDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StorageDatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StorageDatabaseDataSet.xss">
+      <DependentUpon>StorageDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <Content Include="StorageDatabase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -63,4 +63,52 @@ Public Class frmBuyers
         frmMain.Show()
         Me.Close()
     End Sub
+
+    Private Sub txtNameOfCustomer_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNameOfCustomer.Leave
+        If checksNumber(txtNameOfCustomer) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtNameOfCustomer.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtNameOfProduct_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNameOfProduct.Leave
+        If checksNumber(txtNameOfProduct) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtNameOfProduct.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtNumberProduct_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberProduct.Leave
+        If checksWord(txtNumberProduct) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtNumberProduct.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtPayment_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPayment.Leave
+        If checksWord(txtPayment) = True Then
+            MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtPayment.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub lblReset_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblReset.Click
+        Try
+            txtSearch.Clear()
+            BuyersBindingSource.Filter = Nothing
+
+            With dgvBuyers
+                .ClearSelection()
+                .ReadOnly = True
+                .MultiSelect = False
+                .DataSource = BuyersBindingSource
+            End With
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

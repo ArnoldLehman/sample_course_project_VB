@@ -28,4 +28,24 @@ Public Class frmUserCreateAccount
     Private Sub frmUserCreateAccount_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmUserLogin.Show()
     End Sub
+
+    Private Sub txtLoginCreate_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtLoginCreate.Leave
+        If checksAccount(txtLoginCreate) = True Then
+            Exit Sub
+        Else
+            MsgBox("Длина логина не должна быть меньше 3 и больше 20", MsgBoxStyle.Critical, "Ввод")
+            txtLoginCreate.Focus()
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub txtPasswordCreate_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPasswordCreate.Leave
+        If checksAccount(txtPasswordCreate) = True Then
+            Exit Sub
+        Else
+            MsgBox("Длина пароля не должна быть меньше 3 и больше 20", MsgBoxStyle.Critical, "Ввод")
+            txtPasswordCreate.Focus()
+            Exit Sub
+        End If
+    End Sub
 End Class
