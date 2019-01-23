@@ -34,17 +34,6 @@ Partial Class frmBookkeeping
         Me.cmdDeletePersonal = New System.Windows.Forms.Button
         Me.cmdAddNewPersonal = New System.Windows.Forms.Button
         Me.dgvStaff = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ФамилияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ИмяDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ОтчествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ПрофессияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ОкладDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЗарплатаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ОтпускныеDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ПерсоналBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BookkeepingDatabaseDataSet = New SampleCourseProject.BookkeepingDatabaseDataSet
         Me.GroupBox9 = New System.Windows.Forms.GroupBox
@@ -144,6 +133,17 @@ Partial Class frmBookkeeping
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.lblMain = New System.Windows.Forms.Label
+        Me.КодDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ФамилияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ИмяDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ОтчествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ПрофессияDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ОкладDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ЗарплатаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.ОтпускныеDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.tabBookkeeping.SuspendLayout()
         Me.tpPersonal.SuspendLayout()
         CType(Me.dgvStaff, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -275,76 +275,6 @@ Partial Class frmBookkeeping
         Me.dgvStaff.Name = "dgvStaff"
         Me.dgvStaff.Size = New System.Drawing.Size(692, 167)
         Me.dgvStaff.TabIndex = 51
-        '
-        'КодDataGridViewTextBoxColumn
-        '
-        Me.КодDataGridViewTextBoxColumn.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn.Name = "КодDataGridViewTextBoxColumn"
-        Me.КодDataGridViewTextBoxColumn.Width = 50
-        '
-        'ФамилияDataGridViewTextBoxColumn
-        '
-        Me.ФамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия"
-        Me.ФамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия"
-        Me.ФамилияDataGridViewTextBoxColumn.Name = "ФамилияDataGridViewTextBoxColumn"
-        '
-        'ИмяDataGridViewTextBoxColumn
-        '
-        Me.ИмяDataGridViewTextBoxColumn.DataPropertyName = "Имя"
-        Me.ИмяDataGridViewTextBoxColumn.HeaderText = "Имя"
-        Me.ИмяDataGridViewTextBoxColumn.Name = "ИмяDataGridViewTextBoxColumn"
-        '
-        'ОтчествоDataGridViewTextBoxColumn
-        '
-        Me.ОтчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество"
-        Me.ОтчествоDataGridViewTextBoxColumn.HeaderText = "Отчество"
-        Me.ОтчествоDataGridViewTextBoxColumn.Name = "ОтчествоDataGridViewTextBoxColumn"
-        '
-        'ПрофессияDataGridViewTextBoxColumn
-        '
-        Me.ПрофессияDataGridViewTextBoxColumn.DataPropertyName = "Профессия"
-        Me.ПрофессияDataGridViewTextBoxColumn.HeaderText = "Профессия"
-        Me.ПрофессияDataGridViewTextBoxColumn.Name = "ПрофессияDataGridViewTextBoxColumn"
-        '
-        'КоличествоРабочихДнейDataGridViewTextBoxColumn
-        '
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество рабочих дней"
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.HeaderText = "Количество рабочих дней"
-        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.Name = "КоличествоРабочихДнейDataGridViewTextBoxColumn"
-        '
-        'КоличествоОтработанныхДнейDataGridViewTextBoxColumn
-        '
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество отработанных дней"
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.HeaderText = "Количество отработанных дней"
-        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.Name = "КоличествоОтработанныхДнейDataGridViewTextBoxColumn"
-        '
-        'ОкладDataGridViewTextBoxColumn
-        '
-        Me.ОкладDataGridViewTextBoxColumn.DataPropertyName = "Оклад"
-        Me.ОкладDataGridViewTextBoxColumn.HeaderText = "Оклад"
-        Me.ОкладDataGridViewTextBoxColumn.Name = "ОкладDataGridViewTextBoxColumn"
-        Me.ОкладDataGridViewTextBoxColumn.Width = 80
-        '
-        'ЗарплатаDataGridViewTextBoxColumn
-        '
-        Me.ЗарплатаDataGridViewTextBoxColumn.DataPropertyName = "Зарплата"
-        Me.ЗарплатаDataGridViewTextBoxColumn.HeaderText = "Зарплата"
-        Me.ЗарплатаDataGridViewTextBoxColumn.Name = "ЗарплатаDataGridViewTextBoxColumn"
-        Me.ЗарплатаDataGridViewTextBoxColumn.Width = 95
-        '
-        'СреднийДневнойЗаработокDataGridViewTextBoxColumn
-        '
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.DataPropertyName = "Средний дневной заработок"
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.HeaderText = "Средний дневной заработок"
-        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.Name = "СреднийДневнойЗаработокDataGridViewTextBoxColumn"
-        '
-        'ОтпускныеDataGridViewTextBoxColumn
-        '
-        Me.ОтпускныеDataGridViewTextBoxColumn.DataPropertyName = "Отпускные"
-        Me.ОтпускныеDataGridViewTextBoxColumn.HeaderText = "Отпускные"
-        Me.ОтпускныеDataGridViewTextBoxColumn.Name = "ОтпускныеDataGridViewTextBoxColumn"
-        Me.ОтпускныеDataGridViewTextBoxColumn.Width = 90
         '
         'ПерсоналBindingSource
         '
@@ -1258,6 +1188,77 @@ Partial Class frmBookkeeping
         Me.lblMain.Text = "Главная"
         Me.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'КодDataGridViewTextBoxColumn
+        '
+        Me.КодDataGridViewTextBoxColumn.DataPropertyName = "Код"
+        Me.КодDataGridViewTextBoxColumn.HeaderText = "Код"
+        Me.КодDataGridViewTextBoxColumn.Name = "КодDataGridViewTextBoxColumn"
+        Me.КодDataGridViewTextBoxColumn.Visible = False
+        Me.КодDataGridViewTextBoxColumn.Width = 50
+        '
+        'ФамилияDataGridViewTextBoxColumn
+        '
+        Me.ФамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия"
+        Me.ФамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия"
+        Me.ФамилияDataGridViewTextBoxColumn.Name = "ФамилияDataGridViewTextBoxColumn"
+        '
+        'ИмяDataGridViewTextBoxColumn
+        '
+        Me.ИмяDataGridViewTextBoxColumn.DataPropertyName = "Имя"
+        Me.ИмяDataGridViewTextBoxColumn.HeaderText = "Имя"
+        Me.ИмяDataGridViewTextBoxColumn.Name = "ИмяDataGridViewTextBoxColumn"
+        '
+        'ОтчествоDataGridViewTextBoxColumn
+        '
+        Me.ОтчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество"
+        Me.ОтчествоDataGridViewTextBoxColumn.HeaderText = "Отчество"
+        Me.ОтчествоDataGridViewTextBoxColumn.Name = "ОтчествоDataGridViewTextBoxColumn"
+        '
+        'ПрофессияDataGridViewTextBoxColumn
+        '
+        Me.ПрофессияDataGridViewTextBoxColumn.DataPropertyName = "Профессия"
+        Me.ПрофессияDataGridViewTextBoxColumn.HeaderText = "Профессия"
+        Me.ПрофессияDataGridViewTextBoxColumn.Name = "ПрофессияDataGridViewTextBoxColumn"
+        '
+        'КоличествоРабочихДнейDataGridViewTextBoxColumn
+        '
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество рабочих дней"
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.HeaderText = "Количество рабочих дней"
+        Me.КоличествоРабочихДнейDataGridViewTextBoxColumn.Name = "КоличествоРабочихДнейDataGridViewTextBoxColumn"
+        '
+        'КоличествоОтработанныхДнейDataGridViewTextBoxColumn
+        '
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.DataPropertyName = "Количество отработанных дней"
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.HeaderText = "Количество отработанных дней"
+        Me.КоличествоОтработанныхДнейDataGridViewTextBoxColumn.Name = "КоличествоОтработанныхДнейDataGridViewTextBoxColumn"
+        '
+        'ОкладDataGridViewTextBoxColumn
+        '
+        Me.ОкладDataGridViewTextBoxColumn.DataPropertyName = "Оклад"
+        Me.ОкладDataGridViewTextBoxColumn.HeaderText = "Оклад"
+        Me.ОкладDataGridViewTextBoxColumn.Name = "ОкладDataGridViewTextBoxColumn"
+        Me.ОкладDataGridViewTextBoxColumn.Width = 80
+        '
+        'ЗарплатаDataGridViewTextBoxColumn
+        '
+        Me.ЗарплатаDataGridViewTextBoxColumn.DataPropertyName = "Зарплата"
+        Me.ЗарплатаDataGridViewTextBoxColumn.HeaderText = "Зарплата"
+        Me.ЗарплатаDataGridViewTextBoxColumn.Name = "ЗарплатаDataGridViewTextBoxColumn"
+        Me.ЗарплатаDataGridViewTextBoxColumn.Width = 95
+        '
+        'СреднийДневнойЗаработокDataGridViewTextBoxColumn
+        '
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.DataPropertyName = "Средний дневной заработок"
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.HeaderText = "Средний дневной заработок"
+        Me.СреднийДневнойЗаработокDataGridViewTextBoxColumn.Name = "СреднийДневнойЗаработокDataGridViewTextBoxColumn"
+        '
+        'ОтпускныеDataGridViewTextBoxColumn
+        '
+        Me.ОтпускныеDataGridViewTextBoxColumn.DataPropertyName = "Отпускные"
+        Me.ОтпускныеDataGridViewTextBoxColumn.HeaderText = "Отпускные"
+        Me.ОтпускныеDataGridViewTextBoxColumn.Name = "ОтпускныеDataGridViewTextBoxColumn"
+        Me.ОтпускныеDataGridViewTextBoxColumn.Width = 90
+        '
         'frmBookkeeping
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1414,6 +1415,8 @@ Partial Class frmBookkeeping
     Friend WithEvents РасходDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents lblReset As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents lblMain As System.Windows.Forms.Label
     Friend WithEvents КодDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ФамилияDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ИмяDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1425,7 +1428,5 @@ Partial Class frmBookkeeping
     Friend WithEvents ЗарплатаDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents СреднийДневнойЗаработокDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ОтпускныеDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents lblMain As System.Windows.Forms.Label
 
 End Class
