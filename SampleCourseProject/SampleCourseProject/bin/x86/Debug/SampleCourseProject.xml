@@ -58,6 +58,123 @@ Used to sort self-referenced table's rows
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
+</member><member name="P:SampleCourseProject.My.Resources.Resources.ResourceManager">
+	<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member><member name="P:SampleCourseProject.My.Resources.Resources.Culture">
+	<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member><member name="T:SampleCourseProject.My.Resources.Resources">
+	<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSet.AccountDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSet.AccountRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSet.AccountRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.AccountTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SampleCourseProject.UserAccountDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SampleCourseProject.UserAccountDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SampleCourseProject.UserAccountDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateAll(SampleCourseProject.UserAccountDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet.BuyersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet.BuyersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet.BuyersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SampleCourseProject.BuyersDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SampleCourseProject.BuyersDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SampleCourseProject.BuyersDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(SampleCourseProject.BuyersDatabaseDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
 </member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSet.ВодаDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -203,123 +320,6 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet.BuyersDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet.BuyersRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet.BuyersRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.BuyersTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SampleCourseProject.BuyersDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SampleCourseProject.BuyersDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SampleCourseProject.BuyersDatabaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateAll(SampleCourseProject.BuyersDatabaseDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:SampleCourseProject.BuyersDatabaseDataSetTableAdapters.TableAdapterManager">
-	<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
-</member><member name="P:SampleCourseProject.My.Resources.Resources.ResourceManager">
-	<summary>
-  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
-</summary>
-</member><member name="P:SampleCourseProject.My.Resources.Resources.Culture">
-	<summary>
-  Перезаписывает свойство CurrentUICulture текущего потока для всех
-  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
-</summary>
-</member><member name="T:SampleCourseProject.My.Resources.Resources">
-	<summary>
-  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSet.AccountDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSet.AccountRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSet.AccountRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSet">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.AccountTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SampleCourseProject.UserAccountDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Update rows in top-down order.
-</summary>
-</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SampleCourseProject.UserAccountDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Insert rows in top-down order.
-</summary>
-</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SampleCourseProject.UserAccountDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Delete rows in bottom-up order.
-</summary>
-</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-	<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member><member name="M:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateAll(SampleCourseProject.UserAccountDataSet)">
-	<summary>
-Update all changes to the dataset.
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-	<summary>
-Update Order Option
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-	<summary>
-Used to sort self-referenced table's rows
-</summary>
-</member><member name="T:SampleCourseProject.UserAccountDataSetTableAdapters.TableAdapterManager">
 	<summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>

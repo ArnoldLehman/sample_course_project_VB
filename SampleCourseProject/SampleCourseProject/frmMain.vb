@@ -7,6 +7,7 @@
     End Sub
 
     'Блок кода, относящийся к списку картинок
+    'Изменяет картинки и текст на форме 
     Private Sub FirstImage()
         lblImage.ImageIndex = 0
         picFirstImage.Image = My.Resources.filled_circle_icon_icons_com_72757
@@ -43,6 +44,7 @@
         lblText.Text = "С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также укрепление и развитие структуры играет важную роль в формировании существенных финансовых и административных условий."
     End Sub
 
+    'Изменение внешнего вида метки при наведении курсора на неё
     Private Sub lblBack_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBack.MouseEnter
         lblBack.BackColor = Color.LightGray
     End Sub
@@ -59,6 +61,7 @@
         lblNext.BackColor = Color.Gainsboro
     End Sub
 
+    'Изменение картинки и текста в зависимости от индекса стоящей в данный момент картинки
     Private Sub lblNext_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblNext.Click
         If lblImage.ImageIndex = 0 Then
             SecondImage()
@@ -97,6 +100,7 @@
         End If
     End Sub
 
+    'Отображение картинок и соответсвующего текста при нажатии на картинки кружком
     Private Sub picFirstImage_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles picFirstImage.Click
         FirstImage()
     End Sub
@@ -116,25 +120,13 @@
 
 
 
-
-
-    'Блок кода, относящийся к шапке 
-
-
+    'Изменение внешнего вида метки при наведение курсора на неё
     Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
         msHoverTitle(lblMain)
     End Sub
 
     Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
         msLeaveTitle(lblMain)
-    End Sub
-
-    Private Sub lblTitle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblTitle.Click
-        frmMain_Load(Nothing, Nothing)
-    End Sub
-
-    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
-        frmMain_Load(Nothing, Nothing)
     End Sub
 
     Private Sub lblBookkeepingOrBuy_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.MouseEnter
@@ -160,6 +152,17 @@
     Private Sub lblBuyers_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblBuyers.MouseLeave
         msLeave(lblBuyers)
     End Sub
+
+    'Перезагружать форму при нажатии на метку "Главная" или логотип
+    Private Sub lblTitle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblTitle.Click
+        frmMain_Load(Nothing, Nothing)
+    End Sub
+
+    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
+        frmMain_Load(Nothing, Nothing)
+    End Sub
+
+
 
     Private Sub lblBookkeepingOrBuy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblBookkeepingOrBuy.Click
         If auth = False Then

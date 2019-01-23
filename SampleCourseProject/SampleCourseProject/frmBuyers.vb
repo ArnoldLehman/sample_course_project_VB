@@ -14,7 +14,7 @@ Public Class frmBuyers
         Me.BuyersTableAdapter.Fill(Me.BuyersDatabaseDataSet.Buyers)
 
     End Sub
-
+    'Поиск по базе данных
     Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
         Try
             If txtSearch.Text = "" Then
@@ -24,10 +24,12 @@ Public Class frmBuyers
                 BuyersBindingSource.Filter = "(Наименование_организации LIKE '" & txtSearch.Text & "') OR (Имя_заказчика LIKE '" & txtSearch.Text & "')" & _
                 "OR (Наименование_товара LIKE '" & txtSearch.Text & "')"
 
+                'Если что-то, искомое выше, нашлось в базе данных, тогда вывести информацию об этом в DataGridView
                 If BuyersBindingSource.Count <> 0 Then
                     With dgvBuyers
                         .DataSource = BuyersBindingSource
                     End With
+                    'Иначе выдать сообщение об отсутсвии
                 Else
                     MsgBox("Элемент " & cantFine & " не найден", MsgBoxStyle.Information, "Поиск")
                     BuyersBindingSource.Filter = Nothing
@@ -37,20 +39,20 @@ Public Class frmBuyers
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
+    'Создать новую ячейку в базе данных для записи
     Private Sub cmdAddNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNew.Click
         BuyersBindingSource.AddNew()
     End Sub
-
+    'Сохранить информацию в базу данных
     Private Sub cmdSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSave.Click
         BuyersBindingSource.EndEdit()
         BuyersTableAdapter.Update(BuyersDatabaseDataSet.Buyers)
     End Sub
-
+    'Удалить ячейку из базы данных
     Private Sub cmdDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDelete.Click
         BuyersBindingSource.RemoveCurrent()
     End Sub
-
+    'Изменение метки при наведении курсора на неё
     Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
         msHoverTitle(lblMain)
     End Sub
@@ -64,6 +66,9 @@ Public Class frmBuyers
         Me.Close()
     End Sub
 
+
+    'Блок проверок полей
+    'Проверка на буквы
     Private Sub txtNameOfCustomer_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNameOfCustomer.Leave
         If checksNumber(txtNameOfCustomer) = True Then
             MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -79,7 +84,7 @@ Public Class frmBuyers
             Exit Sub
         End If
     End Sub
-
+    'Проверка на цифры
     Private Sub txtNumberProduct_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberProduct.Leave
         If checksWord(txtNumberProduct) = True Then
             MessageBox.Show("Некорректный ввод данных", "Ввод", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -95,7 +100,7 @@ Public Class frmBuyers
             Exit Sub
         End If
     End Sub
-
+    'Очистка поля поиска и сброс фильтров поиска
     Private Sub lblReset_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblReset.Click
         Try
             txtSearch.Clear()

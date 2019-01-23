@@ -2,7 +2,7 @@
 Imports System.Data
 
 Public Class frmUserCreateAccount
-
+    'Подключение к базе данных и занесение в неё логина и пароля пользователя
     Private Sub cmdCreate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCreate.Click
         If txtLoginCreate.Text = "" Or txtPasswordCreate.Text = "" Or txtConfirmPassword.Text = "" Then
             MsgBox("plz fill the info")
@@ -28,7 +28,7 @@ Public Class frmUserCreateAccount
     Private Sub frmUserCreateAccount_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmUserLogin.Show()
     End Sub
-
+    'Проверка на количество вводимых символов
     Private Sub txtLoginCreate_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtLoginCreate.Leave
         If checksAccount(txtLoginCreate) = True Then
             Exit Sub

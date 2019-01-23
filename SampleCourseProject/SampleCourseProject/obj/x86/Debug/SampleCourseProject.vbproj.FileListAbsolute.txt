@@ -82,7 +82,6 @@ C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCours
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmUserLogin.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmUserCreateAccount.resources
 C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.frmMain.resources
-C:\Users\Дом\Desktop\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.Form1.resources
 C:\Users\s0\Documents\GitHub\sample_course_project_VB\SampleCourseProject\SampleCourseProject\bin\x86\Debug\SampleCourseProject.exe.config
 C:\Users\s0\Documents\GitHub\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.exe
 C:\Users\s0\Documents\GitHub\sample_course_project_VB\SampleCourseProject\SampleCourseProject\obj\x86\Debug\SampleCourseProject.xml

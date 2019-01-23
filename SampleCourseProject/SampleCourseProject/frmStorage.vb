@@ -13,21 +13,21 @@ Public Class frmStorage
 
 
     End Sub
-
+    'Создание новой ячейки в базе данных для записи
     Private Sub cmdAddNew_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNew.Click
         StorageBindingSource.AddNew()
     End Sub
-
+    'Сохранение информации в базу данных
     Private Sub cmdSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSave.Click
         StorageBindingSource.EndEdit()
         StorageTableAdapter.Update(StorageDatabaseDataSet.Storage)
     End Sub
-
+    'Удаление из базы данных
     Private Sub cmdDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDelete.Click
         StorageBindingSource.RemoveCurrent()
         StorageTableAdapter.Update(StorageDatabaseDataSet.Storage)
     End Sub
-
+    'Внести изменения в базу данных
     Private Sub cmdUpdate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdUpdate.Click
         Dim dbsource As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\StorageDatabase.mdb"
         Dim conn = New OleDbConnection(dbsource)
@@ -51,7 +51,7 @@ Public Class frmStorage
         frmMain.Show()
         Me.Close()
     End Sub
-
+    'Изменение внешнего вида метки при наведении курсора на неё
     Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
         msHoverTitle(lblMain)
     End Sub

@@ -13,7 +13,7 @@ Public Class frmBuy
     Private Sub frmBuy_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmMain.Show()
     End Sub
-
+    'Код, в котором из базы Storage вычитается введённо количество товара и обновляется база данных
     Private Sub cmdBuy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdBuy.Click
         amountSugar -= Val(txtNumber.Text)
         tpSugar = cboTypeOfSugar.Text
@@ -54,6 +54,7 @@ Public Class frmBuy
         BuyersBindingSource.AddNew()
         Label8.Text = "Количество на складе: "
 
+        'Задаётся начальный вид формы
         With Me
             .Height = 195
             .Width = 343
@@ -64,7 +65,7 @@ Public Class frmBuy
         pnl2.Hide()
 
     End Sub
-
+    'При нажатии на одни из переключателей меняется внешний вид формы и некоторых элементов
     Private Sub rdoOrganization_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rdoOrganization.CheckedChanged
         With Me
             .Height = 386
@@ -93,6 +94,7 @@ Public Class frmBuy
         cmdFurther.Visible = True
     End Sub
 
+    'Меняется внешний вид формы
     Private Sub cmdFurther_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdFurther.Click
         If txtOrganization.Text = "" Or txtName.Text = "" Then
             MsgBox("Введите данные", MsgBoxStyle.Critical, "")
@@ -105,7 +107,7 @@ Public Class frmBuy
         pnl2.Visible = True
         cmdFurther.Hide()
     End Sub
-
+    'В зависимости от выбора меняется выводимое количество продукции в метку...
     Private Sub cboTypeOfSugar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboTypeOfSugar.SelectedIndexChanged
         tpSugar = cboTypeOfSugar.Text
         Try
@@ -117,26 +119,27 @@ Public Class frmBuy
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        lblNumberOnStorage.Text = amountSugar & " тонн"
+        lblNumberOnStorage.Text = amountSugar & " кг"
         conn.close()
 
-
+        '...а также присваивается переменно Cost цену за одни кг. продукции
         If cboTypeOfSugar.SelectedIndex = 0 Then
-            Cost = 93 * 1000
+            Cost = 93
         ElseIf cboTypeOfSugar.SelectedIndex = 1 Then
-            Cost = 119 * 1000
+            Cost = 119
         ElseIf cboTypeOfSugar.SelectedIndex = 2 Then
-            Cost = 263 * 1000
+            Cost = 263
         ElseIf cboTypeOfSugar.SelectedIndex = 3 Then
-            Cost = 130 * 1000
+            Cost = 130
         ElseIf cboTypeOfSugar.SelectedIndex = 4 Then
-            Cost = 256 * 1000
+            Cost = 256
         ElseIf cboTypeOfSugar.SelectedIndex = 5 Then
-            Cost = 2.6 * 1000
+            Cost = 2.6
         ElseIf cboTypeOfSugar.SelectedIndex = 6 Then
-            Cost = 12.5 * 1000
+            Cost = 12.5
         End If
     End Sub
+
     'Проверка на цифры
     Private Sub ChecksNumberInBuy(ByVal txt As TextBox)
         If checksNumber(txt) = True Then
@@ -144,6 +147,10 @@ Public Class frmBuy
             txt.Focus()
             Exit Sub
         End If
+    End Sub
+
+    Private Sub txtName_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtName.Leave
+        ChecksNumberInBuy(txtName)
     End Sub
 
     'Проверка на буквы
@@ -155,7 +162,7 @@ Public Class frmBuy
         End If
     End Sub
 
-
+    'Расчитывается сумма к оплате
     Private Sub txtNumber_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumber.Leave
         ChecksWordInBuy(txtNumber)
         txtSumm.Text = Cost * Val(txtNumber.Text)
@@ -165,16 +172,12 @@ Public Class frmBuy
         frmMain.Show()
         Me.Close()
     End Sub
-
+    'Изменение внешнего вида метки при наведении курсора на неё
     Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
         msHoverTitle(lblMain)
     End Sub
 
     Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
         msLeaveTitle(lblMain)
-    End Sub
-
-    Private Sub txtName_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtName.Leave
-        ChecksNumberInBuy(txtName)
     End Sub
 End Class

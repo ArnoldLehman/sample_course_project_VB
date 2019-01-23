@@ -2,6 +2,9 @@
 Imports System.Data
 
 Public Class frmUserLogin
+    'Подключение к базе данных аккаунтов, проверка на наличие записи, и, в зависимости от уровня доступа аккаунта, предоставление доступа к другим формам
+    'Уровень доступа "Пользователь" имеет ограниченные возможности (просмотр главной формы и переход к форме "Купить")
+    'Уровень доступа "Администратор" имеет возможности переходить на формы "Бухгалтерия", "Склад" и "Покупатели", и изменять информацию, хранимую в базе
     Private Sub cmdLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdLogin.Click
         Dim uname As String = ""
         Dim pword As String
@@ -45,6 +48,7 @@ Public Class frmUserLogin
         End If
     End Sub
 
+    'Переход на форму регистрации аккаунта
     Private Sub lnklblCreateUserAccount_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lnklblCreateUserAccount.LinkClicked
         frmUserCreateAccount.Show()
         If frmUserCreateAccount.Visible Then
@@ -55,7 +59,7 @@ Public Class frmUserLogin
     Private Sub frmUserLogin_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmMain.Show()
     End Sub
-
+    'Показ пароля
     Private Sub chkShowPass_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkShowPass.CheckedChanged
         If chkShowPass.Checked = True Then
             txtPassword.PasswordChar = ""
@@ -63,7 +67,7 @@ Public Class frmUserLogin
             txtPassword.PasswordChar = "*"
         End If
     End Sub
-
+    'Проверка на количество вводимых символов
     Private Sub txtLogin_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtLogin.Leave
         If checksAccount(txtLogin) = True Then
             Exit Sub
@@ -82,9 +86,5 @@ Public Class frmUserLogin
             txtPassword.Focus()
             Exit Sub
         End If
-    End Sub
-
-    Private Sub frmUserLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

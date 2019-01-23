@@ -1,10 +1,27 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-Imports System.Data.DataTable
 
 Public Class frmBookkeeping
 
     Dim result As DialogResult
+
+
+    'Блок кода, относящийся к шапке
+    'При наведении мыши на метки цвет фона меняется...
+    Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
+        msHoverTitle(lblMain)
+    End Sub
+    '...и становтся прежним при покидании курсора границ объекта
+    Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
+        msLeaveTitle(lblMain)
+    End Sub
+
+    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
+        frmMain.Show()
+        Me.Close()
+    End Sub
+
+
 
     'Код, относящийся к первой вкладке (Персонал)
 
@@ -76,6 +93,53 @@ ErrExite:
     Private Sub cmdCalculateHolidayPay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculateHolidayPay.Click
         txtHolidayPay.Text = Val(txtSDZ.Text) * Val(txtNumbDaysWorked.Text)
     End Sub
+
+    'Очистить поле поиска и сбросить все фильтры поиска
+    Private Sub lblReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblReset.Click
+        Try
+            txtSearch.Clear()
+            ПерсоналBindingSource.Filter = Nothing
+
+            With dgvStaff
+                .ClearSelection()
+                .ReadOnly = True
+                .MultiSelect = False
+                .DataSource = ПерсоналBindingSource
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    'Поиск по базе данных
+    Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
+        Try
+            If txtSearch.Text = "" Then
+                Exit Sub
+            Else
+                Dim cantFine As String = txtSearch.Text
+                ПерсоналBindingSource.Filter = "(Convert(Код, 'System.String') LIKE '" & txtSearch.Text & "')" & _
+                "OR (Фамилия LIKE '" & txtSearch.Text & "') OR (Имя LIKE '" & txtSearch.Text & "')" & _
+                "OR (Отчество LIKE '" & txtSearch.Text & "') OR (Профессия LIKE '" & txtSearch.Text & "')" & _
+                "OR (Convert(Оклад, 'System.String') LIKE '" & txtSearch.Text & "')" & _
+                "OR (Convert(Зарплата, 'System.String') LIKE '" & txtSearch.Text & "')"
+                'Если что-то, искомое выше, нашлось в базе данных, тогда вывести информацию об этом в DataGridView
+                If ПерсоналBindingSource.Count <> 0 Then
+                    With dgvStaff
+                        .DataSource = ПерсоналBindingSource
+                    End With
+                    'Иначе выдать сообщение об отсутсвии
+                Else
+                    MsgBox("Элемент " & cantFine & " не найден", MsgBoxStyle.Information, "Поиск")
+                    ПерсоналBindingSource.Filter = Nothing
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
 
 
 
@@ -380,33 +444,6 @@ ErrExite:
         txtIncomeMolasses.Text = Val(txtNumberMolasses.Text) * Val(txtPriceMolasses.Text)
     End Sub
 
-    Private Sub cmdSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSearch.Click
-        Try
-            If txtSearch.Text = "" Then
-                Exit Sub
-            Else
-                Dim cantFine As String = txtSearch.Text
-                ПерсоналBindingSource.Filter = "(Convert(Код, 'System.String') LIKE '" & txtSearch.Text & "')" & _
-                "OR (Фамилия LIKE '" & txtSearch.Text & "') OR (Имя LIKE '" & txtSearch.Text & "')" & _
-                "OR (Отчество LIKE '" & txtSearch.Text & "') OR (Профессия LIKE '" & txtSearch.Text & "')" & _
-                "OR (Convert(Оклад, 'System.String') LIKE '" & txtSearch.Text & "')" & _
-                "OR (Convert(Зарплата, 'System.String') LIKE '" & txtSearch.Text & "')"
-
-                If ПерсоналBindingSource.Count <> 0 Then
-                    With dgvStaff
-                        .DataSource = ПерсоналBindingSource
-                    End With
-                Else
-                    MsgBox("Элемент " & cantFine & " не найден", MsgBoxStyle.Information, "Поиск")
-                    ПерсоналBindingSource.Filter = Nothing
-                End If
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-        
-    End Sub
-
     Private Sub frmBookkeeping_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmMain.Show()
     End Sub
@@ -432,28 +469,8 @@ ErrExite:
             .ReadOnly = True
             .MultiSelect = False
         End With
-
-
     End Sub
-
-    Private Sub lblReset_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblReset.Click
-        Try
-            txtSearch.Select()
-            ПерсоналBindingSource.Filter = Nothing
-
-            With dgvStaff
-                .ClearSelection()
-                .ReadOnly = True
-                .MultiSelect = False
-                .DataSource = ПерсоналBindingSource
-            End With
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-
-
+    
     'Блок проверок полей
     'Проверка на ввод цифр
     Private Sub ChecksNumberInBookkeeping(ByVal txt As TextBox)
@@ -552,18 +569,5 @@ ErrExite:
 
     Private Sub txtTarifWater_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtTarifWater.Leave
         ChecksWordInBookkeeping(txtTarifWater)
-    End Sub
-
-    Private Sub lblMain_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseEnter
-        msHoverTitle(lblMain)
-    End Sub
-
-    Private Sub lblMain_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles lblMain.MouseLeave
-        msLeaveTitle(lblMain)
-    End Sub
-
-    Private Sub lblMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblMain.Click
-        frmMain.Show()
-        Me.Close()
     End Sub
 End Class
