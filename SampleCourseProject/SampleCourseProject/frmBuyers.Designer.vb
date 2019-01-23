@@ -136,7 +136,7 @@ Partial Class frmBuyers
         '
         'cmdSearch
         '
-        Me.cmdSearch.Location = New System.Drawing.Point(582, 350)
+        Me.cmdSearch.Location = New System.Drawing.Point(582, 351)
         Me.cmdSearch.Name = "cmdSearch"
         Me.cmdSearch.Size = New System.Drawing.Size(75, 20)
         Me.cmdSearch.TabIndex = 2

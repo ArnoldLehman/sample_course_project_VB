@@ -137,72 +137,10 @@ Partial Class frmBookkeeping
         Me.ПотребленоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.ТарифDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.РасходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.tpIncome = New System.Windows.Forms.TabPage
-        Me.tabIncome = New System.Windows.Forms.TabControl
-        Me.tpSugar = New System.Windows.Forms.TabPage
-        Me.cmdNextSugar = New System.Windows.Forms.Button
-        Me.cmdPreviousSugar = New System.Windows.Forms.Button
-        Me.cmdAddNewSugar = New System.Windows.Forms.Button
-        Me.cmdSaveSugar = New System.Windows.Forms.Button
-        Me.cmdDeleteSugar = New System.Windows.Forms.Button
-        Me.DataGridView6 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЦенаDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ДоходDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.СахарBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.cmdCalculateSugar = New System.Windows.Forms.Button
-        Me.Label27 = New System.Windows.Forms.Label
-        Me.txtIncomeSugar = New System.Windows.Forms.TextBox
-        Me.Label26 = New System.Windows.Forms.Label
-        Me.Label25 = New System.Windows.Forms.Label
-        Me.txtPriceSugar = New System.Windows.Forms.TextBox
-        Me.txtNumberSugar = New System.Windows.Forms.TextBox
-        Me.tpPulp = New System.Windows.Forms.TabPage
-        Me.cmdNextPulp = New System.Windows.Forms.Button
-        Me.cmdPreviousPulp = New System.Windows.Forms.Button
-        Me.cmdAddNewPulp = New System.Windows.Forms.Button
-        Me.cmdSavePulp = New System.Windows.Forms.Button
-        Me.cmdDeletePulp = New System.Windows.Forms.Button
-        Me.txtNumberPulp = New System.Windows.Forms.TextBox
-        Me.ЖомBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridView5 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЦенаDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ДоходDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Label21 = New System.Windows.Forms.Label
-        Me.cmdCalculatePulp = New System.Windows.Forms.Button
-        Me.Label20 = New System.Windows.Forms.Label
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.txtPricePulp = New System.Windows.Forms.TextBox
-        Me.txtIncomePulp = New System.Windows.Forms.TextBox
-        Me.tpMolasses = New System.Windows.Forms.TabPage
-        Me.cmdNextMolasses = New System.Windows.Forms.Button
-        Me.cmdPreviousMolasses = New System.Windows.Forms.Button
-        Me.cmdAddNewMolasses = New System.Windows.Forms.Button
-        Me.cmdSaveMolasses = New System.Windows.Forms.Button
-        Me.cmdDeleteMolasses = New System.Windows.Forms.Button
-        Me.txtNumberMolasses = New System.Windows.Forms.TextBox
-        Me.МелассаBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataGridView4 = New System.Windows.Forms.DataGridView
-        Me.КодDataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ЦенаDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.ДоходDataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Label24 = New System.Windows.Forms.Label
-        Me.cmdCalculateMolasses = New System.Windows.Forms.Button
-        Me.Label23 = New System.Windows.Forms.Label
-        Me.Label22 = New System.Windows.Forms.Label
-        Me.txtPriceMolasses = New System.Windows.Forms.TextBox
-        Me.txtIncomeMolasses = New System.Windows.Forms.TextBox
         Me.ПерсоналTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ПерсоналTableAdapter
         Me.ЭлектричествоTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЭлектричествоTableAdapter
         Me.ГазTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ГазTableAdapter
         Me.ВодаTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ВодаTableAdapter
-        Me.СахарTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.СахарTableAdapter
-        Me.ЖомTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЖомTableAdapter
-        Me.МелассаTableAdapter = New SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.lblMain = New System.Windows.Forms.Label
@@ -229,17 +167,6 @@ Partial Class frmBookkeeping
         Me.tpWater.SuspendLayout()
         CType(Me.ВодаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tpIncome.SuspendLayout()
-        Me.tabIncome.SuspendLayout()
-        Me.tpSugar.SuspendLayout()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.СахарBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tpPulp.SuspendLayout()
-        CType(Me.ЖомBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tpMolasses.SuspendLayout()
-        CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -248,7 +175,6 @@ Partial Class frmBookkeeping
         Me.tabBookkeeping.Appearance = System.Windows.Forms.TabAppearance.Buttons
         Me.tabBookkeeping.Controls.Add(Me.tpPersonal)
         Me.tabBookkeeping.Controls.Add(Me.tpMS)
-        Me.tabBookkeeping.Controls.Add(Me.tpIncome)
         Me.tabBookkeeping.Location = New System.Drawing.Point(1, 67)
         Me.tabBookkeeping.Name = "tabBookkeeping"
         Me.tabBookkeeping.SelectedIndex = 0
@@ -468,7 +394,7 @@ Partial Class frmBookkeeping
         Me.cmdCalculateHolidayPay.Location = New System.Drawing.Point(9, 71)
         Me.cmdCalculateHolidayPay.Name = "cmdCalculateHolidayPay"
         Me.cmdCalculateHolidayPay.Size = New System.Drawing.Size(147, 21)
-        Me.cmdCalculateHolidayPay.TabIndex = 50
+        Me.cmdCalculateHolidayPay.TabIndex = 10
         Me.cmdCalculateHolidayPay.Text = "Рассчитать"
         Me.cmdCalculateHolidayPay.UseVisualStyleBackColor = True
         '
@@ -498,7 +424,7 @@ Partial Class frmBookkeeping
         Me.cmdCalculateSDZ.Location = New System.Drawing.Point(11, 71)
         Me.cmdCalculateSDZ.Name = "cmdCalculateSDZ"
         Me.cmdCalculateSDZ.Size = New System.Drawing.Size(102, 21)
-        Me.cmdCalculateSDZ.TabIndex = 48
+        Me.cmdCalculateSDZ.TabIndex = 9
         Me.cmdCalculateSDZ.Text = "Рассчитать"
         Me.cmdCalculateSDZ.UseVisualStyleBackColor = True
         '
@@ -540,7 +466,7 @@ Partial Class frmBookkeeping
         Me.cmdCalculateWage.Location = New System.Drawing.Point(15, 71)
         Me.cmdCalculateWage.Name = "cmdCalculateWage"
         Me.cmdCalculateWage.Size = New System.Drawing.Size(115, 21)
-        Me.cmdCalculateWage.TabIndex = 46
+        Me.cmdCalculateWage.TabIndex = 8
         Me.cmdCalculateWage.Text = "Рассчитать"
         Me.cmdCalculateWage.UseVisualStyleBackColor = True
         '
@@ -568,7 +494,7 @@ Partial Class frmBookkeeping
         Me.txtSalary.Location = New System.Drawing.Point(57, 18)
         Me.txtSalary.Name = "txtSalary"
         Me.txtSalary.Size = New System.Drawing.Size(57, 20)
-        Me.txtSalary.TabIndex = 35
+        Me.txtSalary.TabIndex = 7
         '
         'txtWage
         '
@@ -628,7 +554,7 @@ Partial Class frmBookkeeping
         Me.txtPatronymic.MaxLength = 40
         Me.txtPatronymic.Name = "txtPatronymic"
         Me.txtPatronymic.Size = New System.Drawing.Size(113, 20)
-        Me.txtPatronymic.TabIndex = 37
+        Me.txtPatronymic.TabIndex = 3
         '
         'txtFirstName
         '
@@ -637,7 +563,7 @@ Partial Class frmBookkeeping
         Me.txtFirstName.MaxLength = 40
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(104, 20)
-        Me.txtFirstName.TabIndex = 36
+        Me.txtFirstName.TabIndex = 2
         '
         'txtLastName
         '
@@ -646,7 +572,7 @@ Partial Class frmBookkeeping
         Me.txtLastName.MaxLength = 40
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(111, 20)
-        Me.txtLastName.TabIndex = 35
+        Me.txtLastName.TabIndex = 1
         '
         'GroupBox7
         '
@@ -679,7 +605,7 @@ Partial Class frmBookkeeping
         Me.txtProfession.MaxLength = 40
         Me.txtProfession.Name = "txtProfession"
         Me.txtProfession.Size = New System.Drawing.Size(100, 20)
-        Me.txtProfession.TabIndex = 29
+        Me.txtProfession.TabIndex = 4
         '
         'txtNumbWorkDay
         '
@@ -688,7 +614,7 @@ Partial Class frmBookkeeping
         Me.txtNumbWorkDay.MaxLength = 2
         Me.txtNumbWorkDay.Name = "txtNumbWorkDay"
         Me.txtNumbWorkDay.Size = New System.Drawing.Size(28, 20)
-        Me.txtNumbWorkDay.TabIndex = 32
+        Me.txtNumbWorkDay.TabIndex = 5
         '
         'txtNumbDaysWorked
         '
@@ -697,7 +623,7 @@ Partial Class frmBookkeeping
         Me.txtNumbDaysWorked.MaxLength = 2
         Me.txtNumbDaysWorked.Name = "txtNumbDaysWorked"
         Me.txtNumbDaysWorked.Size = New System.Drawing.Size(28, 20)
-        Me.txtNumbDaysWorked.TabIndex = 33
+        Me.txtNumbDaysWorked.TabIndex = 6
         '
         'Label6
         '
@@ -907,7 +833,9 @@ Partial Class frmBookkeeping
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn1, Me.ПотребленоDataGridViewTextBoxColumn, Me.ТарифDataGridViewTextBoxColumn, Me.РасходDataGridViewTextBoxColumn})
         Me.DataGridView3.DataSource = Me.ЭлектричествоBindingSource
         Me.DataGridView3.Location = New System.Drawing.Point(265, 6)
+        Me.DataGridView3.MultiSelect = False
         Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.Size = New System.Drawing.Size(416, 124)
         Me.DataGridView3.TabIndex = 0
         '
@@ -916,24 +844,28 @@ Partial Class frmBookkeeping
         Me.КодDataGridViewTextBoxColumn1.DataPropertyName = "Код"
         Me.КодDataGridViewTextBoxColumn1.HeaderText = "Код"
         Me.КодDataGridViewTextBoxColumn1.Name = "КодDataGridViewTextBoxColumn1"
+        Me.КодDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'ПотребленоDataGridViewTextBoxColumn
         '
         Me.ПотребленоDataGridViewTextBoxColumn.DataPropertyName = "Потреблено"
         Me.ПотребленоDataGridViewTextBoxColumn.HeaderText = "Потреблено"
         Me.ПотребленоDataGridViewTextBoxColumn.Name = "ПотребленоDataGridViewTextBoxColumn"
+        Me.ПотребленоDataGridViewTextBoxColumn.ReadOnly = True
         '
         'ТарифDataGridViewTextBoxColumn
         '
         Me.ТарифDataGridViewTextBoxColumn.DataPropertyName = "Тариф"
         Me.ТарифDataGridViewTextBoxColumn.HeaderText = "Тариф"
         Me.ТарифDataGridViewTextBoxColumn.Name = "ТарифDataGridViewTextBoxColumn"
+        Me.ТарифDataGridViewTextBoxColumn.ReadOnly = True
         '
         'РасходDataGridViewTextBoxColumn
         '
         Me.РасходDataGridViewTextBoxColumn.DataPropertyName = "Расход"
         Me.РасходDataGridViewTextBoxColumn.HeaderText = "Расход"
         Me.РасходDataGridViewTextBoxColumn.Name = "РасходDataGridViewTextBoxColumn"
+        Me.РасходDataGridViewTextBoxColumn.ReadOnly = True
         '
         'tpGas
         '
@@ -1077,7 +1009,9 @@ Partial Class frmBookkeeping
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn2, Me.ПотребленоDataGridViewTextBoxColumn1, Me.ТарифDataGridViewTextBoxColumn1, Me.РасходDataGridViewTextBoxColumn1})
         Me.DataGridView2.DataSource = Me.ГазBindingSource
         Me.DataGridView2.Location = New System.Drawing.Point(265, 6)
+        Me.DataGridView2.MultiSelect = False
         Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(416, 124)
         Me.DataGridView2.TabIndex = 0
         '
@@ -1086,24 +1020,28 @@ Partial Class frmBookkeeping
         Me.КодDataGridViewTextBoxColumn2.DataPropertyName = "Код"
         Me.КодDataGridViewTextBoxColumn2.HeaderText = "Код"
         Me.КодDataGridViewTextBoxColumn2.Name = "КодDataGridViewTextBoxColumn2"
+        Me.КодDataGridViewTextBoxColumn2.ReadOnly = True
         '
         'ПотребленоDataGridViewTextBoxColumn1
         '
         Me.ПотребленоDataGridViewTextBoxColumn1.DataPropertyName = "Потреблено"
         Me.ПотребленоDataGridViewTextBoxColumn1.HeaderText = "Потреблено"
         Me.ПотребленоDataGridViewTextBoxColumn1.Name = "ПотребленоDataGridViewTextBoxColumn1"
+        Me.ПотребленоDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'ТарифDataGridViewTextBoxColumn1
         '
         Me.ТарифDataGridViewTextBoxColumn1.DataPropertyName = "Тариф"
         Me.ТарифDataGridViewTextBoxColumn1.HeaderText = "Тариф"
         Me.ТарифDataGridViewTextBoxColumn1.Name = "ТарифDataGridViewTextBoxColumn1"
+        Me.ТарифDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'РасходDataGridViewTextBoxColumn1
         '
         Me.РасходDataGridViewTextBoxColumn1.DataPropertyName = "Расход"
         Me.РасходDataGridViewTextBoxColumn1.HeaderText = "Расход"
         Me.РасходDataGridViewTextBoxColumn1.Name = "РасходDataGridViewTextBoxColumn1"
+        Me.РасходDataGridViewTextBoxColumn1.ReadOnly = True
         '
         'tpWater
         '
@@ -1247,7 +1185,9 @@ Partial Class frmBookkeeping
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn3, Me.ПотребленоDataGridViewTextBoxColumn2, Me.ТарифDataGridViewTextBoxColumn2, Me.РасходDataGridViewTextBoxColumn2})
         Me.DataGridView1.DataSource = Me.ВодаBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(265, 6)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(416, 124)
         Me.DataGridView1.TabIndex = 0
         '
@@ -1256,557 +1196,28 @@ Partial Class frmBookkeeping
         Me.КодDataGridViewTextBoxColumn3.DataPropertyName = "Код"
         Me.КодDataGridViewTextBoxColumn3.HeaderText = "Код"
         Me.КодDataGridViewTextBoxColumn3.Name = "КодDataGridViewTextBoxColumn3"
+        Me.КодDataGridViewTextBoxColumn3.ReadOnly = True
         '
         'ПотребленоDataGridViewTextBoxColumn2
         '
         Me.ПотребленоDataGridViewTextBoxColumn2.DataPropertyName = "Потреблено"
         Me.ПотребленоDataGridViewTextBoxColumn2.HeaderText = "Потреблено"
         Me.ПотребленоDataGridViewTextBoxColumn2.Name = "ПотребленоDataGridViewTextBoxColumn2"
+        Me.ПотребленоDataGridViewTextBoxColumn2.ReadOnly = True
         '
         'ТарифDataGridViewTextBoxColumn2
         '
         Me.ТарифDataGridViewTextBoxColumn2.DataPropertyName = "Тариф"
         Me.ТарифDataGridViewTextBoxColumn2.HeaderText = "Тариф"
         Me.ТарифDataGridViewTextBoxColumn2.Name = "ТарифDataGridViewTextBoxColumn2"
+        Me.ТарифDataGridViewTextBoxColumn2.ReadOnly = True
         '
         'РасходDataGridViewTextBoxColumn2
         '
         Me.РасходDataGridViewTextBoxColumn2.DataPropertyName = "Расход"
         Me.РасходDataGridViewTextBoxColumn2.HeaderText = "Расход"
         Me.РасходDataGridViewTextBoxColumn2.Name = "РасходDataGridViewTextBoxColumn2"
-        '
-        'tpIncome
-        '
-        Me.tpIncome.Controls.Add(Me.tabIncome)
-        Me.tpIncome.Location = New System.Drawing.Point(4, 25)
-        Me.tpIncome.Name = "tpIncome"
-        Me.tpIncome.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpIncome.Size = New System.Drawing.Size(1203, 258)
-        Me.tpIncome.TabIndex = 2
-        Me.tpIncome.Text = "Прибыль"
-        Me.tpIncome.UseVisualStyleBackColor = True
-        '
-        'tabIncome
-        '
-        Me.tabIncome.Appearance = System.Windows.Forms.TabAppearance.Buttons
-        Me.tabIncome.Controls.Add(Me.tpSugar)
-        Me.tabIncome.Controls.Add(Me.tpPulp)
-        Me.tabIncome.Controls.Add(Me.tpMolasses)
-        Me.tabIncome.Location = New System.Drawing.Point(8, 6)
-        Me.tabIncome.Name = "tabIncome"
-        Me.tabIncome.SelectedIndex = 0
-        Me.tabIncome.Size = New System.Drawing.Size(683, 169)
-        Me.tabIncome.TabIndex = 25
-        '
-        'tpSugar
-        '
-        Me.tpSugar.BackColor = System.Drawing.SystemColors.Control
-        Me.tpSugar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tpSugar.Controls.Add(Me.cmdNextSugar)
-        Me.tpSugar.Controls.Add(Me.cmdPreviousSugar)
-        Me.tpSugar.Controls.Add(Me.cmdAddNewSugar)
-        Me.tpSugar.Controls.Add(Me.cmdSaveSugar)
-        Me.tpSugar.Controls.Add(Me.cmdDeleteSugar)
-        Me.tpSugar.Controls.Add(Me.DataGridView6)
-        Me.tpSugar.Controls.Add(Me.cmdCalculateSugar)
-        Me.tpSugar.Controls.Add(Me.Label27)
-        Me.tpSugar.Controls.Add(Me.txtIncomeSugar)
-        Me.tpSugar.Controls.Add(Me.Label26)
-        Me.tpSugar.Controls.Add(Me.Label25)
-        Me.tpSugar.Controls.Add(Me.txtPriceSugar)
-        Me.tpSugar.Controls.Add(Me.txtNumberSugar)
-        Me.tpSugar.Location = New System.Drawing.Point(4, 25)
-        Me.tpSugar.Name = "tpSugar"
-        Me.tpSugar.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpSugar.Size = New System.Drawing.Size(675, 140)
-        Me.tpSugar.TabIndex = 0
-        Me.tpSugar.Text = "Сахар"
-        '
-        'cmdNextSugar
-        '
-        Me.cmdNextSugar.Location = New System.Drawing.Point(173, 80)
-        Me.cmdNextSugar.Name = "cmdNextSugar"
-        Me.cmdNextSugar.Size = New System.Drawing.Size(83, 23)
-        Me.cmdNextSugar.TabIndex = 30
-        Me.cmdNextSugar.Text = "Следующий"
-        Me.cmdNextSugar.UseVisualStyleBackColor = True
-        '
-        'cmdPreviousSugar
-        '
-        Me.cmdPreviousSugar.Location = New System.Drawing.Point(11, 80)
-        Me.cmdPreviousSugar.Name = "cmdPreviousSugar"
-        Me.cmdPreviousSugar.Size = New System.Drawing.Size(83, 23)
-        Me.cmdPreviousSugar.TabIndex = 26
-        Me.cmdPreviousSugar.Text = "Предыдущий"
-        Me.cmdPreviousSugar.UseVisualStyleBackColor = True
-        '
-        'cmdAddNewSugar
-        '
-        Me.cmdAddNewSugar.Location = New System.Drawing.Point(100, 80)
-        Me.cmdAddNewSugar.Name = "cmdAddNewSugar"
-        Me.cmdAddNewSugar.Size = New System.Drawing.Size(67, 23)
-        Me.cmdAddNewSugar.TabIndex = 29
-        Me.cmdAddNewSugar.Text = "Добавить"
-        Me.cmdAddNewSugar.UseVisualStyleBackColor = True
-        '
-        'cmdSaveSugar
-        '
-        Me.cmdSaveSugar.Location = New System.Drawing.Point(11, 109)
-        Me.cmdSaveSugar.Name = "cmdSaveSugar"
-        Me.cmdSaveSugar.Size = New System.Drawing.Size(83, 23)
-        Me.cmdSaveSugar.TabIndex = 27
-        Me.cmdSaveSugar.Text = "Сохранить"
-        Me.cmdSaveSugar.UseVisualStyleBackColor = True
-        '
-        'cmdDeleteSugar
-        '
-        Me.cmdDeleteSugar.Location = New System.Drawing.Point(100, 109)
-        Me.cmdDeleteSugar.Name = "cmdDeleteSugar"
-        Me.cmdDeleteSugar.Size = New System.Drawing.Size(67, 23)
-        Me.cmdDeleteSugar.TabIndex = 28
-        Me.cmdDeleteSugar.Text = "Удалить"
-        Me.cmdDeleteSugar.UseVisualStyleBackColor = True
-        '
-        'DataGridView6
-        '
-        Me.DataGridView6.AutoGenerateColumns = False
-        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn4, Me.КоличествоDataGridViewTextBoxColumn, Me.ЦенаDataGridViewTextBoxColumn, Me.ДоходDataGridViewTextBoxColumn})
-        Me.DataGridView6.DataSource = Me.СахарBindingSource
-        Me.DataGridView6.Location = New System.Drawing.Point(273, 6)
-        Me.DataGridView6.Name = "DataGridView6"
-        Me.DataGridView6.Size = New System.Drawing.Size(393, 126)
-        Me.DataGridView6.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn4
-        '
-        Me.КодDataGridViewTextBoxColumn4.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn4.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn4.Name = "КодDataGridViewTextBoxColumn4"
-        '
-        'КоличествоDataGridViewTextBoxColumn
-        '
-        Me.КоличествоDataGridViewTextBoxColumn.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn.Name = "КоличествоDataGridViewTextBoxColumn"
-        '
-        'ЦенаDataGridViewTextBoxColumn
-        '
-        Me.ЦенаDataGridViewTextBoxColumn.DataPropertyName = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn.HeaderText = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn.Name = "ЦенаDataGridViewTextBoxColumn"
-        '
-        'ДоходDataGridViewTextBoxColumn
-        '
-        Me.ДоходDataGridViewTextBoxColumn.DataPropertyName = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn.HeaderText = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn.Name = "ДоходDataGridViewTextBoxColumn"
-        '
-        'СахарBindingSource
-        '
-        Me.СахарBindingSource.DataMember = "Сахар"
-        Me.СахарBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
-        'cmdCalculateSugar
-        '
-        Me.cmdCalculateSugar.Location = New System.Drawing.Point(173, 109)
-        Me.cmdCalculateSugar.Name = "cmdCalculateSugar"
-        Me.cmdCalculateSugar.Size = New System.Drawing.Size(83, 23)
-        Me.cmdCalculateSugar.TabIndex = 6
-        Me.cmdCalculateSugar.Text = "Рассчитать"
-        Me.cmdCalculateSugar.UseVisualStyleBackColor = True
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(8, 9)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(86, 13)
-        Me.Label27.TabIndex = 0
-        Me.Label27.Text = "Количество (кг)"
-        '
-        'txtIncomeSugar
-        '
-        Me.txtIncomeSugar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.СахарBindingSource, "Доход", True))
-        Me.txtIncomeSugar.Location = New System.Drawing.Point(100, 52)
-        Me.txtIncomeSugar.Name = "txtIncomeSugar"
-        Me.txtIncomeSugar.ReadOnly = True
-        Me.txtIncomeSugar.Size = New System.Drawing.Size(156, 20)
-        Me.txtIncomeSugar.TabIndex = 5
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(8, 32)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(62, 13)
-        Me.Label26.TabIndex = 1
-        Me.Label26.Text = "Цена за кг"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(8, 55)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(39, 13)
-        Me.Label25.TabIndex = 2
-        Me.Label25.Text = "Доход"
-        '
-        'txtPriceSugar
-        '
-        Me.txtPriceSugar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.СахарBindingSource, "Цена", True))
-        Me.txtPriceSugar.Location = New System.Drawing.Point(100, 29)
-        Me.txtPriceSugar.Name = "txtPriceSugar"
-        Me.txtPriceSugar.Size = New System.Drawing.Size(156, 20)
-        Me.txtPriceSugar.TabIndex = 4
-        '
-        'txtNumberSugar
-        '
-        Me.txtNumberSugar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.СахарBindingSource, "Количество", True))
-        Me.txtNumberSugar.Location = New System.Drawing.Point(100, 6)
-        Me.txtNumberSugar.Name = "txtNumberSugar"
-        Me.txtNumberSugar.Size = New System.Drawing.Size(156, 20)
-        Me.txtNumberSugar.TabIndex = 3
-        '
-        'tpPulp
-        '
-        Me.tpPulp.BackColor = System.Drawing.SystemColors.Control
-        Me.tpPulp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tpPulp.Controls.Add(Me.cmdNextPulp)
-        Me.tpPulp.Controls.Add(Me.cmdPreviousPulp)
-        Me.tpPulp.Controls.Add(Me.cmdAddNewPulp)
-        Me.tpPulp.Controls.Add(Me.cmdSavePulp)
-        Me.tpPulp.Controls.Add(Me.cmdDeletePulp)
-        Me.tpPulp.Controls.Add(Me.txtNumberPulp)
-        Me.tpPulp.Controls.Add(Me.DataGridView5)
-        Me.tpPulp.Controls.Add(Me.Label21)
-        Me.tpPulp.Controls.Add(Me.cmdCalculatePulp)
-        Me.tpPulp.Controls.Add(Me.Label20)
-        Me.tpPulp.Controls.Add(Me.Label19)
-        Me.tpPulp.Controls.Add(Me.txtPricePulp)
-        Me.tpPulp.Controls.Add(Me.txtIncomePulp)
-        Me.tpPulp.Location = New System.Drawing.Point(4, 25)
-        Me.tpPulp.Name = "tpPulp"
-        Me.tpPulp.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpPulp.Size = New System.Drawing.Size(675, 140)
-        Me.tpPulp.TabIndex = 1
-        Me.tpPulp.Text = "Жом"
-        '
-        'cmdNextPulp
-        '
-        Me.cmdNextPulp.Location = New System.Drawing.Point(173, 80)
-        Me.cmdNextPulp.Name = "cmdNextPulp"
-        Me.cmdNextPulp.Size = New System.Drawing.Size(83, 23)
-        Me.cmdNextPulp.TabIndex = 30
-        Me.cmdNextPulp.Text = "Следующий"
-        Me.cmdNextPulp.UseVisualStyleBackColor = True
-        '
-        'cmdPreviousPulp
-        '
-        Me.cmdPreviousPulp.Location = New System.Drawing.Point(11, 80)
-        Me.cmdPreviousPulp.Name = "cmdPreviousPulp"
-        Me.cmdPreviousPulp.Size = New System.Drawing.Size(83, 23)
-        Me.cmdPreviousPulp.TabIndex = 26
-        Me.cmdPreviousPulp.Text = "Предыдущий"
-        Me.cmdPreviousPulp.UseVisualStyleBackColor = True
-        '
-        'cmdAddNewPulp
-        '
-        Me.cmdAddNewPulp.Location = New System.Drawing.Point(100, 80)
-        Me.cmdAddNewPulp.Name = "cmdAddNewPulp"
-        Me.cmdAddNewPulp.Size = New System.Drawing.Size(67, 23)
-        Me.cmdAddNewPulp.TabIndex = 29
-        Me.cmdAddNewPulp.Text = "Добавить"
-        Me.cmdAddNewPulp.UseVisualStyleBackColor = True
-        '
-        'cmdSavePulp
-        '
-        Me.cmdSavePulp.Location = New System.Drawing.Point(11, 109)
-        Me.cmdSavePulp.Name = "cmdSavePulp"
-        Me.cmdSavePulp.Size = New System.Drawing.Size(83, 23)
-        Me.cmdSavePulp.TabIndex = 27
-        Me.cmdSavePulp.Text = "Сохранить"
-        Me.cmdSavePulp.UseVisualStyleBackColor = True
-        '
-        'cmdDeletePulp
-        '
-        Me.cmdDeletePulp.Location = New System.Drawing.Point(100, 109)
-        Me.cmdDeletePulp.Name = "cmdDeletePulp"
-        Me.cmdDeletePulp.Size = New System.Drawing.Size(67, 23)
-        Me.cmdDeletePulp.TabIndex = 28
-        Me.cmdDeletePulp.Text = "Удалить"
-        Me.cmdDeletePulp.UseVisualStyleBackColor = True
-        '
-        'txtNumberPulp
-        '
-        Me.txtNumberPulp.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ЖомBindingSource, "Количество", True))
-        Me.txtNumberPulp.Location = New System.Drawing.Point(100, 6)
-        Me.txtNumberPulp.Name = "txtNumberPulp"
-        Me.txtNumberPulp.Size = New System.Drawing.Size(156, 20)
-        Me.txtNumberPulp.TabIndex = 5
-        '
-        'ЖомBindingSource
-        '
-        Me.ЖомBindingSource.DataMember = "Жом"
-        Me.ЖомBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
-        'DataGridView5
-        '
-        Me.DataGridView5.AutoGenerateColumns = False
-        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn5, Me.КоличествоDataGridViewTextBoxColumn1, Me.ЦенаDataGridViewTextBoxColumn1, Me.ДоходDataGridViewTextBoxColumn1})
-        Me.DataGridView5.DataSource = Me.ЖомBindingSource
-        Me.DataGridView5.Location = New System.Drawing.Point(273, 6)
-        Me.DataGridView5.Name = "DataGridView5"
-        Me.DataGridView5.Size = New System.Drawing.Size(393, 126)
-        Me.DataGridView5.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn5
-        '
-        Me.КодDataGridViewTextBoxColumn5.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn5.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn5.Name = "КодDataGridViewTextBoxColumn5"
-        '
-        'КоличествоDataGridViewTextBoxColumn1
-        '
-        Me.КоличествоDataGridViewTextBoxColumn1.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn1.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn1.Name = "КоличествоDataGridViewTextBoxColumn1"
-        '
-        'ЦенаDataGridViewTextBoxColumn1
-        '
-        Me.ЦенаDataGridViewTextBoxColumn1.DataPropertyName = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn1.HeaderText = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn1.Name = "ЦенаDataGridViewTextBoxColumn1"
-        '
-        'ДоходDataGridViewTextBoxColumn1
-        '
-        Me.ДоходDataGridViewTextBoxColumn1.DataPropertyName = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn1.HeaderText = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn1.Name = "ДоходDataGridViewTextBoxColumn1"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(8, 9)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(86, 13)
-        Me.Label21.TabIndex = 0
-        Me.Label21.Text = "Количество (кг)"
-        '
-        'cmdCalculatePulp
-        '
-        Me.cmdCalculatePulp.Location = New System.Drawing.Point(173, 109)
-        Me.cmdCalculatePulp.Name = "cmdCalculatePulp"
-        Me.cmdCalculatePulp.Size = New System.Drawing.Size(83, 23)
-        Me.cmdCalculatePulp.TabIndex = 8
-        Me.cmdCalculatePulp.Text = "Рассчитать"
-        Me.cmdCalculatePulp.UseVisualStyleBackColor = True
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(8, 32)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(62, 13)
-        Me.Label20.TabIndex = 1
-        Me.Label20.Text = "Цена за кг"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(8, 55)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(39, 13)
-        Me.Label19.TabIndex = 2
-        Me.Label19.Text = "Доход"
-        '
-        'txtPricePulp
-        '
-        Me.txtPricePulp.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ЖомBindingSource, "Цена", True))
-        Me.txtPricePulp.Location = New System.Drawing.Point(100, 29)
-        Me.txtPricePulp.Name = "txtPricePulp"
-        Me.txtPricePulp.Size = New System.Drawing.Size(156, 20)
-        Me.txtPricePulp.TabIndex = 4
-        '
-        'txtIncomePulp
-        '
-        Me.txtIncomePulp.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ЖомBindingSource, "Доход", True))
-        Me.txtIncomePulp.Location = New System.Drawing.Point(100, 52)
-        Me.txtIncomePulp.Name = "txtIncomePulp"
-        Me.txtIncomePulp.ReadOnly = True
-        Me.txtIncomePulp.Size = New System.Drawing.Size(156, 20)
-        Me.txtIncomePulp.TabIndex = 3
-        '
-        'tpMolasses
-        '
-        Me.tpMolasses.BackColor = System.Drawing.SystemColors.Control
-        Me.tpMolasses.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tpMolasses.Controls.Add(Me.cmdNextMolasses)
-        Me.tpMolasses.Controls.Add(Me.cmdPreviousMolasses)
-        Me.tpMolasses.Controls.Add(Me.cmdAddNewMolasses)
-        Me.tpMolasses.Controls.Add(Me.cmdSaveMolasses)
-        Me.tpMolasses.Controls.Add(Me.cmdDeleteMolasses)
-        Me.tpMolasses.Controls.Add(Me.txtNumberMolasses)
-        Me.tpMolasses.Controls.Add(Me.DataGridView4)
-        Me.tpMolasses.Controls.Add(Me.Label24)
-        Me.tpMolasses.Controls.Add(Me.cmdCalculateMolasses)
-        Me.tpMolasses.Controls.Add(Me.Label23)
-        Me.tpMolasses.Controls.Add(Me.Label22)
-        Me.tpMolasses.Controls.Add(Me.txtPriceMolasses)
-        Me.tpMolasses.Controls.Add(Me.txtIncomeMolasses)
-        Me.tpMolasses.Location = New System.Drawing.Point(4, 25)
-        Me.tpMolasses.Name = "tpMolasses"
-        Me.tpMolasses.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpMolasses.Size = New System.Drawing.Size(675, 140)
-        Me.tpMolasses.TabIndex = 2
-        Me.tpMolasses.Text = "Меласса"
-        '
-        'cmdNextMolasses
-        '
-        Me.cmdNextMolasses.Location = New System.Drawing.Point(173, 80)
-        Me.cmdNextMolasses.Name = "cmdNextMolasses"
-        Me.cmdNextMolasses.Size = New System.Drawing.Size(83, 23)
-        Me.cmdNextMolasses.TabIndex = 30
-        Me.cmdNextMolasses.Text = "Следующий"
-        Me.cmdNextMolasses.UseVisualStyleBackColor = True
-        '
-        'cmdPreviousMolasses
-        '
-        Me.cmdPreviousMolasses.Location = New System.Drawing.Point(11, 80)
-        Me.cmdPreviousMolasses.Name = "cmdPreviousMolasses"
-        Me.cmdPreviousMolasses.Size = New System.Drawing.Size(83, 23)
-        Me.cmdPreviousMolasses.TabIndex = 26
-        Me.cmdPreviousMolasses.Text = "Предыдущий"
-        Me.cmdPreviousMolasses.UseVisualStyleBackColor = True
-        '
-        'cmdAddNewMolasses
-        '
-        Me.cmdAddNewMolasses.Location = New System.Drawing.Point(100, 80)
-        Me.cmdAddNewMolasses.Name = "cmdAddNewMolasses"
-        Me.cmdAddNewMolasses.Size = New System.Drawing.Size(67, 23)
-        Me.cmdAddNewMolasses.TabIndex = 29
-        Me.cmdAddNewMolasses.Text = "Добавить"
-        Me.cmdAddNewMolasses.UseVisualStyleBackColor = True
-        '
-        'cmdSaveMolasses
-        '
-        Me.cmdSaveMolasses.Location = New System.Drawing.Point(11, 109)
-        Me.cmdSaveMolasses.Name = "cmdSaveMolasses"
-        Me.cmdSaveMolasses.Size = New System.Drawing.Size(83, 23)
-        Me.cmdSaveMolasses.TabIndex = 27
-        Me.cmdSaveMolasses.Text = "Сохранить"
-        Me.cmdSaveMolasses.UseVisualStyleBackColor = True
-        '
-        'cmdDeleteMolasses
-        '
-        Me.cmdDeleteMolasses.Location = New System.Drawing.Point(100, 109)
-        Me.cmdDeleteMolasses.Name = "cmdDeleteMolasses"
-        Me.cmdDeleteMolasses.Size = New System.Drawing.Size(67, 23)
-        Me.cmdDeleteMolasses.TabIndex = 28
-        Me.cmdDeleteMolasses.Text = "Удалить"
-        Me.cmdDeleteMolasses.UseVisualStyleBackColor = True
-        '
-        'txtNumberMolasses
-        '
-        Me.txtNumberMolasses.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.МелассаBindingSource, "Количество", True))
-        Me.txtNumberMolasses.Location = New System.Drawing.Point(100, 6)
-        Me.txtNumberMolasses.Name = "txtNumberMolasses"
-        Me.txtNumberMolasses.Size = New System.Drawing.Size(156, 20)
-        Me.txtNumberMolasses.TabIndex = 5
-        '
-        'МелассаBindingSource
-        '
-        Me.МелассаBindingSource.DataMember = "Меласса"
-        Me.МелассаBindingSource.DataSource = Me.BookkeepingDatabaseDataSet
-        '
-        'DataGridView4
-        '
-        Me.DataGridView4.AutoGenerateColumns = False
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.КодDataGridViewTextBoxColumn6, Me.КоличествоDataGridViewTextBoxColumn2, Me.ЦенаDataGridViewTextBoxColumn2, Me.ДоходDataGridViewTextBoxColumn2})
-        Me.DataGridView4.DataSource = Me.МелассаBindingSource
-        Me.DataGridView4.Location = New System.Drawing.Point(273, 6)
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.Size = New System.Drawing.Size(393, 126)
-        Me.DataGridView4.TabIndex = 0
-        '
-        'КодDataGridViewTextBoxColumn6
-        '
-        Me.КодDataGridViewTextBoxColumn6.DataPropertyName = "Код"
-        Me.КодDataGridViewTextBoxColumn6.HeaderText = "Код"
-        Me.КодDataGridViewTextBoxColumn6.Name = "КодDataGridViewTextBoxColumn6"
-        '
-        'КоличествоDataGridViewTextBoxColumn2
-        '
-        Me.КоличествоDataGridViewTextBoxColumn2.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn2.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn2.Name = "КоличествоDataGridViewTextBoxColumn2"
-        '
-        'ЦенаDataGridViewTextBoxColumn2
-        '
-        Me.ЦенаDataGridViewTextBoxColumn2.DataPropertyName = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn2.HeaderText = "Цена"
-        Me.ЦенаDataGridViewTextBoxColumn2.Name = "ЦенаDataGridViewTextBoxColumn2"
-        '
-        'ДоходDataGridViewTextBoxColumn2
-        '
-        Me.ДоходDataGridViewTextBoxColumn2.DataPropertyName = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn2.HeaderText = "Доход"
-        Me.ДоходDataGridViewTextBoxColumn2.Name = "ДоходDataGridViewTextBoxColumn2"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(8, 9)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(86, 13)
-        Me.Label24.TabIndex = 0
-        Me.Label24.Text = "Количество (кг)"
-        '
-        'cmdCalculateMolasses
-        '
-        Me.cmdCalculateMolasses.Location = New System.Drawing.Point(173, 109)
-        Me.cmdCalculateMolasses.Name = "cmdCalculateMolasses"
-        Me.cmdCalculateMolasses.Size = New System.Drawing.Size(83, 23)
-        Me.cmdCalculateMolasses.TabIndex = 10
-        Me.cmdCalculateMolasses.Text = "Рассчитать"
-        Me.cmdCalculateMolasses.UseVisualStyleBackColor = True
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(8, 32)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(62, 13)
-        Me.Label23.TabIndex = 1
-        Me.Label23.Text = "Цена за кг"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(8, 55)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(39, 13)
-        Me.Label22.TabIndex = 2
-        Me.Label22.Text = "Доход"
-        '
-        'txtPriceMolasses
-        '
-        Me.txtPriceMolasses.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.МелассаBindingSource, "Цена", True))
-        Me.txtPriceMolasses.Location = New System.Drawing.Point(100, 29)
-        Me.txtPriceMolasses.Name = "txtPriceMolasses"
-        Me.txtPriceMolasses.Size = New System.Drawing.Size(156, 20)
-        Me.txtPriceMolasses.TabIndex = 4
-        '
-        'txtIncomeMolasses
-        '
-        Me.txtIncomeMolasses.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.МелассаBindingSource, "Доход", True))
-        Me.txtIncomeMolasses.Location = New System.Drawing.Point(100, 52)
-        Me.txtIncomeMolasses.Name = "txtIncomeMolasses"
-        Me.txtIncomeMolasses.ReadOnly = True
-        Me.txtIncomeMolasses.Size = New System.Drawing.Size(156, 20)
-        Me.txtIncomeMolasses.TabIndex = 3
+        Me.РасходDataGridViewTextBoxColumn2.ReadOnly = True
         '
         'ПерсоналTableAdapter
         '
@@ -1823,18 +1234,6 @@ Partial Class frmBookkeeping
         'ВодаTableAdapter
         '
         Me.ВодаTableAdapter.ClearBeforeFill = True
-        '
-        'СахарTableAdapter
-        '
-        Me.СахарTableAdapter.ClearBeforeFill = True
-        '
-        'ЖомTableAdapter
-        '
-        Me.ЖомTableAdapter.ClearBeforeFill = True
-        '
-        'МелассаTableAdapter
-        '
-        Me.МелассаTableAdapter.ClearBeforeFill = True
         '
         'Panel1
         '
@@ -1870,7 +1269,7 @@ Partial Class frmBookkeeping
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmBookkeeping"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Бухгалтерия"
         Me.tabBookkeeping.ResumeLayout(False)
         Me.tpPersonal.ResumeLayout(False)
@@ -1904,20 +1303,6 @@ Partial Class frmBookkeeping
         Me.tpWater.PerformLayout()
         CType(Me.ВодаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tpIncome.ResumeLayout(False)
-        Me.tabIncome.ResumeLayout(False)
-        Me.tpSugar.ResumeLayout(False)
-        Me.tpSugar.PerformLayout()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.СахарBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tpPulp.ResumeLayout(False)
-        Me.tpPulp.PerformLayout()
-        CType(Me.ЖомBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tpMolasses.ResumeLayout(False)
-        Me.tpMolasses.PerformLayout()
-        CType(Me.МелассаBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -2001,50 +1386,6 @@ Partial Class frmBookkeeping
     Friend WithEvents cmdPreviousWater As System.Windows.Forms.Button
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents tpIncome As System.Windows.Forms.TabPage
-    Friend WithEvents tabIncome As System.Windows.Forms.TabControl
-    Friend WithEvents tpSugar As System.Windows.Forms.TabPage
-    Friend WithEvents cmdNextSugar As System.Windows.Forms.Button
-    Friend WithEvents cmdPreviousSugar As System.Windows.Forms.Button
-    Friend WithEvents cmdAddNewSugar As System.Windows.Forms.Button
-    Friend WithEvents cmdSaveSugar As System.Windows.Forms.Button
-    Friend WithEvents cmdDeleteSugar As System.Windows.Forms.Button
-    Friend WithEvents DataGridView6 As System.Windows.Forms.DataGridView
-    Friend WithEvents cmdCalculateSugar As System.Windows.Forms.Button
-    Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents txtIncomeSugar As System.Windows.Forms.TextBox
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents txtPriceSugar As System.Windows.Forms.TextBox
-    Friend WithEvents txtNumberSugar As System.Windows.Forms.TextBox
-    Friend WithEvents tpPulp As System.Windows.Forms.TabPage
-    Friend WithEvents cmdNextPulp As System.Windows.Forms.Button
-    Friend WithEvents cmdPreviousPulp As System.Windows.Forms.Button
-    Friend WithEvents cmdAddNewPulp As System.Windows.Forms.Button
-    Friend WithEvents cmdSavePulp As System.Windows.Forms.Button
-    Friend WithEvents cmdDeletePulp As System.Windows.Forms.Button
-    Friend WithEvents txtNumberPulp As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridView5 As System.Windows.Forms.DataGridView
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents cmdCalculatePulp As System.Windows.Forms.Button
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents txtPricePulp As System.Windows.Forms.TextBox
-    Friend WithEvents txtIncomePulp As System.Windows.Forms.TextBox
-    Friend WithEvents tpMolasses As System.Windows.Forms.TabPage
-    Friend WithEvents cmdNextMolasses As System.Windows.Forms.Button
-    Friend WithEvents cmdPreviousMolasses As System.Windows.Forms.Button
-    Friend WithEvents cmdAddNewMolasses As System.Windows.Forms.Button
-    Friend WithEvents cmdSaveMolasses As System.Windows.Forms.Button
-    Friend WithEvents cmdDeleteMolasses As System.Windows.Forms.Button
-    Friend WithEvents txtNumberMolasses As System.Windows.Forms.TextBox
-    Friend WithEvents DataGridView4 As System.Windows.Forms.DataGridView
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents cmdCalculateMolasses As System.Windows.Forms.Button
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents txtPriceMolasses As System.Windows.Forms.TextBox
-    Friend WithEvents txtIncomeMolasses As System.Windows.Forms.TextBox
     Friend WithEvents cmdNextPersonal As System.Windows.Forms.Button
     Friend WithEvents cmdPreviousPersonal As System.Windows.Forms.Button
     Friend WithEvents txtSearch As System.Windows.Forms.TextBox
@@ -2071,24 +1412,6 @@ Partial Class frmBookkeeping
     Friend WithEvents ПотребленоDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ТарифDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents РасходDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents СахарBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents СахарTableAdapter As SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.СахарTableAdapter
-    Friend WithEvents КодDataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents КоличествоDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ЦенаDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ДоходDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ЖомBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents ЖомTableAdapter As SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.ЖомTableAdapter
-    Friend WithEvents КодDataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents КоличествоDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ЦенаDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ДоходDataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents МелассаBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents МелассаTableAdapter As SampleCourseProject.BookkeepingDatabaseDataSetTableAdapters.МелассаTableAdapter
-    Friend WithEvents КодDataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents КоличествоDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ЦенаDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ДоходDataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents lblReset As System.Windows.Forms.Label
     Friend WithEvents КодDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn

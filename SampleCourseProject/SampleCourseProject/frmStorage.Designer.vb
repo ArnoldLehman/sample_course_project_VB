@@ -53,7 +53,9 @@ Partial Class frmStorage
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ВидыDataGridViewTextBoxColumn, Me.КоличествоDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.StorageBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 67)
+        Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(244, 143)
         Me.DataGridView1.TabIndex = 0
         '
@@ -62,12 +64,14 @@ Partial Class frmStorage
         Me.ВидыDataGridViewTextBoxColumn.DataPropertyName = "Виды"
         Me.ВидыDataGridViewTextBoxColumn.HeaderText = "Виды"
         Me.ВидыDataGridViewTextBoxColumn.Name = "ВидыDataGridViewTextBoxColumn"
+        Me.ВидыDataGridViewTextBoxColumn.ReadOnly = True
         '
         'КоличествоDataGridViewTextBoxColumn
         '
         Me.КоличествоDataGridViewTextBoxColumn.DataPropertyName = "Количество"
         Me.КоличествоDataGridViewTextBoxColumn.HeaderText = "Количество"
         Me.КоличествоDataGridViewTextBoxColumn.Name = "КоличествоDataGridViewTextBoxColumn"
+        Me.КоличествоDataGridViewTextBoxColumn.ReadOnly = True
         '
         'StorageBindingSource
         '

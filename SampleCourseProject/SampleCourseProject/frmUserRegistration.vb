@@ -5,7 +5,7 @@ Public Class frmUserCreateAccount
     'Подключение к базе данных и занесение в неё логина и пароля пользователя
     Private Sub cmdCreate_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCreate.Click
         If txtLoginCreate.Text = "" Or txtPasswordCreate.Text = "" Or txtConfirmPassword.Text = "" Then
-            MsgBox("plz fill the info")
+            MsgBox("Пожалуйста, заполните все поля", MsgBoxStyle.Critical, "Ввод")
         Else
             If txtPasswordCreate.Text = txtConfirmPassword.Text Then
                 Try
@@ -14,7 +14,7 @@ Public Class frmUserCreateAccount
                     Dim cmd As New OleDbCommand(insert, conn)
                     conn.Open()
                     cmd.ExecuteNonQuery()
-                    MsgBox("create success")
+                    MessageBox.Show("Аккаунт был успешно создан", "Регистрация")
                     Me.Close()
                 Catch ex As Exception
                     MsgBox(ex.Message)

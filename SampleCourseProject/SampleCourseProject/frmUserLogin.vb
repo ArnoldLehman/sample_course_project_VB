@@ -2,6 +2,7 @@
 Imports System.Data
 
 Public Class frmUserLogin
+    Dim kol As Integer = 0
     'Подключение к базе данных аккаунтов, проверка на наличие записи, и, в зависимости от уровня доступа аккаунта, предоставление доступа к другим формам
     'Уровень доступа "Пользователь" имеет ограниченные возможности (просмотр главной формы и переход к форме "Купить")
     'Уровень доступа "Администратор" имеет возможности переходить на формы "Бухгалтерия", "Склад" и "Покупатели", и изменять информацию, хранимую в базе
@@ -10,7 +11,8 @@ Public Class frmUserLogin
         Dim pword As String
         Dim pass As String = ""
         If txtLogin.Text = "" Or txtPassword.Text = "" Then
-            MsgBox("Проверьте, все ли поля заполнены корректно", MsgBoxStyle.Exclamation, "Вход")
+            MsgBox("Проверьте, все ли поля заполнены", MsgBoxStyle.Exclamation, "Вход")
+            kol += 1
         Else
             uname = txtLogin.Text
             pword = txtPassword.Text
@@ -25,7 +27,7 @@ Public Class frmUserLogin
                 MsgBox(ex.Message)
             End Try
             If pword = pass Then
-                MsgBox("Login success")
+                MessageBox.Show("Авторизация прошла успешно", "Авторизация")
                 frmMain.auth = True
                 If txtLogin.Text = "Admin" Then
                     frmMain.access = True
@@ -42,8 +44,15 @@ Public Class frmUserLogin
                 End If
                 Me.Close()
             Else
+                kol += 1
                 txtLogin.Clear()
                 txtPassword.Clear()
+                If (kol >= 3) Then
+                    MsgBox("Вы превысили максимальное количество попыток входа", MsgBoxStyle.Critical, "Ввод")
+                    Me.tmrBlock.Enabled = True
+                    txtLogin.ReadOnly = True
+                    txtPassword.ReadOnly = True
+                End If
             End If
         End If
     End Sub
@@ -85,6 +94,17 @@ Public Class frmUserLogin
             MsgBox("Длина пароля не должна быть меньше 3 и больше 20", MsgBoxStyle.Critical, "Ввод")
             txtPassword.Focus()
             Exit Sub
+        End If
+    End Sub
+    'Таймер, для блокироваки полей на 10 секунд
+    Private Sub tmrBlock_Tick(ByVal sender As Object, ByVal e As System.EventArgs) Handles tmrBlock.Tick
+        Label3.Text = Val(Label3.Text) + 1
+        If Label3.Text = "10" Then
+            Label3.Text = ""
+            tmrBlock.Enabled = False
+            txtLogin.ReadOnly = False
+            txtPassword.ReadOnly = False
+            kol = 0
         End If
     End Sub
 End Class

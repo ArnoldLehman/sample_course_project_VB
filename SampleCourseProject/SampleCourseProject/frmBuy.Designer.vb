@@ -121,9 +121,9 @@ Partial Class frmBuy
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(90, 92)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(30, 13)
+        Me.Label5.Size = New System.Drawing.Size(18, 13)
         Me.Label5.TabIndex = 17
-        Me.Label5.Text = "тонн"
+        Me.Label5.Text = "кг"
         '
         'Panel1
         '
@@ -168,7 +168,7 @@ Partial Class frmBuy
         'lblNumberOnStorage
         '
         Me.lblNumberOnStorage.AutoSize = True
-        Me.lblNumberOnStorage.Location = New System.Drawing.Point(154, 39)
+        Me.lblNumberOnStorage.Location = New System.Drawing.Point(145, 39)
         Me.lblNumberOnStorage.Name = "lblNumberOnStorage"
         Me.lblNumberOnStorage.Size = New System.Drawing.Size(0, 13)
         Me.lblNumberOnStorage.TabIndex = 24

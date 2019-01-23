@@ -39,7 +39,7 @@ Public Class frmStorage
             cmd.Parameters.AddWithValue("Количество", txtNumber.Text)
             cmd.Parameters.AddWithValue("Виды", txtType.Text)
             cmd.ExecuteNonQuery()
-            MsgBox("Data has been update")
+            MsgBox("Данные были изменены")
             conn.Close()
         Catch ex As Exception
             MsgBox(ex.Message)

@@ -37,17 +37,12 @@ Public Class frmBookkeeping
     End Sub
     'Сохранение информации в базу данных и обновление таблицы на форме
     Private Sub cmdDatabasePersonal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDatabasePersonal.Click
-        On Error GoTo SaveErr
-        ПерсоналBindingSource.EndEdit()
-        ПерсоналTableAdapter.Update(BookkeepingDatabaseDataSet.Персонал)
-
-ErrEx:
-        Exit Sub
-SaveErr:
-        MsgBox("Ошибка номер " & Err.Number & vbNewLine & _
-               "Описание ошибки - " & Err.Description, MsgBoxStyle.Critical, _
-               "Reser Error!")
-        Resume ErrEx
+        Try
+            ПерсоналBindingSource.EndEdit()
+            ПерсоналTableAdapter.Update(BookkeepingDatabaseDataSet.Персонал)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
     'Создание новой строки таблицы
     Private Sub cmdAddNewPrsonal_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNewPersonal.Click
@@ -293,168 +288,11 @@ ErrExite:
         txtRashElec.Text = Val(txtPotrElec.Text) * Val(txtTarifElec.Text)
     End Sub
 
-
-    'Код, относящийся к третьей вкладке (Прибыль)
-
-    'Расширение окна формы до соответствующих размеров
-    Private Sub tpIncome_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpIncome.Enter
-        If tabBookkeeping.SelectedTab Is tpIncome Then
-            With Me
-                .Width = 712
-                .Height = 306
-            End With
-        End If
-    End Sub
-    'При переходе на вкладку "Сахар" выделяется первая строка таблицы
-    Private Sub tpSugar_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpSugar.Enter
-        If tabIncome.SelectedTab Is tpSugar Then
-            СахарBindingSource.MoveFirst()
-        End If
-    End Sub
-    'При переходе на вкладку "Жом" выделяется первая строка таблицы
-    Private Sub tpPulp_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpPulp.Enter
-        If tabIncome.SelectedTab Is tpPulp Then
-            ЖомBindingSource.MoveFirst()
-        End If
-    End Sub
-    'При переходе на вкладку "Меласса" выделяется первая строка таблицы
-    Private Sub tpMolasses_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tpMolasses.Enter
-        If tabIncome.SelectedTab Is tpMolasses Then
-            МелассаBindingSource.MoveFirst()
-        End If
-    End Sub
-    'Выделить предыдущую строку таблицы на вкладке "Сахар"
-    Private Sub cmdPreviousSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousSugar.Click
-        СахарBindingSource.MovePrevious()
-    End Sub
-    'Создать новую строку таблицы на вкладке "Сахар"
-    Private Sub cmdAddNewSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNewSugar.Click
-        СахарBindingSource.AddNew()
-    End Sub
-    'Выделить следующую строку таблицы на вкладке "Сахар"
-    Private Sub cmdNextSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdNextSugar.Click
-        СахарBindingSource.MoveNext()
-    End Sub
-    'Сохранение информации в базу данных и обновление таблицы на вкладке "Сахар"
-    Private Sub cmdSaveSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSaveSugar.Click
-        СахарBindingSource.EndEdit()
-        СахарTableAdapter.Update(BookkeepingDatabaseDataSet.Сахар)
-        MessageBox.Show("All good!")
-    End Sub
-    'Удаление строки из таблицы на вкладке "Сахар"
-    Private Sub cmdDeleteSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteSugar.Click
-        On Error GoTo ErrExite
-        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
-        If result = DialogResult.Yes Then
-            СахарBindingSource.RemoveCurrent()
-            СахарTableAdapter.Update(BookkeepingDatabaseDataSet.Сахар)
-            Exit Sub
-        Else
-            Exit Sub
-        End If
-ErrExite:
-        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
-        Exit Sub
-    End Sub
-    'Выделить предыдущую строку таблицы на вкладке "Жом"
-    Private Sub cmdPreviousPulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousPulp.Click
-        ЖомBindingSource.MovePrevious()
-    End Sub
-    'Создать новую строку таблицы на вкладке "Жом"
-    Private Sub cmdAddNewPulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNewPulp.Click
-        ЖомBindingSource.AddNew()
-    End Sub
-    'Выделить следующую строку таблицы на вкладке "Жом"
-    Private Sub cmdNextPulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdNextPulp.Click
-        ЖомBindingSource.MoveNext()
-    End Sub
-    'Сохранение информации в базу данных и обновление таблицы на вкладке "Жом"
-    Private Sub cmdSavePulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSavePulp.Click
-        ЖомBindingSource.EndEdit()
-        ЖомTableAdapter.Update(BookkeepingDatabaseDataSet.Жом)
-        MessageBox.Show("All good!")
-    End Sub
-    'Удаление строки из таблицы на вкладке "Жом"
-    Private Sub cmdDeletePulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeletePulp.Click
-        On Error GoTo ErrExite
-        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
-        If result = DialogResult.Yes Then
-            ЖомBindingSource.RemoveCurrent()
-            ЖомTableAdapter.Update(BookkeepingDatabaseDataSet.Жом)
-            Exit Sub
-        Else
-            Exit Sub
-        End If
-ErrExite:
-        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
-        Exit Sub
-    End Sub
-    'Выделить предыдущую строку таблицы на вкладке "Меласса"
-    Private Sub cmdPreviousMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdPreviousMolasses.Click
-        МелассаBindingSource.MovePrevious()
-    End Sub
-    'Создать новую строку таблицы на вкладке "Меласса"
-    Private Sub cmdAddNewMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAddNewMolasses.Click
-        МелассаBindingSource.AddNew()
-    End Sub
-    'Выделить следующую строку таблицы на вкладке "Меласса"
-    Private Sub cmdNextMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdNextMolasses.Click
-        МелассаBindingSource.MoveNext()
-    End Sub
-    'Сохранение информации в базу данных и обновление таблицы на вкладке "Меласса"
-    Private Sub cmdSaveMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSaveMolasses.Click
-        МелассаBindingSource.EndEdit()
-        МелассаTableAdapter.Update(BookkeepingDatabaseDataSet.Меласса)
-        MessageBox.Show("All good!")
-    End Sub
-    'Удаление строки из таблицы на вкладке "Меласса"
-    Private Sub cmdDeleteMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdDeleteMolasses.Click
-        On Error GoTo ErrExite
-        result = MessageBox.Show("Вы уверены?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button1)
-        If result = DialogResult.Yes Then
-            МелассаBindingSource.RemoveCurrent()
-            МелассаTableAdapter.Update(BookkeepingDatabaseDataSet.Меласса)
-            Exit Sub
-        Else
-            Exit Sub
-        End If
-ErrExite:
-        MsgBox("Поле пусто, ничего нельзя удалить", MsgBoxStyle.Critical, "Ошибка")
-        Exit Sub
-    End Sub
-    'Расчёт дохода от сахара по формуле (Дс = Кс * Цс), где 
-    'Дс - доход от сахара
-    'Кс - количество сахара
-    'Цс - цена на сахар
-    Private Sub cmdCalculateSugar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculateSugar.Click
-        txtIncomeSugar.Text = Val(txtNumberSugar.Text) * Val(txtPriceSugar.Text)
-    End Sub
-    'Расчёт дохода от жома по формуле (Дж = Кж * Цж), где 
-    'Дж - доход от жома
-    'Кж - количество жома
-    'Цж - цена на жом
-    Private Sub cmdCalculatePulp_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculatePulp.Click
-        txtIncomePulp.Text = Val(txtNumberPulp.Text) * Val(txtPricePulp.Text)
-    End Sub
-    'Расчёт дохода от мелассы по формуле (Дм = Км * Цм), где 
-    'Дм - доход от мелассы
-    'Км - количество мелассы
-    'Цм - цена на мелассу
-    Private Sub cmdCalculateMolasses_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCalculateMolasses.Click
-        txtIncomeMolasses.Text = Val(txtNumberMolasses.Text) * Val(txtPriceMolasses.Text)
-    End Sub
-
     Private Sub frmBookkeeping_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
         frmMain.Show()
     End Sub
 
     Private Sub frmBookkeeping_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Меласса". При необходимости она может быть перемещена или удалена.
-        Me.МелассаTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Меласса)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Жом". При необходимости она может быть перемещена или удалена.
-        Me.ЖомTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Жом)
-        'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Сахар". При необходимости она может быть перемещена или удалена.
-        Me.СахарTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Сахар)
         'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Вода". При необходимости она может быть перемещена или удалена.
         Me.ВодаTableAdapter.Fill(Me.BookkeepingDatabaseDataSet.Вода)
         'TODO: данная строка кода позволяет загрузить данные в таблицу "BookkeepingDatabaseDataSet.Газ". При необходимости она может быть перемещена или удалена.
@@ -519,32 +357,8 @@ ErrExite:
         ChecksWordInBookkeeping(txtNumbWorkDay)
     End Sub
 
-    Private Sub txtNumberMolasses_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberMolasses.Leave
-        ChecksWordInBookkeeping(txtNumberMolasses)
-    End Sub
-
-    Private Sub txtNumberPulp_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberPulp.Leave
-        ChecksWordInBookkeeping(txtNumberPulp)
-    End Sub
-
-    Private Sub txtNumberSugar_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtNumberSugar.Leave
-        ChecksWordInBookkeeping(txtNumberSugar)
-    End Sub
-
     Private Sub txtSalary_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtSalary.Leave
         ChecksWordInBookkeeping(txtSalary)
-    End Sub
-
-    Private Sub txtPriceMolasses_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPriceMolasses.Leave
-        ChecksWordInBookkeeping(txtPriceMolasses)
-    End Sub
-
-    Private Sub txtPricePulp_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPricePulp.Leave
-        ChecksWordInBookkeeping(txtPricePulp)
-    End Sub
-
-    Private Sub txtPriceSugar_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPriceSugar.Leave
-        ChecksWordInBookkeeping(txtPriceSugar)
     End Sub
 
     Private Sub txtPotrElec_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtPotrElec.Leave

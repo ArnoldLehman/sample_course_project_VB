@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A015048F-B2DE-4E1D-9382-4DD73E8738D9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -32,8 +32,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>3986711-building-factory-industry-icon_112974.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -297,6 +296,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="3986711-building-factory-industry-icon_112974.ico" />
     <Content Include="BookkeepingDatabase.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

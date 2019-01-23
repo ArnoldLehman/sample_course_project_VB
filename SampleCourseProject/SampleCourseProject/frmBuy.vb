@@ -23,7 +23,6 @@ Public Class frmBuy
             Dim cmd As New OleDbCommand(str, conn)
             cmd.Parameters.AddWithValue("Количество_сахара", amountSugar)
             cmd.ExecuteNonQuery()
-            MsgBox("Data has been update")
             conn.close()
 
 
