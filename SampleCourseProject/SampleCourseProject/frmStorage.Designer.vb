@@ -23,7 +23,12 @@ Partial Class frmStorage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStorage))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.ВидыDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.КоличествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.StorageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StorageDatabaseDataSet = New SampleCourseProject.StorageDatabaseDataSet
         Me.cmdAddNew = New System.Windows.Forms.Button
         Me.cmdDelete = New System.Windows.Forms.Button
         Me.cmdUpdate = New System.Windows.Forms.Button
@@ -34,15 +39,11 @@ Partial Class frmStorage
         Me.txtNumber = New System.Windows.Forms.TextBox
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.lblMain = New System.Windows.Forms.Label
-        Me.StorageDatabaseDataSet = New SampleCourseProject.StorageDatabaseDataSet
-        Me.StorageBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StorageTableAdapter = New SampleCourseProject.StorageDatabaseDataSetTableAdapters.StorageTableAdapter
-        Me.ВидыDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.КоличествоDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StorageBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -55,6 +56,28 @@ Partial Class frmStorage
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(244, 143)
         Me.DataGridView1.TabIndex = 0
+        '
+        'ВидыDataGridViewTextBoxColumn
+        '
+        Me.ВидыDataGridViewTextBoxColumn.DataPropertyName = "Виды"
+        Me.ВидыDataGridViewTextBoxColumn.HeaderText = "Виды"
+        Me.ВидыDataGridViewTextBoxColumn.Name = "ВидыDataGridViewTextBoxColumn"
+        '
+        'КоличествоDataGridViewTextBoxColumn
+        '
+        Me.КоличествоDataGridViewTextBoxColumn.DataPropertyName = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn.HeaderText = "Количество"
+        Me.КоличествоDataGridViewTextBoxColumn.Name = "КоличествоDataGridViewTextBoxColumn"
+        '
+        'StorageBindingSource
+        '
+        Me.StorageBindingSource.DataMember = "Storage"
+        Me.StorageBindingSource.DataSource = Me.StorageDatabaseDataSet
+        '
+        'StorageDatabaseDataSet
+        '
+        Me.StorageDatabaseDataSet.DataSetName = "StorageDatabaseDataSet"
+        Me.StorageDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'cmdAddNew
         '
@@ -149,31 +172,9 @@ Partial Class frmStorage
         Me.lblMain.Text = "Главная"
         Me.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'StorageDatabaseDataSet
-        '
-        Me.StorageDatabaseDataSet.DataSetName = "StorageDatabaseDataSet"
-        Me.StorageDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StorageBindingSource
-        '
-        Me.StorageBindingSource.DataMember = "Storage"
-        Me.StorageBindingSource.DataSource = Me.StorageDatabaseDataSet
-        '
         'StorageTableAdapter
         '
         Me.StorageTableAdapter.ClearBeforeFill = True
-        '
-        'ВидыDataGridViewTextBoxColumn
-        '
-        Me.ВидыDataGridViewTextBoxColumn.DataPropertyName = "Виды"
-        Me.ВидыDataGridViewTextBoxColumn.HeaderText = "Виды"
-        Me.ВидыDataGridViewTextBoxColumn.Name = "ВидыDataGridViewTextBoxColumn"
-        '
-        'КоличествоDataGridViewTextBoxColumn
-        '
-        Me.КоличествоDataGridViewTextBoxColumn.DataPropertyName = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn.HeaderText = "Количество"
-        Me.КоличествоDataGridViewTextBoxColumn.Name = "КоличествоDataGridViewTextBoxColumn"
         '
         'frmStorage
         '
@@ -190,13 +191,14 @@ Partial Class frmStorage
         Me.Controls.Add(Me.cmdDelete)
         Me.Controls.Add(Me.cmdAddNew)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmStorage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Склад"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StorageBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StorageDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

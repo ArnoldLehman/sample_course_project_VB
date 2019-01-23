@@ -265,6 +265,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblNext)
         Me.Controls.Add(Me.lblImage)
         Me.Controls.Add(Me.Panel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmMain"

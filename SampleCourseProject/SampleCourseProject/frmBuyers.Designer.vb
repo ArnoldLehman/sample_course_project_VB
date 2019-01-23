@@ -23,6 +23,7 @@ Partial Class frmBuyers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuyers))
         Me.dgvBuyers = New System.Windows.Forms.DataGridView
         Me.КодDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.НаименованиеорганизацииDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn
@@ -310,6 +311,7 @@ Partial Class frmBuyers
         Me.Controls.Add(Me.cmdSearch)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.dgvBuyers)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmBuyers"

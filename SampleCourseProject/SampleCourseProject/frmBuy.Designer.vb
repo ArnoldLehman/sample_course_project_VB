@@ -23,6 +23,7 @@ Partial Class frmBuy
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmBuy))
         Me.cmdBuy = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
@@ -324,6 +325,7 @@ Partial Class frmBuy
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnl2)
         Me.Controls.Add(Me.pnl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmBuy"
